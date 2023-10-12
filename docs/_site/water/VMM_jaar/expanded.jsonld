@@ -1,0 +1,94 @@
+[
+    {
+        "@id": "_:wks001",
+        "@type": [
+            "https://purl.eu/ns/air-and-water/water-quality#WaterQualityParameterObservation",
+            "https://data.vlaanderen.be/ns/waterkwaliteit#StatistischeObservatie"
+        ],
+        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime": {
+            "@type": "http://www.w3.org/2006/time#Instant",
+            "http://www.w3.org/2006/time#inXSDDateTime": {
+                "@type": "xml-schema:date",
+                "@value": "2022"
+            }
+        },
+        "http://www.w3.org/ns/sosa/usedProcedure": {
+            "@type": "http://www.w3.org/ns/sosa/Procedure",
+            "http://www.w3.org/ns/ssn/hasInput": {
+                "@type": "http://www.w3.org/ns/ssn/Input",
+                "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Input.referentie": {
+                    "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+                    "@value": "_:obv001"
+                },
+                "http://purl.org/dc/terms/type": "https://example.com/concept/inputtype/observatieverzameling"
+            },
+            "http://purl.org/dc/terms/type": "https://example.com/concept/observatieproceduretype/OW19"
+        },
+        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest": "_:mpt001",
+        "https://purl.eu/ns/air-and-water/water-quality#WaterQualityParameterObservation.observedProperty": {
+            "@id": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0009",
+            "http://www.w3.org/2004/02/skos/core#prefLabel": {
+                "@value": "Geleidbaarheid (20Â°C)"
+            }
+        },
+        "https://purl.eu/ns/air-and-water/water-quality#WaterQualityParameterObservation.waterQualityParameterResult": {
+            "@type": [
+                "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure",
+                "https://data.vlaanderen.be/ns/statistiek#Statistiek"
+            ],
+            "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure.value": {
+                "@type": "https://schema.org/QuantitativeValue",
+                "https://schema.org/unitCode": {
+                    "@id": "https://qudt.org/vocab/unit/MicroS-PER-CentiM",
+                    "@type": "https://qudt.org/schema/qudt/Unit"
+                },
+                "https://schema.org/value": {
+                    "@value": 410.25
+                }
+            },
+            "https://data.vlaanderen.be/ns/statistiek#statistiektype": "https://example.com/concept/statistiektype/gemiddelde"
+        }
+    },
+    {
+        "@id": "_:mpt001",
+        "@type": [
+            "https://data.vlaanderen.be/ns/waterkwaliteit#Meetpunt",
+            "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint"
+        ],
+        "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature": "_:seg00",
+        "https://data.vlaanderen.be/ns/observaties-en-metingen#Bemonsteringsobject.identificator": {
+            "@type": "http://www.w3.org/ns/adms#Identifier",
+            "http://www.w3.org/2004/02/skos/core#notation": {
+                "@type": "https://example.com/concept/identificatortype/puntnummer",
+                "@value": "100000"
+            }
+        },
+        "http://purl.org/dc/terms/type": "https://example.com/concept/meetpunttype/OW",
+        "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape": {
+            "@type": "http://www.opengis.net/ont/sf#Point",
+            "http://www.opengis.net/ont/geosparql#asGML": {
+                "@type": "http://www.opengis.net/ont/geosparql#gmlliteral",
+                "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/31370\"><gml:coordinates>227995 222056</gml:coordinates><gml:Point>"
+            }
+        },
+        "http://purl.org/dc/terms/description": {
+            "@language": "nl",
+            "@value": "Schaft (NL), Abdijweg, opw Kluizerbrug en versmalling, aan debietmeter"
+        }
+    },
+    {
+        "@id": "_:seg001",
+        "@type": "https://purl.eu/ns/air-and-water/water-quality#WaterFeature",
+        "http://www.w3.org/ns/adms#identifier": {
+            "@type": "http://www.w3.org/ns/adms#Identifier",
+            "http://www.w3.org/2004/02/skos/core#notation": {
+                "@type": "https://example.com/concept/identificatortype/vha_segmentcode",
+                "@value": "6010065"
+            }
+        },
+        "http://purl.org/dc/terms/description": {
+            "@language": "nl",
+            "@value": "WARMBEEK"
+        }
+    }
+]

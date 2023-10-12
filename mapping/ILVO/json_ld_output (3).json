@@ -1,0 +1,1704 @@
+{
+    "@context": {
+        "@vocab": "http://www.opengis.net/ont/eo-geojson/1.0/",
+        "s": "http://schema.org/",
+        "dct": "http://purl.org/dc/terms/",
+        "gj": "https://purl.org/geojson/vocab#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "dataset_name": "s:name",
+        "published_date": "dct:dateCopyrighted",
+        "creator": "dct:creator",
+        "description": "dct:description",
+        "reference_id": "dct:identifier",
+        "sample_type": "dct:description",
+        "sampling_date": "dct:date",
+        "sampling_depth_lower_limit": {
+            "@id": "s:depth",
+            "@type": "xsd:float",
+            "@context": {
+                "m": "http://https://qudt.org/vocab/unit/M"
+            }
+        },
+        "crs": "http://www.opengis.net/ont/crs#",
+        "organic_carbon_content": {
+            "@id": "http://inspire.ec.europa.eu/codelist/SoilDerivedObjectParameterNameValue/organicCarbonContent",
+            "@type": "xsd:float",
+            "@context": {
+                "g kg-1": "http://qudt.org/vocab/unit/GM-PER-KiloGM"
+            }
+        },
+        "analysis_method": "dct:description",
+        "pH_CaCl2": {
+            "@id": "http://inspire.ec.europa.eu/codelist/SoilDerivedObjectParameterNameValue/pHValue",
+            "@type": "xsd:float",
+            "@context": {
+                "reagent": "CaCl2"
+            }
+        },
+        "pH_H2O": {
+            "@id": "http://inspire.ec.europa.eu/codelist/SoilDerivedObjectParameterNameValue/pHValue",
+            "@type": "xsd:float",
+            "@context": {
+                "reagent": "H2O"
+            }
+        },
+        "geometry":{
+			"@id":"http://www.w3.org/ns/locn#geometry",
+			"@type":"http://www.w3.org/ns/locn#Geometry"
+		},
+        "LineString": "gj:LineString",
+        "MultiLineString": "gj:MultiLineString",
+        "MultiPoint": "gj:MultiPoint",
+        "MultiPolygon": "gj:MultiPolygon",
+        "Point": "gj:Point",
+        "Polygon": "gj:Polygon",
+        "bbox": {
+            "@container": "@list",
+            "@id": "gj:bbox"
+        },
+        "coordinates": "gj:coordinates"
+    },
+    "@type": "http://purl.org/dc/dcmitype/Dataset",
+    "dataset_name": "LUCAS 2018 TOPSOIL data",
+    "published_date": "2022",
+    "creator": "European Commission",
+    "description": "LUCAS | LUCAS SOIL | clay | silt | sand | coarse fragments | pH | OC | SOC | Organic Carbon Content | carbonates | CaCO3 | nitrogen | phosphorous | potassium | N | P | K | EC | Electrical conductivity | Oxalate extractable Fe | Oxalate extractable Al",
+    "url": {
+        "@id": "https://esdac.jrc.ec.europa.eu/content/lucas-2018-topsoil-data"
+    },
+    "sample": [
+        {
+            "reference_id": 47862690,
+            "sample_type": "composite sample",
+            "sampling_date": "06-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.13421178,
+                47.15023795
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 12.4,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 4.1,
+                    "pH_H2O": 4.81,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47882704,
+            "sample_type": "composite sample",
+            "sampling_date": "06-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.17535859,
+                47.27427248
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 16.7,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 4.1,
+                    "pH_H2O": 4.93,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47982688,
+            "sample_type": "composite sample",
+            "sampling_date": "02-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.28969291,
+                47.1232602
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 47.5,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 4.1,
+                    "pH_H2O": 4.85,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 48022702,
+            "sample_type": "composite sample",
+            "sampling_date": "06-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.35750603,
+                47.24569335
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 28.1,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 5.5,
+                    "pH_H2O": 5.8,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 48062708,
+            "sample_type": "composite sample",
+            "sampling_date": "05-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.41678159,
+                47.29637182
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 19.4,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 6.1,
+                    "pH_H2O": 6.48,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 48222780,
+            "sample_type": "composite sample",
+            "sampling_date": "21-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.71115772,
+                47.92869563
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 22.9,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.1,
+                    "pH_H2O": 7.98,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 48342774,
+            "sample_type": "composite sample",
+            "sampling_date": "26-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.8638522,
+                47.86505893
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 29.1,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.4,
+                    "pH_H2O": 8.09,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 48442784,
+            "sample_type": "composite sample",
+            "sampling_date": "11-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                17.00926007,
+                47.94615773
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 14.4,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.2,
+                    "pH_H2O": 7.84,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 48462776,
+            "sample_type": "composite sample",
+            "sampling_date": "14-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                17.02603165,
+                47.87283272
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 21.8,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.6,
+                    "pH_H2O": 8.15,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 48482762,
+            "sample_type": "composite sample",
+            "sampling_date": "03-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                17.03536819,
+                47.74578723
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 30,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.4,
+                    "pH_H2O": 8.3,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 46562790,
+            "sample_type": "composite sample",
+            "sampling_date": "07-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                14.50151431,
+                48.13164949
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 15.2,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.1,
+                    "pH_H2O": 7.52,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 46782766,
+            "sample_type": "composite sample",
+            "sampling_date": "18-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                14.77615139,
+                47.90375685
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 169.8,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 6.8,
+                    "pH_H2O": 6.93,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 46942756,
+            "sample_type": "composite sample",
+            "sampling_date": "08-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                14.98089168,
+                47.80449646
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 79.9,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 6.1,
+                    "pH_H2O": 6.39,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 46942878,
+            "sample_type": "composite sample",
+            "sampling_date": "24-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.09042334,
+                48.89920109
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 45.3,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 3.3,
+                    "pH_H2O": 3.78,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 46982766,
+            "sample_type": "composite sample",
+            "sampling_date": "24-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.04300695,
+                47.89181128
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 33.9,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 4,
+                    "pH_H2O": 4.52,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47002806,
+            "sample_type": "composite sample",
+            "sampling_date": "27-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.10565784,
+                48.24952676
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 55.2,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 4.2,
+                    "pH_H2O": 4.85,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47002816,
+            "sample_type": "composite sample",
+            "sampling_date": "27-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.11475237,
+                48.33925149
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 114.6,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 3.3,
+                    "pH_H2O": 3.88,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47042780,
+            "sample_type": "composite sample",
+            "sampling_date": "16-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.13568848,
+                48.01373378
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 36.2,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 6.1,
+                    "pH_H2O": 6.54,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47042788,
+            "sample_type": "composite sample",
+            "sampling_date": "14-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.14295123,
+                48.0855196
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 81.8,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 6.9,
+                    "pH_H2O": 7.26,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47042874,
+            "sample_type": "composite sample",
+            "sampling_date": "23-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.22270532,
+                48.85703064
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 12.7,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 6,
+                    "pH_H2O": 6.48,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47082754,
+            "sample_type": "composite sample",
+            "sampling_date": "24-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.16550245,
+                47.77790891
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 162.9,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7,
+                    "pH_H2O": 7.18,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47082776,
+            "sample_type": "composite sample",
+            "sampling_date": "01-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.18551031,
+                47.97532887
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 33.3,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 4.1,
+                    "pH_H2O": 4.87,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47102754,
+            "sample_type": "composite sample",
+            "sampling_date": "24-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.19212015,
+                47.77664936
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 205.1,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 6.9,
+                    "pH_H2O": 7.23,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47122762,
+            "sample_type": "composite sample",
+            "sampling_date": "24-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.22606358,
+                47.84717109
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 13.5,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.3,
+                    "pH_H2O": 8.05,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47182762,
+            "sample_type": "composite sample",
+            "sampling_date": "04-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.30601701,
+                47.8433281
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 112.6,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 6.9,
+                    "pH_H2O": 7.37,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47182802,
+            "sample_type": "composite sample",
+            "sampling_date": "10-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.34360954,
+                48.20218867
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 23.2,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 4.3,
+                    "pH_H2O": 4.9,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47222878,
+            "sample_type": "composite sample",
+            "sampling_date": "23-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.47133227,
+                48.8811597
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 20.3,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 3.9,
+                    "pH_H2O": 4.48,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47242764,
+            "sample_type": "composite sample",
+            "sampling_date": "24-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.38785093,
+                47.85737019
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 147.3,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 6.7,
+                    "pH_H2O": 7.01,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47242774,
+            "sample_type": "composite sample",
+            "sampling_date": "29-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.39733381,
+                47.94708374
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 82.4,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 6.2,
+                    "pH_H2O": 6.32,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47302860,
+            "sample_type": "composite sample",
+            "sampling_date": "06-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.56199577,
+                48.71438211
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 37.7,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 3.9,
+                    "pH_H2O": 4.72,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47322802,
+            "sample_type": "composite sample",
+            "sampling_date": "29-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.53143347,
+                48.19292023
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 14.9,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.4,
+                    "pH_H2O": 7.98,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47362862,
+            "sample_type": "composite sample",
+            "sampling_date": "20-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.64534213,
+                48.72821368
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 17.9,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 5.5,
+                    "pH_H2O": 6.12,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47462794,
+            "sample_type": "composite sample",
+            "sampling_date": "05-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.71109418,
+                48.11159718
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 24.1,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 4.2,
+                    "pH_H2O": 5.06,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47462830,
+            "sample_type": "composite sample",
+            "sampling_date": "24-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.74777325,
+                48.43438076
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 17,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.6,
+                    "pH_H2O": 8.19,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47482810,
+            "sample_type": "composite sample",
+            "sampling_date": "24-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.75417784,
+                48.25366633
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 16.5,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.3,
+                    "pH_H2O": 7.85,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47482864,
+            "sample_type": "composite sample",
+            "sampling_date": "25-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.81008072,
+                48.73776101
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 54.7,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 6.5,
+                    "pH_H2O": 6.93,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47502772,
+            "sample_type": "composite sample",
+            "sampling_date": "24-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.74232302,
+                47.91152793
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 418.5,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 6.1,
+                    "pH_H2O": 6.34,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47522746,
+            "sample_type": "composite sample",
+            "sampling_date": "23-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.74276958,
+                47.67695905
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 29.1,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 4.2,
+                    "pH_H2O": 4.97,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47522800,
+            "sample_type": "composite sample",
+            "sampling_date": "05-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.7975866,
+                48.16119375
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 20.4,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 4.7,
+                    "pH_H2O": 5.46,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47522858,
+            "sample_type": "composite sample",
+            "sampling_date": "12-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.8579662,
+                48.68113594
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 18.1,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.1,
+                    "pH_H2O": 8,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47582744,
+            "sample_type": "composite sample",
+            "sampling_date": "23-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.82039312,
+                47.65480589
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 219.3,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 6.8,
+                    "pH_H2O": 7.1,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47602836,
+            "sample_type": "composite sample",
+            "sampling_date": "19-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.94276715,
+                48.47819549
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 34.4,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7,
+                    "pH_H2O": 7.42,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47642862,
+            "sample_type": "composite sample",
+            "sampling_date": "23-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.02476493,
+                48.70829192
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 22,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.5,
+                    "pH_H2O": 8.15,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47662810,
+            "sample_type": "composite sample",
+            "sampling_date": "27-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.99581379,
+                48.24079034
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 18.7,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.2,
+                    "pH_H2O": 8.02,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47662860,
+            "sample_type": "composite sample",
+            "sampling_date": "23-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.04967587,
+                48.68889773
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 18.7,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.5,
+                    "pH_H2O": 8.19,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47682754,
+            "sample_type": "composite sample",
+            "sampling_date": "03-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                15.96349091,
+                47.73731361
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 419.9,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 4.7,
+                    "pH_H2O": 5.31,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47702818,
+            "sample_type": "composite sample",
+            "sampling_date": "24-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.0581072,
+                48.30955796
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 15.5,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.3,
+                    "pH_H2O": 7.8,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47722780,
+            "sample_type": "composite sample",
+            "sampling_date": "17-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.04417339,
+                47.96748332
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 265.8,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 6.4,
+                    "pH_H2O": 6.66,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47722816,
+            "sample_type": "composite sample",
+            "sampling_date": "24-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.08281825,
+                48.29015496
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 19.2,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.3,
+                    "pH_H2O": 8.04,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47742758,
+            "sample_type": "composite sample",
+            "sampling_date": "17-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.04745715,
+                47.7687947
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 63.8,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7,
+                    "pH_H2O": 7.33,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47742848,
+            "sample_type": "composite sample",
+            "sampling_date": "04-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.14471725,
+                48.57542474
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 18.4,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.2,
+                    "pH_H2O": 7.66,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47762734,
+            "sample_type": "composite sample",
+            "sampling_date": "25-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.04865989,
+                47.5521552
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 72.1,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 6.8,
+                    "pH_H2O": 7.23,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47782854,
+            "sample_type": "composite sample",
+            "sampling_date": "20-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.20543133,
+                48.62617322
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 21.7,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.3,
+                    "pH_H2O": 7.71,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47802746,
+            "sample_type": "composite sample",
+            "sampling_date": "16-07-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.1143944,
+                47.65678235
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 75.4,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 4.2,
+                    "pH_H2O": 4.74,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47802840,
+            "sample_type": "composite sample",
+            "sampling_date": "28-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.21684089,
+                48.4992256
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 18.3,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.3,
+                    "pH_H2O": 8.1,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47822764,
+            "sample_type": "composite sample",
+            "sampling_date": "17-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.16029648,
+                47.81664234
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 46.2,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.3,
+                    "pH_H2O": 7.58,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47822830,
+            "sample_type": "composite sample",
+            "sampling_date": "23-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.23266131,
+                48.40811053
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 19.3,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.5,
+                    "pH_H2O": 8.24,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47822862,
+            "sample_type": "composite sample",
+            "sampling_date": "20-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.26852997,
+                48.69480289
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 19.5,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.2,
+                    "pH_H2O": 8.06,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47862838,
+            "sample_type": "composite sample",
+            "sampling_date": "28-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.29550339,
+                48.47673358
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 12.6,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.3,
+                    "pH_H2O": 8,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47882830,
+            "sample_type": "composite sample",
+            "sampling_date": "14-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.31343033,
+                48.40352598
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 15.4,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 4.3,
+                    "pH_H2O": 5.08,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47882836,
+            "sample_type": "composite sample",
+            "sampling_date": "28-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.32020173,
+                48.45727905
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 14.5,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.5,
+                    "pH_H2O": 8.19,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47942784,
+            "sample_type": "composite sample",
+            "sampling_date": "20-08-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.34222748,
+                47.98675742
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 37.7,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.6,
+                    "pH_H2O": 8.28,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47942860,
+            "sample_type": "composite sample",
+            "sampling_date": "19-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.42865737,
+                48.66760092
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 16.6,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.3,
+                    "pH_H2O": 7.77,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47942870,
+            "sample_type": "composite sample",
+            "sampling_date": "19-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.44025251,
+                48.75716362
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 11.4,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.2,
+                    "pH_H2O": 7.55,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47982796,
+            "sample_type": "composite sample",
+            "sampling_date": "17-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.40918794,
+                48.09117243
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 28.4,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.3,
+                    "pH_H2O": 7.87,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47982822,
+            "sample_type": "composite sample",
+            "sampling_date": "14-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.43882591,
+                48.3240934
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 14.5,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 6.8,
+                    "pH_H2O": 7.36,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47982846,
+            "sample_type": "composite sample",
+            "sampling_date": "19-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.46649408,
+                48.5390661
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 23.4,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.3,
+                    "pH_H2O": 7.81,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 47982850,
+            "sample_type": "composite sample",
+            "sampling_date": "20-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.47113472,
+                48.57489201
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 16.3,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.3,
+                    "pH_H2O": 8,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 48002836,
+            "sample_type": "composite sample",
+            "sampling_date": "14-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.4818701,
+                48.44792185
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 19.8,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.5,
+                    "pH_H2O": 8.19,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 48082844,
+            "sample_type": "composite sample",
+            "sampling_date": "15-06-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.59905631,
+                48.51319481
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 14,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.2,
+                    "pH_H2O": 7.83,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        },
+        {
+            "reference_id": 48122780,
+            "sample_type": "composite sample",
+            "sampling_date": "14-05-18",
+            "sampling_depth_lower_limit": 0.2,
+            "sampling_depth_upper_limit": 0,
+            "Point": [
+                16.57783537,
+                47.93677674
+            ],
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "soil_parameters": {
+                "total_organic_carbon": {
+                    "organic_carbon_content": 31.6,
+                    "analysis_method": "https://www.iso.org/standard/18782.html"
+                },
+                "ph": {
+                    "pH_CaCl2": 7.4,
+                    "pH_H2O": 8.03,
+                    "analysis_method": "https://www.iso.org/standard/40879.html"
+                }
+            }
+        }
+    ]
+}

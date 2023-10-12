@@ -1,0 +1,59 @@
+{
+    "id": "urn:ngsi-v2:cot-imec-be:devicemodel:keller-36xiw-ctd",
+    "type": "DeviceModel",
+    "brandName": {
+        "type": "Property",
+        "value": "Keller"
+    },
+    "category": {
+        "type": "Property",
+        "value": [
+            "sensor"
+        ]
+    },
+    "controlledProperty": {
+        "type": "Property",
+        "value": [
+            "temperature",
+            "conductivity",
+            "depth"
+        ]
+    },
+    "function": {
+        "type": "Property",
+        "value": [
+            "sensing"
+        ]
+    },
+    "iow_tags": {
+        "type": "Property",
+        "value": [
+            "external"
+        ]
+    },
+    "manufacturerName": {
+        "type": "Property",
+        "value": "Keller"
+    },
+    "modelName": {
+        "type": "Property",
+        "value": "36XiW-CTD"
+    },
+    "name": {
+        "type": "Property",
+        "value": "36XiW-CTD"
+    },
+    "supportedUnits": {
+        "type": "Property",
+        "value": [
+            "CEL",
+            "G42",
+            "MMT"
+        ]
+    },
+    "@context": [
+        "https://schema.lab.fiware.org/ld/context",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://fiware.github.io/data-models/context.jsonld"
+    ]
+}

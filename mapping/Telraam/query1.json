@@ -1,0 +1,9 @@
+curl --location 'https://telraam-api.net/v1/reports/traffic' \
+--header 'X-Api-Key: Your personal API Token comes here.' \
+--data '{
+  "level": "segments",
+  "format": "per-hour",
+  "id": "348917",
+  "time_start": "2020-10-30 07:00:00Z",
+  "time_end": "2020-10-30 09:00:00Z"
+}'

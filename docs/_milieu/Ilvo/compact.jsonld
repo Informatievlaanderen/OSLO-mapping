@@ -1,0 +1,160 @@
+{
+ "@context": [
+ 
+"https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaats
+tandaard/2022-10-17/context/waterkwaliteit-ap.jsonld",
+"https://purl.eu/doc/applicationprofile/AirAndWater/Air/kandidaatstandaard/2021-10-01/context/OSLO-airAndWater-Air-ap_en.jsonld",
+ 
+"https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstand
+aard/2022-10-17/context/statistiek-ap.jsonld",
+ "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28/context/ap-observaties-enmetingen.jsonld",
+ "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28/context/ap-sensoren-enbemonstering.jsonld",
+ "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld",
+ {
+ "adms": "http://www.w3.org/ns/adms#",
+ "qudt-schema": "https://qudt.org/schema/qudt/",
+ "dcterms": "http://purl.org/dc/terms/",
+ "time": "http://www.w3.org/2006/time#",
+ "skos": "http://www.w3.org/2004/02/skos/core#",
+ "geosparql": "http://www.opengis.net/ont/geosparql#",
+ "qudt-unit": "https://qudt.org/vocab/unit/",
+ 
+"cl-fc": "https://data.omgeving.vlaanderen.be/doc/concept/fysico-chemisch/0030",
+
+ }
+ ],
+ "@graph": [
+
+
+
+{
+ "@id": "_:ob001",
+ "@type": "Observation",
+ "Observation.phenomenonTime":{
+    "@type": "time:Instant",
+    "time:inXSDDateTime": {
+        "@type": "xml-schema:date",
+        "@value": "20220119"
+ }},
+    "Observation.parameter": "",
+    "Observation.result": 3,
+    "Observation.PropertyType": "cl-fc:0030",
+ 
+
+
+
+}
+,
+ },
+ "Observatie.fenomeentijd": {
+ "@type": "time:Instant",
+ "time:inXSDDateTime": {
+ "@type": "xml-schema:date",
+ "@value": "20220119"
+ }
+
+
+
+ {
+ "@id": "_:obv001",
+ "@type": "Observatieverzameling",
+ "Observatieverzameling.geobserveerdObject": "_:mpt001",
+ "Observatieverzameling.geobserveerdKenmerk": 
+"https://data.omgeving.vlaanderen.be/doc/concept/fysico-chemisch/0009",
+ "Observatieverzameling.fenomeentijd": {
+ "@type": "time:Instant",
+ "time:inXSDDateTime": {
+ "@type": "xml-schema:date",
+ "@value": "2022"
+ }
+ },
+ "Observatieverzameling.heeftLid": [
+ "_:wko001",
+ ""
+ ]
+ },
+
+
+ {
+ "@id": "_:wko001",
+ "@type": "WaterkwaliteitParameterObservatie",
+ "Observatie.geobserveerdObject": "_:mpt001",
+ "WaterkwaliteitParameterObservatie.geobserveerdKenmerk": {
+ "@id": 
+"https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0009",
+ "skos:prefLabel": "Geleidbaarheid (20°C)"
+ 
+ },
+ 
+"WaterkwaliteitParameterObservatie.waterkwaliteitParameterResultaat": {
+ "@type": [
+ "Maat"
+ ],
+ "Maat.maat": {
+ "@type": "KwantitatieveWaarde",
+ "KwantitatieveWaarde.waarde": 371.0,
+"KwantitatieveWaarde.standaardEenheid": {
+ "@type": "qudt-schema:Unit",
+ "@id": "qudt-unit:MicroS-PER-CentiM"
+ }
+ }
+
+ },
+ "Observatie.gebruikteProcedure": {
+ "@type": "Observatieprocedure",
+ "Observatieprocedure.type": 
+"https://example.com/concept/observatieproceduretype/OW19"
+ }
+ },
+ {
+ "@id": "_:mpt001",
+ "@type": [
+ "Meetpunt",
+ "Bemonsteringspunt"
+ ],
+ "Bemonsteringsobject.identificator": {
+ "@type": "Identificator",
+ "Identificator.identificator": {
+ "@value": "100000",
+ "@type": 
+"https://example.com/concept/identificatortype/puntnummer"
+ }
+ },
+ "dcterms:description": {
+ "@value": "Schaft (NL), Abdijweg, opw Kluizerbrug en 
+versmalling, aan debietmeter",
+ "@language": "nl"
+ },
+ "Bemonsteringspunt.geometrie": {
+ "@type": "Punt",
+ "Geometrie.gml": {
+ "@value": "<gml:Point srsName=\"http:
+\\//www.opengis.net/def/crs/EPSG/0/31370\"><gml:coordinates>227995 
+222056</gml:coordinates><gml:Point>",
+ "@type": "geosparql:gmlliteral"
+ }
+ },
+ "Bemonsteringsobject.type": 
+"https://example.com/concept/meetpunttype/OW",
+ "Bemonsteringsobject.bemonsterdObject": "_:seg001"
+ },
+ {
+ "@id": "_:seg001",
+ "@type": "WaterObject",
+ "Waterobject.type": 
+"https://example.com/concept/waterobjecttype/vha_segment",
+ "adms:identifier": {
+ "@type": "Identificator",
+ "Identificator.identificator": {
+ "@value": "6010065",
+ "@type": 
+"https://example.com/concept/identificatortype/vha_segmentcode"
+ }
+ },
+ "dcterms:description": {
+ "@value": "WARMBEEK",
+ "@language": "nl"
+ }
+ }
+ ]
+}

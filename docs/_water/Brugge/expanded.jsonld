@@ -1,0 +1,133 @@
+[
+    {
+        "@type": "http://www.w3.org/ns/sosa/Sampling",
+        "http://www.w3.org/ns/sosa/hasFeatureOfInterest": "_:mpt001",
+        "http://www.w3.org/ns/sosa/resultTime": {
+            "@type": "http://www.w3.org/2006/time#Instant",
+            "http://www.w3.org/2006/time#inXSDDateTime": {
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "@value": "20210111T12:05:51.000"
+            }
+        },
+        "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.conditie": [
+            "_:wra001",
+            ""
+        ],
+        "http://www.w3.org/ns/sosa/hasResult": "_:mon001",
+        "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.uitgevoerdDoor": {
+            "@type": "Organisatie"
+        },
+        "http://www.w3.org/ns/sosa/madeBySampler": {
+            "@type": "http://www.w3.org/ns/sosa/Sampler",
+            "http://purl.org/dc/terms/type": [
+                "cl-bet#staalnamekooi",
+                "cl-bet#fles"
+            ]
+        }
+    },
+    {
+        "@id": "_:mon001",
+        "@type": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen",
+        "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation": [
+            "_:obs001",
+            ""
+        ],
+        "https://data.vlaanderen.be/ns/observaties-en-metingen#Bemonsteringsobject.identificator": {
+            "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime": {
+            "@type": "http://www.w3.org/2006/time#Instant",
+            "http://www.w3.org/2006/time#inXSDDateTime": {
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "@value": "20210111T12:05:51.000"
+            }
+        },
+        "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.materialClass": "https://example.com/concept/materiaaltype/water",
+        "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.specimenType": "https://example.com/concept/monstertype/schepstaal"
+    },
+    {
+        "@id": "_:mpt001",
+        "@type": [
+            "Meetpunt",
+            "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint"
+        ],
+        "https://data.vlaanderen.be/ns/observaties-en-metingen#Bemonsteringsobject.identificator": {
+            "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape": {
+            "@type": "http://www.opengis.net/ont/sf#Point",
+            "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature": {
+                "@type": "WaterObject",
+                "dcterms:description": {
+                    "@language": "nl",
+                    "@value": "Langerei"
+                }
+            },
+            "http://www.opengis.net/ont/geosparql#asGML": {
+                "http://www.opengis.net/ont/geosparql#asGML": {
+                    "@type": "http://www.opengis.net/ont/geosparql#gmlliteral",
+                    "@value": "<gml:Point srsName=\"http: \\//www.opengis.net/def/crs/EPSG/0/4326\"> <gml:coordinates>51.2178744,3.229362</gml:coordinates><gml:Point>"
+                }
+            },
+            "dcterms:spatial": {
+                "@language": "nl",
+                "@value": "Ter Duinenbrug"
+            }
+        }
+    },
+    {
+        "@id": "_:obv001",
+        "@type": "http://www.w3.org/ns/sosa/ObservationCollection",
+        "http://www.w3.org/ns/sosa/hasFeatureOfInterest": "_:mon001",
+        "http://www.w3.org/ns/sosa/hasMember": [
+            "_:obs001",
+            ""
+        ],
+        "dcterms:type": {
+            "@value": "cl-ovt:metingenterplaatse"
+        }
+    },
+    {
+        "@id": "_:obs001",
+        "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result": {
+            "@type": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure",
+            "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure.value": {
+                "@type": "https://schema.org/QuantitativeValue",
+                "https://schema.org/unitCode": {
+                    "@id": "https://qudt.org/vocab/unit/DEG_C",
+                    "@type": "https://qudt.org/schema/qudt/Unit"
+                },
+                "https://schema.org/value": {
+                    "@value": 3.6
+                }
+            }
+        },
+        "http://purl.org/dc/terms/type": "https://example.com/concept/observatietype/metingterplaatse"
+    },
+    {
+        "@id": "_:wra001",
+        "@type": "http://www.w3.org/ns/sosa/ObservationCollection",
+        "http://www.w3.org/ns/sosa/hasFeatureOfInterest": "_:mpt001",
+        "http://www.w3.org/ns/sosa/hasMember": [
+            "_:wob001",
+            ""
+        ],
+        "dcterms:type": {
+            "@value": "cl-ovt:weerrapport"
+        }
+    },
+    {
+        "@id": "_:wob001",
+        "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime": {
+            "@type": "http://www.w3.org/2006/time#Instant",
+            "http://www.w3.org/2006/time#inXSDDateTime": {
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "@value": "20210111T12:05:51.000"
+            }
+        },
+        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result": "https://example.com/concept/weertype/zon/bewolkt",
+        "http://purl.org/dc/terms/type": "https://example.com/concept/observatietype/weerobservatie"
+    }
+]

@@ -1,0 +1,252 @@
+{
+	"@context": [
+		"https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2022-04-28/context/ap-bodem-en-ondergrond.jsonld",
+		"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28/context/ap-sensoren-en-bemonstering.jsonld",
+		"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28/context/ap-observaties-en-metingen.jsonld",
+		"https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2021-12-02/context/DCAT-AP-VL-20.jsonld",
+		{
+			"@vocab": "http://www.opengis.net/ont/eo-geojson/1.0/",
+			"schema": "http://schema.org/",
+			"dct": "http://purl.org/dc/terms/",
+			"xsd": "http://www.w3.org/2001/XMLSchema#",
+			"geosparql": "http://www.opengis.net/ont/geosparql#",
+			"cl-diepte": "https://example.com/concept/dieptetype/",
+			"cl-obs": "https://example.com/concept/observatietype/",
+			"cl-idt": "https://example.com/concept/identificatortype/",
+			"cl-dcat": "https://example.com/concept/dcat/",
+			"qudt-unit": "http://qudt.org/vocab/unit/",
+			"qudt-schema": "https://qudt.org/schema/qudt/",
+			"dcterms": "http://purl.org/dc/terms/",
+			
+			"reference_id": "dct:identifier",
+			"sample_type": "dct:description",
+			"sampling_date": "dct:date",
+			"sampling_depth_lower_limit": {
+				"@id": "s:depth",
+				"@type": "xsd:float",
+				"@context": {
+					"m": "http://https://qudt.org/vocab/unit/M"
+				}
+			},
+			"crs": "http://www.opengis.net/ont/crs#",
+			"organic_carbon_content": {
+				"@id": "http://inspire.ec.europa.eu/codelist/SoilDerivedObjectParameterNameValue/organicCarbonContent",
+				"@type": "xsd:float",
+				"@context": {
+					"g kg-1": "http://qudt.org/vocab/unit/GM-PER-KiloGM"
+				}
+			},
+			"analysis_method": "dct:description",
+			"pH_CaCl2": {
+				"@id": "http://inspire.ec.europa.eu/codelist/SoilDerivedObjectParameterNameValue/pHValue",
+				"@type": "xsd:float",
+				"@context": {
+					"reagent": "CaCl2"
+				}
+			},
+			"pH_H2O": {
+				"@id": "http://inspire.ec.europa.eu/codelist/SoilDerivedObjectParameterNameValue/pHValue",
+				"@type": "xsd:float",
+				"@context": {
+					"reagent": "H2O"
+				}
+			}
+		}
+	],
+	"@graph": 
+      
+[
+  
+  
+  {
+		"@id": "_:LUCAS2018",
+		"@type": "Dataset",
+		"Dataset.titel": {
+			"@language": "en",
+			"@value": "LUCAS 2018 TOPSOIL data"
+		},
+		"Dataset.beschrijving": [{
+			"@language": "en",
+			"@value": "Data from the 2018 LUCAS campaign soil component containing soil properties data for 18,984 samples: pH (CaCl2 and H2O), organic carbon content, CaCO3, nitrogen, phosphorous, potassium, EC (Electrical conductivity), Oxalate extractable Fe and Al"
+		},{
+			"@language": "nl",
+			"@value": "Gegevens van de bodemcomponent van de LUCAS-campagne uit 2018 met bodemeigenschappen voor 18.984 monsters: pH (CaCl2 en H2O), organisch koolstofgehalte, CaCO3, stikstof, fosfor, kalium, EC (elektrische geleidbaarheid), oxalaat-extraheerbaar Fe en Al"
+		}
+	],
+		"Dataset.trefwoord": {
+			"@language": "en",
+			"@value": "LUCAS, LUCAS SOIL, clay, silt, sand, coarse fragments, pH, OC, SOC, Organic Carbon Content, carbonates, CaCO3, nitrogen, phosphorous"
+		},
+		"Dataset.identificator" : "_:LUCAS2018",
+		"Dataset.toegankelijkheid": "cl-dcat:toegankelijkheid",
+		"CatalogusResource.statuut":"cl-statuut",
+		"CatalogusResource.hoofdonderwerp":{
+			"@type":"Catalogusrecord",
+			"CatalogusRecord.identificator":"_:LUCAS_id1",
+			"CatalogusRecord.aanmaakdatum":{
+					"@type": "time:Instant",
+					"time:inXSDDateTime": {
+					"@type": "xml-schema:dateTime",
+					"@value": "2022-01-01"
+					}
+					},
+			"CatalogusRecord.wijzigingsdatum":{
+					"@type": "time:Instant",
+					"time:inXSDDateTime": {
+					"@type": "xml-schema:dateTime",
+					"@value": "2022-01-01"
+					}
+					}},
+	"Catalogus.uitgever":[{
+		"@type": "Agent",
+		"Agent.naam": "European Commission"
+	}],
+      "Catalogus.record":{
+		"@type": "CatalogusRecord",
+		"CatalogusRecord.identificator":"_:LUCAS_id1",
+		"CatalogusRecord.aanmaakdatum":{
+                "@type": "time:Instant",
+                "time:inXSDDateTime": {
+                "@type": "xml-schema:dateTime",
+                "@value": "2022-01-01"
+                }
+                },
+		"CatalogusRecord.wijzigingsdatum":{
+                "@type": "time:Instant",
+                "time:inXSDDateTime": {
+                "@type": "xml-schema:dateTime",
+                "@value": "2022-01-01"
+                }
+                }
+      }},
+    
+    
+    
+    
+		
+		{
+			"@id": "_:bmo001",
+			"@type": "BoRuimtelijkBemonsteringsobject",
+			"Bemonsteringsobject.identificator": {
+				"@type": "Identificator",
+				"Identificator.identificator": {
+					"@value": "47862690",
+					"@type": "cl-idt:bemonsteringsobjectid"
+				}
+			},
+			"Bemonsteringsobject.type": "composite sample",
+			"Bemonsteringsobject.isResultaatVan": {
+				"@type": "Bemonstering",
+				"Bemonstering.bemonsteringstijdstip": {
+                    "@type": "time:Instant",
+                    "time:inXSDDateTime": {
+                    "@type": "xml-schema:dateTime",
+                    "@value": "2018-07-06"
+                 }
+        }                
+		},
+			"BoRuimtelijkBemonsteringsobject.diepte": {
+				"@type": "cl-diepte:sampling_depth_lower_limit",
+				"@value": "0.2"
+			},
+            "BoRuimtelijkBemonsteringsobject.diepte": {
+				"@type": "cl-diepte:sampling_depth_upper_limit",
+				"@value": "0"
+			},
+			"RuimtelijkBemonsteringsobject.geometrie": {
+				"@type": "Punt",
+				"Geometrie.gml": {
+					"@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates>16.13421178,47.15023795</gml:coordinates><gml:Point>",
+					"@type": "geosparql:gmlliteral"
+				}
+			},
+			"Bemonsteringsobject.bemonsterdObject": "",
+			"Bemonsteringsobject.geassocieerdeObservatie": [
+				"_:Crbn001",
+				"_:pH_CaCl2_001",
+				"_:pH_H2O_001"
+			]
+		},
+		{
+			"@id": "_:Crbn001",
+			"@type": "Meting",
+			"Observatie.identificator": {
+				"@type": "Identificator",
+				"Identificator.identificator": {
+					"@value": "1",
+					"@type": "cl-idt:observatieid_Crbn001"
+				}
+			},
+			"Observatie.resultaat": {
+				"@type": "Maat",
+				"Maat.maat": {
+					"@type": "KwantitatieveWaarde",
+					"Kwantitatievewaarde.waarde": 12.4,
+					"Kwantitatievewaarde.standaardEenheid": {
+						"@type": "qudt-schema:Unit",
+						"@id": "qudt-unit:GM-PER-KiloGM"
+					}
+				}
+			},
+			"Observatie.geobserveerdKenmerk": "http://inspire.ec.europa.eu/codelist/SoilDerivedObjectParameterNameValue/organicCarbonContent",
+			"Observatie.gebruikteProcedure": {
+				"@type": "Observatieprocedure",
+				"Observatieprocedure.specificatie": "https://www.iso.org/standard/18782.html"
+			}
+		},
+        {
+			"@id": "_:pH_CaCl2_001",
+			"@type": "Meting",
+			"Observatie.identificator": {
+				"@type": "Identificator",
+				"Identificator.identificator": {
+					"@value": "1",
+					"@type": "cl-idt:observatieid_pH_CaCl2"
+				}
+			},
+			"Observatie.resultaat": {
+				"@type": "Maat",
+				"Maat.maat": {
+					"@type": "KwantitatieveWaarde",
+					"Kwantitatievewaarde.waarde": 4.1,
+					"Kwantitatievewaarde.standaardEenheid": {
+						"@type": "qudt-schema:Unit",
+						"@id": "qudt-unit:PH"
+					}
+				}
+			},
+			"Observatie.geobserveerdKenmerk": "http://inspire.ec.europa.eu/codelist/SoilDerivedObjectParameterNameValue/pHValue",
+			"Observatie.gebruikteProcedure": {
+				"@type": "Observatieprocedure",
+				"Observatieprocedure.specificatie": "https://www.iso.org/standard/40879.html"
+			}
+		},
+            {
+			"@id": "_:pH_H2O_001",
+			"@type": "Meting",
+			"Observatie.identificator": {
+				"@type": "Identificator",
+				"Identificator.identificator": {
+					"@value": "1",
+					"@type": "cl-idt:observatieid_pH_H2O"
+				}
+			},
+			"Observatie.resultaat": {
+				"@type": "Maat",
+				"Maat.maat": {
+					"@type": "KwantitatieveWaarde",
+					"Kwantitatievewaarde.waarde": 4.81,
+					"Kwantitatievewaarde.standaardEenheid": {
+						"@type": "qudt-schema:Unit",
+						"@id": "qudt-unit:PH"
+					}
+				}
+			},
+			"Observatie.geobserveerdKenmerk": "http://inspire.ec.europa.eu/codelist/SoilDerivedObjectParameterNameValue/pHValue",
+			"Observatie.gebruikteProcedure": {
+				"@type": "Observatieprocedure",
+				"Observatieprocedure.specificatie": "https://www.iso.org/standard/40879.html"
+			}
+		}
+	]
+}

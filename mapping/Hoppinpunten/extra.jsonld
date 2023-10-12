@@ -1,0 +1,143 @@
+{
+"@context": [
+"https://data.vlaanderen.be/doc/applicatieprofiel/infrastructuurelementen/erkendestandaard/2021-09-30/context/infrastructuurelementen-ap.jsonld",
+"https://data.vlaanderen.be/doc/applicatieprofiel/mobiliteit/vervoersknooppunten/erkendestandaard/2022-12-01/context/OSLO-Vervoersknooppunten-ap.jsonld",
+{
+"locn": "http://www.w3.org/ns/locn#",
+"adres": "https://data.vlaanderen.be/ns/adres#",
+"time": "http://www.w3.org/2006/time#",
+"xml-schema": "http://www.w3.org/2001/XMLSchema#",
+"skos": "http://www.w3.org/2004/02/skos/core#",
+"geosparql": "http://www.opengis.net/ont/geosparql#",
+"dcterms": "http://purl.org/dc/terms/",
+
+"cl-vrtgtype":"https://example.com/concept/voertuigtype/",
+"cl-mdt":"https://example.com/concept/mobiliteitsdienst/",
+"cl-vm":"https://example.com/concept/vervoersmiddel/",
+"cl-parkpl_kenmerk":"https://example.com/concept/parkeerplaatskenmerk/"
+}
+],
+	"@graph": [
+{
+"@id": "_:vkn001",
+"@type": "Hoppinpunt",
+"Vervoersknooppunt.locatie": [
+    {
+        "@type": "locn:Address",
+        "locn:thoroughfare": {
+        "@value": "Lommelsebaan",
+        "@language": "nl"
+        },
+        "adres:Adresvoorstelling.huisnummer": "14A",
+        "locn:postcode": "2000",
+        "adres:gemeentenaam": {
+            "@value": "Hechtel-Eksel",
+            "@language": "nl"
+        }
+}],
+"Vervoersknooppunt.toegankelijkheid":[ "Visuele beperking", "Motorische handicap"]
+},
+{
+"@id": "_:hoppinzuil010",
+"@type": "Hoppinzuil",
+"Hoppinzuil.zuilnaam":"Hoppinzuil Aalst",
+"Hoppinzuil.zuilnummer":"10",
+"Infrastructuurelement.geometrie":
+    {
+					"@type": "Punt",
+					"Geometrie.gml": {
+						"@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/31370\"><gml:coordinates>156579.64 216540.27</gml:coordinates><gml:Point>",
+						"@type": "geosparql:gmlliteral"
+					}
+				}},
+{
+"@id": "_:fietsstalling001",
+"@type": "Fietsstalling",
+"Parkeerfaciliteit.capaciteit": {
+    "@type":"Capaciteit",
+    "Capaciteit.maximum": 5,
+    "Capaciteit.totaal": 20,
+    "Capaciteit.voertuigtype":{
+        "@value": "fiets",
+	    "@type": "cl-vrtgtype:fiets"
+
+    }
+},
+"Parkeerfaciliteit.openingsuren": {
+    "@type": "Periode",
+    "Periode.begin":{
+        "@type": "time:Instant",
+                    "time:inXSDDateTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-07-06"
+                    }
+                },
+    "Period.einde":{
+        "@type": "time:Instant",
+                    "time:inXSDDateTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-07-06"
+                    }
+                }
+
+},
+"Fietsstalling.overdekt":"True",
+"Fietsstalling.afsluitbaar":"True",
+"Fietsstalling.fietsdelen":"False",
+"Mobiliteitsdienst.type": "cl-mdt:buitenmaatse_fietsen",
+"Parkeerfaciliteit.gerealiseerdMet":{
+    "@type":"Infrastructuurelement",
+    "Infrastructuurelement.dienst":{
+        "@type": "Mobiliteitsdienst",
+        "Mobiliteitsdienst.type": "cl-mdt:buitenmaatse_fietsen"
+    }
+}
+},
+
+{
+"@id": "_:EVlaadpunt_EV001",
+"@type": "Lader",
+"Lader.vervoersmiddel":"cl-vm:elektrisch voertuig"
+},
+{
+"@id": "_:laadpunt_Ebike001",
+"@type": "Lader",
+"Lader.vervoersmiddel":"cl-vm:E-bike"
+},
+{
+"@id": "_:laadpunt_Ebike001",
+"@type": "Lader",
+"Lader.vervoersmiddel":"cl-vm:E-bike"
+},{
+"@id": "_:laadpunt_Ebike001",
+"@type": "Lader",
+"Lader.vervoersmiddel":"cl-vm:EV deelwagens buiten VOM",
+"rdf:value": 1
+},
+ 
+{
+"@id": "_:parkpl_carpool_001",
+"@type": "Parkeerplaats",
+"Parkeerplaats.kenmerk":"cl-parkpl_kenmerk:carpool",
+"rdf:value": 1
+},
+{
+"@id": "_:parkpl_wagen_001",
+"@type": "Parkeerplaats",
+"Parkeerplaats.kenmerk":"cl-parkpl_kenmerk:wagen",
+"rdf:value": 89
+},
+{
+"@id": "_:parkpl_wagen_001",
+"@type": "Parkeerplaats",
+"Parkeerplaats.kenmerk":"cl-parkpl_kenmerk:beperking",
+"rdf:value": 6
+},
+{
+"@id": "_:parkpl_wagen_001",
+"@type": "Parkeerplaats",
+"Parkeerplaats.kenmerk":"cl-parkpl_kenmerk:deelwagens buiten VOM",
+"rdf:value": 1
+}
+    ]
+}

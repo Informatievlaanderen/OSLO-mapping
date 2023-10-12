@@ -1,0 +1,853 @@
+{
+    "@context": [
+        "https://schema.lab.fiware.org/ld/context",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "@graph": [
+        {
+            "id": "urn:ngsi-v2:cot-imec-be:WaterQualityObserved:imec-iow-3orY3reQDK5n3TMpPnLVYR",
+            "type": "WaterQualityObserved",
+            "batteryLevel": {
+                "type": "Property",
+                "value": 0.75,
+                "rawValue": {
+                    "type": "Property",
+                    "value": {}
+                },
+                "statusCode": {
+                    "type": "Property",
+                    "value": 1
+                },
+                "observedAt": "2022-04-19T11:40:42.000Z"
+            },
+            "conductivity": {
+                "type": "Property",
+                "value": 2567.02,
+                "phase": {
+                    "type": "Property",
+                    "value": {}
+                },
+                "rawValue": {
+                    "type": "Property",
+                    "value": {}
+                },
+                "statusCode": {
+                    "type": "Property",
+                    "value": 1
+                },
+                "observedAt": "2022-04-19T11:40:42.000Z",
+                "unitCode": "G42"
+            },
+            "dateObserved": {
+                "type": "Property",
+                "value": {
+                    "@type": "DateTime",
+                    "@value": "2022-04-19T11:40:42.000Z"
+                }
+            },
+            "depth": {
+                "type": "Property",
+                "value": 1142.11328,
+                "rawValue": {
+                    "type": "Property",
+                    "value": {}
+                },
+                "statusCode": {
+                    "type": "Property",
+                    "value": 1
+                },
+                "observedAt": "2022-04-19T11:40:42.000Z",
+                "unitCode": "HP"
+            },
+            "location": {
+                "type": "GeoProperty",
+                "value": {
+                    "type": "Point",
+                    "coordinates": [
+                        3.22100827,
+                        51.22159735
+                    ]
+                },
+                "name": {
+                    "type": "Property",
+                    "value": "loc-00014-48"
+                }
+            },
+            "locationName": {
+                "type": "Property",
+                "value": "loc-00014-48"
+            },
+            "refDevice": {
+                "type": "Relationship",
+                "object": "urn:ngsi-v2:cot-imec-be:Device:imec-iow-eoP3fQDo577EmZz3nvVrJd"
+            },
+            "refDevices": {
+                "type": "Property",
+                "value": [
+                    "urn:ngsi-v2:cot-imec-be:Device:imec-iow-eoP3fQDo577EmZz3nvVrJd"
+                ]
+            },
+            "samplingPoint": {
+                "type": "Property",
+                "value": "spt-00025-12"
+            },
+            "temperature": {
+                "type": "Property",
+                "value": 15.18,
+                "rawValue": {
+                    "type": "Property",
+                    "value": {}
+                },
+                "statusCode": {
+                    "type": "Property",
+                    "value": 1
+                },
+                "observedAt": "2022-04-19T11:40:42.000Z",
+                "unitCode": "CEL"
+            }
+        },
+        {
+            "id": "urn:ngsi-v2:cot-imec-be:WaterQualityObserved:imec-iow-DswZraaLUyomowK6DhDBvC",
+            "type": "WaterQualityObserved",
+            "batteryLevel": {
+                "type": "Property",
+                "value": 0.033333333,
+                "rawValue": {
+                    "type": "Property",
+                    "value": "3020"
+                },
+                "rawValueUnitCode": {
+                    "type": "Property",
+                    "value": "2Z"
+                }
+            },
+            "conductivity": {
+                "type": "Property",
+                "value": 0.667961859,
+                "unitCode": "G42"
+            },
+            "dateObserved": {
+                "type": "Property",
+                "value": {
+                    "@type": "DateTime",
+                    "@value": "2022-04-19T12:44:39.000Z"
+                }
+            },
+            "deviceHumidity": {
+                "type": "Property",
+                "value": 8669,
+                "unitCode": "P1"
+            },
+            "deviceTemperature": {
+                "type": "Property",
+                "value": 19.635309219,
+                "unitCode": "CEL"
+            },
+            "location": {
+                "type": "GeoProperty",
+                "value": {
+                    "type": "Point",
+                    "coordinates": [
+                        2.801997831,
+                        51.12717843
+                    ]
+                },
+                "name": {
+                    "type": "Property",
+                    "value": "loc-00015-45"
+                }
+            },
+            "locationName": {
+                "type": "Property",
+                "value": "loc-00015-45"
+            },
+            "octa_state": {
+                "type": "Property",
+                "value": 13
+            },
+            "pH": {
+                "type": "Property",
+                "value": -530,
+                "unitCode": "Q30"
+            },
+            "refDevice": {
+                "type": "Relationship",
+                "object": "urn:ngsi-v2:cot-imec-be:Device:imec-iow-awUYPY6XTsis2nFcxnatsp"
+            },
+            "refDevices": {
+                "type": "Property",
+                "value": [
+                    "urn:ngsi-v2:cot-imec-be:Device:imec-iow-awUYPY6XTsis2nFcxnatsp",
+                    "urn:ngsi-v2:cot-imec-be:Device:imec-iow-bTQvEKx78u4xXVpbC2X6E3"
+                ]
+            },
+            "reliability": {
+                "type": "Property",
+                "value": 1,
+                "sensor_state": {
+                    "type": "Property",
+                    "value": 0
+                }
+            },
+            "samplingPoint": {
+                "type": "Property",
+                "value": "spt-00028-03"
+            },
+            "sensor_state": {
+                "type": "Property",
+                "value": 0
+            },
+            "temperature": {
+                "type": "Property",
+                "value": 14.6,
+                "unitCode": "CEL"
+            }
+        },
+        {
+            "id": "urn:ngsi-v2:cot-imec-be:WaterQualityObserved:vmm-iow-DL9QJxd5s6kzEvvTLv3XzY",
+            "type": "WaterQualityObserved",
+            "batteryLevel": {
+                "type": "Property",
+                "value": 0.74,
+                "rawValue": {
+                    "type": "Property",
+                    "value": {}
+                },
+                "statusCode": {
+                    "type": "Property",
+                    "value": 1
+                },
+                "observedAt": "2022-04-19T11:48:18.000Z"
+            },
+            "conductivity": {
+                "type": "Property",
+                "value": 26929.69,
+                "phase": {
+                    "type": "Property",
+                    "value": {}
+                },
+                "rawValue": {
+                    "type": "Property",
+                    "value": {}
+                },
+                "statusCode": {
+                    "type": "Property",
+                    "value": 1
+                },
+                "observedAt": "2022-04-19T11:48:18.000Z",
+                "unitCode": "G42"
+            },
+            "dateObserved": {
+                "type": "Property",
+                "value": {
+                    "@type": "DateTime",
+                    "@value": "2022-04-19T11:48:18.000Z"
+                }
+            },
+            "depth": {
+                "type": "Property",
+                "value": 1580.6032,
+                "rawValue": {
+                    "type": "Property",
+                    "value": {}
+                },
+                "statusCode": {
+                    "type": "Property",
+                    "value": 1
+                },
+                "observedAt": "2022-04-19T11:48:18.000Z",
+                "unitCode": "HP"
+            },
+            "location": {
+                "type": "GeoProperty",
+                "value": {
+                    "type": "Point",
+                    "coordinates": [
+                        3.2134298,
+                        51.26948242
+                    ]
+                },
+                "name": {
+                    "type": "Property",
+                    "value": "loc-00036-79"
+                }
+            },
+            "locationName": {
+                "type": "Property",
+                "value": "loc-00036-79"
+            },
+            "refDevice": {
+                "type": "Relationship",
+                "object": "urn:ngsi-v2:cot-imec-be:Device:vmm-iow-3FaAYYsWUdux93CwKaufYu"
+            },
+            "refDevices": {
+                "type": "Property",
+                "value": [
+                    "urn:ngsi-v2:cot-imec-be:Device:vmm-iow-3FaAYYsWUdux93CwKaufYu"
+                ]
+            },
+            "samplingPoint": {
+                "type": "Property",
+                "value": "spt-00000-87"
+            },
+            "temperature": {
+                "type": "Property",
+                "value": 11.63,
+                "rawValue": {
+                    "type": "Property",
+                    "value": {}
+                },
+                "statusCode": {
+                    "type": "Property",
+                    "value": 1
+                },
+                "observedAt": "2022-04-19T11:48:18.000Z",
+                "unitCode": "CEL"
+            }
+        },
+        {
+            "id": "urn:ngsi-v2:cot-imec-be:Device:imec-iow-eoP3fQDo577EmZz3nvVrJd",
+            "type": "Device",
+            "adminState": {
+                "type": "Property",
+                "value": "up"
+            },
+            "alternativeIds": {
+                "type": "Property",
+                "value": [
+                    "urn:ngsi-v2:cot-imec-be:WaterQualityObserved:imec-iow-3orY3reQDK5n3TMpPnLVYR",
+                    "imec-imex-box-2133"
+                ]
+            },
+            "dateLastValueReported": {
+                "type": "Property",
+                "value": {
+                    "@type": "DateTime",
+                    "@value": "2022-04-19T11:40:42.000Z"
+                }
+            },
+            "extraMeasurementAttributes": {
+                "type": "Property",
+                "value": {
+                    "location": true,
+                    "samplingPoint": true,
+                    "locationName": true
+                }
+            },
+            "healthState": {
+                "type": "Property",
+                "value": "up"
+            },
+            "location": {
+                "type": "GeoProperty",
+                "value": {
+                    "type": "Point",
+                    "coordinates": [
+                        3.22100827,
+                        51.22159735
+                    ]
+                },
+                "name": {
+                    "type": "Property",
+                    "value": "loc-00014-48"
+                }
+            },
+            "locationName": {
+                "type": "Property",
+                "value": "loc-00014-48"
+            },
+            "maxTimeBetweenObservations": {
+                "type": "Property",
+                "value": 180
+            },
+            "name": {
+                "type": "Property",
+                "value": "imec-box-2133"
+            },
+            "owner": {
+                "type": "Property",
+                "value": [
+                    "imec"
+                ]
+            },
+            "refDeviceModel": {
+                "type": "Relationship",
+                "object": "urn:ngsi-v2:cot-imec-be:devicemodel:keller-36xiw-ctd"
+            },
+            "samplingPoint": {
+                "type": "Property",
+                "value": "spt-00025-12"
+            },
+            "source": {
+                "type": "Property",
+                "value": "cot.iow.observed"
+            }
+        },
+        {
+            "id": "urn:ngsi-v2:cot-imec-be:devicemodel:keller-36xiw-ctd",
+            "type": "DeviceModel",
+            "brandName": {
+                "type": "Property",
+                "value": "Keller"
+            },
+            "category": {
+                "type": "Property",
+                "value": [
+                    "sensor"
+                ]
+            },
+            "controlledProperty": {
+                "type": "Property",
+                "value": [
+                    "temperature",
+                    "conductivity",
+                    "depth"
+                ]
+            },
+            "function": {
+                "type": "Property",
+                "value": [
+                    "sensing"
+                ]
+            },
+            "iow_tags": {
+                "type": "Property",
+                "value": [
+                    "external"
+                ]
+            },
+            "manufacturerName": {
+                "type": "Property",
+                "value": "Keller"
+            },
+            "modelName": {
+                "type": "Property",
+                "value": "36XiW-CTD"
+            },
+            "name": {
+                "type": "Property",
+                "value": "36XiW-CTD"
+            },
+            "supportedUnits": {
+                "type": "Property",
+                "value": [
+                    "CEL",
+                    "G42",
+                    "MMT"
+                ]
+            }
+        },
+        {
+            "id": "urn:ngsi-v2:cot-imec-be:Device:imec-iow-awUYPY6XTsis2nFcxnatsp",
+            "type": "Device",
+            "adminState": {
+                "type": "Property",
+                "value": "up"
+            },
+            "alternativeIds": {
+                "type": "Property",
+                "value": [
+                    "iow-sensor.c4ce971239dc7f67000b2d4830353637"
+                ]
+            },
+            "calibrationParameters": {
+                "type": "Property",
+                "value": {
+                    "conductivity": {
+                        "k_cell": 1.43
+                    },
+                    "temperature": {
+                        "offset": 0
+                    },
+                    "pH": {
+                        "gain": 1,
+                        "offset": 0
+                    },
+                    "copper_shield": {
+                        "weight": 0
+                    }
+                }
+            },
+            "dateLastValueReported": {
+                "type": "Property",
+                "value": {
+                    "@type": "DateTime",
+                    "@value": "2022-04-19T12:54:42.000Z"
+                }
+            },
+            "extraMeasurementAttributes": {
+                "type": "Property",
+                "value": {}
+            },
+            "healthState": {
+                "type": "Property",
+                "value": "up"
+            },
+            "maxTimeBetweenObservations": {
+                "type": "Property",
+                "value": 60
+            },
+            "name": {
+                "type": "Property",
+                "value": "sen-00056-70"
+            },
+            "owner": {
+                "type": "Property",
+                "value": [
+                    "imec"
+                ]
+            },
+            "refDeviceModel": {
+                "type": "Relationship",
+                "object": "urn:ngsi-v2:cot-imec-be:devicemodel:imec-iow-sensor-v0003"
+            },
+            "refParentDevice": {
+                "type": "Relationship",
+                "object": "urn:ngsi-v2:cot-imec-be:Device:imec-iow-bTQvEKx78u4xXVpbC2X6E3"
+            },
+            "source": {
+                "type": "Property",
+                "value": "cot.iow.observed"
+            }
+        },
+        {
+            "id": "urn:ngsi-v2:cot-imec-be:Device:imec-iow-bTQvEKx78u4xXVpbC2X6E3",
+            "type": "Device",
+            "adminState": {
+                "type": "Property",
+                "value": "up"
+            },
+            "alternativeIds": {
+                "type": "Property",
+                "value": [
+                    "octa.1150534b8a365020",
+                    "octa_dec.2328420974947684369"
+                ]
+            },
+            "batteryLevel": {
+                "type": "Property",
+                "value": 0.033333333,
+                "rawValue": {
+                    "type": "Property",
+                    "value": "3020"
+                },
+                "rawValueUnitCode": {
+                    "type": "Property",
+                    "value": "2Z"
+                }
+            },
+            "calibrationParameters": {
+                "type": "Property",
+                "value": {
+                    "battery": {
+                        "gain": 600,
+                        "offset": 3000
+                    }
+                }
+            },
+            "copyObservationAttributes": {
+                "type": "Property",
+                "value": [
+                    "batteryLevel"
+                ]
+            },
+            "dateLastValueReported": {
+                "type": "Property",
+                "value": {
+                    "@type": "DateTime",
+                    "@value": "2022-04-19T12:54:42.000Z"
+                }
+            },
+            "extraMeasurementAttributes": {
+                "type": "Property",
+                "value": {
+                    "location": true,
+                    "samplingPoint": true,
+                    "locationName": true
+                }
+            },
+            "healthState": {
+                "type": "Property",
+                "value": "up"
+            },
+            "location": {
+                "type": "GeoProperty",
+                "value": {
+                    "type": "Point",
+                    "coordinates": [
+                        2.801997831,
+                        51.12717843
+                    ]
+                },
+                "name": {
+                    "type": "Property",
+                    "value": "loc-00015-45"
+                }
+            },
+            "locationName": {
+                "type": "Property",
+                "value": "loc-00015-45"
+            },
+            "maxTimeBetweenObservations": {
+                "type": "Property",
+                "value": 60
+            },
+            "name": {
+                "type": "Property",
+                "value": "box-00027-15"
+            },
+            "owner": {
+                "type": "Property",
+                "value": [
+                    "imec"
+                ]
+            },
+            "refDeviceModel": {
+                "type": "Relationship",
+                "object": "urn:ngsi-v2:cot-imec-be:devicemodel:imec-iow-box-v0003"
+            },
+            "samplingPoint": {
+                "type": "Property",
+                "value": "spt-00028-03"
+            },
+            "source": {
+                "type": "Property",
+                "value": "cot.iow.observed"
+            }
+        },
+        {
+            "id": "urn:ngsi-v2:cot-imec-be:devicemodel:imec-iow-sensor-v0003",
+            "type": "DeviceModel",
+            "brandName": {
+                "type": "Property",
+                "value": "imec"
+            },
+            "category": {
+                "type": "Property",
+                "value": [
+                    "sensor"
+                ]
+            },
+            "controlledProperty": {
+                "type": "Property",
+                "value": [
+                    "temperature",
+                    "conductivity",
+                    "pH"
+                ]
+            },
+            "function": {
+                "type": "Property",
+                "value": [
+                    "sensing"
+                ]
+            },
+            "iow_tags": {
+                "type": "Property",
+                "value": [
+                    "wqmd_sensor"
+                ]
+            },
+            "manufacturerName": {
+                "type": "Property",
+                "value": "IMEC NL"
+            },
+            "maxTimeBetweenObservations": {
+                "type": "Property",
+                "value": 60
+            },
+            "modelName": {
+                "type": "Property",
+                "value": "iow-sensor-v0003"
+            },
+            "supportedUnits": {
+                "type": "Property",
+                "value": [
+                    "CEL",
+                    "D10",
+                    "Q30"
+                ]
+            }
+        },
+        {
+            "id": "urn:ngsi-v2:cot-imec-be:devicemodel:imec-iow-box-v0003",
+            "type": "DeviceModel",
+            "brandName": {
+                "type": "Property",
+                "value": "imec"
+            },
+            "category": {
+                "type": "Property",
+                "value": [
+                    "sensor"
+                ]
+            },
+            "controlledProperty": {
+                "type": "Property",
+                "value": [
+                    "deviceHumidity",
+                    "deviceTemperature",
+                    "temperature",
+                    "conductivity",
+                    "pH"
+                ]
+            },
+            "function": {
+                "type": "Property",
+                "value": [
+                    "sensing"
+                ]
+            },
+            "iow_tags": {
+                "type": "Property",
+                "value": [
+                    "wqmd_box"
+                ]
+            },
+            "manufacturerName": {
+                "type": "Property",
+                "value": "IMEC NL"
+            },
+            "maxTimeBetweenObservations": {
+                "type": "Property",
+                "value": 60
+            },
+            "modelName": {
+                "type": "Property",
+                "value": "iow-box-v0003"
+            }
+        },
+        {
+            "id": "urn:ngsi-v2:cot-imec-be:Device:vmm-iow-3FaAYYsWUdux93CwKaufYu",
+            "type": "Device",
+            "adminState": {
+                "type": "Property",
+                "value": "up"
+            },
+            "alternativeIds": {
+                "type": "Property",
+                "value": [
+                    "urn:ngsi-v2:cot-imec-be:WaterQualityObserved:vmm-iow-DL9QJxd5s6kzEvvTLv3XzY",
+                    "vmm-box-2066"
+                ]
+            },
+            "dateLastValueReported": {
+                "type": "Property",
+                "value": {
+                    "@type": "DateTime",
+                    "@value": "2022-04-19T11:48:18.000Z"
+                }
+            },
+            "extraMeasurementAttributes": {
+                "type": "Property",
+                "value": {
+                    "location": true,
+                    "samplingPoint": true,
+                    "locationName": true
+                }
+            },
+            "healthState": {
+                "type": "Property",
+                "value": "up"
+            },
+            "location": {
+                "type": "GeoProperty",
+                "value": {
+                    "type": "Point",
+                    "coordinates": [
+                        3.2134298,
+                        51.26948242
+                    ]
+                },
+                "name": {
+                    "type": "Property",
+                    "value": "loc-00036-79"
+                }
+            },
+            "locationName": {
+                "type": "Property",
+                "value": "loc-00036-79"
+            },
+            "maxTimeBetweenObservations": {
+                "type": "Property",
+                "value": 180
+            },
+            "name": {
+                "type": "Property",
+                "value": "vmm-box-2066"
+            },
+            "owner": {
+                "type": "Property",
+                "value": [
+                    "vmm"
+                ]
+            },
+            "refDeviceModel": {
+                "type": "Relationship",
+                "object": "urn:ngsi-v2:cot-imec-be:devicemodel:keller-36xiw-ctd"
+            },
+            "samplingPoint": {
+                "type": "Property",
+                "value": "spt-00000-87"
+            },
+            "source": {
+                "type": "Property",
+                "value": "cot.iow.observed"
+            }
+        },
+        {
+            "id": "urn:ngsi-v2:cot-imec-be:devicemodel:keller-36xiw-ctd",
+            "type": "DeviceModel",
+            "brandName": {
+                "type": "Property",
+                "value": "Keller"
+            },
+            "category": {
+                "type": "Property",
+                "value": [
+                    "sensor"
+                ]
+            },
+            "controlledProperty": {
+                "type": "Property",
+                "value": [
+                    "temperature",
+                    "conductivity",
+                    "depth"
+                ]
+            },
+            "function": {
+                "type": "Property",
+                "value": [
+                    "sensing"
+                ]
+            },
+            "iow_tags": {
+                "type": "Property",
+                "value": [
+                    "external"
+                ]
+            },
+            "manufacturerName": {
+                "type": "Property",
+                "value": "Keller"
+            },
+            "modelName": {
+                "type": "Property",
+                "value": "36XiW-CTD"
+            },
+            "name": {
+                "type": "Property",
+                "value": "36XiW-CTD"
+            },
+            "supportedUnits": {
+                "type": "Property",
+                "value": [
+                    "CEL",
+                    "G42",
+                    "MMT"
+                ]
+            }
+        }
+    ]
+}

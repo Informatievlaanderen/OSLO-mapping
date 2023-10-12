@@ -1,0 +1,106 @@
+{
+    "@context": [
+        "https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2022-10-17/context/waterkwaliteit-ap.jsonld",
+        "https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2022-10-17/context/statistiek-ap.jsonld",
+        "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28/context/ap-observaties-en-metingen.jsonld",
+        "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28/context/ap-sensoren-en-bemonstering.jsonld",
+        "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld",
+        {
+            "adms": "http://www.w3.org/ns/adms#",
+            "qudt-schema": "https://qudt.org/schema/qudt/",
+            "dcterms": "http://purl.org/dc/terms/",
+            "time": "http://www.w3.org/2006/time#",
+            "skos": "http://www.w3.org/2004/02/skos/core#",
+            "geosparql": "http://www.opengis.net/ont/geosparql#",
+            "qudt-unit": "https://qudt.org/vocab/unit/"
+        }
+    ],
+    "@graph": [
+        {
+            "@id": "_:wks001",
+            "@type": [
+                "WaterkwaliteitParameterObservatie",
+                "StatistischeObservatie"
+            ],
+            "Observatie.geobserveerdObject": "_:mpt001",
+            "WaterkwaliteitParameterObservatie.geobserveerdKenmerk": {
+                "@id": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0009",
+                "skos:prefLabel": "Geleidbaarheid (20°C)"
+            },
+            "WaterkwaliteitParameterObservatie.waterkwaliteitParameterResultaat": {
+                "@type": [
+                    "Maat",
+                    "Statistiek"
+                ],
+                "Maat.maat": {
+                    "@type": "KwantitatieveWaarde",
+                    "KwantitatieveWaarde.waarde": 410.25,
+                    "KwantitatieveWaarde.standaardEenheid": {
+                        "@type": "qudt-schema:Unit",
+                        "@id": "qudt-unit:MicroS-PER-CentiM"
+                    }
+                },
+                "Statistiek.statistiektype": "https://example.com/concept/statistiektype/gemiddelde"
+            },
+            "Observatie.fenomeentijd": {
+                "@type": "time:Instant",
+                "time:inXSDDateTime": {
+                    "@type": "xml-schema:date",
+                    "@value": "2022"
+                }
+            },
+            "Observatie.gebruikteProcedure": {
+                "@type": "Observatieprocedure",
+                "Observatieprocedure.type": "https://example.com/concept/observatieproceduretype/OW19",
+                "Observatieprocedure.input": {
+                    "@type": "Input",
+                    "Input.referentie": "_:obv001",
+                    "Input.type": "https://example.com/concept/inputtype/observatieverzameling"
+                }
+            }
+        },
+        {
+            "@id": "_:mpt001",
+            "@type": [
+                "Meetpunt",
+                "Bemonsteringspunt"
+            ],
+            "Bemonsteringsobject.identificator": {
+                "@type": "Identificator",
+                "Identificator.identificator": {
+                    "@value": "100000",
+                    "@type": "https://example.com/concept/identificatortype/puntnummer"
+                }
+            },
+            "dcterms:description": {
+                "@value": "Schaft (NL), Abdijweg, opw Kluizerbrug en versmalling, aan debietmeter",
+                "@language": "nl"
+            },
+            "Bemonsteringspunt.geometrie": {
+                "@type": "Punt",
+                "Geometrie.gml": {
+                    "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/31370\"><gml:coordinates>227995 222056</gml:coordinates><gml:Point>",
+                    "@type": "geosparql:gmlliteral"
+                }
+            },
+            "Bemonsteringsobject.type": "https://example.com/concept/meetpunttype/OW",
+            "Bemonsteringsobject.bemonsterdObject": "_:seg00"
+        },
+        {
+            "@id": "_:seg001",
+            "@type": "WaterObject",
+            "Waterobject.type": "https://example.com/concept/waterobjecttype/vha_segment",
+            "adms:identifier": {
+                "@type": "Identificator",
+                "Identificator.identificator": {
+                    "@value": "6010065",
+                    "@type": "https://example.com/concept/identificatortype/vha_segmentcode"
+                }
+            },
+            "dcterms:description": {
+                "@value": "WARMBEEK",
+                "@language": "nl"
+            }
+        }
+    ]
+}

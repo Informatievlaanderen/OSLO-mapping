@@ -1,0 +1,134 @@
+{
+  "@context": [
+    "https://data.vlaanderen.be/doc/applicatieprofiel/mobiliteit/vervoersknooppunten/erkendestandaard/2022-12-01/context/OSLO-Vervoersknooppunten-ap.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/infrastructuurelementen/erkendestandaard/2021-09-30/context/infrastructuurelementen-ap.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld",
+    "https://raw.githubusercontent.com/GeertThijs/MyFiles/master/ContextfileOrganisatie.jsonld",
+    {
+      "dcterms": "http://purl.org/dc/terms/",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "geosparql": "http://www.opengis.net/ont/geosparql#",
+      "NetwerkElement.netwerk": {
+        "@reverse": "https://data.vlaanderen.be/ns/netwerk#bestaatUit"
+      },
+      "cl-idt": "https://example.com/concept/identificatortype/",
+      "cl-plt": "https://example.com/concept/plaatstype/",
+      "cl-hcl": "https://example.com/concept/hoppinpuntclassificatie/",
+      "cl-hst": "https://example.com/concept/hoppinpuntstatus/",
+      "cl-mdt": "https://example.com/concept/mobiliteitsdiensttype/",
+      "cl-tkt": "https://example.com/concept/transportknooptype/",
+      "cl-trt": "https://example.com/concept/transporttype/",
+      "cl-avd": "https://example.com/concept/aanvullendedienst/",
+      "cl-ine": "https://example.com/concept/infrastructuurelement/"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "_:vkn001",
+      "@type": "Hoppinpunt",
+      "GeregistreerdVervoersknooppunt.registratie": {
+        "@type": "Identificator",
+        "Identificator.identificator": {
+          "@value": "1",
+          "@type": "cl-idt:hoppinpunt"
+        }
+      },
+      "Vervoersknooppunt.locatie": [
+        {
+          "@type": "Plaats",
+          "Plaats.plaatsnaam": {
+            "@value": "Aalst",
+            "@language": "nl"
+          },
+          "dcterms:type": {
+            "@id": "cl-plt:vervoersregio"
+          }
+        },
+        {
+          "@type": "Plaats",
+          "Plaats.plaatsnaam": {
+            "@value": "Aalst",
+            "@language": "nl"
+          },
+          "dcterms:type": {
+            "@id": "cl-plt:gemeente"
+          }
+        },
+        {
+          "@type": "Punt",
+          "Geometrie.gml": {
+            "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/31370\"><gml:coordinates>129234,71 181910,43</gml:coordinates><gml:Point>",
+            "@type": "geosparql:gmlliteral"
+          }
+        }
+      ],
+      "Vervoersknooppunt.naam": {
+        "@value": "Station Aalst",
+        "@language": "nl"
+      },
+      "Vervoersknooppunt.classificatie": "cl-hcl:interregionaal",
+      "Vervoersknooppunt.status": [
+        "cl-hst:uniekeverantwoordingsnota",
+        "cl-hst:lopende"
+      ],
+      "Vervoersknooppunt.dienst": [
+        "_:av001"
+      ],
+      "Vervoersknooppunt.transportobject": {
+        "@type": "Transportknoop",
+        "Transportknoop.type": "cl-tkt:treinstation",
+        "Transportknoop.geometrie": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/31370\"><gml:coordinates>126832,7 181419,33</gml:coordinates><gml:Point>",
+        "NetwerkElement.netwerk": [
+          {
+            "@type": "Transportnetwerk",
+            "Transportnetwerk.type": "cl-trt:inspire-trn",
+            "Transportnetwerk.geografischeNaam": {
+              "@value": "KernNet",
+              "@language": "nl"
+            }
+          },
+          {
+            "@type": "Transportnetwerk",
+            "Transportnetwerk.type": "cl-trt:inspire-trn",
+            "Transportnetwerk.geografischeNaam": {
+              "@value": "AanvullendNet",
+              "@language": "nl"
+            }
+          },
+          {
+            "@type": "Transportnetwerk",
+            "Transportnetwerk.type": "cl-trt:inspire-trn",
+            "Transportnetwerk.geografischeNaam": {
+              "@value": "FunctioneelNet",
+              "@language": "nl"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:av001",
+      "@type": "AanvullendeDienst",
+      "AanvullendeDienst.aanbieder": "_:aan099",
+      "AanvullendeDienst.naam": {
+        "@value": "Zitbanken wachtzaal",
+        "@language": "nl"
+      },
+      "AanvullendeDienst.type": "cl-avd:wachtacommodatie",
+      "AanvullendeDienst.beschikbaarOpInfrastructuurelement": [
+        {
+          "@type": "Zitbank"
+        }
+      ],
+      "rdf:value": 10
+    },
+    {
+      "@id": "_:aan099",
+      "@type": "Organisatie",
+      "voorkeursnaam": {
+        "@value": "Onbekend",
+        "@language": "nl"
+      }
+    }
+  ]
+}

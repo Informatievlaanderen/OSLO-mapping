@@ -1,0 +1,58 @@
+   "1-Aalst Station" : {
+"Locatie" : {
+"CRS" : "EPSG:31370",
+"Geometrie" : "POLYGON ((126966 181444,126958.387953251 181405.731656763,126936.710678119 181373.289321881,126904.268343237 181351.612046749,126866 181344,126827.731656763 181351.612046749,126795.289321881 181373.289321881,126773.612046749 181405.731656763,126766 181444,126773.612046749 181482.268343236,126795.289321881 181514.710678119,126827.731656763 181536.387953251,126866 181544,126904.268343237 181536.387953251,126936.710678119 181514.710678119,126958.387953251 181482.268343236,126966 181444))"
+},
+"Attributen" : {
+"ID" : "1",
+"Naam" : "Aalst Station",
+"Provincie" : "Oost-Vlaanderen",
+"VVR" : "Aalst",
+"Gemeente" : "Aalst",
+"Status" : "Goedgekeurd",
+"Categorie BVR" : "Interregionaal",
+"Beheer" : [ "Lokaal bestuur" ],
+"Mobiliteitsaanbod" : {
+"Deelsystemen" : [
+{
+"Naam" : "VOM deelmobiliteit",
+"Aanbod" : [ "Deelwagens, Deelfietsen" ]
+}
+],
+"Lijnbus halte" : "false",
+"Tramhalte" : "false",
+"Kernnet" : "true",
+"Aanvullend net" : "true",
+"Functioneel net" : "true",
+"Metrohalte" : "false",
+"Treinstation" : "true",
+"VOM flex halte" : "true",
+"Deelwagen VOM" : "false",
+"Deelfiets VOM" : "false",
+"Fietslockers" : "false",
+"Deelsteps" : "false",
+"Fietspomp" : "false",
+"Park and ride" : "false",
+"Kiss and ride" : "false"
+},
+"Aanvullend aanbod" : {
+"Wachtaccomodatie" : "false",
+"Vuilnisbak" : "false",
+"Pakketautomaat" : "false",
+"Bagagelocker" : "false",
+"Fietshersteldienst" : "false",
+"Sanitair" : "false",
+"Rode brievenbus" : "false",
+"AED" : "false",
+"Geld automaat" : "false",
+"Wifi" : "false",
+"Oplaadpunt smartphones" : "false",
+"Drinkerwatervoorziening" : "false",
+"Vergaderruimte" : "false",
+"Voedings-en krantenwinkel" : "false",
+"Eet- en drankgelegenheid" : "false",
+"Uitleenpunt kinderwagens" : "false",
+"Spin-off centrumdiensten" : "false"
+}
+}
+}

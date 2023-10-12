@@ -1,0 +1,404 @@
+[
+  {
+    "@id": "_:LUCAS2018",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Dataset"
+    ],
+    "http://www.w3.org/ns/dcat#record": [
+      {
+        "@type": [
+          "http://www.w3.org/ns/dcat#CatalogRecord"
+        ],
+        "http://purl.org/dc/terms/issued": [
+          {
+            "@type": [
+              "time:Instant"
+            ],
+            "time:inXSDDateTime": [
+              {
+                "@type": "xml-schema:dateTime",
+                "@value": "2022-01-01"
+              }
+            ]
+          }
+        ],
+        "http://purl.org/dc/terms/identifier": [
+          {
+            "@type": "http://www.w3.org/2000/01/rdf-schema#Literal",
+            "@value": "_:LUCAS_id1"
+          }
+        ],
+        "http://purl.org/dc/terms/modified": [
+          {
+            "@type": [
+              "time:Instant"
+            ],
+            "time:inXSDDateTime": [
+              {
+                "@type": "xml-schema:dateTime",
+                "@value": "2022-01-01"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "http://purl.org/dc/terms/publisher": [
+      {
+        "@type": [
+          "http://purl.org/dc/terms/Agent"
+        ],
+        "http://xmlns.com/foaf/0.1/name": [
+          {
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+            "@value": "European Commission"
+          }
+        ]
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": [
+          "time:Instant"
+        ],
+        "time:inXSDDateTime": [
+          {
+            "@type": "xml-schema:dateTime",
+            "@value": "2022-01-01"
+          }
+        ]
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/primaryTopic": [
+      {
+        "@id": "https://example.com/concept/dcat/hoofdonderwerp"
+      }
+    ],
+    "http://purl.org/dc/terms/identifier": [
+      {
+        "@type": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "@value": "_:LUCAS_id1"
+      },
+      {
+        "@type": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "@value": "_:LUCAS2018"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": [
+          "time:Instant"
+        ],
+        "time:inXSDDateTime": [
+          {
+            "@type": "xml-schema:dateTime",
+            "@value": "2022-01-01"
+          }
+        ]
+      }
+    ],
+    "http://data.vlaanderen.be/ns/metadata-dcat#statuut": [
+      {
+        "@id": "cl-statuut"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Data from the 2018 LUCAS campaign soil component containing soil properties data for 18,984 samples: pH (CaCl2 and H2O), organic carbon content, CaCO3, nitrogen, phosphorous, potassium, EC (Electrical conductivity), Oxalate extractable Fe and Al"
+      },
+      {
+        "@language": "nl",
+        "@value": "Gegevens van de bodemcomponent van de LUCAS-campagne uit 2018 met bodemeigenschappen voor 18.984 monsters: pH (CaCl2 en H2O), organisch koolstofgehalte, CaCO3, stikstof, fosfor, kalium, EC (elektrische geleidbaarheid), oxalaat-extraheerbaar Fe en Al"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "LUCAS 2018 TOPSOIL data"
+      }
+    ],
+    "http://purl.org/dc/terms/accessRights": [
+      {
+        "@id": "https://example.com/concept/dcat/toegankelijkheid"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#keyword": [
+      {
+        "@language": "en",
+        "@value": "LUCAS, LUCAS SOIL, clay, silt, sand, coarse fragments, pH, OC, SOC, Organic Carbon Content, carbonates, CaCO3, nitrogen, phosphorous"
+      }
+    ]
+  },
+  {
+    "@id": "_:bmo001",
+    "@type": [
+      "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject"
+    ],
+    "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature": [
+      {
+        "@id": ""
+      }
+    ],
+    "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation": [
+      {
+        "@id": "_:Crbn001"
+      },
+      {
+        "@id": "_:pH_CaCl2_001"
+      },
+      {
+        "@id": "_:pH_H2O_001"
+      }
+    ],
+    "https://data.vlaanderen.be/ns/observaties-en-metingen#Bemonsteringsobject.identificator": [
+      {
+        "@type": [
+          "http://www.w3.org/ns/adms#Identifier"
+        ],
+        "http://www.w3.org/2004/02/skos/core#notation": [
+          {
+            "@type": "https://example.com/concept/identificatortype/bemonsteringsobjectid",
+            "@value": "47862690"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/sosa/isResultOf": [
+      {
+        "@type": [
+          "http://www.w3.org/ns/sosa/Sampling"
+        ],
+        "http://www.w3.org/ns/sosa/resultTime": [
+          {
+            "@type": [
+              "time:Instant"
+            ],
+            "time:inXSDDateTime": [
+              {
+                "@type": "xml-schema:dateTime",
+                "@value": "2018-07-06"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "http://purl.org/dc/terms/type": [
+      {
+        "@id": "composite sample"
+      }
+    ],
+    "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.diepte": [
+      {
+        "@type": "https://example.com/concept/dieptetype/sampling_depth_upper_limit",
+        "@value": "0"
+      }
+    ],
+    "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape": [
+      {
+        "@type": [
+          "http://www.opengis.net/ont/sf#Point"
+        ],
+        "http://www.opengis.net/ont/geosparql#asGML": [
+          {
+            "@type": "http://www.opengis.net/ont/geosparql#gmlliteral",
+            "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates>16.13421178,47.15023795</gml:coordinates><gml:Point>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Crbn001",
+    "@type": [
+      "http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement"
+    ],
+    "http://www.w3.org/ns/sosa/usedProcedure": [
+      {
+        "@type": [
+          "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure"
+        ],
+        "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.specificatie": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@value": "https://www.iso.org/standard/18782.html"
+          }
+        ]
+      }
+    ],
+    "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty": [
+      {
+        "@id": "http://inspire.ec.europa.eu/codelist/SoilDerivedObjectParameterNameValue/organicCarbonContent"
+      }
+    ],
+    "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.identificator": [
+      {
+        "@type": [
+          "http://www.w3.org/ns/adms#Identifier"
+        ],
+        "http://www.w3.org/2004/02/skos/core#notation": [
+          {
+            "@type": "https://example.com/concept/identificatortype/observatieid_Crbn001",
+            "@value": "1"
+          }
+        ]
+      }
+    ],
+    "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result": [
+      {
+        "@type": [
+          "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
+        ],
+        "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure.value": [
+          {
+            "@type": [
+              "https://schema.org/QuantitativeValue"
+            ],
+            "https://schema.org/unitCode": [
+              {
+                "@id": "http://qudt.org/vocab/unit/GM-PER-KiloGM",
+                "@type": [
+                  "https://qudt.org/schema/qudt/Unit"
+                ]
+              }
+            ],
+            "https://schema.org/value": [
+              {
+                "@value": 12.4
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:pH_CaCl2_001",
+    "@type": [
+      "http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement"
+    ],
+    "http://www.w3.org/ns/sosa/usedProcedure": [
+      {
+        "@type": [
+          "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure"
+        ],
+        "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.specificatie": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@value": "https://www.iso.org/standard/40879.html"
+          }
+        ]
+      }
+    ],
+    "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty": [
+      {
+        "@id": "http://inspire.ec.europa.eu/codelist/SoilDerivedObjectParameterNameValue/pHValue"
+      }
+    ],
+    "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.identificator": [
+      {
+        "@type": [
+          "http://www.w3.org/ns/adms#Identifier"
+        ],
+        "http://www.w3.org/2004/02/skos/core#notation": [
+          {
+            "@type": "https://example.com/concept/identificatortype/observatieid_pH_CaCl2",
+            "@value": "1"
+          }
+        ]
+      }
+    ],
+    "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result": [
+      {
+        "@type": [
+          "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
+        ],
+        "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure.value": [
+          {
+            "@type": [
+              "https://schema.org/QuantitativeValue"
+            ],
+            "https://schema.org/unitCode": [
+              {
+                "@id": "http://qudt.org/vocab/unit/PH",
+                "@type": [
+                  "https://qudt.org/schema/qudt/Unit"
+                ]
+              }
+            ],
+            "https://schema.org/value": [
+              {
+                "@value": 4.1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:pH_H2O_001",
+    "@type": [
+      "http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement"
+    ],
+    "http://www.w3.org/ns/sosa/usedProcedure": [
+      {
+        "@type": [
+          "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure"
+        ],
+        "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.specificatie": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@value": "https://www.iso.org/standard/40879.html"
+          }
+        ]
+      }
+    ],
+    "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty": [
+      {
+        "@id": "http://inspire.ec.europa.eu/codelist/SoilDerivedObjectParameterNameValue/pHValue"
+      }
+    ],
+    "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.identificator": [
+      {
+        "@type": [
+          "http://www.w3.org/ns/adms#Identifier"
+        ],
+        "http://www.w3.org/2004/02/skos/core#notation": [
+          {
+            "@type": "https://example.com/concept/identificatortype/observatieid_pH_H2O",
+            "@value": "1"
+          }
+        ]
+      }
+    ],
+    "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result": [
+      {
+        "@type": [
+          "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
+        ],
+        "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure.value": [
+          {
+            "@type": [
+              "https://schema.org/QuantitativeValue"
+            ],
+            "https://schema.org/unitCode": [
+              {
+                "@id": "http://qudt.org/vocab/unit/PH",
+                "@type": [
+                  "https://qudt.org/schema/qudt/Unit"
+                ]
+              }
+            ],
+            "https://schema.org/value": [
+              {
+                "@value": 4.81
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

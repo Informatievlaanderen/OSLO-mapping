@@ -1,0 +1,244 @@
+---
+sort: 2
+---
+
+# Fietstelpunten
+
+
+<div style="text-align: left;"><img src="../images/Fietstelpunt.jpg" width="200" alt="My Image" id="hp"/>
+
+
+
+De telpunten langs belangrijke fietsverbindingen verzamelen heel wat nuttige informatie. Dankzij deze fietstelpunten brengen we het verplaatsingsgedrag van fietsers in kaart. Zo maken we het fietsbeleid slimmer en accurater.
+
+
+De fietstelpunten zijn fietstelpalen met display, maar ook onzichtbare fietstellussen. Hiermee kunnen we op een eenvoudige manier belangrijke info verzamelen: 
+
+<li>hoeveel fietsers rijden er per jaar?</li>
+<li>Wat is het aantal op piekmomenten?</li>
+<li>Wanneer zijn die piekmomenten?</li>
+<li>Wordt de route ook ‘s nachts gebruikt?</li>
+
+Fietstelpalen hebben ook een motiverende en sensibiliserende functie, fietsers weten dat ze niet alleen zijn en ook de omgeving ziet dat mensen bewust een mobiliteitskeuze maken. De data die we hieruit verkrijgen helpt ons het fietsbeleid te optimaliseren.
+
+</div>
+
+
+ 
+
+Fietstelpunt 
+
+<p align="center"><img src="../images/Fietstellus_schets.jpg" width="60%" text-align="center"></p>
+
+
+## Vereenvoudigd implementatie model
+
+<div id="enlargeImage">
+<a href="https://raw.githubusercontent.com/samuvack/OSLO-mapping/main/images/Fietstellus_overview.jpg"><img src="../images/Fietstellus_overview.jpg" width="100%" text-align="center"></a>
+</div>
+
+
+
+## Data input
+
+```json
+{
+"data":
+[
+{
+"site ID": 1,
+"richting" : "OUT",
+"type": "FIETSERS",
+"van":"2023-06-01 00:00:00.0",
+"tot": "2023-06-01 00:15:00.0",
+"aantal": 0
+}
+{
+"site ID": 47,
+"richting" : "IN",
+"type": "FIETSERS",
+"van":"2023-06-01 00:00:00.0",
+"tot": "2023-06-01 00:15:00.0",
+"aantal": 0
+}],
+
+"sites":
+[
+{
+    "site ID" : "1",
+    "site nr" : "100046096",
+    "long": 4.456121776137429,
+    "lang": 50.91618331151478,
+    "naam": "Machelen",
+    "domein" : "Vlaamse Overheid A. Wegen enVerkeer",
+    "wegnr": "T2110002",
+    "district": "AWV212",
+    "gemeente" : "Machelen",
+    "interval":"15",
+    "datum_van":"2019-08-22"
+
+}],
+
+
+"richtingen":[
+    {
+"site ID":1,
+"richting": "IN",
+"naam":"Machelen Cyclists rich. Brucargo"},
+{
+"site ID":21,
+"richting": "OUT",
+"naam":"Bilzen Fietsers rich. Bilzen"}
+]
+}
+
+```
+
+## OSLO mapping
+
+```json
+{
+    "@context": [
+        "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14/context/Verkeersmetingen-ap.jsonld",
+        "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28/context/ap-sensoren-en-bemonstering.jsonld",
+        "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28/context/ap-observaties-en-metingen.jsonld",
+        "https://raw.githubusercontent.com/samuvack/context/main/DCAT_context.json",
+        "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld",
+        {
+            "schema": "http://schema.org/",
+            "dct": "http://purl.org/dc/terms/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "geosparql": "http://www.opengis.net/ont/geosparql#",
+            "qudt-unit": "http://qudt.org/vocab/unit/",
+            "qudt-schema": "https://qudt.org/schema/qudt/",
+            "dcterms": "http://purl.org/dc/terms/",
+            "time": "http://www.w3.org/2006/time#",
+
+            "cl-vrt":"https://example.com/concept/voertuigtype/",
+            "cl-vkt": "https://example.com/concept/verkeerskenmerktype",
+            "cl-trt" : "https://example.com/concept/toepassingsRichtingtype",
+            "cl-mit": "https://example.com/concept/meetinstrumenttype",
+            "cl-opt:type": "https://example.com/concept/observatieproceduret"
+            
+        }
+    ],
+    "@graph": [
+        {
+            "@id": "_:tellusdata001",
+            "@type": "Dataset",
+            "Dataset.titel": {
+                "@language": "nl",
+                "@value": "Fietstellingen - Agentschap Wegen en Verkeer"
+            },
+            "Dataset.beschrijving": [
+                {
+                    "@language": "nl",
+                    "@value": "Deze dataset omvat zowel de automatische fietstellingen van AWV, als de locaties waar de tellingen plaatsvinden."
+                }
+            ],
+            "Dataset.toegankelijkheid": "cl-dcat:NORMAL",
+            "Dataset.trefwoord": [
+                {
+                    "@language": "nl",
+                    "@value": "fietstellingen"
+                }
+            ]
+        },
+        {
+            "@id": "_:vrm001",
+            "@type": "Verkeersmeting",
+            "Observatie.geobserveerdKenmerk": {
+                "@type": "Verkeerskenmerk",
+                "Verkeerskenmerk.type": "cl-vkt:aantalvoertuigen",
+                "Verkeerskenmerk.voertuigType": "cl-vrt:fiets"
+            },
+            "Observatie.geobserveerdObject": {
+                "@type": ["Verkeersmeetpunt","Telling"],
+                "Verkeersmeetpunt.netwerkreferentie": {
+                    "@type": "Puntreferentie",
+                    "Netwerkreferentie.element": "_:wgs001",
+                    "Linkreferentie.toepassingsRichting": "gelijklopend",
+                    "Puntreferentie.opPositie": {
+                        "@type": "Lengte",
+                        "KwantitatieveWaarde.waarde": "300",
+                        "KwantitatieveWaarde.standaardEenheid": {
+                            "@value": "m",
+                            "@type": "ucum:ucumunit"
+                        }
+                    }
+                },
+                "Bemonsteringsobject.bemonsterdObject": "_:rri001"
+            },
+            "Observatie.fenomeentijd": {
+                "@type": "time:ProperInterval",
+                "time:hasBeginning": {
+                    "@type": "time:Instant",
+                    "time:inXSDDateTime": {
+                        "@type": "xml-schema:dateTime",
+                        "@value": "20230601T00:00:00.000"
+                    }
+                },
+                "time:hasEnd": {
+                    "@type": "time:Instant",
+                    "time:inXSDDateTime": {
+                        "@type": "xml-schema:dateTime",
+                        "@value": "20230601T00:00:15.000"
+                    }
+                }
+            },
+            "Telling.resultaat": 60,
+            "Observatie.uitgevoerdMet": "_:mti001"
+        },
+        {
+            "@id": "_:rri001",
+            "@type": "Rijrichting",
+            "Rijrichting.netwerkreferentie": {
+                "@type": "Linkreferentie",
+                "Netwerkreferentie.element": "_:wgs001",
+                "Linkreferentie.toepassingsRichting": "cl-trt:tweerichting"
+            },
+            "Rijrichting.rijrichting": "cl-trt:tweerichting"
+        },
+        {
+            "@id":"_:wgs001",
+            "@type":"Wegsegment",
+            "Wegsegment.beginknoop":"_:wgkn001",
+            "Wegsegment.eindknoop":"_:wgkn002"
+        },
+        {
+            "@id": "_:wgkn001",
+            "@type": "Wegknoop",
+            "Wegknoop.geometrie": {
+                "@type": "Punt",
+                "Geometrie.gml": {
+                    "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates>14.13421178,46.15023795</gml:coordinates><gml:Point>",
+                    "@type": "geosparql:gmlliteral"
+                }
+        }
+        },
+        {
+            "@id": "_:wgkn002",
+            "@type": "Wegknoop",
+            "Wegknoop.geometrie": {
+                "@type": "Punt",
+                "Geometrie.gml": {
+                    "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates>17.13421178,49.15023795</gml:coordinates><gml:Point>",
+                    "@type": "geosparql:gmlliteral"
+                }
+        }
+        },
+
+        {
+            "@id": "_:mti001",
+            "@type": "Sensor",
+            "Systeem.type": "cl-mit:fietstelslang",
+            "Systeem.implementeert":{
+                "@type":"Observatieproceduretype",
+                "Procedure.type":"cl-opt:type"}
+
+        }
+    ]
+}
+
+
+```

@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://brechtvdv.github.io/demo-data/OSLO-airAndWater-Core-ap.jsonld",
+    {
+      "ldes": "https://w3id.org/ldes#",
+      "tree": "https://w3id.org/tree#",
+      "tree:member": {
+        "@type": "@id"
+      }
+    }
+  ],
+  "@graph":[
+
+{
+      "@id": "https://lodi.ilabt.imec.be/odala/data/observations/17208065381",
+      "@type": "ObservationCollection",
+      "ObservationCollection.hasFeatureOfInterest": {
+        "@type": "SpatialSamplingFeature",
+        "SamplingFeature.sampledFeature": "http://www.wikidata.org/entity/Q56245086",
+        "http://www.w3.org/ns/locn#geometry": {
+          "@type": "Geometry",
+          "Geometry.asWkt": "<http://www.opengis.net/def/crs/EPSG/0/4979> POINT(50.89226691784 4.38381582499 26.0)"
+        }
+      },
+      "ObservationCollection.madeBySensor": {
+        "@type": [
+          "Sensor",
+          "Device"
+        ],
+        "@id": "https://lodi.ilabt.imec.be/odala/data/sensors/26244",
+        "Device.manufacturerName": "various",
+        "Device.modelName": "DHT22"
+      },
+      "ObservationCollection.resultTime": "2023-09-20T14:26:01Z",
+      "ObservationCollection.hasMember": [
+        {
+          "type": "Observation",
+          "@id": "https://lodi.ilabt.imec.be/odala/data/observations/38894976985",
+          "Observation.observedProperty": "http://www.wikidata.org/entity/Q11466",
+          "Observation.hasSimpleResult": {
+            "@type": "http://w3id.org/lindt/custom_datatypes#temperature",
+            "@value": "22.80 Cel"
+          }
+        },
+        {
+          "type": "Observation",
+          "@id": "https://lodi.ilabt.imec.be/odala/data/observations/38894976986",
+          "Observation.observedProperty": "http://www.wikidata.org/entity/Q2499617",
+          "Observation.hasSimpleResult": {
+            "@type": "http://w3id.org/lindt/custom_datatypes#dimensionless",
+            "@value": "99.90 %"
+          }
+        }
+      ]
+}
+]
+}

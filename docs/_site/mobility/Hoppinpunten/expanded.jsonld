@@ -1,0 +1,259 @@
+[
+  {
+    "@id": "_:vkn001",
+    "@type": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#Hoppinpunt",
+    "http://www.w3.org/ns/adms#identifier": {
+      "@type": "http://www.w3.org/ns/adms#Identifier",
+      "http://www.w3.org/2004/02/skos/core#notation": {
+        "@type": "https://example.com/concept/identificatortype/hoppinpunt",
+        "@value": "1"
+      }
+    },
+    "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#Vervoersknooppunt.classificatie": "https://example.com/concept/hoppinpuntclassificatie/interregionaal",
+    "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#dienst": "_:av001",
+    "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#infrastructuurelement": [
+      "_:laderEV001",
+      "_:fietsstalling001",
+      "_:hoppinzuil010"
+    ],
+    "http://purl.org/dc/terms/spatial": [
+      {
+        "@type": "http://purl.org/dc/terms/Location",
+        "http://www.w3.org/2000/01/rdf-schema#label": {
+          "@language": "nl",
+          "@value": "Aalst"
+        },
+        "http://purl.org/dc/terms/type": {
+          "@value": "cl-plt:vervoersregio"
+        }
+      },
+      {
+        "@type": "http://purl.org/dc/terms/Location",
+        "http://www.w3.org/2000/01/rdf-schema#label": {
+          "@language": "nl",
+          "@value": "Aalst"
+        },
+        "http://purl.org/dc/terms/type": {
+          "@value": "cl-plt:gemeente"
+        }
+      },
+      {
+        "@type": "http://www.opengis.net/ont/eo-geojson/1.0/",
+        "http://www.opengis.net/ont/geosparql#asGML": {
+          "@type": "http://www.opengis.net/ont/geosparql#gmlliteral",
+          "@value": "<gml:Polygon srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/31370\"><gml:coordinates>126966 181444,126958.387953251 181405.731656763,126936.710678119 181373.289321881,126904.268343237 181351.612046749,126866 181344,126827.731656763 181351.612046749,126795.289321881 181373.289321881,126773.612046749 181405.731656763,126766 181444,126773.612046749 181482.268343236,126795.289321881 181514.710678119,126827.731656763 181536.387953251,126866 181544,126904.268343237 181536.387953251,126936.710678119 181514.710678119,126958.387953251 181482.268343236,126966 181444</gml:coordinates><gml:Polygon>"
+        }
+      }
+    ],
+    "http://purl.org/dc/terms/title": {
+      "@language": "nl",
+      "@value": "Station Aalst"
+    },
+    "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#Vervoersknooppunt.status": "https://example.com/concept/hoppinpuntstatus/goedgekeurd",
+    "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#toegankelijkheid": [
+      {
+        "@type": "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Toegankelijkheid",
+        "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#niveau": "cl-tni:zelfstandigToegankelijk",
+        "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#onderdeel": "cl-ton:lift",
+        "http://purl.org/dc/terms/type": "cl-tty:motorischeBeperking"
+      },
+      {
+        "@type": "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Toegankelijkheid"
+      }
+    ],
+    "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#transportobject": {
+      "@type": "https://data.vlaanderen.be/ns/transportnetwerk#Transportknoop",
+      "@reverse": {
+        "https://data.vlaanderen.be/ns/netwerk#bestaatUit": [
+          {
+            "@type": "https://data.vlaanderen.be/ns/transportnetwerk#Transportnetwerk",
+            "https://data.vlaanderen.be/ns/transportnetwerk#geografischeNaam": {
+              "@language": "nl",
+              "@value": "KernNet"
+            }
+          },
+          {
+            "@type": "https://data.vlaanderen.be/ns/transportnetwerk#Transportnetwerk",
+            "https://data.vlaanderen.be/ns/transportnetwerk#geografischeNaam": {
+              "@language": "nl",
+              "@value": "AanvullendNet"
+            }
+          },
+          {
+            "@type": "https://data.vlaanderen.be/ns/transportnetwerk#Transportnetwerk",
+            "https://data.vlaanderen.be/ns/transportnetwerk#geografischeNaam": {
+              "@language": "nl",
+              "@value": "FunctioneelNet"
+            }
+          }
+        ]
+      },
+      "https://data.vlaanderen.be/ns/netwerk#Knoop.geometrie": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/31370\"><gml:coordinates>0 0</gml:coordinates><gml:Point>",
+      "http://purl.org/dc/terms/type": "https://example.com/concept/transportknooptype/treinstation"
+    },
+    "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#wegbeheerder": {
+      "@type": "http://www.w3.org/ns/org#Organization",
+      "http://www.w3.org/2004/02/skos/core#prefLabel": {
+        "@language": "nl",
+        "@value": "Aalst"
+      }
+    }
+  },
+  {
+    "@id": "_:dienst001",
+    "@type": "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst",
+    "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#aanbieder": "_:organisatie001",
+    "http://purl.org/dc/terms/title": {
+      "@language": "nl",
+      "@value": "Deelwagen"
+    },
+    "http://purl.org/dc/terms/type": "https://example.com/concept/mobiliteitsdiensttype/deelwagen"
+  },
+  {
+    "@id": "_:fietsstalling001",
+    "@type": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Fietsstalling",
+    "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#afsluitbaar": {
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+      "@value": "True"
+    },
+    "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#fietsdelen": {
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+      "@value": "False"
+    },
+    "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#overdekt": {
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+      "@value": "True"
+    },
+    "http://schema.mobivoc.org/#capacity": {
+      "@type": "http://schema.mobivoc.org/#Capacity",
+      "http://schema.mobivoc.org/#maximumValue": {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 5
+      },
+      "http://schema.mobivoc.org/#totalCapacity": {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 20
+      },
+      "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#voertuigtype": {
+        "@type": "cl-vrtgtype:fiets",
+        "@value": "fiets"
+      }
+    },
+    "http://schema.mobivoc.org/#feature": "cl-pfk:buitenmaatse_fietsen",
+    "http://schema.org/openingHoursSpecification": {
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime",
+      "http://data.europa.eu/m8g/startTime": {
+        "@type": "http://www.w3.org/2006/time#Instant",
+        "http://www.w3.org/2006/time#inXSDDateTime": {
+          "@type": "xsd:dateTime",
+          "@value": "2018-07-06"
+        }
+      },
+      "http://data.europa.eu/m8g/endTime": {
+        "@type": "http://www.w3.org/2006/time#Instant",
+        "http://www.w3.org/2006/time#inXSDDateTime": {
+          "@type": "xsd:dateTime",
+          "@value": "2018-07-06"
+        }
+      }
+    }
+  },
+  {
+    "@id": "_:hoppinzuil010",
+    "@type": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#Hoppinzuil",
+    "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Hoppinzuil.zuilnaam": {
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@value": "Hoppinzuil Aalst"
+    },
+    "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Hoppinzuil.zuilnummer": {
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@value": "10"
+    },
+    "http://www.w3.org/ns/locn#geometry": {
+      "@type": "http://www.opengis.net/ont/sf#Point",
+      "http://www.opengis.net/ont/geosparql#asGML": {
+        "@type": "http://www.opengis.net/ont/geosparql#gmlliteral",
+        "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/31370\"><gml:coordinates>156579.64 216540.27</gml:coordinates><gml:Point>"
+      }
+    }
+  },
+  {
+    "@id": "_:laderEV001",
+    "@type": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#Lader",
+    "http://schema.mobivoc.org/#plugType": "snellader",
+    "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#Lader.vervoermiddel": "https://example.com/concept/vervoersmiddel/auto",
+    "rdfs:value": {
+      "@value": 1
+    }
+  },
+  {
+    "@id": "_:av001",
+    "@type": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#AanvullendeDienst",
+    "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#aanbieder": "_:aan099",
+    "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#AanvullendeDienst.beschikbaarOpInfrastructuurelement": {
+      "@type": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Zitbank"
+    },
+    "http://purl.org/dc/terms/title": {
+      "@language": "nl",
+      "@value": "Zitbanken wachtzaal"
+    },
+    "http://purl.org/dc/terms/type": "https://example.com/concept/aanvullendedienst/wachtacommodatie",
+    "rdfs:value": {
+      "@value": 10
+    }
+  },
+  {
+    "@id": "_:organisatie001",
+    "@type": [
+      "http://www.w3.org/ns/regorg#RegisteredOrganization",
+      "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Aanbieder",
+      "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Uitvoerder"
+    ],
+    "http://schema.org/contactPoint": {
+      "@type": "http://schema.org/ContactPoint",
+      "http://www.w3.org/ns/locn#address": {
+        "@type": "http://www.w3.org/ns/locn#Address",
+        "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer": {
+          "@type": "http://www.w3.org/2001/XMLSchema#string",
+          "@value": "b"
+        },
+        "https://data.vlaanderen.be/ns/adres#gemeentenaam": {
+          "@language": "nl",
+          "@value": "Gent"
+        },
+        "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer": {
+          "@type": "http://www.w3.org/2001/XMLSchema#string",
+          "@value": "65"
+        },
+        "http://www.w3.org/ns/locn#postCode": {
+          "@type": "http://www.w3.org/2001/XMLSchema#string",
+          "@value": "9000"
+        },
+        "http://www.w3.org/ns/locn#thoroughfare": {
+          "@language": "nl",
+          "@value": "Koningin Maria Hendrikaplein"
+        }
+      },
+      "http://schema.org/telephone": {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "093884565"
+      }
+    },
+    "http://xmlns.com/foaf/0.1/homepage": {
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@value": "www.cambio.be"
+    },
+    "http://schema.org/logo": "https://cambio.png",
+    "http://www.w3.org/ns/regorg#registration": {
+      "@type": "http://www.w3.org/ns/adms#Identifier",
+      "http://www.w3.org/2004/02/skos/core#notation": {
+        "@type": "https://example.com/concept/identificatortype/kbonummer",
+        "@value": "0479.561.664"
+      }
+    },
+    "http://www.w3.org/2004/02/skos/core#prefLabel": {
+      "@language": "nl",
+      "@value": "Cambio Vlaanderen"
+    }
+  }
+]

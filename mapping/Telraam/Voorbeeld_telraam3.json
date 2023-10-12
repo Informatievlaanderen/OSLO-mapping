@@ -1,0 +1,46 @@
+{
+  "status_code": 200,
+  "message": "ok",
+  "cameras": [
+    {
+      "instance_id": 1692,
+      "mac": 202481587145269,
+      "user_id": 414,
+      "segment_id": 348917,
+      "direction": true,
+      "status": "non_active",
+      "manual": false,
+      "time_added": "2019-10-02T19:42:54.343Z",
+      "time_end": null,
+      "last_data_package": "2021-05-02T10:56:15.402Z",
+      "first_data_package": "1970-01-01T00:00:00.000Z",
+      "pedestrians_left": false,
+      "pedestrians_right": true,
+      "bikes_left": true,
+      "bikes_right": true,
+      "cars_left": true,
+      "cars_right": true,
+      "is_calibration_done": "yes"
+    },
+    {
+      "instance_id": 1691,
+      "mac": 202481587145269,
+      "user_id": 414,
+      "segment_id": 348917,
+      "direction": false,
+      "status": "non_active",
+      "manual": false,
+      "time_added": "2019-06-26T07:00:37.546Z",
+      "time_end": "2019-10-02T19:42:54.343Z",
+      "last_data_package": "2021-01-05T08:33:37.913Z",
+      "first_data_package": "1970-01-01T00:00:00.000Z",
+      "pedestrians_left": false,
+      "pedestrians_right": true,
+      "bikes_left": true,
+      "bikes_right": true,
+      "cars_left": true,
+      "cars_right": true,
+      "is_calibration_done": "no"
+    }
+  ]
+}

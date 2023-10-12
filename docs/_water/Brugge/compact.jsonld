@@ -1,0 +1,168 @@
+{
+    "@context": [
+        "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28/context/ap-sensoren-en-bemonstering.jsonld",
+        "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28/context/ap-observaties-en-metingen.jsonld",
+        {
+            "time": "http://www.w3.org/2006/time#",
+            "qudt-schema": "https://qudt.org/schema/qudt/",
+            "xml-schema": "http://www.w3.org/2001/XMLSchema#",
+            "geosparql": "http://www.opengis.net/ont/geosparql#",
+            "cl-bpt": "https://example.com/concept/bemonsteringsproceduretype/",
+            "cl-bet": "https://example.com/concept/bemonsteraartype/",
+            "cl-bco": "https://example.com/concept/bemonsteringsconditietype/",
+            "cl-ovt": "https://example.com/concept/observatieverzamelingtype/",
+            "cl-obt": "https://example.com/concept/observatietype/",
+            "cl-wrt": "https://example.com/concept/weertype/",
+            "cl-idt": "https://example.com/concept/identificatortype/",
+            "cl-mat": "https://example.com/concept/materiaaltype/",
+            "cl-mot": "https://example.com/concept/monstertype/",
+            "cl-fch": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/",
+            "qudt-unit": "https://qudt.org/vocab/unit/"
+        }
+    ],
+    "@graph": [
+        {
+            "@type": "Bemonstering",
+            "Bemonstering.bemonsteringstijdstip": {
+                "@type": "time:Instant",
+                "time:inXSDDateTime": {
+                    "@type": "xml-schema:dateTime",
+                    "@value": "20210111T12:05:51.000"
+                }
+            },
+            "Bemonstering.bemonsterdObject": "_:mpt001",
+            "Bemonstering.uitgevoerdDoor": {
+                "@type": "Organisatie",
+                "voorkeursnaam": "BVP/KD"
+            },
+            "gebruikteProcedure": {
+                "@type": "Bemonsteringsprocedure",
+                "Bemonsteringsprocedure.type": "cl-bpt:indirect",
+                "Bemonsteringsprocedure.specificatie": "https://reflabos.vito.be/2022/WAC_I_A_003.pdf"
+            },
+            "Bemonstering.uitgevoerdMet": {
+                "@type": "Bemonsteraar",
+                "Bemonsteraar.type": [
+                    "cl-bet#staalnamekooi",
+                    "cl-bet#fles"
+                ]
+            },
+            "Bemonstering.conditie": [
+                "_:wra001",
+                ""
+            ],
+            "Bemonstering.resultaat": "_:mon001"
+        },
+        {
+            "@id": "_:mon001",
+            "@type": "Monster",
+            "Monster.materiaalklasse": "cl-mat:water",
+            "Monster.bemonsteringstijdstip": {
+                "@type": "time:Instant",
+                "time:inXSDDateTime": {
+                    "@type": "xml-schema:dateTime",
+                    "@value": "20210111T12:05:51.000"
+                }
+            },
+            "Monster.bemonsterdObject": "_:mpt001",
+            "Bemonsteringsobject.identificator": {
+                "@type": "Identificator",
+                "Identificator.identificator": {
+                    "@value": "2021000015",
+                    "@type": "cl-idt:monstercode"
+                }
+            },
+            "Monster.monstertype": "cl-mot:schepstaal",
+            "Bemonsteringsobject.geassocieerdeObservatie": [
+                "_:obs001",
+                ""
+            ]
+        },
+        {
+            "@id": "_:mpt001",
+            "@type": [
+                "Meetpunt",
+                "Bemonsteringspunt"
+            ],
+            "Bemonsteringsobject.identificator": {
+                "@type": "Identificator",
+                "Identificator.identificator": {
+                    "@value": "R4",
+                    "@type": "cl-idt:meetplaatsnummer"
+                }
+            },
+            "Bemonsteringspunt.geometrie": {
+                "@type": "Punt",
+                "Geometrie.gml": {
+                    "Geometrie.gml": {
+                        "@value": "<gml:Point srsName=\"http: \\//www.opengis.net/def/crs/EPSG/0/4326\"> <gml:coordinates>51.2178744,3.229362</gml:coordinates><gml:Point>",
+                        "@type": "geosparql:gmlliteral"
+                    }
+                },
+                "dcterms:spatial": {
+                    "@value": "Ter Duinenbrug",
+                    "@language": "nl"
+                },
+                "Bemonsteringsobject.bemonsterdObject": {
+                    "@type": "WaterObject",
+                    "WaterObject.type": "cl-wat:waterloop",
+                    "dcterms:description": {
+                        "@value": "Langerei",
+                        "@language": "nl"
+                    }
+                }
+            }
+        },
+        {
+            "@id": "_:obv001",
+            "@type": "Observatieverzameling",
+            "dcterms:type": "cl-ovt:metingenterplaatse",
+            "Observatieverzameling.geobserveerdObject": "_:mon001",
+            "Observatieverzameling.heeftLid": [
+                "_:obs001",
+                ""
+            ]
+        },
+        {
+            "@id": "_:obs001",
+            "@type": "Observatie",
+            "Observatie.type": "cl-obt:metingterplaatse",
+            "Observatie.kenmerktype": "cl-fch:0030",
+            "Observatie.resultaat": {
+                "@type": "Maat",
+                "Maat.maat": {
+                    "@type": "KwantitatieveWaarde",
+                    "KwantitatieveWaarde.waarde": 3.6,
+                    "KwantitatieveWaarde.standaardEenheid": {
+                        "@type": "qudt-schema:Unit",
+                        "@id": "qudt-unit:DEG_C"
+                    }
+                }
+            }
+        },
+        {
+            "@id": "_:wra001",
+            "@type": "Observatieverzameling",
+            "dcterms:type": "cl-ovt:weerrapport",
+            "Observatieverzameling.geobserveerdObject": "_:mpt001",
+            "Observatieverzameling.heeftLid": [
+                "_:wob001",
+                ""
+            ]
+        },
+        {
+            "@id": "_:wob001",
+            "@type": "Observatie",
+            "Observatie.type": "cl-obt:weerobservatie",
+            "Observatie.kenmerktype": "cl-wrt:zon",
+            "Observatie.fenomeentijd": {
+                "@type": "time:Instant",
+                "time:inXSDDateTime": {
+                    "@type": "xml-schema:dateTime",
+                    "@value": "20210111T12:05:51.000"
+                }
+            },
+            "Observatie.resultaat": "cl-wrt:zon/bewolkt"
+        }
+    ]
+}
