@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Input data
-parent: Telraam
+parent: Verkeerscentrum
 nav_order: 0
 ---
 

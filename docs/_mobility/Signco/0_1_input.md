@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Input data
-parent: Documentatie
-grand_parent: Signco
+parent: Signco
 nav_order: 0
 ---
 
@@ -60,6 +59,97 @@ Haalt alle meetpunten op. Uit deze gegevens kunt u de guid halen die u bij de an
   ]
 }
 
+```
+
+## Surveys
+
+```json
+{
+  "id": "903e2e28-919e-4fcf-8a68-8a46bc3c9b94",
+  "reference": "131 21376 Bruges (May 2023)",
+  "timezone": "Europe/Brussels",
+  "createdAt": "2023-07-27T14:51:23.000Z",
+  "pois": [
+    {
+      "name": "Site 1",
+      "address": "Pater Damiaanstraat",
+      "id": "5ed752d5-a754-415c-97a1-0ca27cff1a81",
+      "type": "site",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2148652151227,
+          51.2095512122563
+        ]
+      },
+      "country": "BE",
+      "subdivision": "BE-BRU",
+      "origins": [
+        {
+          "id": "db3859a7-b60d-4688-92fb-00a6038788c2",
+          "name": "A",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              3.21470361202955,
+              51.209493870826
+            ]
+          }
+        },
+        {
+          "id": "26f39f88-fa0e-4c7e-aed0-f698490a0dce",
+          "name": "B",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              3.21502950042486,
+              51.2096106540299
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Site 2",
+      "address": "Roompotstraat",
+      "id": "bcb2c52e-f4b2-4265-9e85-84df06bfd1a5",
+      "type": "site",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.21467377245426,
+          51.2099479793909
+        ]
+      },
+      "country": "BE",
+      "subdivision": "BE-BRU",
+      "origins": [
+        {
+          "id": "8b93be49-3be6-4b1b-b4cc-f378f28879e3",
+          "name": "A",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              3.21448434144259,
+              51.2098786661622
+            ]
+          }
+        },
+        {
+          "id": "be6c5883-4f0d-4b55-a00f-097a0636df06",
+          "name": "B",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              3.21487192064524,
+              51.2100202330697
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ## Verkeersmeting aantal voertuigen

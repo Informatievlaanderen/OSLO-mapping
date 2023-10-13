@@ -2,9 +2,10 @@
 layout: default
 title: LUCAS
 has_children: true
+has_toc: false
 ---
 
 # LUCAS
 
 {: .note}
-We are currently working on the documentation of the LUCAS dataset
+De documentatie van deze OSLO mapping wordt momenteel uitgewerkt.

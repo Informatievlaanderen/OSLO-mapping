@@ -2,6 +2,7 @@
 layout: default
 title: Data voorbeeld
 parent: ILVO
+nav_exclude: true
 nav_order: 2
 ---
 

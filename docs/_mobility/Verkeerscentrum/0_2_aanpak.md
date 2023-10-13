@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Aanpak
-parent: Signco
+parent: Verkeerscentrum
 nav_order: 1
 ---
 

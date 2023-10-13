@@ -13,7 +13,7 @@ Deze dataset omvat de <b>metingen over de waterkwaliteit van het oppervlaktewate
 Parameters: Temperatuur, Zuurstof, pH, Ammonium, Nitraat, Orthofosfaat, Chloride, BOD, COD, TOC, Totaal stikstof, Sulfaat.
 <br>
 
-![](/images/Brugge.jpg)
+![](/OSLO-mapping/images/Brugge.jpg)
 
 Uitgever: stad Brugge <br>
 Versie: ODALA versie <br>

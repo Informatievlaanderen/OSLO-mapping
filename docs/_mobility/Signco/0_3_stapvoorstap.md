@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Stap voor stap
-parent: Documentatie
-grand_parent: Signco
+parent: Signco
 nav_order: 2
 ---
 

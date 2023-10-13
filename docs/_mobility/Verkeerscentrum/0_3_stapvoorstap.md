@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Stap voor stap
-parent: Telraam
+parent: Verkeerscentrum
 nav_order: 2
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Implementatie model
-parent: Fietstelpunten
+parent: Geomobility
 nav_order: 4
 ---
 

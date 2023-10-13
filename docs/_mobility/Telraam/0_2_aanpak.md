@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Aanpak
-parent: Documentatie
-grand_parent: Telraam
+parent: Telraam
 nav_order: 1
 ---
 

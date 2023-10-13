@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Aanpak
-parent: Fietstelpunten
+parent: Geomobility
 nav_order: 1
 ---
 

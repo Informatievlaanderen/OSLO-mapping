@@ -2,9 +2,10 @@
 layout: default
 title: Internet of NH3
 has_children: true
+has_toc: false
 ---
 
 # ILVO
 
 {: .note}
-This OSLO mapping is in progress
+De documentatie van deze OSLO mapping wordt momenteel uitgewerkt.
