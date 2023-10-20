@@ -8,13 +8,6 @@
     "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld",
 
 
-    "https://raw.githubusercontent.com/samuvack/context/main/Verkeersmetingen-ap.jsonld",
-    "https://raw.githubusercontent.com/samuvack/context/main/sensoren-en-bemonstering.jsonld",
-    "https://raw.githubusercontent.com/samuvack/context/main/observaties-en-metingen.jsonld",
-    "https://raw.githubusercontent.com/samuvack/context/main/GEODCAT-AP-VL.jsonld",
-    "https://raw.githubusercontent.com/samuvack/context/main/generiek-basis.jsonld",
-    "https://raw.githubusercontent.com/samuvack/context/main/wegenregister.jsonld",
-
     {
       "schema": "http://schema.org/",
       "dct": "http://purl.org/dc/terms/",

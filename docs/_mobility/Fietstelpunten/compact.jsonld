@@ -5,12 +5,7 @@
     "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28/context/ap-observaties-en-metingen.jsonld",
     "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21/context/geodcatap-vlaanderen.jsonld",
     "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld",
-    
-    "https://raw.githubusercontent.com/samuvack/context/main/Verkeersmetingen-ap.jsonld",
-    "https://raw.githubusercontent.com/samuvack/context/main/sensoren-en-bemonstering.jsonld",
-    "https://raw.githubusercontent.com/samuvack/context/main/observaties-en-metingen.jsonld",
-    "https://raw.githubusercontent.com/samuvack/context/main/GEODCAT-AP-VL.jsonld",
-    "https://raw.githubusercontent.com/samuvack/context/main/generiek-basis.jsonld",
+
     
 
     {
