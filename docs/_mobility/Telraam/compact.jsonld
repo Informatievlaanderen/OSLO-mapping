@@ -206,11 +206,7 @@
     {
       "@id": "_:mti001",
       "@type": "Sensor",
-      "Systeem.type": "cl-mit:telraam",
-      "Sensor.implementeert": {
-        "@type": "Observatieproceduretype",
-        "Observatieprocedure.type": "cl-op:type"
-      }
+      "Systeem.type": "cl-mit:telraam"
     }
   ]
 }

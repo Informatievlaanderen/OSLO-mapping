@@ -129,10 +129,6 @@
   {
     "@id": "_:mti001",
     "@type": "https://www.w3.org/ns/sosa/Sensor",
-    "http://www.w3.org/ns/ssn/implements": {
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
-      "http://purl.org/dc/terms/type": "cl-opt:type"
-    },
     "http://purl.org/dc/terms/type": "https://data.vlaanderen.be/doc/concept/VkmMeetInstrumentType/rubberslang"
   }
 ]

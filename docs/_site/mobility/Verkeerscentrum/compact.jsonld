@@ -230,11 +230,7 @@
     {
       "@id": "_:mti001",
       "@type": "Sensor",
-      "Systeem.type": "cl-mit:verkeersmeting",
-      "Sensor.implementeert": {
-        "@type": "Observatieproceduretype",
-        "Observatieprocedure.type": "cl-op:type"
-      }
+      "Systeem.type": "cl-mit:verkeersmeting"
     }
   ]
 }
