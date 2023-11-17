@@ -1,6 +1,12 @@
 {
   "@context": [
     "https://implementatie.data.vlaanderen.be/doc/implementatiemodel/verkeersmetingen/ontwerpstandaard/2023-09-27/context/Verkeersmetingen-im.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28/context/ap-sensoren-en-bemonstering.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28/context/ap-observaties-en-metingen.jsonld",
+    "https://raw.githubusercontent.com/samuvack/context/main/wegenregister.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21/context/geodcatap-vlaanderen.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld",
+
 
     {
       "schema": "http://schema.org/",
@@ -14,6 +20,11 @@
       "adms": "http://www.w3.org/ns/adms#",
       "ucum": "https://w3id.org/cdt/",
 
+      "Verkeersmeting.resultaat": {
+        "@type": "http://www.w3.org/2001/XMLSchema#double",
+        "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result"
+      },
+
       "cl-vrt": "https://data.vlaanderen.be/doc/concept/VkmVoertuigType/",
       "cl-vkt": "https://data.vlaanderen.be/doc/concept/VkmVerkeersKenmerkType/",
       "cl-trt": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/",
@@ -24,24 +35,45 @@
   ],
   "@graph": [
     {
+      "@id": "_:GM001",
+      "@type": "Dataset",
+      "Dataset.titel": {
+        "@language": "nl",
+        "@value": "GeoMobility."
+      },
+      "Dataset.beschrijving": [
+        {
+          "@language": "nl",
+          "@value": "Floating Car Data geeft een zeer goed beeld van de verkeerssituatie in een stad, maar soms is het essentieel om exact te weten hoeveel verkeer er in bothDirections richtingen door een straat rijdt en wat de modal split is."
+        }
+      ],
+      "Dataset.toegankelijkheid": "cl-access:PUBLIC",
+      "Dataset.trefwoord": [
+        {
+          "@language": "nl",
+          "@value": "GeoMobility"
+        }
+      ]
+    },
+    {
       "@id": "_:rri001",
       "@type": "Rijrichting",
-      "netwerkreferentie": {
+      "Rijrichting.netwerkreferentieelement": {
         "@type": "Linkreferentie",
-        "toepassingsRichting": "cl-trt:inDirection",
-        "element": "_:wgs001"
+        "Linkreferentie.toepassingsRichting": "cl-trt:inDirection",
+        "Netwerkreferentie.element": "_:wgs001"
       },
-      "rijrichting": "cl-trt:inDirection"
+      "Rijrichting.rijrichting": "cl-trt:inDirection"
     },
 
     {
       "@id": "_:wgs001",
       "@type": "Wegsegment",
-      "beginknoop": "_:wgkn001",
-      "eindknoop": "_:wgkn002",
-      "Geometriemiddenlijn": {
+      "Wegsegment.beginknoop": "_:wgkn001",
+      "Wegsegment.eindknoop": "_:wgkn002",
+      "Wegsegment.geometriemiddenlijn": {
         "@type": "LineString",
-        "wkt": {
+        "Geometrie.wkt": {
           "@value": "<http://www.opengis.net/def/crs/EPSG/0/4326> LINESTRING (30 10, 10 30, 40 40)",
           "@type": "geosparql:wktLiteral"
         }
@@ -50,9 +82,9 @@
     {
       "@id": "_:wgkn001",
       "@type": "Wegknoop",
-      "Geometrie": {
+      "Wegknoop.geometrie": {
         "@type": "Punt",
-        "gml": {
+        "Geometrie.gml": {
           "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates> 3.24239104986191, 51.2259355430829</gml:coordinates><gml:Point>",
           "@type": "geosparql:gmlLiteral"
         }
@@ -61,9 +93,9 @@
     {
       "@id": "_:wgkn002",
       "@type": "Wegknoop",
-      "Geometrie": {
+      "Wegknoop.geometrie": {
         "@type": "Punt",
-        "gml": {
+        "Geometrie.gml": {
           "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates>3.24177950620651, 51.2256331896095</gml:coordinates><gml:Point>",
           "@type": "geosparql:gmlLiteral"
         }
@@ -72,20 +104,20 @@
     {
       "@id": "_:vkmauto001",
       "@type": "Verkeerstelling",
-      "geobserveerdKenmerk": {
-        "@type": "Verkeerskenmerk",
-        "type": "cl-vkt:aantal",
-        "voertuigType": "cl-vrt:fiets"
+      "Verkeerstelling.geobserveerdKenmerk": {
+        "@type": "Verkeerstellingkenmerk",
+        "Verkeerstellingkenmerk.kenmerktype": "cl-vkt:aantal",
+        "Verkeerskenmerk.voertuigType": "cl-vrt:fiets"
       },
-      "geobserveerdObject": "_:mpt001",
-      "fenomeenTijd": ":_fenomtime001",
-      "tellingresultaat": 5,
-      "uitgevoerdMet": "_:mti001",
+      "Verkeersmeting.geobserveerdObject": "_:mpt001",
+      "Verkeersmeting.fenomeenTijd": ":_fenomtime001",
+      "Verkeersmeting.resultaat": 5,
+      "Verkeersmeting.uitgevoerdMet": "_:mti001",
       "dct:memberOf": "_:GM001"
     },
     {
       "@id": "_:fenomtime001",
-      "fenomeenTijd": {
+      "Verkeersmeting.fenomeenTijd": {
         "@type": "time:ProperInterval",
         "time:hasBeginning": {
           "@type": "time:Instant",
@@ -106,34 +138,34 @@
     {
       "@id": "_:mpt001",
       "@type": "Verkeersmeetpunt",
-      "Geometrie": {
+      "Verkeersmeetpunt.geometrie": {
         "@type": "Punt",
-        "gml": {
+        "Geometrie.gml": {
           "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates>3.24177950620651, 51.2256331896095</gml:coordinates><gml:Point>",
           "@type": "geosparql:gmlLiteral"
         }
       },
-      "netwerkreferentie":"_:pr001", 
-      "bemonsterdObject": "_:rri001"
+      "Verkeersmeetpunt.verkeersmeetpuntnetwerkreferentie":"_:pr001", 
+      "Verkeersbemonsteringsobject.bemonsterdObject": "_:rri001"
     },
     {
         "@id": "_:pr001",
         "@type": "Puntreferentie",
-        "opPositie": {
+        "Puntreferentie.opPositie": {
           "@type": "Lengte",
-          "waarde": "300",
-          "standaardEenheid": {
+          "KwantitatieveWaarde.waarde": "300",
+          "KwantitatieveWaarde.standaardEenheid": {
             "@value": "m",
             "@type": "ucum:ucumunit"
           }
         },
-        "toepassingsRichting": "cl-trt:bothDirections"
+        "Linkreferentie.toepassingsRichting": "cl-trt:bothDirections"
       },
 
     {
       "@id": "_:mti001",
       "@type": "Sensor",
-      "type": "cl-mit:rubberslang"
+      "Systeem.type": "cl-mit:rubberslang"
     }
   ]
 }
