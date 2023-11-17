@@ -111,7 +111,7 @@
       },
       "Verkeersmeting.geobserveerdObject": "_:mpt001",
       "Verkeersmeting.fenomeenTijd": ":_fenomtime001",
-      "Verkeersmeting.resultaat": 5,
+      "Verkeerstelling.tellingresultaat": 5,
       "Verkeersmeting.uitgevoerdMet": "_:mti001",
       "dct:memberOf": "_:GM001"
     },

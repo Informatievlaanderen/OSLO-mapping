@@ -66,15 +66,15 @@
     "@type": "https://implementatie.data.vlaanderen.be/ns/vsds-verkeersmetingen#Verkeerstelling",
     "https://data.vlaanderen.be/ns/Verkeersmetingen#fenomeenTijd": ":_fenomtime001",
     "https://data.vlaanderen.be/ns/Verkeersmetingen#geobserveerdObject": "_:mpt001",
-    "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result": {
-      "@type": "http://www.w3.org/2001/XMLSchema#double",
-      "@value": 5
-    },
     "http://www.w3.org/ns/sosa/madeBySensor": "_:mti001",
     "https://implementatie.data.vlaanderen.be/ns/vsds-verkeersmetingen#Verkeerstelling.geobserveerdKenmerk": {
       "@type": "https://implementatie.data.vlaanderen.be/ns/vsds-verkeersmetingen#Verkeerstellingkenmerk",
       "https://data.vlaanderen.be/ns/Verkeersmetingen#voertuigType": "https://data.vlaanderen.be/doc/concept/VkmVoertuigType/fiets",
       "https://implementatie.data.vlaanderen.be/ns/vsds-verkeersmetingen#Verkeerstellingkenmerk.kenmerktype": "https://data.vlaanderen.be/doc/concept/VkmVerkeersKenmerkType/aantal"
+    },
+    "https://implementatie.data.vlaanderen.be/ns/vsds-verkeersmetingen#Verkeerstelling.tellingresultaat": {
+      "@type": "http://www.w3.org/2001/XMLSchema#double",
+      "@value": 5
     },
     "http://purl.org/dc/terms/memberOf": {
       "@value": "_:GM001"
