@@ -21,7 +21,7 @@
     "@type": "https://data.vlaanderen.be/ns/weg#Rijrichting",
     "https://data.vlaanderen.be/ns/netwerk#netwerkreferentie": {
       "@type": "https://data.vlaanderen.be/ns/netwerk#Linkreferentie",
-      "https://data.vlaanderen.be/ns/netwerk#Linkreferentie.toepassingsrichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/inDirection",
+      "https://data.vlaanderen.be/ns/netwerk#toepassingsrichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/inDirection",
       "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie.element": "_:wgs001"
     },
     "https://data.vlaanderen.be/ns/weg#rijrichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/inDirection"
@@ -69,7 +69,6 @@
       "http://purl.org/dc/elements/1.1/type": "https://data.vlaanderen.be/doc/concept/VkmVerkeersKenmerkType/aantal",
       "https://data.vlaanderen.be/ns/verkeersmetingen#voertuigType": "https://data.vlaanderen.be/doc/concept/VkmVoertuigType/vrachtwagen"
     },
-    "https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdObject": "_:mpt001",
     "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result": {
       "@type": "http://www.w3.org/2001/XMLSchema#double",
       "@value": 0
@@ -91,7 +90,6 @@
       "http://purl.org/dc/elements/1.1/type": "https://data.vlaanderen.be/doc/concept/VkmVerkeersKenmerkType/snelheid",
       "https://data.vlaanderen.be/ns/verkeersmetingen#voertuigType": "https://data.vlaanderen.be/doc/concept/VkmVoertuigType/vrachtwagen"
     },
-    "https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdObject": "_:mpt001",
     "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result": {
       "@type": "http://www.w3.org/2001/XMLSchema#double",
       "@value": 0
@@ -113,7 +111,6 @@
       "http://purl.org/dc/elements/1.1/type": "https://data.vlaanderen.be/doc/concept/VkmVerkeersKenmerkType/aantal",
       "https://data.vlaanderen.be/ns/verkeersmetingen#voertuigType": "https://data.vlaanderen.be/doc/concept/VkmVoertuigType/auto"
     },
-    "https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdObject": "_:mpt001",
     "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result": {
       "@type": "http://www.w3.org/2001/XMLSchema#double",
       "@value": 0
@@ -135,7 +132,6 @@
       "http://purl.org/dc/elements/1.1/type": "https://data.vlaanderen.be/doc/concept/VkmVerkeersKenmerkType/snelheid",
       "https://data.vlaanderen.be/ns/verkeersmetingen#voertuigType": "https://data.vlaanderen.be/doc/concept/VkmVoertuigType/auto"
     },
-    "https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdObject": "_:mpt001",
     "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result": {
       "@type": "http://www.w3.org/2001/XMLSchema#double",
       "@value": 0
@@ -157,7 +153,6 @@
       "http://purl.org/dc/elements/1.1/type": "https://data.vlaanderen.be/doc/concept/VkmVerkeersKenmerkType/aantal",
       "https://data.vlaanderen.be/ns/verkeersmetingen#voertuigType": "https://data.vlaanderen.be/doc/concept/VkmVoertuigType/auto"
     },
-    "https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdObject": "_:mpt001",
     "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result": {
       "@type": "http://www.w3.org/2001/XMLSchema#double",
       "@value": 0

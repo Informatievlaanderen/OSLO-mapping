@@ -21,7 +21,7 @@
     "@type": "https://data.vlaanderen.be/ns/weg#Rijrichting",
     "https://data.vlaanderen.be/ns/netwerk#netwerkreferentie": {
       "@type": "https://data.vlaanderen.be/ns/netwerk#Linkreferentie",
-      "https://data.vlaanderen.be/ns/netwerk#Linkreferentie.toepassingsrichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/inDirection",
+      "https://data.vlaanderen.be/ns/netwerk#toepassingsrichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/inDirection",
       "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie.element": "_:wgs001"
     },
     "https://data.vlaanderen.be/ns/weg#rijrichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/inDirection"
@@ -31,7 +31,7 @@
     "@type": "https://data.vlaanderen.be/ns/weg#Rijrichting",
     "https://data.vlaanderen.be/ns/netwerk#netwerkreferentie": {
       "@type": "https://data.vlaanderen.be/ns/netwerk#Linkreferentie",
-      "https://data.vlaanderen.be/ns/netwerk#Linkreferentie.toepassingsrichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/inOppositeDirection",
+      "https://data.vlaanderen.be/ns/netwerk#toepassingsrichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/inOppositeDirection",
       "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie.element": "_:wgs001"
     },
     "https://data.vlaanderen.be/ns/weg#rijrichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/inOppositeDirection"
@@ -83,7 +83,6 @@
       "http://purl.org/dc/elements/1.1/type": "https://data.vlaanderen.be/doc/concept/VkmVerkeersKenmerkType/aantal",
       "https://data.vlaanderen.be/ns/verkeersmetingen#voertuigType": "https://data.vlaanderen.be/doc/concept/VkmVoertuigType/auto"
     },
-    "https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdObject": "_:mpt001",
     "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result": {
       "@type": "http://www.w3.org/2001/XMLSchema#double",
       "@value": 30
@@ -105,7 +104,6 @@
       "http://purl.org/dc/elements/1.1/type": "https://data.vlaanderen.be/doc/concept/VkmVerkeersKenmerkType/aantal",
       "https://data.vlaanderen.be/ns/verkeersmetingen#voertuigType": "https://data.vlaanderen.be/doc/concept/VkmVoertuigType/auto"
     },
-    "https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdObject": "_:mpt001",
     "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result": {
       "@type": "http://www.w3.org/2001/XMLSchema#double",
       "@value": 210
@@ -151,7 +149,7 @@
   {
     "@id": "_:pr001",
     "@type": "https://data.vlaanderen.be/ns/netwerk#Puntreferentie",
-    "https://data.vlaanderen.be/ns/netwerk#Linkreferentie.toepassingsrichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/bothDirections",
+    "https://data.vlaanderen.be/ns/netwerk#toepassingsrichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/bothDirections",
     "https://data.vlaanderen.be/ns/netwerk#Puntreferentie.opPositie": {
       "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Length",
       "https://schema.org/unitCode": {
