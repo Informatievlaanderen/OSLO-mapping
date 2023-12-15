@@ -21,7 +21,7 @@
     "@type": "https://data.vlaanderen.be/ns/weg#Rijrichting",
     "https://data.vlaanderen.be/ns/netwerk#netwerkreferentie": {
       "@type": "https://data.vlaanderen.be/ns/netwerk#Linkreferentie",
-      "https://data.vlaanderen.be/ns/netwerk#toepassingsrichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/inDirection",
+      "https://data.vlaanderen.be/ns/netwerk#toepassingsRichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/inDirection",
       "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie.element": "_:wgs001"
     },
     "https://data.vlaanderen.be/ns/weg#rijrichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/inDirection"
@@ -31,7 +31,7 @@
     "@type": "https://data.vlaanderen.be/ns/weg#Rijrichting",
     "https://data.vlaanderen.be/ns/netwerk#netwerkreferentie": {
       "@type": "https://data.vlaanderen.be/ns/netwerk#Linkreferentie",
-      "https://data.vlaanderen.be/ns/netwerk#toepassingsrichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/inOppositeDirection",
+      "https://data.vlaanderen.be/ns/netwerk#toepassingsRichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/inOppositeDirection",
       "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie.element": "_:wgs001"
     },
     "https://data.vlaanderen.be/ns/weg#rijrichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/inOppositeDirection"
@@ -41,7 +41,7 @@
     "@type": "https://data.vlaanderen.be/ns/weg#Wegsegment",
     "https://data.vlaanderen.be/ns/netwerk/#beginknoop": "_:wgkn001",
     "https://data.vlaanderen.be/ns/netwerk#eindknoop": "_:wgkn002",
-    "https://data.vlaanderen.be/ns/netwerk#geometriemiddellijn": {
+    "https://data.vlaanderen.be/ns/netwerk#Link.geometriemiddellijn": {
       "@type": "LineString",
       "http://www.opengis.net/ont/geosparql#asWKT": {
         "@type": "http://www.opengis.net/ont/geosparql#wktLiteral",
@@ -149,7 +149,7 @@
   {
     "@id": "_:pr001",
     "@type": "https://data.vlaanderen.be/ns/netwerk#Puntreferentie",
-    "https://data.vlaanderen.be/ns/netwerk#toepassingsrichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/bothDirections",
+    "https://data.vlaanderen.be/ns/netwerk#toepassingsRichting": "https://inspire.ec.europa.eu/codelist/LinkDirectionValue/bothDirections",
     "https://data.vlaanderen.be/ns/netwerk#Puntreferentie.opPositie": {
       "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Length",
       "https://schema.org/unitCode": {

@@ -6,8 +6,6 @@
     "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21/context/geodcatap-vlaanderen.jsonld",
     "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld",
 
-
-
     {
       "schema": "http://schema.org/",
       "dct": "http://purl.org/dc/terms/",
@@ -63,7 +61,7 @@
       "@type": "Wegsegment",
       "Wegsegment.geometriemiddenlijn": {
         "Geometrie.gml": {
-          "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates>50.9346197016993 4.04451041920408,50.9346499094883 4.04468516398887,50.9346736897766 4.04476128017613, 50.9347048165154 4.04486091154096,50.9347897018035 4.0450104190652,50.9348297017355 4.04508041942127,50.9349798325647 4.04536795581668,50.9350979049717 4.04561050090522, 50.9351073291995 4.04563353497237,50.9351797011571 4.04581042002322</gml:coordinates><gml:Point>",
+          "@value": "<gml:Linestring srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates>50.9346197016993 4.04451041920408,50.9346499094883 4.04468516398887,50.9346736897766 4.04476128017613, 50.9347048165154 4.04486091154096,50.9347897018035 4.0450104190652,50.9348297017355 4.04508041942127,50.9349798325647 4.04536795581668,50.9350979049717 4.04561050090522, 50.9351073291995 4.04563353497237,50.9351797011571 4.04581042002322</gml:coordinates><gml:Point>",
           "@type": "geosparql:gmlLiteral"
         }
       },
@@ -171,14 +169,13 @@
       },
       "Verkeersmeting.geobserveerdObject": "_:mpt001",
       "Verkeersmeting.fenomeenTijd": ":_fenomtime001",
-      "Verkeerssnelheidsmeting.resultaat": {
-          "@type": "Snelheid",
+        "Verkeerssnelheidsmeting.resultaat": {
+          "@type": "KwantitatieveWaarde",
           "KwantitatieveWaarde.waarde": 30,
           "KwantitatieveWaarde.standaardEenheid": {
-            "@value": "km/h",
-            "@type": "ucum:ucumunit"
-          }
-        },
+            "@id": "qudt-unit:KiloM-PER-HR",
+            "@type": "qudt-schema:unit"
+          }},
       "Verkeersmeting.uitgevoerdMet": "_:mti001"
     },
 
@@ -209,7 +206,7 @@
     {
       "@id": "_:fenomtime001",
       "Verkeersmeting.fenomeenTijd": {
-        "@type": "time:ProperInterval",
+        "@type": "time:TemporalEntity",
         "time:hasBeginning": {
           "@type": "time:Instant",
           "time:inXSDDateTime": {

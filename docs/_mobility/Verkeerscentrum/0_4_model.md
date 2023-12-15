@@ -12,5 +12,5 @@ In het kader van de Mobility Dataspace werden verschillende datasets rond verkee
 
 
 <div id="enlargeImage">
-<a href="https://raw.githubusercontent.com/Informatievlaanderen/OSLOthema-im-verkeersmetingen/main/site-skeleton/verkeersmetingen-im/overview.jpg"><img src="https://raw.githubusercontent.com/Informatievlaanderen/OSLOthema-im-verkeersmetingen/main/site-skeleton/verkeersmetingen-im/overview.jpg" width="100%" text-align="center"></a>
+<a href="https://implementatie.data.test-vlaanderen.be/doc/implementatiemodel/verkeersmetingverzameling/ontwerpstandaard/2023-11-22/html/overview.jpg"><img src="https://implementatie.data.test-vlaanderen.be/doc/implementatiemodel/verkeersmetingverzameling/ontwerpstandaard/2023-11-22/html/overview.jpg" width="100%" text-align="center"></a>
 </div>
