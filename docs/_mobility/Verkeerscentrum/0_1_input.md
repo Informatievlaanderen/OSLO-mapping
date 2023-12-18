@@ -7,9 +7,21 @@ nav_order: 0
 
 # Data voorbeeld Verkeerscentrum
 
-TO DO:
-rec_kl_gaten rec_geslvak rec_typed
-0 0 0
+
+
+De dataset die dient gemapt te worden op bestaande OSLO standaarden, is opgesplitst in 2 datasets. Eén dataset bevat de verkeersmetingen van 1 dag met aggregatieniveau 15 minuten. Deze dataset is beperkt tot de essentiële velden, namelijk:
+* locpost: identificatie van de meetpost (doorsnede van de weg)
+* Time_measured: begintijdstip van het interval
+* int_niet_vracht: intensiteit niet-vrachtverkeer ('auto')
+* int_vracht: intensiteit vrachtverkeer
+* Vh_niet_vracht: gemiddelde snelheid niet-vrachtverkeer (harmonisch gemiddelde)
+* Vh_vracht: gemiddelde snelheid vrachtverkeer (harmonisch gemiddelde)
+* rec_kl_gaten: percentage data gereconstrueerd op basis van interpolatie
+* rec_geslvak: percentage data gereconstrueerd op basis van een redundante meetpost
+* rec_typed: percentage data gereconstrueerd op basis van een type dag
+ 
+
+
 
 ## Data voorbeeld
 
@@ -33,7 +45,7 @@ locpost	TIME_MEASURED	int_niet_vracht	int_vracht	Vh_niet_vracht	Vh_vracht	rec_kl
 
 ```json
             "Post": {
-                "LocPost": 130502,
+                "LocPost": 100105,
                 "Offset": 14,
                 "Segmentdeel": {
                     "Begin": {

@@ -1,11 +1,10 @@
 {
   "@context": [
-    "https://raw.githubusercontent.com/samuvack/OSLO_codelijst_generator/main/codelijst_verkeersmetingsverzameling.jsonld",
+    "https://raw.githubusercontent.com/samuvack/context/main/im-verkeersmeting.jsonld",
     "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28/context/ap-sensoren-en-bemonstering.jsonld",
     "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28/context/ap-observaties-en-metingen.jsonld",
     "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21/context/geodcatap-vlaanderen.jsonld",
     "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld",
-
     {
       "schema": "http://schema.org/",
       "dct": "http://purl.org/dc/terms/",
@@ -27,61 +26,139 @@
     }
   ],
   "@graph": [
-{
-      "@id": "_:dataset001",
-      "@type": "Dataset",
-      "Dataset.titel": {
-        "@language": "nl",
-        "@value": "Verkeersmetingen Vlaams Verkeerscentrum"
+    {
+      "@id": "_:vkmauto001",
+      "@type": "Verkeerstelling",
+      "Verkeerstelling.geobserveerdKenmerk": {
+        "@type": "Verkeerstellingkenmerk",
+        "Verkeerstellingkenmerk.kenmerktype": "cl-vkt:aantal",
+        "Verkeerskenmerk.voertuigType": "cl-vrt:auto"
       },
-      "Dataset.beschrijving": [
-        {
-          "@language": "nl",
-          "@value": "Verkeersmetingen Vlaams Verkeerscentrum"
+      "Verkeersmeting.geobserveerdObject": "_:mpt001",
+      "Verkeersmeting.fenomeenTijd": {
+          "@type": "time:TemporalEntity",
+          "time:hasBeginning": {
+            "@type": "time:Instant",
+            "time:inXSDDateTime": {
+              "@type": "xml-schema:dateTime",
+              "@value": "20230907T00:00:00.000"
+            }
+          },
+          "time:hasEnd": {
+            "@type": "time:Instant",
+            "time:inXSDDateTime": {
+              "@type": "xml-schema:dateTime",
+              "@value": "20230907T00:15:00.000"   
+            }
+          }
+      },
+      "Verkeerstelling.verkeerstellingTellingresultaat": 8,
+      "Verkeersmeting.uitgevoerdMet": {
+            "@type": "Sensor",
+            "Systeem.type": "cl-mit:pneumatisch"
+      },
+      "dct:memberOf": "_:dataset001"
+    },
+    {
+      "@id": "_:vkmzwaar001",
+      "@type": "Verkeerstelling",
+      "Verkeerstelling.geobserveerdKenmerk": {
+        "@type": "Verkeerstellingkenmerk",
+        "Verkeerstellingkenmerk.kenmerktype": "cl-vkt:aantal",
+        "Verkeerskenmerk.voertuigType": "cl-vrt:zwaar"
+      },
+      "Verkeersmeting.geobserveerdObject": "_:mpt001",
+      "Verkeersmeting.fenomeenTijd": {
+        "@type": "time:TemporalEntity",
+        "time:hasBeginning": {
+          "@type": "time:Instant",
+          "time:inXSDDateTime": {
+            "@type": "xml-schema:dateTime",
+            "@value": "20230907T00:00:00.000"
+          }
         },
-        {
-          "@language": "en",
-          "@value": "Traffic measurements Flanders Traffic Control Center"
+        "time:hasEnd": {
+          "@type": "time:Instant",
+          "time:inXSDDateTime": {
+            "@type": "xml-schema:dateTime",
+            "@value": "20230907T00:15:00.000"   
+          }
         }
-      ],
-      "Dataset.toegankelijkheid": "cl-access:PUBLIC",
-      "Dataset.trefwoord": [
-        {
-          "@language": "nl",
-          "@value": "verkeersmeting"
-        }
-      ]
+      },
+      "Verkeerstelling.verkeerstellingTellingresultaat": 1,
+      "Verkeersmeting.uitgevoerdMet": {
+            "@type": "Sensor",
+            "Systeem.type": "cl-mit:pneumatisch"
+      },
+      "dct:memberOf": "_:dataset001"
     },
 
-{
-    "@id": "_:verz001",
-    "@type": "Verkeersmetingverzameling",
-    "Verkeersmetingverzameling.fenomeenTijd": ":_fenomtime001",
-    "Verkeersmetingverzameling.geobserveerdObject": "_:mpt001",
-    "Verkeersmetingverzameling.uitgevoerdMet": "_:mti001",
-    "dct:memberOf": "_:dataset001",
-
-    "Verkeersmetingverzameling.heeftLid":[
-      {
-        "@id": "_:vkmauto001",
-        "@type": "Verkeerstelling",
-        "Verkeerstelling.geobserveerdKenmerk": {
-          "@type": "Verkeerstellingkenmerk",
-          "Verkeerstellingkenmerk.kenmerktype": "cl-vkt:aantal",
-          "Verkeerskenmerk.voertuigType": "cl-vrt:auto"
-        },
-        "Verkeerstelling.tellingresultaat": 8
+    {
+      "@id": "_:vkmauto002",
+      "@type": "Verkeerstelling",
+      "Verkeerstelling.geobserveerdKenmerk": {
+        "@type": "Verkeerstellingkenmerk",
+        "Verkeerstellingkenmerk.kenmerktype": "cl-vkt:aantal",
+        "Verkeerskenmerk.voertuigType": "cl-vrt:zwaar"
       },
+      "Verkeersmeting.geobserveerdObject": "_:mpt001",
+      "Verkeersmeting.fenomeenTijd": {
+          "@type": "time:TemporalEntity",
+          "time:hasBeginning": {
+            "@type": "time:Instant",
+            "time:inXSDDateTime": {
+              "@type": "xml-schema:dateTime",
+              "@value": "20230907T00:00:00.000"
+            }
+          },
+          "time:hasEnd": {
+            "@type": "time:Instant",
+            "time:inXSDDateTime": {
+              "@type": "xml-schema:dateTime",
+              "@value": "20230907T00:15:00.000"   
+            }
+          }
+      },
+      "Verkeerstelling.tellingresultaat": 1,
+      "Verkeersmeting.uitgevoerdMet": {
+            "@type": "Sensor",
+            "Systeem.type": "cl-mit:pneumatisch"
+      },
+      "dct:memberOf": "_:dataset001"
+    },
+
       {
         "@id": "_:vmtauto002",
         "@type": "Verkeerssnelheidsmeting",
+        "Verkeersmeting.geobserveerdObject": "_:mpt001",
+        "Verkeersmeting.fenomeenTijd": {
+                  "@type": "time:TemporalEntity",
+                  "time:hasBeginning": {
+                    "@type": "time:Instant",
+                    "time:inXSDDateTime": {
+                      "@type": "xml-schema:dateTime",
+                      "@value": "20230907T00:00:00.000"
+                    }
+                  },
+                  "time:hasEnd": {
+                    "@type": "time:Instant",
+                    "time:inXSDDateTime": {
+                      "@type": "xml-schema:dateTime",
+                      "@value": "20230907T00:15:00.000"   
+                    }
+                  }
+                
+        },
+        "Verkeersmeting.uitgevoerdMet": {
+            "@type": "Sensor",
+            "Systeem.type": "cl-mit:pneumatisch"
+        },
+        "dct:memberOf": "_:dataset001",
         "Verkeerssnelheidsmeting.geobserveerdKenmerk": {
           "@type": "Verkeerssnelheidsmetingkenmerk",
           "Verkeerssnelheidsmetingkenmerk.kenmerktype": "cl-vkt:v85",
           "Verkeerskenmerk.voertuigType": "cl-vrt:auto"
         },
-        "Verkeersmeting.geobserveerdObject": "_:mpt001",
-        "Verkeersmeting.fenomeenTijd": ":_fenomtime001",
         "Verkeerssnelheidsmeting.resultaat": {
           "@type": "KwantitatieveWaarde",
           "KwantitatieveWaarde.waarde": 82,
@@ -91,27 +168,48 @@
           }
         }
       },
+
+      
       {
         "@id": "_:vmtzwaar002",
         "@type": "Verkeerssnelheidsmeting",
+        "Verkeersmeting.geobserveerdObject": "_:mpt001",
+        "Verkeersmeting.fenomeenTijd":       {
+          "@type": "time:TemporalEntity",
+          "time:hasBeginning": {
+            "@type": "time:Instant",
+            "time:inXSDDateTime": {
+              "@type": "xml-schema:dateTime",
+              "@value": "20230907T00:00:00.000"
+        },
+        "time:hasEnd": {
+          "@type": "time:Instant",
+          "time:inXSDDateTime": {
+            "@type": "xml-schema:dateTime",
+            "@value": "20230907T00:15:00.000"   
+          }
+        }
+      }
+      },
+        "Verkeersmeting.uitgevoerdMet": {
+            "@type": "Sensor",
+            "Systeem.type": "cl-mit:pneumatisch"
+        },
+        "dct:memberOf": "_:dataset001",
         "Verkeerssnelheidsmeting.geobserveerdKenmerk": {
           "@type": "Verkeerssnelheidsmetingkenmerk",
           "Verkeerssnelheidsmetingkenmerk.kenmerktype": "cl-vkt:v85",
           "Verkeerskenmerk.voertuigType": "cl-vrt:zwaar"
         },
-        "Verkeersmeting.geobserveerdObject": "_:mpt001",
-        "Verkeersmeting.fenomeenTijd": ":_fenomtime001",
         "Verkeerssnelheidsmeting.resultaat": {
           "@type": "KwantitatieveWaarde",
-          "KwantitatieveWaarde.waarde": 82,
+          "KwantitatieveWaarde.waarde": 62,
           "KwantitatieveWaarde.standaardEenheid": {
             "@id": "qudt-unit:KiloM-PER-HR",
             "@type": "qudt-schema:unit"
           }
-      }
-    }
-    ]
-  },
+        }
+      },
 
       {
       "@id": "_:wgs001",
@@ -147,30 +245,30 @@
         }
       }
     },
-    {
-      "@id": "_:fenomtime001",
-      "Verkeersmetingverzameling.fenomeenTijd": {
-        "@type": "time:TemporalEntity",
-        "time:hasBeginning": {
-          "@type": "time:Instant",
-          "time:inXSDDateTime": {
-            "@type": "xml-schema:dateTime",
-            "@value": "20230907T00:00:00.000"
-          }
-        },
-        "time:hasEnd": {
-          "@type": "time:Instant",
-          "time:inXSDDateTime": {
-            "@type": "xml-schema:dateTime",
-            "@value": "20230907T00:15:00.000"   
+        {
+      "@id": "_:mpt001",
+      "@type": "Verkeersmeetpunt",
+      "Verkeersmeetpunt.geometrie": {
+        "@type": "Punt",
+        "Geometrie.gml": {
+          "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates>virtual_x,virtual_y</gml:coordinates><gml:Point>",
+          "@type": "geosparql:gmlLiteral"
+        }
+      },
+      "Verkeersmeetpunt.netwerkreferentie": {
+        "@type": "Puntreferentie",
+        "Puntreferentie.opPositie": {
+          "@type": "Lengte",
+          "KwantitatieveWaarde.waarde": "300",
+          "KwantitatieveWaarde.standaardEenheid": {
+            "@value": "m",
+            "@type": "ucum:ucumunit"
           }
         }
-      }
+      },
+      "Verkeersbemonsteringsobject.bemonsterdObject": "_:wgs001"
     },
-    {
-      "@id": "_:mti001",
-      "@type": "Sensor",
-      "Systeem.type": "cl-mit:pneumatisch"
-    }
+
+
   ]
 }

@@ -1,0 +1,186 @@
+{
+  "@context": [
+    "https://raw.githubusercontent.com/samuvack/OSLO_codelijst_generator/main/codelijst_verkeersmetingsverzameling.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28/context/ap-sensoren-en-bemonstering.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28/context/ap-observaties-en-metingen.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21/context/geodcatap-vlaanderen.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld",
+
+    {
+      "schema": "http://schema.org/",
+      "dct": "http://purl.org/dc/terms/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "geosparql": "http://www.opengis.net/ont/geosparql#",
+      "qudt-unit": "http://qudt.org/vocab/unit/",
+      "qudt-schema": "https://qudt.org/schema/qudt/",
+      "dcterms": "http://purl.org/dc/terms/",
+      "time": "http://www.w3.org/2006/time#",
+      "ucum": "https://w3id.org/cdt/",
+
+
+      "Velocity": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Velocity",
+      "cl-vrt": "https://data.vlaanderen.be/doc/concept/VkmVoertuigType/",
+      "cl-vkt": "https://data.vlaanderen.be/doc/concept/VkmVerkeersKenmerkType/",
+      "cl-mit": "https://data.vlaanderen.be/doc/concept/VkmMeetInstrumentType/",
+      "cl-op": "https://data.vlaanderen.be/doc/concept/VkmObservatieProcedure/",
+      "cl-access": "http://publications.europa.eu/resource/authority/access-right/"
+    }
+  ],
+  "@graph": [
+{
+      "@id": "_:dataset001",
+      "@type": "Dataset",
+      "Dataset.titel": {
+        "@language": "nl",
+        "@value": "Verkeersmetingen Vlaams Verkeerscentrum"
+      },
+      "Dataset.beschrijving": [
+        {
+          "@language": "nl",
+          "@value": "Verkeersmetingen Vlaams Verkeerscentrum"
+        },
+        {
+          "@language": "en",
+          "@value": "Traffic measurements Flanders Traffic Control Center"
+        }
+      ],
+      "Dataset.toegankelijkheid": "cl-access:PUBLIC",
+      "Dataset.trefwoord": [
+        {
+          "@language": "nl",
+          "@value": "verkeersmeting"
+        }
+      ]
+    },
+
+{
+    "@id": "_:verz001",
+    "@type": "Verkeersmetingverzameling",
+    "Verkeersmetingverzameling.fenomeenTijd": ":_fenomtime001",
+    "Verkeersmetingverzameling.geobserveerdObject": "_:mpt001",
+    "Verkeersmetingverzameling.uitgevoerdMet": "_:mti001",
+    "dct:memberOf": "_:dataset001",
+
+    "Verkeersmetingverzameling.heeftLid":[
+      {
+        "@id": "_:vkmauto001",
+        "@type": "Verkeerstelling",
+        "Verkeerstelling.geobserveerdKenmerk": {
+          "@type": "Verkeerstellingkenmerk",
+          "Verkeerstellingkenmerk.kenmerktype": "cl-vkt:aantal",
+          "Verkeerskenmerk.voertuigType": "cl-vrt:auto"
+        },
+        "Verkeerstelling.tellingresultaat": 8
+      },
+      {
+        "@id": "_:vmtauto002",
+        "@type": "Verkeerssnelheidsmeting",
+        "Verkeerssnelheidsmeting.geobserveerdKenmerk": {
+          "@type": "Verkeerssnelheidsmetingkenmerk",
+          "Verkeerssnelheidsmetingkenmerk.kenmerktype": "cl-vkt:v85",
+          "Verkeerskenmerk.voertuigType": "cl-vrt:auto"
+        },
+        "Verkeersmeting.geobserveerdObject": "_:mpt001",
+        "Verkeersmeting.fenomeenTijd": ":_fenomtime001",
+        "Verkeerssnelheidsmeting.resultaat": {
+          "@type": "KwantitatieveWaarde",
+          "KwantitatieveWaarde.waarde": 82,
+          "KwantitatieveWaarde.standaardEenheid": {
+            "@id": "qudt-unit:KiloM-PER-HR",
+            "@type": "qudt-schema:unit"
+          }
+        }
+      },
+        {
+        "@id": "_:vkmzwaar001",
+        "@type": "Verkeerstelling",
+        "Verkeerstelling.geobserveerdKenmerk": {
+          "@type": "Verkeerstellingkenmerk",
+          "Verkeerstellingkenmerk.kenmerktype": "cl-vkt:aantal",
+          "Verkeerskenmerk.voertuigType": "cl-vrt:zwaar"
+        },
+        "Verkeerstelling.tellingresultaat": 1
+      },
+      {
+        "@id": "_:vmtzwaar002",
+        "@type": "Verkeerssnelheidsmeting",
+        "Verkeerssnelheidsmeting.geobserveerdKenmerk": {
+          "@type": "Verkeerssnelheidsmetingkenmerk",
+          "Verkeerssnelheidsmetingkenmerk.kenmerktype": "cl-vkt:v85",
+          "Verkeerskenmerk.voertuigType": "cl-vrt:zwaar"
+        },
+        "Verkeersmeting.geobserveerdObject": "_:mpt001",
+        "Verkeersmeting.fenomeenTijd": ":_fenomtime001",
+        "Verkeerssnelheidsmeting.resultaat": {
+          "@type": "KwantitatieveWaarde",
+          "KwantitatieveWaarde.waarde": 62,
+          "KwantitatieveWaarde.standaardEenheid": {
+            "@id": "qudt-unit:KiloM-PER-HR",
+            "@type": "qudt-schema:unit"
+          }
+      }
+    }
+    ]
+  },
+
+      {
+      "@id": "_:wgs001",
+      "@type": "Wegsegment",
+      "Wegsegment.geometriemiddenlijn": {
+        "Geometrie.gml": {
+          "@value": "<gml:Linestring srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates>50.9346197016993 4.04451041920408,50.9346499094883 4.04468516398887,50.9346736897766 4.04476128017613, 50.9347048165154 4.04486091154096,50.9347897018035 4.0450104190652,50.9348297017355 4.04508041942127,50.9349798325647 4.04536795581668,50.9350979049717 4.04561050090522, 50.9351073291995 4.04563353497237,50.9351797011571 4.04581042002322</gml:coordinates><gml:Point>",
+          "@type": "geosparql:gmlLiteral"
+        }
+      },
+      "Wegsegment.beginknoop": "_:wgkn001",
+      "Wegsegment.eindknoop": "_:wgkn002"
+    },
+    {
+      "@id": "_:wgkn001",
+      "@type": "Wegknoop",
+      "Wegknoop.geometrie": {
+        "@type": "Punt",
+        "Geometrie.gml": {
+          "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates>50.9346197016993 4.0445104192040</gml:coordinates><gml:Point>",
+          "@type": "geosparql:gmlLiteral"
+        }
+      }
+    },
+      {
+      "@id": "_:wgkn002",
+      "@type": "Wegknoop",
+      "Wegknoop.geometrie": {
+        "@type": "Punt",
+        "Geometrie.gml": {
+          "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates>50.9346197016993 4.0445104192040</gml:coordinates><gml:Point>",
+          "@type": "geosparql:gmlLiteral"
+        }
+      }
+    },
+    {
+      "@id": "_:fenomtime001",
+      "Verkeersmetingverzameling.fenomeenTijd": {
+        "@type": "time:TemporalEntity",
+        "time:hasBeginning": {
+          "@type": "time:Instant",
+          "time:inXSDDateTime": {
+            "@type": "xml-schema:dateTime",
+            "@value": "20230907T00:00:00.000"
+          }
+        },
+        "time:hasEnd": {
+          "@type": "time:Instant",
+          "time:inXSDDateTime": {
+            "@type": "xml-schema:dateTime",
+            "@value": "20230907T00:15:00.000"   
+          }
+        }
+      }
+    },
+    {
+      "@id": "_:mti001",
+      "@type": "Sensor",
+      "Systeem.type": "cl-mit:pneumatisch"
+    }
+  ]
+}

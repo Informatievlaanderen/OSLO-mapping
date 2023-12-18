@@ -1,19 +1,12 @@
 {
   "@context": [
-    "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14/context/Verkeersmetingen-ap.jsonld",
+    "https://implementatie.data.vlaanderen.be/doc/implementatiemodel/verkeersmetingen/ontwerpstandaard/2023-09-27/context/Verkeersmetingen-im.jsonld",
     "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28/context/ap-sensoren-en-bemonstering.jsonld",
     "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28/context/ap-observaties-en-metingen.jsonld",
     "https://raw.githubusercontent.com/samuvack/context/main/wegenregister.jsonld",
     "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21/context/geodcatap-vlaanderen.jsonld",
     "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld",
 
-
-    "https://raw.githubusercontent.com/samuvack/context/main/Verkeersmetingen-ap.jsonld",
-    "https://raw.githubusercontent.com/samuvack/context/main/sensoren-en-bemonstering.jsonld",
-    "https://raw.githubusercontent.com/samuvack/context/main/observaties-en-metingen.jsonld",
-    "https://raw.githubusercontent.com/samuvack/context/main/GEODCAT-AP-VL.jsonld",
-    "https://raw.githubusercontent.com/samuvack/context/main/generiek-basis.jsonld",
-    "https://raw.githubusercontent.com/samuvack/context/main/wegenregister.jsonld",
 
     {
       "schema": "http://schema.org/",
@@ -65,7 +58,7 @@
     {
       "@id": "_:rri001",
       "@type": "Rijrichting",
-      "Rijrichting.netwerkreferentie": {
+      "Rijrichting.netwerkreferentieelement": {
         "@type": "Linkreferentie",
         "Linkreferentie.toepassingsRichting": "cl-trt:inDirection",
         "Netwerkreferentie.element": "_:wgs001"
@@ -110,15 +103,15 @@
     },
     {
       "@id": "_:vkmauto001",
-      "@type": "Verkeersmeting",
-      "Verkeersmeting.geobserveerdKenmerk": {
-        "@type": "Verkeerskenmerk",
-        "Verkeerskenmerk.type": "cl-vkt:aantal",
+      "@type": "Verkeerstelling",
+      "Verkeerstelling.geobserveerdKenmerk": {
+        "@type": "Verkeerstellingkenmerk",
+        "Verkeerstellingkenmerk.kenmerktype": "cl-vkt:aantal",
         "Verkeerskenmerk.voertuigType": "cl-vrt:fiets"
       },
       "Verkeersmeting.geobserveerdObject": "_:mpt001",
       "Verkeersmeting.fenomeenTijd": ":_fenomtime001",
-      "Verkeersmeting.resultaat": 5,
+      "Verkeerstelling.tellingresultaat": 5,
       "Verkeersmeting.uitgevoerdMet": "_:mti001",
       "dct:memberOf": "_:GM001"
     },
@@ -152,7 +145,7 @@
           "@type": "geosparql:gmlLiteral"
         }
       },
-      "Verkeersmeetpunt.netwerkreferentie":"_:pr001", 
+      "Verkeersmeetpunt.verkeersmeetpuntnetwerkreferentie":"_:pr001", 
       "Verkeersbemonsteringsobject.bemonsterdObject": "_:rri001"
     },
     {
