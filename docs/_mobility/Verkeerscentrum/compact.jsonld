@@ -211,12 +211,12 @@
         }
       },
 
-      {
+    {
       "@id": "_:wgs001",
       "@type": "Wegsegment",
       "Wegsegment.geometriemiddenlijn": {
         "Geometrie.gml": {
-          "@value": "<gml:Linestring srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates>50.9346197016993 4.04451041920408,50.9346499094883 4.04468516398887,50.9346736897766 4.04476128017613, 50.9347048165154 4.04486091154096,50.9347897018035 4.0450104190652,50.9348297017355 4.04508041942127,50.9349798325647 4.04536795581668,50.9350979049717 4.04561050090522, 50.9351073291995 4.04563353497237,50.9351797011571 4.04581042002322</gml:coordinates><gml:Point>",
+          "@value": "<gml:Linestring srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/3812\"><gml:coordinates>85255.6517999992 196641.521899998, 85217.3483000025 196719.535100002, 85207.9952000007 196729.535599999</gml:coordinates><gml:Point>",
           "@type": "geosparql:gmlLiteral"
         }
       },
@@ -229,29 +229,29 @@
       "Wegknoop.geometrie": {
         "@type": "Punt",
         "Geometrie.gml": {
-          "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates>50.9346197016993 4.0445104192040</gml:coordinates><gml:Point>",
+          "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/3812\"><gml:coordinates>85255.6517999992 196641.521899998</gml:coordinates><gml:Point>",
           "@type": "geosparql:gmlLiteral"
         }
       }
     },
-      {
+    {
       "@id": "_:wgkn002",
       "@type": "Wegknoop",
       "Wegknoop.geometrie": {
         "@type": "Punt",
         "Geometrie.gml": {
-          "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates>50.9346197016993 4.0445104192040</gml:coordinates><gml:Point>",
+          "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/3812\"><gml:coordinates>85207.9952000007 196729.535599999</gml:coordinates><gml:Point>",
           "@type": "geosparql:gmlLiteral"
         }
       }
     },
-        {
+    {
       "@id": "_:mpt001",
       "@type": "Verkeersmeetpunt",
       "Verkeersmeetpunt.geometrie": {
         "@type": "Punt",
         "Geometrie.gml": {
-          "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates>virtual_x,virtual_y</gml:coordinates><gml:Point>",
+          "@value": "<gml:Point srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/3812\"><gml:coordinates>virtual_x,virtual_y</gml:coordinates><gml:Point>",
           "@type": "geosparql:gmlLiteral"
         }
       },
@@ -268,7 +268,6 @@
       },
       "Verkeersbemonsteringsobject.bemonsterdObject": "_:wgs001"
     },
-
 
   ]
 }

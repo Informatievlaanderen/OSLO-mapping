@@ -1,8 +1,7 @@
 ---
 layout: default
-title: Aanpak
+title: Aanzet
 parent: VMM
-nav_exclude: true
 nav_order: 1
 ---
 

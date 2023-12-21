@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Stap voor stap
+title: Stap voor Stap
 parent: VMM
 nav_order: 2
 ---

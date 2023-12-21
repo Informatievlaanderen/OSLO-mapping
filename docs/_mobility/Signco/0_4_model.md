@@ -8,7 +8,7 @@ nav_order: 4
 ## Vereenvoudigd implementatie model
 
 In het kader van de Mobility Dataspace werden verschillende datasets rond verkeersmetingen gepubliceerd als Linked Data Event Streams. Een implementatiemodel werd uitgewerkt specifiek voor deze datasets:
-![](https://implementatie.data.test-vlaanderen.be/doc/implementatiemodel/verkeersmetingen/)
+https://implementatie.data.test-vlaanderen.be/doc/implementatiemodel/verkeersmetingen/
 
 
 <div id="enlargeImage">
