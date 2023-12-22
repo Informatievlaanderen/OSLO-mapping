@@ -28,6 +28,9 @@ collections:
   milieu:
     permalink: "/:collection/:path"
     output: true
+  basis:
+    permalink: "/:collection/:path"
+    output: true
 
 
 # External navigation links
@@ -83,6 +86,8 @@ just_the_docs:
       name: Mobility Data Space
     milieu:
       name:  Agriculture Data Space
+    basis:
+      name:  Basis Registers Data Space
 
 enable_copy_code_button: true
 

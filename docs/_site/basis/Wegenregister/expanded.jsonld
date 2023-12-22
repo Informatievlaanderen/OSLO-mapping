@@ -1,0 +1,101 @@
+[
+  {
+    "@id": "_:datasetweg001",
+    "@type": "http://www.w3.org/ns/dcat#Dataset",
+    "http://purl.org/dc/terms/description": {
+      "@language": "nl",
+      "@value": "Het Wegenregister is het middenschalig referentiebestand van de wegen in Vlaanderen."
+    },
+    "http://purl.org/dc/terms/title": {
+      "@language": "nl",
+      "@value": "GRB - wegenregister"
+    },
+    "http://purl.org/dc/terms/accessRights": "cl-access:PUBLIC",
+    "http://www.w3.org/ns/dcat#keyword": {
+      "@language": "nl",
+      "@value": "GRB"
+    }
+  },
+  {
+    "@id": "_:wegsegment001",
+    "@type": "https://data.vlaanderen.be/ns/weg#Wegsegment",
+    "https://data.vlaanderen.be/ns/weg#beginknoop": {
+      "@type": "http://www.opengis.net/ont/sf#Point",
+      "http://www.opengis.net/ont/geosparql#asGML": {
+        "@type": "geosparql:gmlLiteral",
+        "@value": "<gml:Point srsName='urn:ogc:def:crs:EPSG::31370' srsDimension='2'><gml:pos>184783.609986328 112696.828017466</gml:pos></gml:Point>"
+      }
+    },
+    "https://data.vlaanderen.be/ns/weg#eindknoop": {
+      "@type": "http://www.opengis.net/ont/sf#Point",
+      "http://www.opengis.net/ont/geosparql#asGML": {
+        "@type": "geosparql:gmlLiteral",
+        "@value": "<gml:Point srsName='urn:ogc:def:crs:EPSG::31370' srsDimension='2'><gml:pos>  </gml:pos></gml:Point>"
+      }
+    },
+    "https://data.vlaanderen.be/ns/weg#linkergemeentenaam": {
+      "@type": "https://data.vlaanderen.be/ns/adres#Gemeentenaam",
+      "@value": "ng"
+    },
+    "https://data.vlaanderen.be/ns/weg#linkerstraatnaam": {
+      "@type": "https://data.vlaanderen.be/ns/adres#Straatnaam",
+      "@value": "nvt"
+    },
+    "https://data.vlaanderen.be/ns/weg#middellijnGeometrie": {
+      "@type": "http://www.opengis.net/ont/sf#LineString",
+      "http://www.opengis.net/ont/geosparql#asGML": {
+        "@type": "geosparql:gmlLiteral",
+        "@value": "<gml:LineString srsName='urn:ogc:def:crs:EPSG::31370' srsDimension='2'><gml:posList> 107440.708013833,184783.609986328 112696.828017466,192266.132487502 </gml:posList></gml:LineString>"
+      }
+    },
+    "https://data.vlaanderen.be/ns/weg#morfologischeWegklasse": {
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@value": "cl-morfologischeWegklasse#114"
+    },
+    "https://data.vlaanderen.be/ns/weg#rechtergemeentenaam": {
+      "@type": "https://data.vlaanderen.be/ns/adres#Gemeentenaam",
+      "@value": "ng"
+    },
+    "https://data.vlaanderen.be/ns/weg#rechterstraatnaam": {
+      "@type": "https://data.vlaanderen.be/ns/adres#Straatnaam",
+      "@value": "nvt"
+    },
+    "https://data.vlaanderen.be/ns/weg#toegangsbeperking": {
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@value": "cl-toegangsbeperking#openbare_weg"
+    },
+    "https://data.vlaanderen.be/ns/weg#wegcategorie": {
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@value": "cl-wegcategorie#-9"
+    },
+    "https://data.vlaanderen.be/ns/weg#wegsegmentstatus": {
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@value": "cl-wegsegmentStatus#in_gebruik"
+    },
+    "https://data.vlaanderen.be/ns/weg#wegverharding": {
+      "@type": "https://data.vlaanderen.be/ns/weg#Wegverharding",
+      "@value": "cl-wegverharding#2"
+    }
+  },
+  {
+    "https://data.vlaanderen.be/ns/weg#behoortTot": [
+      {
+        "@type": "https://data.vlaanderen.be/ns/weg#EuropeseWeg",
+        "https://data.vlaanderen.be/ns/weg#europeesWegnummer": {
+          "@type": "http://www.w3.org/2001/XMLSchema#string",
+          "@value": ""
+        }
+      },
+      {
+        "@type": "https://data.vlaanderen.be/ns/weg#NationaleWeg"
+      }
+    ],
+    "https://data.vlaanderen.be/ns/weg#behoortTotSetOpPositie": {
+      "@type": "https://data.vlaanderen.be/ns/weg#GenummerdeWeg",
+      "https://data.vlaanderen.be/ns/weg#genummerdeWegnummer": {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": ""
+      }
+    }
+  }
+]

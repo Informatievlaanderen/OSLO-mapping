@@ -1,0 +1,105 @@
+{
+  "@context": [
+    "https://raw.githubusercontent.com/samuvack/context/main/wegenregister.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21/context/geodcatap-vlaanderen.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld"
+  ,
+  {
+  "cl-morfologieType": "https://data.vlaanderen.be/doc/concept/Wegenregister_morfologieType",
+  "cl-wegcategorieType": "https://data.vlaanderen.be/doc/concept/Wegenregister_wegcategorieType",
+  "cl-wegsegmentStatus": "https://data.vlaanderen.be/doc/concept/Wegenregister_wegcategorieType",
+  "cl-geometrieMethode": "https://data.vlaanderen.be/doc/concept/Wegenregister_geometrieMethode",
+  "cl-genummerdeWegRichting": "https://data.vlaanderen.be/doc/concept/Wegenregister_genummerdeWegRichting",
+  "cl-toegangsbeperkingType": "https://data.vlaanderen.be/doc/concept/Wegenregister_toegangsbeperkingType",
+  "cl-wegknoopType": "https://data.vlaanderen.be/doc/concept/Wegenregister_wegknoopType",
+  "cl-wegcategorie":  "https://data.vlaanderen.be/doc/concept/Wegenregister_wegcategorie",
+  "cl-referentiepuntType": "https://data.vlaanderen.be/doc/concept/Wegenregister_referentiepuntType",
+  "cl_ondergrondseKruisingType": "https://data.vlaanderen.be/doc/concept/Wegenregister_referentiepuntType",
+  "cl-wegsegmentStatus": "https://data.vlaanderen.be/doc/concept/Wegenregister_wegsegmentStatus",
+  "cl-wegverhardingType": "https://data.vlaanderen.be/doc/concept/Wegenregister_wegverhardingType",
+  "cl-toegangsbeperkingType": "https://data.vlaanderen.be/doc/concept/Wegenregister_toegangsbeperkingType",
+  "cl-beheerder":"https://data.vlaanderen.be/doc/concept/Wegenregister_beheerder",
+  "cl-richtingWaarde": "https://data.vlaanderen.be/doc/concept/Wegenregister_richtingWaarde"
+}],
+
+  "@graph": [
+    {
+      "@id": "_:datasetweg001",
+      "@type": "Dataset",
+      "Dataset.titel": {
+        "@language": "nl",
+        "@value": "GRB - wegenregister"
+      },
+      "Dataset.beschrijving": [
+        {
+          "@language": "nl",
+          "@value": "Het Wegenregister is het middenschalig referentiebestand van de wegen in Vlaanderen."
+        }
+      ],
+      "Dataset.toegankelijkheid": "cl-access:PUBLIC",
+      "Dataset.trefwoord": [
+        {
+          "@language": "nl",
+          "@value": "GRB"
+        }
+      ]
+    },
+    {
+    "@id": "_:wegsegment001",
+    "@type": "Wegsegment",
+    "middellijnGeometrie": {
+        "@type": "Lijnstring",
+        "Geometrie.gml": {
+            "@value": "<gml:LineString srsName='urn:ogc:def:crs:EPSG::31370' srsDimension='2'><gml:posList> 107440.708013833,184783.609986328 112696.828017466,192266.132487502 </gml:posList></gml:LineString>",
+            "@type": "geosparql:gmlLiteral"
+        }
+    },
+    "beginknoop": {
+        "@type": "Punt",
+        "Geometrie.gml": {
+            "@value": "<gml:Point srsName='urn:ogc:def:crs:EPSG::31370' srsDimension='2'><gml:pos>184783.609986328 112696.828017466</gml:pos></gml:Point>",
+            "@type": "geosparql:gmlLiteral"
+        }
+    },
+    "eindknoop": {
+        "@type": "Punt",
+        "Geometrie.gml": {
+            "@value": "<gml:Point srsName='urn:ogc:def:crs:EPSG::31370' srsDimension='2'><gml:pos>  </gml:pos></gml:Point>",
+            "@type": "geosparql:gmlLiteral"
+        }
+    },
+    "wegsegmentstatus": "cl-wegsegmentStatus#in_gebruik",
+    "morfologischeWegklasse": "cl-morfologischeWegklasse#114",
+    "wegcategorie": "cl-wegcategorie#-9",
+    "wegverharding": "cl-wegverharding#2",
+    "linkerwergbeheerder":"cl-beheerder#44040",
+    "rechterwergbeheerder":"cl-beheerder#44040",
+    "methode wegsegmentgeometrie":"cl-geometrieMethode#2",
+    "toegangsbeperking": "cl-toegangsbeperking#openbare_weg",
+    "linkerstraatnaam": "nvt",
+    "rechterstraatnaam": "nvt",
+    "linkergemeentenaam": "ng",
+    "rechtergemeentenaam": "ng"
+},{
+    "behoortTot":
+    [{
+      "@type": "EuropeseWeg",
+      "europeesWegnummer": ""
+    },
+    {
+      "@type": "NationaleWeg",
+      "nationaalWegnummer": ""
+    }
+  ],
+    "behoortTotSet":
+    [
+    {
+      "@type":"GenummerdeWeg",
+      "genummerdeWegnummer": ""
+    }
+  ]
+  }
+
+  
+]
+}
