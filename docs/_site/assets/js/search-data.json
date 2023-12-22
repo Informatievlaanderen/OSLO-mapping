@@ -1331,7 +1331,7 @@
   },"190": {
     "doc": "Input data",
     "title": "Input data",
-    "content": "Onderstaande datavoorbeelden werden gedownload via de downloadtoepassing: https://download.vlaanderen.be/product/10412-wegenregister-15122023 . ",
+    "content": "Onderstaande datavoorbeelden werden gedownload van GRB . Downloadtoepassing voor data wegenregister geeft enkel shapefile weer: https://download.vlaanderen.be/product/10412-wegenregister-15122023 . ",
     "url": "/basis/Wegenregister/1_input",
     
     "relUrl": "/basis/Wegenregister/1_input"

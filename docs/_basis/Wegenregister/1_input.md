@@ -7,9 +7,9 @@ nav_order: 1
 
 ## Input data
 
-Onderstaande datavoorbeelden werden gedownload via de downloadtoepassing: https://download.vlaanderen.be/product/10412-wegenregister-15122023
+Onderstaande datavoorbeelden werden gedownload van GRBgis via de download toepassing: https://download.vlaanderen.be/product/1-grbgis
 
-
+Downloadtoepassing voor data wegenregister geeft enkel shapefile weer: https://download.vlaanderen.be/product/10412-wegenregister-15122023
 
 ## Wegsegment
 
