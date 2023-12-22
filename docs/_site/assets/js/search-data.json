@@ -1331,7 +1331,7 @@
   },"190": {
     "doc": "Input data",
     "title": "Input data",
-    "content": "Onderstaande datavoorbeelden werden gedownload van GRB . Downloadtoepassing voor data wegenregister geeft enkel shapefile weer: https://download.vlaanderen.be/product/10412-wegenregister-15122023 . ",
+    "content": "Onderstaande datavoorbeelden werden gedownload van GRBgis via de download toepassing: https://download.vlaanderen.be/product/1-grbgis . Downloadtoepassing voor data wegenregister geeft enkel shapefile weer: https://download.vlaanderen.be/product/10412-wegenregister-15122023 . ",
     "url": "/basis/Wegenregister/1_input",
     
     "relUrl": "/basis/Wegenregister/1_input"
@@ -1408,7 +1408,7 @@
   },"201": {
     "doc": "Oslo model",
     "title": "OSLO model",
-    "content": " ",
+    "content": "Het datavoorbeeld Wegenregister werd gemapt op het OSLO model wegenregister: . https://data.vlaanderen.be/doc/applicatieprofiel/wegenregister/html/overview.jpg . ",
     "url": "/basis/Wegenregister/3_model#oslo-model",
     
     "relUrl": "/basis/Wegenregister/3_model#oslo-model"
