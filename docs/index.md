@@ -1,5 +1,5 @@
 ---
-title: Home
+title: OSLO mapping
 layout: home
 nav_order: 0
 ---
