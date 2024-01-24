@@ -1331,123 +1331,228 @@
   },"190": {
     "doc": "Input data",
     "title": "Input data",
+    "content": " ",
+    "url": "/basis/Organisatieregister/1_input",
+    
+    "relUrl": "/basis/Organisatieregister/1_input"
+  },"191": {
+    "doc": "Oslo model",
+    "title": "OSLO model",
+    "content": "Het datavoorbeeld Verenigingsregister werd gemapt op het OSLO model Feitelijke Verenigingen: . ",
+    "url": "/basis/Organisatieregister/3_model#oslo-model",
+    
+    "relUrl": "/basis/Organisatieregister/3_model#oslo-model"
+  },"192": {
+    "doc": "Oslo model",
+    "title": "Oslo model",
+    "content": " ",
+    "url": "/basis/Organisatieregister/3_model",
+    
+    "relUrl": "/basis/Organisatieregister/3_model"
+  },"193": {
+    "doc": "OSLO mapping",
+    "title": "OSLO mapping",
+    "content": "{ \"@context\": [ \"https://raw.githubusercontent.com/samuvack/context/main/wegenregister.jsonld\", \"https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21/context/geodcatap-vlaanderen.jsonld\", \"https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld\" , { \"cl-morfologieType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_morfologieType\", \"cl-wegcategorieType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_wegcategorieType\", \"cl-wegsegmentStatus\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_wegcategorieType\", \"cl-geometrieMethode\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_geometrieMethode\", \"cl-genummerdeWegRichting\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_genummerdeWegRichting\", \"cl-toegangsbeperkingType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_toegangsbeperkingType\", \"cl-wegknoopType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_wegknoopType\", \"cl-wegcategorie\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_wegcategorie\", \"cl-referentiepuntType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_referentiepuntType\", \"cl_ondergrondseKruisingType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_referentiepuntType\", \"cl-wegsegmentStatus\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_wegsegmentStatus\", \"cl-wegverhardingType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_wegverhardingType\", \"cl-toegangsbeperkingType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_toegangsbeperkingType\", \"cl-beheerder\":\"https://data.vlaanderen.be/doc/concept/Wegenregister_beheerder\", \"cl-richtingWaarde\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_richtingWaarde\" }], \"@graph\": [ { \"@id\": \"_:datasetweg001\", \"@type\": \"Dataset\", \"Dataset.titel\": { \"@language\": \"nl\", \"@value\": \"GRB - wegenregister\" }, \"Dataset.beschrijving\": [ { \"@language\": \"nl\", \"@value\": \"Het Wegenregister is het middenschalig referentiebestand van de wegen in Vlaanderen.\" } ], \"Dataset.toegankelijkheid\": \"cl-access:PUBLIC\", \"Dataset.trefwoord\": [ { \"@language\": \"nl\", \"@value\": \"GRB\" } ] }, { } ] } . ",
+    "url": "/basis/Organisatieregister/4_oslo_mapping",
+    
+    "relUrl": "/basis/Organisatieregister/4_oslo_mapping"
+  },"194": {
+    "doc": "Expanded OSLO mapping",
+    "title": "expanded OSLO mapping",
+    "content": "[ { \"@id\": \"_:datasetweg001\", \"@type\": \"http://www.w3.org/ns/dcat#Dataset\", \"http://purl.org/dc/terms/description\": { \"@language\": \"nl\", \"@value\": \"Het Wegenregister is het middenschalig referentiebestand van de wegen in Vlaanderen.\" }, \"http://purl.org/dc/terms/title\": { \"@language\": \"nl\", \"@value\": \"GRB - wegenregister\" }, \"http://purl.org/dc/terms/accessRights\": \"cl-access:PUBLIC\", \"http://www.w3.org/ns/dcat#keyword\": { \"@language\": \"nl\", \"@value\": \"GRB\" } }, { \"@id\": \"_:wegsegment001\", \"@type\": \"https://data.vlaanderen.be/ns/weg#Wegsegment\", \"https://data.vlaanderen.be/ns/weg#beginknoop\": { \"@type\": \"http://www.opengis.net/ont/sf#Point\", \"http://www.opengis.net/ont/geosparql#asGML\": { \"@type\": \"geosparql:gmlLiteral\", \"@value\": \"&lt;gml:Point srsName='urn:ogc:def:crs:EPSG::31370' srsDimension='2'&gt;&lt;gml:pos&gt;184783.609986328 112696.828017466&lt;/gml:pos&gt;&lt;/gml:Point&gt;\" } }, \"https://data.vlaanderen.be/ns/weg#eindknoop\": { \"@type\": \"http://www.opengis.net/ont/sf#Point\", \"http://www.opengis.net/ont/geosparql#asGML\": { \"@type\": \"geosparql:gmlLiteral\", \"@value\": \"&lt;gml:Point srsName='urn:ogc:def:crs:EPSG::31370' srsDimension='2'&gt;&lt;gml:pos&gt; &lt;/gml:pos&gt;&lt;/gml:Point&gt;\" } }, \"https://data.vlaanderen.be/ns/weg#linkergemeentenaam\": { \"@type\": \"https://data.vlaanderen.be/ns/adres#Gemeentenaam\", \"@value\": \"ng\" }, \"https://data.vlaanderen.be/ns/weg#linkerstraatnaam\": { \"@type\": \"https://data.vlaanderen.be/ns/adres#Straatnaam\", \"@value\": \"nvt\" }, \"https://data.vlaanderen.be/ns/weg#middellijnGeometrie\": { \"@type\": \"http://www.opengis.net/ont/sf#LineString\", \"http://www.opengis.net/ont/geosparql#asGML\": { \"@type\": \"geosparql:gmlLiteral\", \"@value\": \"&lt;gml:LineString srsName='urn:ogc:def:crs:EPSG::31370' srsDimension='2'&gt;&lt;gml:posList&gt; 107440.708013833,184783.609986328 112696.828017466,192266.132487502 &lt;/gml:posList&gt;&lt;/gml:LineString&gt;\" } }, \"https://data.vlaanderen.be/ns/weg#morfologischeWegklasse\": { \"@type\": \"http://www.w3.org/2004/02/skos/core#Concept\", \"@value\": \"cl-morfologischeWegklasse#114\" }, \"https://data.vlaanderen.be/ns/weg#rechtergemeentenaam\": { \"@type\": \"https://data.vlaanderen.be/ns/adres#Gemeentenaam\", \"@value\": \"ng\" }, \"https://data.vlaanderen.be/ns/weg#rechterstraatnaam\": { \"@type\": \"https://data.vlaanderen.be/ns/adres#Straatnaam\", \"@value\": \"nvt\" }, \"https://data.vlaanderen.be/ns/weg#toegangsbeperking\": { \"@type\": \"http://www.w3.org/2004/02/skos/core#Concept\", \"@value\": \"cl-toegangsbeperking#openbare_weg\" }, \"https://data.vlaanderen.be/ns/weg#wegcategorie\": { \"@type\": \"http://www.w3.org/2004/02/skos/core#Concept\", \"@value\": \"cl-wegcategorie#-9\" }, \"https://data.vlaanderen.be/ns/weg#wegsegmentstatus\": { \"@type\": \"http://www.w3.org/2004/02/skos/core#Concept\", \"@value\": \"cl-wegsegmentStatus#in_gebruik\" }, \"https://data.vlaanderen.be/ns/weg#wegverharding\": { \"@type\": \"https://data.vlaanderen.be/ns/weg#Wegverharding\", \"@value\": \"cl-wegverharding#2\" } }, { \"https://data.vlaanderen.be/ns/weg#behoortTot\": [ { \"@type\": \"https://data.vlaanderen.be/ns/weg#EuropeseWeg\", \"https://data.vlaanderen.be/ns/weg#europeesWegnummer\": { \"@type\": \"http://www.w3.org/2001/XMLSchema#string\", \"@value\": \"\" } }, { \"@type\": \"https://data.vlaanderen.be/ns/weg#NationaleWeg\" } ], \"https://data.vlaanderen.be/ns/weg#behoortTotSetOpPositie\": { \"@type\": \"https://data.vlaanderen.be/ns/weg#GenummerdeWeg\", \"https://data.vlaanderen.be/ns/weg#genummerdeWegnummer\": { \"@type\": \"http://www.w3.org/2001/XMLSchema#string\", \"@value\": \"\" } } } ] . ",
+    "url": "/basis/Organisatieregister/5_expanded_oslo_mapping#expanded-oslo-mapping",
+    
+    "relUrl": "/basis/Organisatieregister/5_expanded_oslo_mapping#expanded-oslo-mapping"
+  },"195": {
+    "doc": "Expanded OSLO mapping",
+    "title": "Expanded OSLO mapping",
+    "content": " ",
+    "url": "/basis/Organisatieregister/5_expanded_oslo_mapping",
+    
+    "relUrl": "/basis/Organisatieregister/5_expanded_oslo_mapping"
+  },"196": {
+    "doc": "Organisatieregister",
+    "title": "Organisatieregister",
+    "content": "Het organisatieregister (ook gekend als “Wegwijs organisatie”) identificeert en beschrijft organisaties binnen de publieke sector. De Vlaamse overheid is een onderdeel hiervan, maar ook lokale overheden en leveranciers en klanten van publieke dienstverlening zijn geïdentificeerd in het organisatieregister. In totaal gaat het vandaag om bijna 50.000 organisaties/organisatie-eenheden die minstens over een naam en een unieke identificator, of OVO-code, beschikken. ",
+    "url": "/basis/Organisatieregister/index",
+    
+    "relUrl": "/basis/Organisatieregister/index"
+  },"197": {
+    "doc": "Input data",
+    "title": "Input data",
+    "content": " ",
+    "url": "/basis/Verenigingsregister/1_input",
+    
+    "relUrl": "/basis/Verenigingsregister/1_input"
+  },"198": {
+    "doc": "Input data",
+    "title": "Architectuur",
+    "content": ". ",
+    "url": "/basis/Verenigingsregister/1_input#architectuur",
+    
+    "relUrl": "/basis/Verenigingsregister/1_input#architectuur"
+  },"199": {
+    "doc": "Oslo model",
+    "title": "OSLO model",
+    "content": "Het datavoorbeeld Verenigingsregister werd gemapt op het OSLO model Feitelijke Verenigingen: . ",
+    "url": "/basis/Verenigingsregister/3_model#oslo-model",
+    
+    "relUrl": "/basis/Verenigingsregister/3_model#oslo-model"
+  },"200": {
+    "doc": "Oslo model",
+    "title": "Oslo model",
+    "content": " ",
+    "url": "/basis/Verenigingsregister/3_model",
+    
+    "relUrl": "/basis/Verenigingsregister/3_model"
+  },"201": {
+    "doc": "OSLO mapping",
+    "title": "OSLO mapping",
+    "content": "{ \"@context\": [ \"https://data.vlaanderen.be/doc/applicatieprofiel/FeitelijkeVerenigingen/kandidaatstandaard/2021-06-22/context/Feitelijke-Verenigingen-ap.jsonld\", \"https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21/context/geodcatap-vlaanderen.jsonld\", \"https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld\" , { \"cl-morfologieType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_morfologieType\", \"cl-wegcategorieType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_wegcategorieType\", \"cl-wegsegmentStatus\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_wegcategorieType\", \"cl-geometrieMethode\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_geometrieMethode\", \"cl-genummerdeWegRichting\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_genummerdeWegRichting\", \"cl-toegangsbeperkingType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_toegangsbeperkingType\", \"cl-wegknoopType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_wegknoopType\", \"cl-wegcategorie\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_wegcategorie\", \"cl-referentiepuntType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_referentiepuntType\", \"cl_ondergrondseKruisingType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_referentiepuntType\", \"cl-wegsegmentStatus\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_wegsegmentStatus\", \"cl-wegverhardingType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_wegverhardingType\", \"cl-toegangsbeperkingType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_toegangsbeperkingType\", \"cl-beheerder\":\"https://data.vlaanderen.be/doc/concept/Wegenregister_beheerder\", \"cl-richtingWaarde\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_richtingWaarde\" }], \"@graph\": [ { \"@id\": \"_:datasetweg001\", \"@type\": \"Dataset\", \"Dataset.titel\": { \"@language\": \"nl\", \"@value\": \"GRB - wegenregister\" }, \"Dataset.beschrijving\": [ { \"@language\": \"nl\", \"@value\": \"Het Wegenregister is het middenschalig referentiebestand van de wegen in Vlaanderen.\" } ], \"Dataset.toegankelijkheid\": \"cl-access:PUBLIC\", \"Dataset.trefwoord\": [ { \"@language\": \"nl\", \"@value\": \"GRB\" } ] }, { \"@id\": \"_:feitvereniging001\", \"@type\" : \"FeitelijkeVereniging\", \"FeitelijkeVereniging.dientIn\":{ \"@id\": \"_:Erkenningsaanvraag001\", \"@type\" : \"Erkenningsaanvraag\", \"Erkenningsaanvraag.beschrijving\": \"Erkenningsaanvraag.criteriumvereiste\": \"Erkenningsaanvraag.erkenningsbeslissing\": \"Erkenningsaanvraag.geldigheidsperiodeErkenning\": \"Erkenningsaanvraag.heeftResultaat\": \"Erkenningsaanvraag.input\": \"Erkenningsaanvraag.type\": \"FeitelijkeVereniging.heeftErkenning\": }, \"FeitelijkeVereniging.vraagtAan\":{ \"@id\": \"_:PubliekeDienstverlening001\", \"@type\" : \"PubliekeDienstverlening\", \"PubliekeDienstverlening.beschrijving\": \"\", \"PubliekeDienstverlening.heeftVerantwoordelijke\": \"\", \"PubliekeDienstverlening.kost\": \"\", \"PubliekeDienstverlening.naam\": \"\", \"PubliekeDienstverlening.produceert\": \"\", \"PubliekeOrganisatie\": \"_:organisatie\", \"PubliekeOrganisatie.werkingsgebied\": \"\", }, \"FeitelijkeVereniging.vertegenwoordiger\":{ }, { \"@id\":\"_:organisatie\", \"@type\": \"Organisatie\", \"Organisatie.werkingsgebied\": { \"@value\": \"PlaatsNaam\", \"@language\": \"nl\" } } }, ] } . ",
+    "url": "/basis/Verenigingsregister/4_oslo_mapping",
+    
+    "relUrl": "/basis/Verenigingsregister/4_oslo_mapping"
+  },"202": {
+    "doc": "Expanded OSLO mapping",
+    "title": "expanded OSLO mapping",
+    "content": ". ",
+    "url": "/basis/Verenigingsregister/5_expanded_oslo_mapping#expanded-oslo-mapping",
+    
+    "relUrl": "/basis/Verenigingsregister/5_expanded_oslo_mapping#expanded-oslo-mapping"
+  },"203": {
+    "doc": "Expanded OSLO mapping",
+    "title": "Expanded OSLO mapping",
+    "content": " ",
+    "url": "/basis/Verenigingsregister/5_expanded_oslo_mapping",
+    
+    "relUrl": "/basis/Verenigingsregister/5_expanded_oslo_mapping"
+  },"204": {
+    "doc": "Verenigingsregister",
+    "title": "Verenigingsregister",
+    "content": "Het Verenigingsregister is de nieuwe databron waarin de gegevens van (feitelijke) verenigingen centraal worden opgeslagen, maar decentraal worden beheerd. Het Verenigingsregister is in opbouw en zal het (data)hart van het Verenigingsloket vormen. ",
+    "url": "/basis/Verenigingsregister/index",
+    
+    "relUrl": "/basis/Verenigingsregister/index"
+  },"205": {
+    "doc": "Input data",
+    "title": "Input data",
     "content": "Onderstaande datavoorbeelden werden gedownload van GRBgis via de download toepassing: https://download.vlaanderen.be/product/1-grbgis . Downloadtoepassing voor data wegenregister geeft enkel shapefile weer: https://download.vlaanderen.be/product/10412-wegenregister-15122023 . ",
     "url": "/basis/Wegenregister/1_input",
     
     "relUrl": "/basis/Wegenregister/1_input"
-  },"191": {
+  },"206": {
     "doc": "Input data",
     "title": "Wegsegment",
     "content": "&lt;?xml version=\"1.0\" encoding=\"utf-8\"?&gt; &lt;agiv:FeatureCollection xmlns:gml=\"http://www.opengis.net/gml\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xsi:schemaLocation=\"http://www.agiv.be/agiv Wegsegment44040.xsd\" xmlns:agiv=\"http://www.agiv.be/agiv\"&gt; &lt;gml:boundedBy&gt; &lt;gml:Box srsName=\"EPSG:31370\"&gt; &lt;gml:coordinates&gt;107440.708013833,184783.609986328 112696.828017466,192266.132487502&lt;/gml:coordinates&gt; &lt;/gml:Box&gt; &lt;/gml:boundedBy&gt; &lt;gml:featureMember&gt; &lt;agiv:Wegsegment44040&gt; &lt;agiv:OIDN&gt;730719&lt;/agiv:OIDN&gt; &lt;agiv:UIDN&gt;1790014&lt;/agiv:UIDN&gt; &lt;agiv:VERSIE&gt;1&lt;/agiv:VERSIE&gt; &lt;agiv:BEGINDATUM&gt;2023-05-03&lt;/agiv:BEGINDATUM&gt; &lt;agiv:VERSDATUM&gt;2023-05-03&lt;/agiv:VERSDATUM&gt; &lt;agiv:WS_OIDN&gt;144503&lt;/agiv:WS_OIDN&gt; &lt;agiv:WS_UIDN&gt;144503_1&lt;/agiv:WS_UIDN&gt; &lt;agiv:STATUS&gt;4&lt;/agiv:STATUS&gt; &lt;agiv:LBLSTATUS&gt;in gebruik&lt;/agiv:LBLSTATUS&gt; &lt;agiv:LSTRNMID&gt;-9&lt;/agiv:LSTRNMID&gt; &lt;agiv:LSTRNM&gt;nvt&lt;/agiv:LSTRNM&gt; &lt;agiv:LNISCODE&gt;-8&lt;/agiv:LNISCODE&gt; &lt;agiv:LGEMEENTE&gt;ng&lt;/agiv:LGEMEENTE&gt; &lt;agiv:RSTRNMID&gt;-9&lt;/agiv:RSTRNMID&gt; &lt;agiv:RSTRNM&gt;nvt&lt;/agiv:RSTRNM&gt; &lt;agiv:RNISCODE&gt;-8&lt;/agiv:RNISCODE&gt; &lt;agiv:RGEMEENTE&gt;ng&lt;/agiv:RGEMEENTE&gt; &lt;agiv:MORF&gt;114&lt;/agiv:MORF&gt; &lt;agiv:LBLMORF&gt;wandel- of fietsweg, niet toegankelijk voor andere voertuigen&lt;/agiv:LBLMORF&gt; &lt;agiv:WEGCAT&gt;-9&lt;/agiv:WEGCAT&gt; &lt;agiv:LBLWEGCAT&gt;niet van toepassing&lt;/agiv:LBLWEGCAT&gt; &lt;agiv:VERH&gt;2&lt;/agiv:VERH&gt; &lt;agiv:LBLVERH&gt;weg met losse verharding&lt;/agiv:LBLVERH&gt; &lt;agiv:BEHEER&gt;44040&lt;/agiv:BEHEER&gt; &lt;agiv:LBLBEHEER&gt;Gemeente Melle&lt;/agiv:LBLBEHEER&gt; &lt;agiv:METHODE&gt;2&lt;/agiv:METHODE&gt; &lt;agiv:LBLMETHODE&gt;ingemeten&lt;/agiv:LBLMETHODE&gt; &lt;agiv:TGBEP&gt;1&lt;/agiv:TGBEP&gt; &lt;agiv:LBLTGBEP&gt;openbare weg&lt;/agiv:LBLTGBEP&gt; &lt;agiv:BGNINV&gt;-9&lt;/agiv:BGNINV&gt; &lt;agiv:LBLBGNINV&gt;niet van toepassing&lt;/agiv:LBLBGNINV&gt; &lt;agiv:LENGTE&gt;117.62&lt;/agiv:LENGTE&gt; &lt;gml:lineStringProperty&gt; &lt;gml:LineString srsName=\"EPSG:31370\"&gt; &lt;gml:coordinates&gt;111735.735024802,186845.156995755 111695.148976773,186801.500995725 111670.02302476,186788.219971713 111642.305008739,186777.843011707&lt;/gml:coordinates&gt; &lt;/gml:LineString&gt; &lt;/gml:lineStringProperty&gt; &lt;/agiv:Wegsegment44040&gt; &lt;/gml:featureMember&gt; &lt;/gml:featureMember&gt; &lt;/agiv:FeatureCollection&gt; . ",
     "url": "/basis/Wegenregister/1_input#wegsegment",
     
     "relUrl": "/basis/Wegenregister/1_input#wegsegment"
-  },"192": {
+  },"207": {
     "doc": "Input data",
     "title": "Wegknoop",
     "content": "&lt;?xml version=\"1.0\" encoding=\"utf-8\"?&gt; &lt;agiv:FeatureCollection xmlns:gml=\"http://www.opengis.net/gml\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xsi:schemaLocation=\"http://www.agiv.be/agiv Wegknoop44040.xsd\" xmlns:agiv=\"http://www.agiv.be/agiv\"&gt; &lt;gml:boundedBy&gt; &lt;gml:Box srsName=\"EPSG:31370\"&gt; &lt;gml:coordinates&gt;107537.922029905,184888.016002402 112320.775345206,191227.645446785&lt;/gml:coordinates&gt; &lt;/gml:Box&gt; &lt;/gml:boundedBy&gt; &lt;gml:featureMember&gt; &lt;agiv:Wegknoop44040&gt; &lt;agiv:OIDN&gt;1053685&lt;/agiv:OIDN&gt; &lt;agiv:UIDN&gt;1079324&lt;/agiv:UIDN&gt; &lt;agiv:VERSIE&gt;1&lt;/agiv:VERSIE&gt; &lt;agiv:BEGINDATUM&gt;2023-05-03&lt;/agiv:BEGINDATUM&gt; &lt;agiv:VERSDATUM&gt;2023-05-03&lt;/agiv:VERSDATUM&gt; &lt;agiv:WK_OIDN&gt;2010770&lt;/agiv:WK_OIDN&gt; &lt;agiv:WK_UIDN&gt;2010770_1&lt;/agiv:WK_UIDN&gt; &lt;agiv:TYPE&gt;1&lt;/agiv:TYPE&gt; &lt;agiv:LBLTYPE&gt;echte knoop&lt;/agiv:LBLTYPE&gt; &lt;agiv:BGNINV&gt;-9&lt;/agiv:BGNINV&gt; &lt;agiv:LBLBGNINV&gt;niet van toepassing&lt;/agiv:LBLBGNINV&gt; &lt;gml:pointProperty&gt; &lt;gml:Point srsName=\"EPSG:31370\"&gt; &lt;gml:coordinates&gt;111915.845104925,186717.758595664&lt;/gml:coordinates&gt; &lt;/gml:Point&gt; &lt;/gml:pointProperty&gt; &lt;/agiv:Wegknoop44040&gt; &lt;/gml:featureMember&gt; &lt;/agiv:FeatureCollection&gt; . ",
     "url": "/basis/Wegenregister/1_input#wegknoop",
     
     "relUrl": "/basis/Wegenregister/1_input#wegknoop"
-  },"193": {
+  },"208": {
     "doc": "Input data",
     "title": "Aantal rijstroken (AttRijstroken)",
     "content": " ",
     "url": "/basis/Wegenregister/1_input#aantal-rijstroken-attrijstroken",
     
     "relUrl": "/basis/Wegenregister/1_input#aantal-rijstroken-attrijstroken"
-  },"194": {
+  },"209": {
     "doc": "Input data",
     "title": "Wegbreedte (AttWegbreedte)",
     "content": " ",
     "url": "/basis/Wegenregister/1_input#wegbreedte-attwegbreedte",
     
     "relUrl": "/basis/Wegenregister/1_input#wegbreedte-attwegbreedte"
-  },"195": {
+  },"210": {
     "doc": "Input data",
     "title": "Wegverharding (AttWegverhard)",
     "content": " ",
     "url": "/basis/Wegenregister/1_input#wegverharding-attwegverhard",
     
     "relUrl": "/basis/Wegenregister/1_input#wegverharding-attwegverhard"
-  },"196": {
+  },"211": {
     "doc": "Input data",
     "title": "Ongelijkgrondse kruising (RltOgkruising)",
     "content": " ",
     "url": "/basis/Wegenregister/1_input#ongelijkgrondse-kruising-rltogkruising",
     
     "relUrl": "/basis/Wegenregister/1_input#ongelijkgrondse-kruising-rltogkruising"
-  },"197": {
+  },"212": {
     "doc": "Input data",
     "title": "Europese weg (AttEuropweg)",
     "content": " ",
     "url": "/basis/Wegenregister/1_input#europese-weg-atteuropweg",
     
     "relUrl": "/basis/Wegenregister/1_input#europese-weg-atteuropweg"
-  },"198": {
+  },"213": {
     "doc": "Input data",
     "title": "Nationale weg (AttNationweg)",
     "content": " ",
     "url": "/basis/Wegenregister/1_input#nationale-weg-attnationweg",
     
     "relUrl": "/basis/Wegenregister/1_input#nationale-weg-attnationweg"
-  },"199": {
+  },"214": {
     "doc": "Input data",
     "title": "Genummerde weg (AttGenumweg)",
     "content": " ",
     "url": "/basis/Wegenregister/1_input#genummerde-weg-attgenumweg",
     
     "relUrl": "/basis/Wegenregister/1_input#genummerde-weg-attgenumweg"
-  },"200": {
+  },"215": {
     "doc": "Input data",
     "title": "Referentiepunt (Refpunt)",
     "content": " ",
     "url": "/basis/Wegenregister/1_input#referentiepunt-refpunt",
     
     "relUrl": "/basis/Wegenregister/1_input#referentiepunt-refpunt"
-  },"201": {
+  },"216": {
     "doc": "Oslo model",
     "title": "OSLO model",
-    "content": "Het datavoorbeeld Wegenregister werd gemapt op het OSLO model wegenregister: . https://data.vlaanderen.be/doc/applicatieprofiel/wegenregister/html/overview.jpg . ",
+    "content": "Het datavoorbeeld Wegenregister werd gemapt op het OSLO model wegenregister: . ",
     "url": "/basis/Wegenregister/3_model#oslo-model",
     
     "relUrl": "/basis/Wegenregister/3_model#oslo-model"
-  },"202": {
+  },"217": {
     "doc": "Oslo model",
     "title": "Oslo model",
     "content": " ",
     "url": "/basis/Wegenregister/3_model",
     
     "relUrl": "/basis/Wegenregister/3_model"
-  },"203": {
+  },"218": {
     "doc": "OSLO mapping",
     "title": "OSLO mapping",
     "content": "{ \"@context\": [ \"https://raw.githubusercontent.com/samuvack/context/main/wegenregister.jsonld\", \"https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21/context/geodcatap-vlaanderen.jsonld\", \"https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld\" , { \"cl-morfologieType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_morfologieType\", \"cl-wegcategorieType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_wegcategorieType\", \"cl-wegsegmentStatus\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_wegcategorieType\", \"cl-geometrieMethode\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_geometrieMethode\", \"cl-genummerdeWegRichting\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_genummerdeWegRichting\", \"cl-toegangsbeperkingType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_toegangsbeperkingType\", \"cl-wegknoopType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_wegknoopType\", \"cl-wegcategorie\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_wegcategorie\", \"cl-referentiepuntType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_referentiepuntType\", \"cl_ondergrondseKruisingType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_referentiepuntType\", \"cl-wegsegmentStatus\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_wegsegmentStatus\", \"cl-wegverhardingType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_wegverhardingType\", \"cl-toegangsbeperkingType\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_toegangsbeperkingType\", \"cl-beheerder\":\"https://data.vlaanderen.be/doc/concept/Wegenregister_beheerder\", \"cl-richtingWaarde\": \"https://data.vlaanderen.be/doc/concept/Wegenregister_richtingWaarde\" }], \"@graph\": [ { \"@id\": \"_:datasetweg001\", \"@type\": \"Dataset\", \"Dataset.titel\": { \"@language\": \"nl\", \"@value\": \"GRB - wegenregister\" }, \"Dataset.beschrijving\": [ { \"@language\": \"nl\", \"@value\": \"Het Wegenregister is het middenschalig referentiebestand van de wegen in Vlaanderen.\" } ], \"Dataset.toegankelijkheid\": \"cl-access:PUBLIC\", \"Dataset.trefwoord\": [ { \"@language\": \"nl\", \"@value\": \"GRB\" } ] }, { \"@id\": \"_:wegsegment001\", \"@type\": \"Wegsegment\", \"middellijnGeometrie\": { \"@type\": \"Lijnstring\", \"Geometrie.gml\": { \"@value\": \"&lt;gml:LineString srsName='urn:ogc:def:crs:EPSG::31370' srsDimension='2'&gt;&lt;gml:posList&gt; 107440.708013833,184783.609986328 112696.828017466,192266.132487502 &lt;/gml:posList&gt;&lt;/gml:LineString&gt;\", \"@type\": \"geosparql:gmlLiteral\" } }, \"beginknoop\": { \"@type\": \"Punt\", \"Geometrie.gml\": { \"@value\": \"&lt;gml:Point srsName='urn:ogc:def:crs:EPSG::31370' srsDimension='2'&gt;&lt;gml:pos&gt;184783.609986328 112696.828017466&lt;/gml:pos&gt;&lt;/gml:Point&gt;\", \"@type\": \"geosparql:gmlLiteral\" } }, \"eindknoop\": { \"@type\": \"Punt\", \"Geometrie.gml\": { \"@value\": \"&lt;gml:Point srsName='urn:ogc:def:crs:EPSG::31370' srsDimension='2'&gt;&lt;gml:pos&gt; &lt;/gml:pos&gt;&lt;/gml:Point&gt;\", \"@type\": \"geosparql:gmlLiteral\" } }, \"wegsegmentstatus\": \"cl-wegsegmentStatus#in_gebruik\", \"morfologischeWegklasse\": \"cl-morfologischeWegklasse#114\", \"wegcategorie\": \"cl-wegcategorie#-9\", \"wegverharding\": \"cl-wegverharding#2\", \"linkerwergbeheerder\":\"cl-beheerder#44040\", \"rechterwergbeheerder\":\"cl-beheerder#44040\", \"methode wegsegmentgeometrie\":\"cl-geometrieMethode#2\", \"toegangsbeperking\": \"cl-toegangsbeperking#openbare_weg\", \"linkerstraatnaam\": \"nvt\", \"rechterstraatnaam\": \"nvt\", \"linkergemeentenaam\": \"ng\", \"rechtergemeentenaam\": \"ng\" },{ \"behoortTot\": [{ \"@type\": \"EuropeseWeg\", \"europeesWegnummer\": \"\" }, { \"@type\": \"NationaleWeg\", \"nationaalWegnummer\": \"\" } ], \"behoortTotSet\": [ { \"@type\":\"GenummerdeWeg\", \"genummerdeWegnummer\": \"\" } ] } ] } . ",
     "url": "/basis/Wegenregister/4_oslo_mapping",
     
     "relUrl": "/basis/Wegenregister/4_oslo_mapping"
-  },"204": {
+  },"219": {
     "doc": "Expanded OSLO mapping",
     "title": "expanded OSLO mapping",
     "content": "[ { \"@id\": \"_:datasetweg001\", \"@type\": \"http://www.w3.org/ns/dcat#Dataset\", \"http://purl.org/dc/terms/description\": { \"@language\": \"nl\", \"@value\": \"Het Wegenregister is het middenschalig referentiebestand van de wegen in Vlaanderen.\" }, \"http://purl.org/dc/terms/title\": { \"@language\": \"nl\", \"@value\": \"GRB - wegenregister\" }, \"http://purl.org/dc/terms/accessRights\": \"cl-access:PUBLIC\", \"http://www.w3.org/ns/dcat#keyword\": { \"@language\": \"nl\", \"@value\": \"GRB\" } }, { \"@id\": \"_:wegsegment001\", \"@type\": \"https://data.vlaanderen.be/ns/weg#Wegsegment\", \"https://data.vlaanderen.be/ns/weg#beginknoop\": { \"@type\": \"http://www.opengis.net/ont/sf#Point\", \"http://www.opengis.net/ont/geosparql#asGML\": { \"@type\": \"geosparql:gmlLiteral\", \"@value\": \"&lt;gml:Point srsName='urn:ogc:def:crs:EPSG::31370' srsDimension='2'&gt;&lt;gml:pos&gt;184783.609986328 112696.828017466&lt;/gml:pos&gt;&lt;/gml:Point&gt;\" } }, \"https://data.vlaanderen.be/ns/weg#eindknoop\": { \"@type\": \"http://www.opengis.net/ont/sf#Point\", \"http://www.opengis.net/ont/geosparql#asGML\": { \"@type\": \"geosparql:gmlLiteral\", \"@value\": \"&lt;gml:Point srsName='urn:ogc:def:crs:EPSG::31370' srsDimension='2'&gt;&lt;gml:pos&gt; &lt;/gml:pos&gt;&lt;/gml:Point&gt;\" } }, \"https://data.vlaanderen.be/ns/weg#linkergemeentenaam\": { \"@type\": \"https://data.vlaanderen.be/ns/adres#Gemeentenaam\", \"@value\": \"ng\" }, \"https://data.vlaanderen.be/ns/weg#linkerstraatnaam\": { \"@type\": \"https://data.vlaanderen.be/ns/adres#Straatnaam\", \"@value\": \"nvt\" }, \"https://data.vlaanderen.be/ns/weg#middellijnGeometrie\": { \"@type\": \"http://www.opengis.net/ont/sf#LineString\", \"http://www.opengis.net/ont/geosparql#asGML\": { \"@type\": \"geosparql:gmlLiteral\", \"@value\": \"&lt;gml:LineString srsName='urn:ogc:def:crs:EPSG::31370' srsDimension='2'&gt;&lt;gml:posList&gt; 107440.708013833,184783.609986328 112696.828017466,192266.132487502 &lt;/gml:posList&gt;&lt;/gml:LineString&gt;\" } }, \"https://data.vlaanderen.be/ns/weg#morfologischeWegklasse\": { \"@type\": \"http://www.w3.org/2004/02/skos/core#Concept\", \"@value\": \"cl-morfologischeWegklasse#114\" }, \"https://data.vlaanderen.be/ns/weg#rechtergemeentenaam\": { \"@type\": \"https://data.vlaanderen.be/ns/adres#Gemeentenaam\", \"@value\": \"ng\" }, \"https://data.vlaanderen.be/ns/weg#rechterstraatnaam\": { \"@type\": \"https://data.vlaanderen.be/ns/adres#Straatnaam\", \"@value\": \"nvt\" }, \"https://data.vlaanderen.be/ns/weg#toegangsbeperking\": { \"@type\": \"http://www.w3.org/2004/02/skos/core#Concept\", \"@value\": \"cl-toegangsbeperking#openbare_weg\" }, \"https://data.vlaanderen.be/ns/weg#wegcategorie\": { \"@type\": \"http://www.w3.org/2004/02/skos/core#Concept\", \"@value\": \"cl-wegcategorie#-9\" }, \"https://data.vlaanderen.be/ns/weg#wegsegmentstatus\": { \"@type\": \"http://www.w3.org/2004/02/skos/core#Concept\", \"@value\": \"cl-wegsegmentStatus#in_gebruik\" }, \"https://data.vlaanderen.be/ns/weg#wegverharding\": { \"@type\": \"https://data.vlaanderen.be/ns/weg#Wegverharding\", \"@value\": \"cl-wegverharding#2\" } }, { \"https://data.vlaanderen.be/ns/weg#behoortTot\": [ { \"@type\": \"https://data.vlaanderen.be/ns/weg#EuropeseWeg\", \"https://data.vlaanderen.be/ns/weg#europeesWegnummer\": { \"@type\": \"http://www.w3.org/2001/XMLSchema#string\", \"@value\": \"\" } }, { \"@type\": \"https://data.vlaanderen.be/ns/weg#NationaleWeg\" } ], \"https://data.vlaanderen.be/ns/weg#behoortTotSetOpPositie\": { \"@type\": \"https://data.vlaanderen.be/ns/weg#GenummerdeWeg\", \"https://data.vlaanderen.be/ns/weg#genummerdeWegnummer\": { \"@type\": \"http://www.w3.org/2001/XMLSchema#string\", \"@value\": \"\" } } } ] . ",
     "url": "/basis/Wegenregister/5_expanded_oslo_mapping#expanded-oslo-mapping",
     
     "relUrl": "/basis/Wegenregister/5_expanded_oslo_mapping#expanded-oslo-mapping"
-  },"205": {
+  },"220": {
     "doc": "Expanded OSLO mapping",
     "title": "Expanded OSLO mapping",
     "content": " ",
     "url": "/basis/Wegenregister/5_expanded_oslo_mapping",
     
     "relUrl": "/basis/Wegenregister/5_expanded_oslo_mapping"
-  },"206": {
+  },"221": {
     "doc": "Wegenregister",
     "title": "Wegenregister",
     "content": "Het wegenregister is een middenschalig referentiebestand van de wegen in Vlaanderen. Het bevat alle wegen van Vlaanderen, met bijbehorende attribuutgegevens. Het bestand heeft een middenschalige precisie. Het zal uitgroeien tot een nieuwe authentieke geografische gegevensbron. ",
     "url": "/basis/Wegenregister/index",
     
     "relUrl": "/basis/Wegenregister/index"
-  },"207": {
+  },"222": {
     "doc": "Introductie basis registers",
     "title": "Introductie basis registers",
     "content": " ",

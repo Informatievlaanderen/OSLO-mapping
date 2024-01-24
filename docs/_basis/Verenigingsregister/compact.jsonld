@@ -1,0 +1,93 @@
+{
+  "@context": [
+    "https://data.vlaanderen.be/doc/applicatieprofiel/FeitelijkeVerenigingen/kandidaatstandaard/2021-06-22/context/Feitelijke-Verenigingen-ap.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21/context/geodcatap-vlaanderen.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld"
+  ,
+  {
+  "cl-morfologieType": "https://data.vlaanderen.be/doc/concept/Wegenregister_morfologieType",
+  "cl-wegcategorieType": "https://data.vlaanderen.be/doc/concept/Wegenregister_wegcategorieType",
+  "cl-wegsegmentStatus": "https://data.vlaanderen.be/doc/concept/Wegenregister_wegcategorieType",
+  "cl-geometrieMethode": "https://data.vlaanderen.be/doc/concept/Wegenregister_geometrieMethode",
+  "cl-genummerdeWegRichting": "https://data.vlaanderen.be/doc/concept/Wegenregister_genummerdeWegRichting",
+  "cl-toegangsbeperkingType": "https://data.vlaanderen.be/doc/concept/Wegenregister_toegangsbeperkingType",
+  "cl-wegknoopType": "https://data.vlaanderen.be/doc/concept/Wegenregister_wegknoopType",
+  "cl-wegcategorie":  "https://data.vlaanderen.be/doc/concept/Wegenregister_wegcategorie",
+  "cl-referentiepuntType": "https://data.vlaanderen.be/doc/concept/Wegenregister_referentiepuntType",
+  "cl_ondergrondseKruisingType": "https://data.vlaanderen.be/doc/concept/Wegenregister_referentiepuntType",
+  "cl-wegsegmentStatus": "https://data.vlaanderen.be/doc/concept/Wegenregister_wegsegmentStatus",
+  "cl-wegverhardingType": "https://data.vlaanderen.be/doc/concept/Wegenregister_wegverhardingType",
+  "cl-toegangsbeperkingType": "https://data.vlaanderen.be/doc/concept/Wegenregister_toegangsbeperkingType",
+  "cl-beheerder":"https://data.vlaanderen.be/doc/concept/Wegenregister_beheerder",
+  "cl-richtingWaarde": "https://data.vlaanderen.be/doc/concept/Wegenregister_richtingWaarde"
+}],
+
+  "@graph": [
+    {
+      "@id": "_:datasetweg001",
+      "@type": "Dataset",
+      "Dataset.titel": {
+        "@language": "nl",
+        "@value": "GRB - wegenregister"
+      },
+      "Dataset.beschrijving": [
+        {
+          "@language": "nl",
+          "@value": "Het Wegenregister is het middenschalig referentiebestand van de wegen in Vlaanderen."
+        }
+      ],
+      "Dataset.toegankelijkheid": "cl-access:PUBLIC",
+      "Dataset.trefwoord": [
+        {
+          "@language": "nl",
+          "@value": "GRB"
+        }
+      ]
+    },
+    {
+
+     "@id":  "_:feitvereniging001",
+     "@type" : "FeitelijkeVereniging",
+
+     "FeitelijkeVereniging.dientIn":{
+        "@id":  "_:Erkenningsaanvraag001",
+        "@type" : "Erkenningsaanvraag",
+        "Erkenningsaanvraag.beschrijving": 
+        "Erkenningsaanvraag.criteriumvereiste": 
+        "Erkenningsaanvraag.erkenningsbeslissing": 
+        "Erkenningsaanvraag.geldigheidsperiodeErkenning": 
+        "Erkenningsaanvraag.heeftResultaat": 
+        "Erkenningsaanvraag.input": 
+        "Erkenningsaanvraag.type": 
+        "FeitelijkeVereniging.heeftErkenning":
+     },
+     "FeitelijkeVereniging.vraagtAan":{
+        "@id":  "_:PubliekeDienstverlening001",
+        "@type" : "PubliekeDienstverlening",
+        "PubliekeDienstverlening.beschrijving": "",
+        "PubliekeDienstverlening.heeftVerantwoordelijke": "",
+        "PubliekeDienstverlening.kost": "",
+        "PubliekeDienstverlening.naam": "",
+        "PubliekeDienstverlening.produceert": "",
+        "PubliekeOrganisatie": "_:organisatie",
+        "PubliekeOrganisatie.werkingsgebied": "",
+     },
+     "FeitelijkeVereniging.vertegenwoordiger":{
+      
+     },
+     {
+      "@id":"_:organisatie",
+      "@type": "Organisatie",
+      "Organisatie.werkingsgebied": {
+          "@value": "PlaatsNaam",
+          "@language": "nl"
+      }
+     }
+
+     
+  },
+
+
+  
+]
+}
