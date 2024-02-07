@@ -101,6 +101,7 @@
 
 "oppervlakte":143933.16, 
 "lengte":1823.47,
-"relatie": "cl-wildbeh:410"
+"relatie": "cl-wildbeh:410",
+"behoortTot": ["_:datasetjacht_limburg", "_:datasetjachtterrein", "_:catalogus_agiv"]
 }
  ] }
