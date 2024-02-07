@@ -88,7 +88,7 @@
     }
   ],
 
-"Terrein.geometrie":
+"http://www.w3.org/ns/locn#geometry":
   {
   "@type": "Polygoon",
     "Geometrie.gml": {

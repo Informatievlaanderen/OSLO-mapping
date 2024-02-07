@@ -7,19 +7,7 @@ nav_order: 1
 
 ## Standardiseren data
 
-<agiv:Jachtter>
-<agiv:OIDN>3801</agiv:OIDN>
-<agiv:UIDN>49287</agiv:UIDN>
-<agiv:VELDID>41000014</agiv:VELDID>
-<agiv:PROV>Limburg</agiv:PROV>
-<agiv:DATGOEDK>2023-07-28</agiv:DATGOEDK>
-<agiv:WBENR>410</agiv:WBENR>
-<agiv:WBENAAM>De Leeuwerik</agiv:WBENAAM>
-<agiv:LENGTE>1823.47</agiv:LENGTE>
-<agiv:OPPERVL>143933.16</agiv:OPPERVL>
-<gml:Polygon srsName="EPSG:31370">
-
-
+Volgende kolommen dienen gemapt te worden op een OSLO standaard:
 Objectidentificator: OIDN
 Versie identificator: UIDN
 Identificator jachtterrein: VELDID
