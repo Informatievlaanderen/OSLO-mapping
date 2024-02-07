@@ -7,7 +7,9 @@
   "cl-id": "https://data.vlaanderen.be/doc/concept/Identificator/",
   "cl-gemet":"http://www.eionet.europa.eu/gemet/concept/",
   "cl-toegankelijk": "https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/",
-  "cl-wildbeh": "https://data.vlaanderen.be/doc/concept/Wildbeheereenheid/"
+  "cl-wildbeh": "https://data.vlaanderen.be/doc/concept/Wildbeheereenheid/",
+
+  "geometrie": "http://www.w3.org/ns/locn#geometry"
 }],
   "@graph": [
     {
@@ -72,7 +74,7 @@
     },
 {
 "@id": "_:jacht01",
-"@type": ["Object","Terrein"],
+"@type": "Object",
 "Object.identificator":[
     {
         "@type": "cl-id:oidn",
@@ -88,7 +90,7 @@
     }
   ],
 
-"http://www.w3.org/ns/locn#geometry":
+"geometrie":
   {
   "@type": "Polygoon",
     "Geometrie.gml": {
@@ -96,8 +98,9 @@
       "@type": "geosparql:gmlliteral"
     }
   },
-"Terrein.begindatum":143933.16,
-"Terrein.lengte":1823.47,
-"Terrein.relatie": "cl-wildbeh:410"
+
+"oppervlakte":143933.16, 
+"lengte":1823.47,
+"relatie": "cl-wildbeh:410"
 }
  ] }
