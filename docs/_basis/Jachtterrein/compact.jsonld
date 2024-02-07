@@ -1,0 +1,103 @@
+{
+  "@context": [
+    "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21/context/geodcatap-vlaanderen.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/terreindelen/erkendestandaard/2021-09-30/context/terreindelen-ap.jsonld",
+  {
+  "cl-id": "https://data.vlaanderen.be/doc/concept/Identificator/",
+  "cl-gemet":"http://www.eionet.europa.eu/gemet/concept/",
+  "cl-toegankelijk": "https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/",
+  "cl-wildbeh": "https://data.vlaanderen.be/doc/concept/Wildbeheereenheid/"
+}],
+  "@graph": [
+    {
+      "@id":"_:catalogus_agiv",
+      "Catalogus.uitgever":{
+          "@type":"Agent",
+          "Agent.naam": "Agentschap voor Natuur en Bos",
+          "ContactInfo.adres": "Havenlaan 88 bus 75,1000 Brussel,België",
+          "ContactInfo.telefoonnummer":"+32 (0)2 553 81 02",
+          "ContactInfo.fax":" +32 2 553 81 05",
+          "ContactInfo.email": "https://www.vlaanderen.be/digitaal-vlaanderen"
+      },
+      "Catalogus.heeftDataset":["_:datasetjachtterrein","_:datasetjacht_limb", "_:datasetjacht_wvl", "_:datasetjacht_vlbr", "_:datasetjacht_antw", "_:datasetjacht_ovl"]
+  },
+    {
+      "@id": "_:datasetjachtterrein",
+      "@type": "Dataset",
+      "Dataset.titel": {
+        "@language": "nl",
+        "@value": "Jachtterreinen"
+      },
+      "Dataset.beschrijving": [
+        {
+          "@language": "nl",
+          "@value": "Overzicht van de jachtterreinen die opgenomen zijn op goedgekeurde jachtplannen. Een jachtterrein is een aaneengesloten terrein, dat uit één of meer percelen bestaat waarop eenzelfde jachtrechthouder of een groep van jachtrechthouders het jachtrecht heeft."
+        }
+      ],
+      "Dataset.toegankelijkheid": ["cl-access:PUBLIC","cl-toegankelijk:KOSTELOOS", "cl-toegankelijk:VLOPENDATA","cl-toegankelijk:HERBRUIKBAAR", "cl-toegankelijk:TOEGEVOEGDIVL", "cl-toegankelijk:GEODATA" ], 
+      "Dataset.trefwoord": [
+        {"@language": "nl","@value": "AGIV"},
+        {"@language": "nl","@value": "jachtplan"},
+        {"@language": "nl","@value": "jachtrecht"},
+        {"@language": "nl","@value": "jachtrechthouder"},
+        {"@language": "nl","@value": "jachtseizoen"},
+        {"@language": "nl","@value": "jachtterrein"},
+        {"@language": "nl","@value": "jachtvergunning"},
+        {"@language": "nl","@value": "jachtverlof"},
+        {"@language": "nl","@value": "wildbeheereenheid"}
+      ],
+      "Dataset.GEMETconcept":["cl-gemet:3646", "cl-gemet:4072", "cl-gemet:4073","cl-gemet:11502","cl-gemet:1772"],
+      "Dataset.geografischeDekking": "Vlaanderen",
+      "Dataset.Distributie":{
+        "@type":"Distributie",
+        "Distributie.verdeler":{
+          "@type":"Agent",
+          "Agent.naam":"Agentschap Digitaal Vlaanderen",
+          "ContactInfo.adres": "Havenlaan 88 bus 30,1000 Brussel,België",
+          "ContactInfo.telefoonnummer":" +32 (0)2 553 72 02",
+          "ContactInfo.email": "https://www.vlaanderen.be/digitaal-vlaanderen"
+        }
+      }
+    },
+    {
+      "@id": "_:datasetjacht_limburg",
+      "@type": "Dataset",
+      "Dataset.eigenaar":{
+        "@type":"Agent",
+        "Agent.naam":"Dienst van de gouverneurs - Limburg, Team Jacht",
+        "ContactInfo.adres": "Universiteitslaan 1,3500 Hasselt, België",
+        "ContactInfo.email": "jacht.limburg@vlaanderen.be"
+      }
+    },
+{
+"@id": "_:jacht01",
+"@type": ["Object","Terrein"],
+"Object.identificator":[
+    {
+        "@type": "cl-id:oidn",
+        "@value": 3801
+    },
+    {
+        "@type":"cl-id:uidn",
+        "@value": 49287
+    },
+    {
+        "@type":"cl-id:veldid",
+        "@value": 41000014
+    }
+  ],
+
+"Terrein.geometrie":
+  {
+  "@type": "Polygoon",
+    "Geometrie.gml": {
+      "@value": "<gml:Polygon srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/31370\"><gml:coordinates>227995 222056</gml:coordinates><gml:polygon>",
+      "@type": "geosparql:gmlliteral"
+    }
+  },
+"Terrein.begindatum":143933.16,
+"Terrein.lengte":1823.47,
+"Terrein.relatie": "cl-wildbeh:410"
+}
+ ] }
