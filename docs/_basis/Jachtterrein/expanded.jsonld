@@ -89,10 +89,22 @@
   },
   {
     "@id": "_:jacht01",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity",
-      "Terrein"
-    ],
+    "@type": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid",
+    "https://data.vlaanderen.be/ns/perceel#agentMetRecht": {
+      "@type": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#FeitelijkeVereniging",
+      "http://www.w3.org/ns/adms#Identifier": {
+        "@type": "https://data.vlaanderen.be/doc/concept/Wildbeheereenheid/",
+        "@value": "410"
+      },
+      "http://www.w3.org/2004/02/skos/core#prefLabel": "De Leeuwerik"
+    },
+    "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.geometrie": {
+      "@type": "http://www.opengis.net/ont/sf#Polygon",
+      "http://www.opengis.net/ont/geosparql#asGML": {
+        "@type": "geosparql:gmlliteral",
+        "@value": "<gml:Polygon srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/31370\"><gml:coordinates>227995 222056</gml:coordinates><gml:polygon>"
+      }
+    },
     "http://www.w3.org/ns/adms#identifier": [
       {
         "@type": "https://data.vlaanderen.be/doc/concept/Identificator/oidn",
@@ -106,6 +118,10 @@
         "@type": "https://data.vlaanderen.be/doc/concept/Identificator/veldid",
         "@value": 41000014
       }
-    ]
+    ],
+    "https://data.vlaanderen.be/ns/perceel#landgebruik": "cl-landgebr:jachtterrein",
+    "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.oppervlakte": {
+      "@value": 143933.16
+    }
   }
 ]
