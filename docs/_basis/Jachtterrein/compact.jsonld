@@ -2,7 +2,8 @@
   "@context": [
     "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld",
     "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21/context/geodcatap-vlaanderen.jsonld",
-    "https://data.vlaanderen.be/doc/applicatieprofiel/terreindelen/erkendestandaard/2021-09-30/context/terreindelen-ap.jsonld",
+    "https://data.vlaanderen.be/doc/applicatieprofiel/perceel/erkendestandaard/2020-06-18/context/perceel.jsonld",
+    ""
   {
   "cl-id": "https://data.vlaanderen.be/doc/concept/Identificator/",
   "cl-gemet":"http://www.eionet.europa.eu/gemet/concept/",
@@ -74,8 +75,8 @@
     },
 {
 "@id": "_:jacht01",
-"@type": "Object",
-"Object.identificator":[
+"@type": "RuimtelijkeEenheid",
+"RuimtelijkeEenheid.identificator":[
     {
         "@type": "cl-id:oidn",
         "@value": 3801
@@ -90,7 +91,7 @@
     }
   ],
 
-"geometrie":
+"RuimtelijkeEenheid.geometrie":
   {
   "@type": "Polygoon",
     "Geometrie.gml": {
@@ -99,9 +100,18 @@
     }
   },
 
-"oppervlakte":143933.16, 
+"RuimtelijkeEenheid.oppervlakte":143933.16, 
 "lengte":1823.47,
-"relatie": "cl-wildbeh:410",
+"RuimtelijkeEenheid.landgebruik":"cl-landgebr:jachtterrein",
+"RuimtelijkeEenheid.agentMetRecht": {
+  "@type":"FeitelijkeVereniging",
+  "FeitelijkeVereniging.alternatieveNaam":"",
+  "FeitelijkeVereniging.identificator":{
+    "@type":"cl-wildbeh",
+    "@value":"410"
+  },
+  "FeitelijkeVereniging.voorkeursnaam":"De Leeuwerik"
+},
 "behoortTot": ["_:datasetjacht_limburg", "_:datasetjachtterrein", "_:catalogus_agiv"]
 }
  ] }
