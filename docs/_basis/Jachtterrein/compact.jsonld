@@ -9,8 +9,12 @@
   "cl-gemet":"http://www.eionet.europa.eu/gemet/concept/",
   "cl-toegankelijk": "https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/",
   "cl-wildbeh": "https://data.vlaanderen.be/doc/concept/Wildbeheereenheid/",
+  "cl-landgebr":"https://data.vlaanderen.be/doc/concept/landgebruik/",
+  "cl-access": "http://publications.europa.eu/resource/authority/access-right/",
 
-  "geometrie": "http://www.w3.org/ns/locn#geometry"
+
+  "geometrie": "http://www.w3.org/ns/locn#geometry/",
+  "geosparql":"http://www.opengis.net/ont/geosparql#"
 }],
   "@graph": [
     {

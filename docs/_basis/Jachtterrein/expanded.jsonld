@@ -30,7 +30,7 @@
       "@value": "Jachtterreinen"
     },
     "http://purl.org/dc/terms/accessRights": [
-      "cl-access:PUBLIC",
+      "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
       "https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/KOSTELOOS",
       "https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATA",
       "https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/HERBRUIKBAAR",
@@ -101,7 +101,7 @@
     "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.geometrie": {
       "@type": "http://www.opengis.net/ont/sf#Polygon",
       "http://www.opengis.net/ont/geosparql#asGML": {
-        "@type": "geosparql:gmlliteral",
+        "@type": "http://www.opengis.net/ont/geosparql#gmlliteral",
         "@value": "<gml:Polygon srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/31370\"><gml:coordinates>227995 222056</gml:coordinates><gml:polygon>"
       }
     },
@@ -119,7 +119,7 @@
         "@value": 41000014
       }
     ],
-    "https://data.vlaanderen.be/ns/perceel#landgebruik": "cl-landgebr:jachtterrein",
+    "https://data.vlaanderen.be/ns/perceel#landgebruik": "https://data.vlaanderen.be/doc/concept/landgebruik/jachtterrein",
     "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.oppervlakte": {
       "@value": 143933.16
     }
