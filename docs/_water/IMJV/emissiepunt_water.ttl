@@ -1,0 +1,30 @@
+@prefix generiek:  <https://data.vlaanderen.be/ns/generiek#> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
+@prefix imjv:      <https://data.imjv.omgeving.vlaanderen.be/ns/imjv#> .
+@prefix ldes:      <https://w3id.org/ldes#> .
+@prefix locn:      <http://www.w3.org/ns/locn#> .
+@prefix prov:      <http://www.w3.org/ns/prov#> .
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms:     <http://purl.org/dc/terms/> .
+@prefix tree:      <https://w3id.org/tree#> .
+@prefix v1:        <https://api-dev.vmm.vlaanderen.be/ldes/data/v1/> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/lozingspunt/00418870010833/AW3500007/jaar/2013/2024-06-25T14:01:47.125Z>
+        rdf:type              imjv:Emissiepunt ;
+        rdfs:label            "RWZI HASSELT : EFFLUENT F202 P1 (2013) (2013)"@nl ;
+        terms:isVersionOf     <https://data.imjv.omgeving.vlaanderen.be/id/lozingspunt/00418870010833/AW3500007/jaar/2013> ;
+        terms:title           "RWZI HASSELT : EFFLUENT F202 P1 (2013)"@nl ;
+        locn:geometry         <https://data.imjv.omgeving.vlaanderen.be/id/lozingspunt/00418870010833/AW3500007/jaar/2013/2024-06-25T14:01:47.125Z/geometrie/0001> ;
+        prov:generatedAtTime  "2024-06-25T14:01:47.125Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        imjv:exploitatie      <https://data.cbb.omgeving.vlaanderen.be/id/exploitatie/00418870010833> ;
+        imjv:jaar             "2013"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        generiek:isTijdspecialisatieVan
+                <https://data.imjv.omgeving.vlaanderen.be/id/lozingspunt/00418870010833/AW3500007> .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/lozingspunt/00418870010833/AW3500007/jaar/2013/2024-06-25T14:01:47.125Z/geometrie/0001>
+        rdf:type         locn:Geometry ;
+        geosparql:asWKT  "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(5.298607495000001 50.948995878)"^^geosparql:wktLiteral ;
+        wgs84_pos:lat    50.948995878 ;
+        wgs84_pos:long   5.298607495000001 .
