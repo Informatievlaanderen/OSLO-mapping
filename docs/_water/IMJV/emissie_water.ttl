@@ -1,0 +1,33 @@
+@prefix concept:        <https://data.imjv.omgeving.vlaanderen.be/id/concept/> .
+@prefix core:           <http://www.w3.org/2004/02/skos/core#> .
+@prefix imjv:           <https://data.imjv.omgeving.vlaanderen.be/ns/imjv#> .
+@prefix ldes:           <https://w3id.org/ldes#> .
+@prefix matrix:         <https://data.omgeving.vlaanderen.be/id/concept/matrix/> .
+@prefix prov:           <http://www.w3.org/ns/prov#> .
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa:           <http://www.w3.org/ns/sosa/> .
+@prefix terms:          <http://purl.org/dc/terms/> .
+@prefix time:           <http://www.w3.org/2006/time#> .
+@prefix tree:           <https://w3id.org/tree#> .
+@prefix v1:             <https://api-dev.vmm.vlaanderen.be/ldes/data/v1/> .
+@prefix water:          <https://data.imjv.omgeving.vlaanderen.be/id/concept/water/> .
+@prefix waterkwaliteit: <https://data.vlaanderen.be/ns/waterkwaliteit#> .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/lozing/00418870062464/AW8972002/2020/2024-06-11T12:13:36.26Z>
+        rdf:type                sosa:FeatureOfInterest , waterkwaliteit:Emissie ;
+        rdfs:label              "Lozing in RWZI ROESBRUGGE : Effluent F201 (2020)"@nl ;
+        terms:isVersionOf       <https://data.imjv.omgeving.vlaanderen.be/id/lozing/00418870062464/AW8972002/2020> ;
+        prov:generatedAtTime    "2024-06-11T12:13:36.260Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        prov:wasInfluencedBy    <https://data.cbb.omgeving.vlaanderen.be/id/exploitatie/00418870062464> ;
+        imjv:emissieType        water:geleidelozing_lozend , concept:geleidelozing ;
+        waterkwaliteit:matrix   matrix:water ;
+        waterkwaliteit:periode  <https://data.imjv.omgeving.vlaanderen.be/id/lozing/00418870062464/AW8972002/2020/2024-06-11T12:13:36.26Z/periode/0001> .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/lozing/00418870062464/AW8972002/2020/2024-06-11T12:13:36.26Z/periode/0001>
+        rdf:type             time:Interval ;
+        rdfs:label           "Periode 2020"@nl ;
+        terms:description    "Periode 2020"@nl ;
+        time:inside          <https://data.imjv.omgeving.vlaanderen.be/id/lozing/00418870062464/AW8972002/2020/2024-06-11T12:13:36.26Z/fenomeentijd/0001> ;
+        imjv:jaar            "2020"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        imjv:meetfrequentie  12.00000000000000000000 .

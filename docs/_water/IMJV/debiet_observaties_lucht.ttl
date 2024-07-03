@@ -1,0 +1,26 @@
+<https://data.imjv.omgeving.vlaanderen.be/id/observatie/01802717000544/1-1-1/geleideemissies/117014/debiet/2017/2024-05-07T12:59:17.937Z>
+        rdf:type                   sosa:Observation ;
+        rdfs:label                 "Debiet van Emissie in Schouw oven(2017)" ;
+        terms:isVersionOf          <https://data.imjv.omgeving.vlaanderen.be/id/observatie/01802717000544/1-1-1/geleideemissies/117014/debiet/2017> ;
+        prov:generatedAtTime       "2024-05-07T12:59:17.937Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        sosa:hasFeatureOfInterest  <https://data.imjv.omgeving.vlaanderen.be/id/emissie/01802717000544/1-1-1/geleideemissies/117014/2017> ;
+        sosa:hasResult             <https://data.imjv.omgeving.vlaanderen.be/id/observatie/01802717000544/1-1-1/geleideemissies/117014/debiet/2017/2024-05-07T12:59:17.937Z/result/0001> ;
+        sosa:hasSimpleResult       "32100"^^<http://www.w3.org/2001/XMLSchema#decimal> ;
+        sosa:observedProperty      <https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053> ;
+        sosa:phenomenonTime        <https://data.imjv.omgeving.vlaanderen.be/id/observatie/01802717000544/1-1-1/geleideemissies/117014/debiet/2017/2024-05-07T12:59:17.937Z/fenomeentijd/0001> .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/observatie/01802717000544/1-1-1/geleideemissies/117014/debiet/2017/2024-05-07T12:59:17.937Z/result/0001>
+        rdf:type                       sosa:Result , <https://schema.org/QuantitativeValue> ;
+        rdfs:label                     "32100 (normaal kubieke meter per uur )" ;
+        <https://schema.org/unitCode>  eenheid:Nm3_per_uur ;
+        <https://schema.org/unitText>  "normaal kubieke meter per uur" ;
+        <https://schema.org/value>     "32100"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+<https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053>
+        rdf:type    sosa:ObservableProperty , imjv:FysicoChemischeEigenschap , core:Concept ;
+        rdfs:label  "Debiet"@nl .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/observatie/01802717000544/1-1-1/geleideemissies/117014/debiet/2017/2024-05-07T12:59:17.937Z/fenomeentijd/0001>
+        rdf:type         time:Instant ;
+        rdfs:label       "2017" ;
+        time:inXSDgYear  "2017"^^<http://www.w3.org/2001/XMLSchema#gYear> .

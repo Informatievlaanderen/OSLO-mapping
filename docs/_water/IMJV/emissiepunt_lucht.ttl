@@ -1,0 +1,31 @@
+@prefix generiek:  <https://data.vlaanderen.be/ns/generiek#> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
+@prefix imjv:      <https://data.imjv.omgeving.vlaanderen.be/ns/imjv#> .
+@prefix ldes:      <https://w3id.org/ldes#> .
+@prefix locn:      <http://www.w3.org/ns/locn#> .
+@prefix prov:      <http://www.w3.org/ns/prov#> .
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms:     <http://purl.org/dc/terms/> .
+@prefix tree:      <https://w3id.org/tree#> .
+@prefix v1:        <https://api-dev.vmm.vlaanderen.be/ldes/data/v1/> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/emissiepunt/00122227000164/6-3-1/geleideemissies/21479/1984/2024-05-07T09:39:32.277Z>
+        rdf:type              imjv:Emissiepunt ;
+        rdfs:label            " SCHOORSTEEN OVENS SEC EN WALTER (1984)"@nl ;
+        terms:isVersionOf     <https://data.imjv.omgeving.vlaanderen.be/id/emissiepunt/00122227000164/6-3-1/geleideemissies/21479/1984> ;
+        terms:title           " SCHOORSTEEN OVENS SEC EN WALTER"@nl ;
+        locn:geometry         <https://data.imjv.omgeving.vlaanderen.be/id/emissiepunt/00122227000164/6-3-1/geleideemissies/21479/1984/2024-05-07T09:39:32.277Z/geometrie/0001> ;
+        prov:generatedAtTime  "2024-05-07T09:39:32.277Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        imjv:exploitatie      <https://data.cbb.omgeving.vlaanderen.be/id/exploitatie/00122227000164> ;
+        imjv:jaar             "1984"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+        generiek:isTijdspecialisatieVan
+                <https://data.imjv.omgeving.vlaanderen.be/id/emissiepunt/00122227000164/6-3-1/geleideemissies/21479/1984> .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/emissiepunt/00122227000164/6-3-1/geleideemissies/21479/1984/2024-05-07T09:39:32.277Z/geometrie/0001>
+        rdf:type         locn:Geometry ;
+        geosparql:asWKT  "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(50.839737199014564 5.552141531935744)"^^geosparql:wktLiteral ;
+        wgs84_pos:lat    50.839737199014564 ;
+        wgs84_pos:long   5.552141531935744 .
+    

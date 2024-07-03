@@ -1,0 +1,25 @@
+<https://data.imjv.omgeving.vlaanderen.be/id/observation/debiet/00418870010833/AW3500007/2013/debiet/2024-06-20T14:34:18.401Z>
+        rdf:type                   sosa:Observation ;
+        rdfs:label                 "Debiet van Lozing in RWZI HASSELT : Effluent F202 P1 (2013)" ;
+        terms:isVersionOf          <https://data.imjv.omgeving.vlaanderen.be/id/observation/debiet/00418870010833/AW3500007/2013/debiet> ;
+        prov:generatedAtTime       "2024-06-20T14:34:18.401Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        sosa:hasFeatureOfInterest  <https://data.imjv.omgeving.vlaanderen.be/id/lozing/00418870010833/AW3500007/2013> ;
+        sosa:hasResult             <https://data.imjv.omgeving.vlaanderen.be/id/observation/debiet/00418870010833/AW3500007/2013/debiet/2024-06-20T14:34:18.401Z/result/0001> ;
+        sosa:hasSimpleResult       12616955.00000000000000000000 ;
+        sosa:observedProperty      <https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053> ;
+        sosa:phenomenonTime        <https://data.imjv.omgeving.vlaanderen.be/id/observation/debiet/00418870010833/AW3500007/2013/debiet/2024-06-20T14:34:18.401Z/fenomeentijd/0001> ;
+        sosa:usedProcedure         concept:meetgegevens .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/observation/debiet/00418870010833/AW3500007/2013/debiet/2024-06-20T14:34:18.401Z/result/0001>
+        rdf:type                    sosa:Result , <https://schema.org/QuantitativeValue> ;
+        rdfs:label                  "12616955.00000000000000000000" ;
+        <https://schema.org/value>  12616955.00000000000000000000 .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/observation/debiet/00418870010833/AW3500007/2013/debiet/2024-06-20T14:34:18.401Z/fenomeentijd/0001>
+        rdf:type         time:Instant ;
+        rdfs:label       "2013"@nl ;
+        time:inXSDgYear  "2013"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+
+<https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053>
+        rdf:type    sosa:ObservableProperty , imjv:FysicoChemischeEigenschap , core:Concept ;
+        rdfs:label  "Debiet"@nl .
