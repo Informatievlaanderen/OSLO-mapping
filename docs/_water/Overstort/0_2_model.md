@@ -19,8 +19,6 @@ Concreet werden volgende klasses gebruikt, maar gemapt op SSN/SOSA ipv ISO19156:
 Een uitbreiding werd gemaakt met volgende klasses:
 * Emissiepunt (imjv:Emissiepunt)
 
-Het beschrijven van jaar-specifieke versie's van Exploitaties en Emissiepunten werd gedaan met tijdsspecialisaties uit OSLO generiek (`https://data.vlaanderen.be/ns/generiek#isTijdspecialisatieVan`)
-
 <br>
 <br>
 
@@ -28,7 +26,7 @@ Het beschrijven van jaar-specifieke versie's van Exploitaties en Emissiepunten w
 
 Met dank aan departement Omgeving werd het implementatiemodel als volgt opgesteld:
 
-![alt text](image-2.png)
+![alt text](Aquafin Overstort.bmp)
 
 Een belangrijk verschil met OSLO waterkwaliteit is dat de specifieke kenmerken en parameters (temperatuur, debiet, hoogte...) werden uitgemodelleerd op Kenmerktype in plaats van subklasses.
 
