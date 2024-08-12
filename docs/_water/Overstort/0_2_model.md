@@ -26,7 +26,7 @@ Een uitbreiding werd gemaakt met volgende klasses:
 
 Met dank aan departement Omgeving werd het implementatiemodel als volgt opgesteld:
 
-![alt text](Aquafin Overstort.bmp)
+![alt text](OSLO-mapping/docs/_water/Overstort/Aquafin Overstort.bmp)
 
 Een belangrijk verschil met OSLO waterkwaliteit is dat de specifieke kenmerken en parameters (temperatuur, debiet, hoogte...) werden uitgemodelleerd op Kenmerktype in plaats van subklasses.
 
