@@ -10,6 +10,137 @@ nav_order: 1
 Om alles overzichtelijk te maken, voorzien we onderstaand een JSON-LD voorbeeld van een Event. De brondata wordt meteen aangeleverd in JSON-LD-formaat.
 Op die manier krijgen we voor overstort:
 
+## Overstorthoogte
+
+```json
+{
+  "id": "https://aquafin.be/id/observatie/001/gemetenAfstand/2024-07-29T15:00:00Z",
+  "type": "Observatie",
+  "isVersionOf": "https://aquafin.be/id/observatie/001/gemetenAfstand/2024-07-27T20:00:00Z",
+  "modifiedAt": "2024-07-29T15:00:00Z",
+  "Observatie.geobserveerdObject": "https://aquafin.be/id/meetpunt/001",
+  "Observatie.geobserveerdKenmerk": "https://data.vlaanderen.be/id/concept/WaterMetingType/gemetenAfstand",
+  "Observatie.simpelResultaat": -10.5,
+  "Observatie.resultaat": {
+    "type": "KwantitatieveWaarde",
+    "KwantitatieveWaarde.waarde": -10.5,
+    "KwantitatieveWaarde.standaardEenheid": "qudt-unit:CentiM"
+  },
+  "Overstortstatus": "https://data.vlaanderen.be/id/concept/OverstortStatus/nietOverstort",
+  "Observatie.resultaatTijd": "2024-07-27T20:00:00Z",
+  "Observatie.fenomeentijd": {
+    "type": "Moment",
+    "inXSDDateTime": "2024-07-27T14:00:00Z"
+  },
+  "Observatie.gebruikteProcedure": "https://aquafin.be/id/concept/observatieproceduretype/OW19",
+  "Observatie.isWaargenomenMet": "https://aquafin.be/id/sensor/001"
+}
+```
+
+## Temperatuur
+
+```json
+{
+  "id": "https://aquafin.be/id/observatie/001/temperatuur/2024-07-29T15:00:00Z",
+  "type": "Observatie",
+  "isVersionOf": "https://aquafin.be/id/observatie/001/temperatuur/2024-07-27T20:00:00Z",
+  "modifiedAt": "2024-07-29T15:00:00Z",
+  "Observatie.geobserveerdObject": "https://aquafin.be/id/meetpunt/001",
+  "Observatie.geobserveerdKenmerk": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0030",
+  "Observatie.simpelResultaat": 22.5,
+  "Observatie.resultaat": {
+    "type": "KwantitatieveWaarde",
+    "KwantitatieveWaarde.waarde": 22.5,
+    "KwantitatieveWaarde.standaardEenheid": "qudt-unit:DEG_C"
+  },
+  "Observatie.resultaatTijd": "2024-07-27T20:00:00Z",
+  "Observatie.fenomeentijd": {
+    "type": "Moment",
+    "inXSDDateTime": "2024-07-27T14:00:00Z"
+  },
+  "Observatie.gebruikteProcedure": "https://aquafin.be/id/concept/observatieproceduretype/OW19",
+  "Observatie.isWaargenomenMet": "https://aquafin.be/id/sensor/001"
+}
+```
+
+## Context
+```json
+{
+  "@context": {
+      "adms": "http://www.w3.org/ns/adms#",
+      "qudt-schema": "https://qudt.org/schema/qudt/",
+      "terms": "http://purl.org/dc/terms/",
+      "time": "http://www.w3.org/2006/time#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "geosparql": "http://www.opengis.net/ont/geosparql#",
+      "qudt-unit": "https://qudt.org/vocab/unit/",
+      "sosa": "http://www.w3.org/ns/sosa/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "schema": "https://schema.org",
+      "id": "@id",
+      "type": "@type",
+      "Observatie": "sosa:Observation",
+      "isVersionOf": {
+        "@id": "terms:isVersionOf",
+        "@type": "@id"
+      },
+      "createdAt": {
+        "@id": "terms:createdAt",
+        "@type": "xsd:dateTime"
+      },
+      "modifiedAt": {
+        "@id": "terms:modifiedAt",
+        "@type": "xsd:dateTime"
+      },
+      "Observatie.geobserveerdObject": {
+        "@id": "sosa:hasFeatureOfInterest",
+        "@type": "@id"
+      },
+      "Observatie.geobserveerdKenmerk": {
+        "@id": "sosa:observedProperty",
+        "@type": "@id"
+      },
+      "Observatie.simpelResultaat": {
+        "@id": "sosa:hasSimpleResult",
+        "@type": "xsd:decimal"
+      },
+      "Observatie.resultaat": {
+        "@id": "sosa:hasResult",
+        "@type": "@id"
+      },
+      "Observatie.resultaatTijd": {
+        "@id": "sosa:resultTime",
+        "@type": "xsd:dateTime"
+      },
+      "Observatie.fenomeentijd": {
+        "@id": "sosa:phenomenonTime",
+        "@type": "@id"
+      },
+      "Observatie.gebruikteProcedure": {
+        "@id": "sosa:usedProcedure",
+        "@type": "@id"
+      },
+      "KwantitatieveWaarde": "https://schema.org/QuantitativeValue",
+      "KwantitatieveWaarde.waarde": {
+        "@id": "https://schema.org/value",
+        "@type": "xsd:decimal"
+      },
+      "KwantitatieveWaarde.standaardEenheid": {
+        "@id": "https://schema.org/unitCode",
+        "@type": "@id"
+      },
+      "Moment": "time:Instant",
+      "inXSDDateTime": "time:inXSDDateTime",
+      "overstortStatus": "https://aquafin.be/ns/overstort#overstortStatus"
+  }
+}
+```
+
+## Temperatuur
+
+Op basis van hoogte
+
+## Sensor
 
 ```json
       {
