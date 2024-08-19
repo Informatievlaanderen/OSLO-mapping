@@ -1,31 +1,24 @@
-@prefix generiek:  <https://data.vlaanderen.be/ns/generiek#> .
-@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
-@prefix imjv:      <https://data.imjv.omgeving.vlaanderen.be/ns/imjv#> .
-@prefix ldes:      <https://w3id.org/ldes#> .
-@prefix locn:      <http://www.w3.org/ns/locn#> .
-@prefix prov:      <http://www.w3.org/ns/prov#> .
-@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix terms:     <http://purl.org/dc/terms/> .
-@prefix tree:      <https://w3id.org/tree#> .
-@prefix v1:        <https://api-dev.vmm.vlaanderen.be/ldes/data/v1/> .
-@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://data.vlaanderen.be/ns/generiek#> .
+@prefix ns2: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ns3: <http://www.w3.org/ns/locn#> .
+@prefix ns4: <https://data.imjv.omgeving.vlaanderen.be/ns/imjv#> .
+@prefix ns5: <http://www.opengis.net/ont/geosparql#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.imjv.omgeving.vlaanderen.be/id/emissiepunt/00122227000164/6-3-1/geleideemissies/21479/1984/2024-05-07T09:39:32.277Z>
-        rdf:type              imjv:Emissiepunt ;
-        rdfs:label            " SCHOORSTEEN OVENS SEC EN WALTER (1984)"@nl ;
-        terms:isVersionOf     <https://data.imjv.omgeving.vlaanderen.be/id/emissiepunt/00122227000164/6-3-1/geleideemissies/21479/1984> ;
-        terms:title           " SCHOORSTEEN OVENS SEC EN WALTER"@nl ;
-        locn:geometry         <https://data.imjv.omgeving.vlaanderen.be/id/emissiepunt/00122227000164/6-3-1/geleideemissies/21479/1984/2024-05-07T09:39:32.277Z/geometrie/0001> ;
-        prov:generatedAtTime  "2024-05-07T09:39:32.277Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        imjv:exploitatie      <https://data.cbb.omgeving.vlaanderen.be/id/exploitatie/00122227000164> ;
-        imjv:jaar             "1984"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
-        generiek:isTijdspecialisatieVan
-                <https://data.imjv.omgeving.vlaanderen.be/id/emissiepunt/00122227000164/6-3-1/geleideemissies/21479/1984> .
+<https://data.imjv.omgeving.vlaanderen.be/id/emissiepunt/01854307000111/1/1977/2024-05-07T11:16:16.628Z> a ns4:Emissiepunt ;
+    rdfs:label " SCHOORSTEEN (1977)"@nl ;
+    dcterms:isVersionOf <https://data.imjv.omgeving.vlaanderen.be/id/emissiepunt/01854307000111/1/1977> ;
+    dcterms:title " SCHOORSTEEN"@nl ;
+    ns3:geometry <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/770a523f294d83efb81daa78b16c773f> ;
+    prov:generatedAtTime "2024-05-07T11:16:16.628000+00:00"^^xsd:dateTime ;
+    ns4:exploitatie <https://data.cbb.omgeving.vlaanderen.be/id/exploitatie/01854307000111> ;
+    ns4:jaar "1977"^^xsd:gYear ;
+    ns1:isTijdspecialisatieVan <https://data.imjv.omgeving.vlaanderen.be/id/emissiepunt/01854307000111/1/1977> .
 
-<https://data.imjv.omgeving.vlaanderen.be/id/emissiepunt/00122227000164/6-3-1/geleideemissies/21479/1984/2024-05-07T09:39:32.277Z/geometrie/0001>
-        rdf:type         locn:Geometry ;
-        geosparql:asWKT  "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(50.839737199014564 5.552141531935744)"^^geosparql:wktLiteral ;
-        wgs84_pos:lat    50.839737199014564 ;
-        wgs84_pos:long   5.552141531935744 .
-    
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/770a523f294d83efb81daa78b16c773f> a ns3:Geometry ;
+    ns5:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(3.205794868161017 50.92813442035296)"^^ns5:wktLiteral ;
+    ns2:lat 50.92813442035296 ;
+    ns2:long 3.205794868161017 .

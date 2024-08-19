@@ -1,30 +1,35 @@
-<https://data.imjv.omgeving.vlaanderen.be/id/observatie/00096463000118/33-14-4/geleideemissies/49263/obs/sommatie_stoffen/nox/1993/2024-05-07T09:39:32.277Z>
-        rdf:type                   sosa:Observation ;
-        rdfs:label                 "Observatie Stikstofoxiden 1993" ;
-        terms:isVersionOf          <https://data.imjv.omgeving.vlaanderen.be/id/observatie/00096463000118/33-14-4/geleideemissies/49263/obs/sommatie_stoffen/nox/1993> ;
-        prov:generatedAtTime       "2024-05-07T09:39:32.277Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        sosa:hasFeatureOfInterest  <https://data.imjv.omgeving.vlaanderen.be/id/emissie/00096463000118/33-14-4/geleideemissies/49263/1993> ;
-        sosa:hasResult             <https://data.imjv.omgeving.vlaanderen.be/id/observatie/00096463000118/33-14-4/geleideemissies/49263/obs/sommatie_stoffen/nox/1993/2024-05-07T09:39:32.277Z/result/0001> ;
-        sosa:hasSimpleResult       0.54614 ;
-        sosa:observedProperty      <https://data.imjv.omgeving.vlaanderen.be/id/observatie/00096463000118/33-14-4/geleideemissies/49263/obs/sommatie_stoffen/nox/1993/2024-05-07T09:39:32.277Z/kenmerktype/emissievrachtagens/0001> ;
-        sosa:phenomenonTime        <https://data.imjv.omgeving.vlaanderen.be/id/observatie/00096463000118/33-14-4/geleideemissies/49263/obs/sommatie_stoffen/nox/1993/2024-05-07T09:39:32.277Z/fenomeentijd/0001> ;
-        sosa:usedProcedure         concept:schatting .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://data.vlaanderen.be/ns/waterkwaliteit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.imjv.omgeving.vlaanderen.be/id/observatie/00096463000118/33-14-4/geleideemissies/49263/obs/sommatie_stoffen/nox/1993/2024-05-07T09:39:32.277Z/result/0001>
-        rdf:type                       sosa:Result , <https://schema.org/QuantitativeValue> ;
-        <https://schema.org/unitCode>  eenheid:Ton_per_jaar ;
-        <https://schema.org/unitText>  "ton per jaar" ;
-        <https://schema.org/value>     0.54614 .
+<https://data.imjv.omgeving.vlaanderen.be/id/observatie/01854307000111/1-1-1/geleideemissies/16181/obs/chemische_stof/UGFAIRIUMAVXCW-UHFFFAOYSA-N/1977/2024-05-07T11:16:16.628Z> a sosa:Observation ;
+    rdfs:label "Observatie Koolstofmonoxide 1977" ;
+    dcterms:isVersionOf <https://data.imjv.omgeving.vlaanderen.be/id/observatie/01854307000111/1-1-1/geleideemissies/16181/obs/chemische_stof/UGFAIRIUMAVXCW-UHFFFAOYSA-N/1977> ;
+    prov:generatedAtTime "2024-05-07T11:16:16.628000+00:00"^^xsd:dateTime ;
+    sosa:hasFeatureOfInterest <https://data.imjv.omgeving.vlaanderen.be/id/emissie/01854307000111/1-1-1/geleideemissies/16181/1977> ;
+    sosa:hasResult <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/d4c09c3d76fc7f870b1041eb26ed94a7> ;
+    sosa:hasSimpleResult 34.04724 ;
+    sosa:observedProperty <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/25574a01c75254fcfa379e479d06eb30> ;
+    sosa:phenomenonTime <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/d31fed37be990f12e12ed861f21ecd8b> ;
+    sosa:usedProcedure <https://data.imjv.omgeving.vlaanderen.be/id/concept/schatting> .
 
-<https://data.imjv.omgeving.vlaanderen.be/id/observatie/00096463000118/33-14-4/geleideemissies/49263/obs/sommatie_stoffen/nox/1993/2024-05-07T09:39:32.277Z/kenmerktype/emissievrachtagens/0001>
-        rdf:type              imjv:EmissieVrachtAgens , sosa:ObservableProperty ;
-        rdfs:comment          "De vracht NOx (als NO2) van een emissie."@nl ;
-        rdfs:label            "vracht NOx (als NO2)"@nl ;
-        waterkwaliteit:agens  sommatie_stoffen:nox .
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/25574a01c75254fcfa379e479d06eb30> a sosa:ObservableProperty,
+        <https://data.imjv.omgeving.vlaanderen.be/ns/imjv#EmissieVrachtAgens> ;
+    rdfs:label "vracht CO"@nl ;
+    rdfs:comment "De vracht CO van een emissie."@nl ;
+    ns1:agens <https://data.omgeving.vlaanderen.be/id/concept/chemische_stof/UGFAIRIUMAVXCW-UHFFFAOYSA-N> .
 
-<https://data.imjv.omgeving.vlaanderen.be/id/observatie/00096463000118/33-14-4/geleideemissies/49263/obs/sommatie_stoffen/nox/1993/2024-05-07T09:39:32.277Z/fenomeentijd/0001>
-        rdf:type         time:Instant ;
-        rdfs:label       "1993" ;
-        time:inXSDgYear  "1993"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/d31fed37be990f12e12ed861f21ecd8b> a time:Instant ;
+    rdfs:label "1977" ;
+    time:inXSDgYear "1977"^^xsd:gYear .
 
-sommatie_stoffen:nox  rdfs:label  "NOx (als NO2)"@nl .
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/d4c09c3d76fc7f870b1041eb26ed94a7> a sosa:Result,
+        schema:QuantitativeValue ;
+    schema:unitCode <https://data.imjv.omgeving.vlaanderen.be/id/concept/eenheid/Ton_per_jaar> ;
+    schema:unitText "ton per jaar" ;
+    schema:value 34.04724 .

@@ -1,29 +1,36 @@
-<https://data.imjv.omgeving.vlaanderen.be/id/observatie/00418870010833/AW3500007/lozend/chemische_stof/OAICVXFJPJFONN-UHFFFAOYSA-N/2013/2024-06-20T14:37:32.576Z>
-        rdf:type                   sosa:Observation ;
-        rdfs:label                 "Geobserveerde vracht Observatie Fosfor totaal (P) 2013" ;
-        terms:isVersionOf          <https://data.imjv.omgeving.vlaanderen.be/id/observatie/00418870010833/AW3500007/lozend/chemische_stof/OAICVXFJPJFONN-UHFFFAOYSA-N/2013> ;
-        prov:generatedAtTime       "2024-06-20T14:37:32.576Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        sosa:hasFeatureOfInterest  <https://data.imjv.omgeving.vlaanderen.be/id/lozing/00418870010833/AW3500007/2013> ;
-        sosa:hasResult             <https://data.imjv.omgeving.vlaanderen.be/id/observatie/00418870010833/AW3500007/lozend/chemische_stof/OAICVXFJPJFONN-UHFFFAOYSA-N/2013/2024-06-20T14:37:32.576Z/result/0001> ;
-        sosa:hasSimpleResult       9791.766 ;
-        sosa:observedProperty      <https://data.imjv.omgeving.vlaanderen.be/id/observatie/00418870010833/AW3500007/lozend/chemische_stof/OAICVXFJPJFONN-UHFFFAOYSA-N/2013/2024-06-20T14:37:32.576Z/kenmerktype/emissievrachtagens/0001> ;
-        sosa:phenomenonTime        <https://data.imjv.omgeving.vlaanderen.be/id/observatie/00418870010833/AW3500007/lozend/chemische_stof/OAICVXFJPJFONN-UHFFFAOYSA-N/2013/2024-06-20T14:37:32.576Z/fenomeentijd/0001> ;
-        sosa:usedProcedure         concept:meetgegevens .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://data.vlaanderen.be/ns/waterkwaliteit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.imjv.omgeving.vlaanderen.be/id/observatie/00418870010833/AW3500007/lozend/chemische_stof/OAICVXFJPJFONN-UHFFFAOYSA-N/2013/2024-06-20T14:37:32.576Z/result/0001>
-        rdf:type                       sosa:Result , <https://schema.org/QuantitativeValue> ;
-        rdfs:label                     "9791.766 (kg/jaar)" ;
-        <https://schema.org/unitCode>  eenheid:kg_per_jaar ;
-        <https://schema.org/unitText>  "kg/jaar" ;
-        <https://schema.org/value>     9791.766 .
+<https://data.imjv.omgeving.vlaanderen.be/id/observatie/00418870096315/AW9981001/lozend/sommatie_stoffen/n_t/2021/2024-08-17T15:18:28.975Z> a sosa:Observation ;
+    rdfs:label "Geobserveerde vracht Observatie Stikstof totaal (N) 2021" ;
+    dcterms:isVersionOf <https://data.imjv.omgeving.vlaanderen.be/id/observatie/00418870096315/AW9981001/lozend/sommatie_stoffen/n_t/2021> ;
+    prov:generatedAtTime "2024-08-17T15:18:28.975000+00:00"^^xsd:dateTime ;
+    sosa:hasFeatureOfInterest <https://data.imjv.omgeving.vlaanderen.be/id/lozing/00418870096315/AW9981001/2021> ;
+    sosa:hasResult <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/dbbfabb09bf0aee5c165807a53e20501> ;
+    sosa:hasSimpleResult 518.747 ;
+    sosa:observedProperty <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/82cd7e3709a9b44723a28a076e643fc9> ;
+    sosa:phenomenonTime <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/cb1192ff9cec94c1f3087960ec936def> ;
+    sosa:usedProcedure <https://data.imjv.omgeving.vlaanderen.be/id/concept/meetgegevens> .
 
-<https://data.imjv.omgeving.vlaanderen.be/id/observatie/00418870010833/AW3500007/lozend/chemische_stof/OAICVXFJPJFONN-UHFFFAOYSA-N/2013/2024-06-20T14:37:32.576Z/kenmerktype/emissievrachtagens/0001>
-        rdf:type              imjv:EmissieVrachtAgens , sosa:ObservableProperty ;
-        rdfs:comment          "De vracht Fosfor totaal (P) van een emissie."@nl ;
-        rdfs:label            "vracht Fosfor totaal (P)"@nl ;
-        waterkwaliteit:agens  chemische_stof:OAICVXFJPJFONN-UHFFFAOYSA-N .
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/82cd7e3709a9b44723a28a076e643fc9> a sosa:ObservableProperty,
+        <https://data.imjv.omgeving.vlaanderen.be/ns/imjv#EmissieVrachtAgens> ;
+    rdfs:label "vracht Stikstof totaal (N)"@nl ;
+    rdfs:comment "De vracht Stikstof totaal (N) van een emissie."@nl ;
+    ns1:agens <https://data.omgeving.vlaanderen.be/id/concept/sommatie_stoffen/n_t> .
 
-<https://data.imjv.omgeving.vlaanderen.be/id/observatie/00418870010833/AW3500007/lozend/chemische_stof/OAICVXFJPJFONN-UHFFFAOYSA-N/2013/2024-06-20T14:37:32.576Z/fenomeentijd/0001>
-        rdf:type         time:Instant ;
-        rdfs:label       "2013" ;
-        time:inXSDgYear  "2013"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/cb1192ff9cec94c1f3087960ec936def> a time:Instant ;
+    rdfs:label "2021"@nl ;
+    time:inXSDgYear "2021"^^xsd:gYear .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/dbbfabb09bf0aee5c165807a53e20501> a sosa:Result,
+        schema:QuantitativeValue ;
+    rdfs:label "518.747 (kg/jaar)" ;
+    schema:unitCode <https://data.imjv.omgeving.vlaanderen.be/id/concept/eenheid/kg_per_jaar> ;
+    schema:unitText "kg/jaar" ;
+    schema:value 518.747 .

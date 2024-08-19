@@ -1,25 +1,27 @@
-<https://data.imjv.omgeving.vlaanderen.be/id/observation/debiet/00418870010833/AW3500007/2013/debiet/2024-06-20T14:34:18.401Z>
-        rdf:type                   sosa:Observation ;
-        rdfs:label                 "Debiet van Lozing in RWZI HASSELT : Effluent F202 P1 (2013)" ;
-        terms:isVersionOf          <https://data.imjv.omgeving.vlaanderen.be/id/observation/debiet/00418870010833/AW3500007/2013/debiet> ;
-        prov:generatedAtTime       "2024-06-20T14:34:18.401Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        sosa:hasFeatureOfInterest  <https://data.imjv.omgeving.vlaanderen.be/id/lozing/00418870010833/AW3500007/2013> ;
-        sosa:hasResult             <https://data.imjv.omgeving.vlaanderen.be/id/observation/debiet/00418870010833/AW3500007/2013/debiet/2024-06-20T14:34:18.401Z/result/0001> ;
-        sosa:hasSimpleResult       12616955.00000000000000000000 ;
-        sosa:observedProperty      <https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053> ;
-        sosa:phenomenonTime        <https://data.imjv.omgeving.vlaanderen.be/id/observation/debiet/00418870010833/AW3500007/2013/debiet/2024-06-20T14:34:18.401Z/fenomeentijd/0001> ;
-        sosa:usedProcedure         concept:meetgegevens .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.imjv.omgeving.vlaanderen.be/id/observation/debiet/00418870010833/AW3500007/2013/debiet/2024-06-20T14:34:18.401Z/result/0001>
-        rdf:type                    sosa:Result , <https://schema.org/QuantitativeValue> ;
-        rdfs:label                  "12616955.00000000000000000000" ;
-        <https://schema.org/value>  12616955.00000000000000000000 .
+<https://data.imjv.omgeving.vlaanderen.be/id/observation/debiet/00418870096315/AW9981001/2021/debiet/2024-08-17T15:18:28.975Z> a sosa:Observation ;
+    rdfs:label "Debiet van Lozing in RWZI Sint-Laureins - Sint-Margriete : Effluent (2021)" ;
+    dcterms:isVersionOf <https://data.imjv.omgeving.vlaanderen.be/id/observation/debiet/00418870096315/AW9981001/2021/debiet> ;
+    prov:generatedAtTime "2024-08-17T15:18:28.975000+00:00"^^xsd:dateTime ;
+    sosa:hasFeatureOfInterest <https://data.imjv.omgeving.vlaanderen.be/id/lozing/00418870096315/AW9981001/2021> ;
+    sosa:hasResult <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/957f1a1c4dbaea49b55669dab95eae6a> ;
+    sosa:hasSimpleResult 40918.00000000000000000000 ;
+    sosa:observedProperty <https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053> ;
+    sosa:phenomenonTime <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/9e622017ef0ee38b3c398d8056d07adb> ;
+    sosa:usedProcedure <https://data.imjv.omgeving.vlaanderen.be/id/concept/meetgegevens> .
 
-<https://data.imjv.omgeving.vlaanderen.be/id/observation/debiet/00418870010833/AW3500007/2013/debiet/2024-06-20T14:34:18.401Z/fenomeentijd/0001>
-        rdf:type         time:Instant ;
-        rdfs:label       "2013"@nl ;
-        time:inXSDgYear  "2013"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/957f1a1c4dbaea49b55669dab95eae6a> a sosa:Result,
+        schema:QuantitativeValue ;
+    rdfs:label "40918.00000000000000000000" ;
+    schema:value 40918.00000000000000000000 .
 
-<https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053>
-        rdf:type    sosa:ObservableProperty , imjv:FysicoChemischeEigenschap , core:Concept ;
-        rdfs:label  "Debiet"@nl .
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/9e622017ef0ee38b3c398d8056d07adb> a time:Instant ;
+    rdfs:label "2021"@nl ;
+    time:inXSDgYear "2021"^^xsd:gYear .

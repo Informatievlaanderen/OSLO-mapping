@@ -7,13 +7,6 @@ nav_order: 5
 
 # Examples Lucht
 
-## Prefices
-
-{% highlight turtle %}
-{% include_relative prefices_lucht.ttl %}
-{% endhighlight %}
-
-
 ## Bruto vracht observaties
 
 {% highlight turtle %}

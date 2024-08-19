@@ -1,25 +1,27 @@
-<https://data.imjv.omgeving.vlaanderen.be/id/observation/ph/00369320000280/AW3990001/20152024-06-22T17:14:44.273Z>
-        rdf:type                   sosa:Observation ;
-        rdfs:label                 "pH van Lozing in CPSP BELGIE VESTIGING ERPERHEIDE : t.h.v. lozing aan pomphuis (2015)" ;
-        terms:isVersionOf          <https://data.imjv.omgeving.vlaanderen.be/id/observation/ph/00369320000280/AW3990001/2015> ;
-        prov:generatedAtTime       "2024-06-22T17:14:44.273Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        sosa:hasFeatureOfInterest  <https://data.imjv.omgeving.vlaanderen.be/id/lozing/00369320000280/AW3990001/2015> ;
-        sosa:hasResult             <https://data.imjv.omgeving.vlaanderen.be/id/observation/ph/00369320000280/AW3990001/20152024-06-22T17:14:44.273Z/result/0001> ;
-        sosa:hasSimpleResult       6.90000000000000000000 ;
-        sosa:observedProperty      <https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0024> ;
-        sosa:phenomenonTime        <https://data.imjv.omgeving.vlaanderen.be/id/observation/ph/00369320000280/AW3990001/20152024-06-22T17:14:44.273Z/fenomeentijd/0001> ;
-        sosa:usedProcedure         concept:meetgegevens .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.imjv.omgeving.vlaanderen.be/id/observation/ph/00369320000280/AW3990001/20152024-06-22T17:14:44.273Z/result/0001>
-        rdf:type                    sosa:Result , <https://schema.org/QuantitativeValue> ;
-        rdfs:label                  "6.90000000000000000000" ;
-        <https://schema.org/value>  6.90000000000000000000 .
+<https://data.imjv.omgeving.vlaanderen.be/id/observation/ph/00418870096315/AW9981001/20212024-08-17T15:18:28.975Z> a sosa:Observation ;
+    rdfs:label "pH van Lozing in RWZI Sint-Laureins - Sint-Margriete : Effluent (2021)" ;
+    dcterms:isVersionOf <https://data.imjv.omgeving.vlaanderen.be/id/observation/ph/00418870096315/AW9981001/2021> ;
+    prov:generatedAtTime "2024-08-17T15:18:28.975000+00:00"^^xsd:dateTime ;
+    sosa:hasFeatureOfInterest <https://data.imjv.omgeving.vlaanderen.be/id/lozing/00418870096315/AW9981001/2021> ;
+    sosa:hasResult <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/3a43991a3c7582ff107ba5abfe10ba85> ;
+    sosa:hasSimpleResult 7.0 ;
+    sosa:observedProperty <https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0024> ;
+    sosa:phenomenonTime <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/138b68e8a095f0c482814c57c5228dcb> ;
+    sosa:usedProcedure <https://data.imjv.omgeving.vlaanderen.be/id/concept/meetgegevens> .
 
-<https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0024>
-        rdf:type    sosa:ObservableProperty , imjv:FysicoChemischeEigenschap , core:Concept ;
-        rdfs:label  "pH"@nl .
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/138b68e8a095f0c482814c57c5228dcb> a time:Instant ;
+    rdfs:label "2021" ;
+    time:inXSDgYear "2021"^^xsd:gYear .
 
-<https://data.imjv.omgeving.vlaanderen.be/id/observation/ph/00369320000280/AW3990001/20152024-06-22T17:14:44.273Z/fenomeentijd/0001>
-        rdf:type         time:Instant ;
-        rdfs:label       "2015" ;
-        time:inXSDgYear  "2015"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/3a43991a3c7582ff107ba5abfe10ba85> a sosa:Result,
+        schema:QuantitativeValue ;
+    rdfs:label "7" ;
+    schema:value 7.0 .
