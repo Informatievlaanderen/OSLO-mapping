@@ -18,22 +18,22 @@ Op die manier krijgen we voor overstort:
   "type": "Observatie",
   "isVersionOf": "https://aquafin.be/id/observatie/001/gemetenAfstand/2024-07-27T20:00:00Z",
   "modifiedAt": "2024-07-29T15:00:00Z",
-  "Observatie.geobserveerdObject": "https://aquafin.be/id/emissiepunt/001",
-  "Observatie.geobserveerdKenmerk": "https://data.vlaanderen.be/id/concept/WaterMetingType/gemetenAfstand",
-  "Observatie.simpelResultaat": "-10.5",
-  "Observatie.resultaat": {
+  "geobserveerdObject": "https://aquafin.be/id/emissiepunt/001",
+  "geobserveerdKenmerk": "https://data.vlaanderen.be/id/concept/WaterMetingType/gemetenAfstand",
+  "simpelResultaat": "-10.5",
+  "resultaat": {
     "type": "KwantitatieveWaarde",
-    "KwantitatieveWaarde.waarde": "-10.5",
-    "KwantitatieveWaarde.standaardEenheid": "qudt-unit:CentiM"
+    "waarde": "-10.5",
+    "standaardEenheid": "qudt-unit:CentiM"
   },
   "Overstortstatus": "https://data.vlaanderen.be/id/concept/OverstortStatus/nietOverstort",
-  "Observatie.resultaatTijd": "2024-07-27T20:00:00Z",
-  "Observatie.fenomeentijd": {
+  "resultaatTijd": "2024-07-27T20:00:00Z",
+  "fenomeentijd": {
     "type": "Moment",
     "inXSDDateTime": "2024-07-27T14:00:00Z"
   },
-  "Observatie.gebruikteProcedure": "https://aquafin.be/id/concept/observatieproceduretype/OW19",
-  "Observatie.isWaargenomenMet": "https://aquafin.be/id/sensor/001"
+  "gebruikteProcedure": "https://aquafin.be/id/concept/observatieproceduretype/OW19",
+  "WaarGenomenMet": "https://aquafin.be/id/sensor/001"
 }
 ```
 
@@ -45,22 +45,23 @@ Op die manier krijgen we voor overstort:
   "type": "Observatie",
   "isVersionOf": "https://aquafin.be/id/observatie/001/temperatuur/2024-07-27T20:00:00Z",
   "modifiedAt": "2024-07-29T15:00:00Z",
-  "Observatie.geobserveerdObject": "https://aquafin.be/id/emissiepunt/001",
-  "Observatie.geobserveerdKenmerk": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0030",
-  "Observatie.simpelResultaat": "22.5",
-  "Observatie.resultaat": {
+  "geobserveerdObject": "https://aquafin.be/id/emissiepunt/001",
+  "geobserveerdKenmerk": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0030",
+  "simpelResultaat": "22.5",
+  "resultaat": {
     "type": "KwantitatieveWaarde",
-    "KwantitatieveWaarde.waarde": "22.5",
-    "KwantitatieveWaarde.standaardEenheid": "qudt-unit:DEG_C"
+    "waarde": "22.5",
+    "standaardEenheid": "qudt-unit:DEG_C"
   },
-  "Observatie.resultaatTijd": "2024-07-27T20:00:00Z",
-  "Observatie.fenomeentijd": {
+  "resultaatTijd": "2024-07-27T20:00:00Z",
+  "fenomeentijd": {
     "type": "Moment",
     "inXSDDateTime": "2024-07-27T14:00:00Z"
   },
-  "Observatie.gebruikteProcedure": "https://aquafin.be/id/concept/observatieproceduretype/OW19",
-  "Observatie.isWaargenomenMet": "https://aquafin.be/id/sensor/001"
+  "gebruikteProcedure": "https://aquafin.be/id/concept/observatieproceduretype/OW19",
+  "isWaargenomenMet": "https://aquafin.be/id/sensor/001"
 }
+
 ```
 
 ## Debiet
@@ -71,21 +72,21 @@ Op die manier krijgen we voor overstort:
   "type": "Observatie",
   "isVersionOf": "https://aquafin.be/id/observatie/001/debiet/2024-07-27T20:00:00Z",
   "modifiedAt": "2024-07-29T15:00:00Z",
-  "Observatie.geobserveerdObject": "https://aquafin.be/id/emissiepunt/001",
-  "Observatie.geobserveerdKenmerk": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053",
-  "Observatie.simpelResultaat": "22.5",
-  "Observatie.resultaat": {
+  "geobserveerdObject": "https://aquafin.be/id/emissiepunt/001",
+  "geobserveerdKenmerk": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053",
+  "simpelResultaat": "22.5",
+  "resultaat": {
     "type": "KwantitatieveWaarde",
-    "KwantitatieveWaarde.waarde": "22.5",
-    "KwantitatieveWaarde.standaardEenheid": "qudt-unit:CubicMeterPerSecond"
+    "waarde": "22.5",
+    "standaardEenheid": "qudt-unit:CubicMeterPerSecond"
   },
-  "Observatie.resultaatTijd": "2024-07-27T20:00:00Z",
-  "Observatie.fenomeentijd": {
+  "resultaatTijd": "2024-07-27T20:00:00Z",
+  "fenomeentijd": {
     "type": "Moment",
     "inXSDDateTime": "2024-07-27T14:00:00Z"
   },
-  "Observatie.gebruikteProcedure": "https://aquafin.be/id/concept/observatieproceduretype/OW19",
-  "Observatie.isWaargenomenMet": "https://aquafin.be/id/sensor/001"
+  "gebruikteProcedure": "https://aquafin.be/id/concept/observatieproceduretype/OW19",
+  "isWaargenomenMet": "https://aquafin.be/id/sensor/001"
 }
 ```
 
@@ -99,8 +100,8 @@ Op die manier krijgen we voor overstort:
   "label": "Overstortpunt 001",
   "geometrie": {
     "type": "Geometrie",
-    "wktWGS84": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(5.298607495000001 50.948995878)",
-    "wktLambert72": "<http://www.opengis.net/def/crs/EPSG/0/31370> POINT(xxx yyy)",
+    "wktWGS84": "POINT(5.298607495000001 50.948995878)",
+    "wktLambert72": "POINT(xxx yyy)",
     "lat": "50.948995878",
     "long": "5.298607495000001"
   }
@@ -116,17 +117,18 @@ Op die manier krijgen we voor overstort:
   "label": "Sensor 001",
   "geometrie": {
     "type": "Geometrie",
-    "wktWGS84": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(5.298607495000001 50.948995878)",
-    "wktLambert72": "<http://www.opengis.net/def/crs/EPSG/0/31370> POINT(xxx yyy)",
+    "wktWGS84": "POINT(5.298607495000001 50.948995878)",
+    "wktLambert72": "POINT(xxx yyy)",
     "lat": "50.948995878",
     "long": "5.298607495000001"
-  }
+  },
   "familieType": "",
   "identifier": "P2046600",
   "eigenaar": "",
   "operationeleStatus": "",
   "serienummer": ""
 }
+
 ```
 
 https://github.com/smart-data-models/dataModel.Device/blob/master/Device/doc/spec.md
