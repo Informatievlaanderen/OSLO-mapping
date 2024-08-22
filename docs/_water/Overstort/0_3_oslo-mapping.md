@@ -7,57 +7,158 @@ nav_order: 3
 
 # Intro
 
-Voor het mappen van de tabulaire view naar een Linked Data graph volgens OSLO wordt gewerkt in 2 stappen.
+De data wordt reeds in een voorafbepaald JSON-LD formaat aangeleverd. 
+Op basis van dat JSON-LD-model bepalen we de  SPARQL CONSTRUCT mapping die de intiële JSON-LD herstructureert in het implementatiemodel.
 
-Eerst gebeurt een rudimentaire omzetting naar Linked Data die aansluit bij de oorspronkelijke kolomstructuur.
-De reden hiervoor is dat we de OSLO mapping via SPARQL Construct queries willen uitdrukken. Dit is een leesbare manier om complexe mappingen te beschrijven, maar vereist Linked Data als input.
+Om deze stappen beter uit te leggen, gaan we een overstort-observatie als voorbeeld uitwerken.
 
-Daarna gebeurt een SPARQL CONSTRUCT mapping die de intiële omzetting herstructureerd in het implementatiemodel.
-
-Om deze stappen beter uit te leggen, gaan we een water-observatie als voorbeeld uitwerken.
-
-# Voorbeeld bruto vracht observatie water 
+# Voorbeeld hoogte overstort
 
 ## Ruwe data
 
-Om bruto vracht observaties te publiceren hebben we maar een deel van de kolommen in de view nodig:
+Om overstorthoogte-observaties te publiceren hebben we maar een deel van de kolommen in de view nodig:
 
 ```json
-{
-    "observation_url" : "https:\/\/data.imjv.omgeving.vlaanderen.be\/id\/observatie\/01894963000131\/AW9308001\/transfer\/chemische_stof\/RYGMFSIKBFXOCR-UHFFFAOYSA-N\/2021",
-    "observatie_label" : "Observatie Koper 2021",
-    "year0" : 2021,
-    "emissie_url" : "https:\/\/data.imjv.omgeving.vlaanderen.be\/id\/lozing\/01894963000131\/AW9308001\/2021",
-    "substantie_url" : "https:\/\/data.omgeving.vlaanderen.be\/id\/concept\/chemische_stof\/RYGMFSIKBFXOCR-UHFFFAOYSA-N",
-    "substantie_label" : "Koper",
-    "bepalingsmethode_url" : "https:\/\/data.imjv.omgeving.vlaanderen.be\/id\/concept\/meetgegevens",
-    "unitMeasure_url" : "https:\/\/data.imjv.omgeving.vlaanderen.be\/id\/concept\/eenheid\/kg_per_jaar",
-    "unitMeasure_label" : "kg\/jaar",
-    "modifiedAt" : "2024-06-05T07:14:44.998Z",
-    "isDeleted" : 0
-}
+  {
+    "@context": [
+      "https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01/context/waterkwaliteit-ap.jsonld",
+      "https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01/context/statistiek-ap.jsonld",
+      "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28/context/ap-observaties-en-metingen.jsonld",
+      "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28/context/ap-sensoren-en-bemonstering.jsonld",
+      "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld",
+      "https://github.com/smart-data-models/dataModel.Environment/blob/master/context.jsonld",
+    "https://github.com/bramverdonck/AQFOverstort/blob/main/Context%20Overstort.json",
+      {
+        "adms": "http://www.w3.org/ns/adms#",
+        "qudt-schema": "https://qudt.org/schema/qudt/",
+        "dcterms": "http://purl.org/dc/terms/",
+        "time": "http://www.w3.org/2006/time#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "geosparql": "http://www.opengis.net/ont/geosparql#",
+        "qudt-unit": "https://qudt.org/vocab/unit/",
+        "sosa": "http://www.w3.org/ns/sosa/"
+      }
+    ],
+    "@graph": [
+      {
+        "@id": "_:obv001",
+        "@type": "Observatieverzameling",
+        "Observatieverzameling.geobserveerdObject": "_:mpt001",
+        "Observatieverzameling.geobserveerdKenmerk": [
+          "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0030",
+          "https://smartdatamodels.org/dataModel.Environment/waterLevel",
+          "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053"
+        ],
+        "Observatieverzameling.fenomeentijd": {
+          "@type": "time:Instant",
+          "time:inXSDDateTime": {
+            "@type": "xml-schema:dateTime",
+            "@value": "2024-07-29T14:00:00Z"
+          }
+        },
+        "Observatieverzameling.heeftLid": [
+          "_:wko001",
+          "_:wko002",
+          "_:wko003"
+        ]
+      },
+      {
+        "@id": "_:wko002",
+        "@type": "OverstortMetingParameterObservatie",
+        "Observatie.geobserveerdObject": "_:mpt001",
+        "OverstortMetingParameterObservatie.geobserveerdKenmerk": {
+          "@id": "https://smartdatamodels.org/dataModel.Environment/waterLevel",
+          "skos:prefLabel": "Waterhoogte"
+        },
+        "OverstortMetingParameterObservatie.OverstortMetingParameterResultaat": {
+          "@type": [
+            "Maat",
+            "KwantitatieveWaarde"
+          ],
+          "KwantitatieveWaarde.waarde": -0.5,
+          "KwantitatieveWaarde.standaardEenheid": {
+            "@type": "qudt-schema:Unit",
+            "@id": "qudt-unit:Meter"
+          }
+        },
+        "Observatie.fenomeentijd": {
+          "@type": "time:Instant",
+          "time:inXSDDateTime": {
+            "@type": "xml-schema:dateTime",
+            "@value": "2024-07-29T14:00:00Z"
+          }
+        },
+        "Observatie.gebruikteProcedure": {
+          "@type": "Observatieprocedure",
+          "Observatieprocedure.type": "https://example.com/concept/observatieproceduretype/OW19"
+        },
+        "Observatie.isWaargenomenMet": "_:P2046600"
+      },
+      {
+        "@id": "_:P2046600",
+        "@type": [
+          "sosa:Sensor",
+          "Meetpunt",
+          "Bemonsteringspunt"
+        ],
+        "dcterms:identifier": "P2046600",
+        "sosa:observes": [
+          "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0030",
+          "https://smartdatamodels.org/dataModel.Environment/waterLevel",
+          "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053"
+        ],
+        "Bemonsteringsobject.identificator": {
+          "@type": "Identificator",
+          "Identificator.identificator": {
+            "@value": "100000",
+            "@type": "https://example.com/concept/identificatortype/puntnummer"
+          }
+        },
+        "dcterms:description": {
+          "@value": "OSM OSgr. Keistraat 11, Hemelveerdegem",
+          "@language": "nl"
+        },
+        "Bemonsteringspunt.geometrieWGS": {
+          "@type": "Punt",
+          "Geometrie.gml": {
+            "@value": "<gml:Point srsName=\"http://www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates>4.3598,50.8467</gml:coordinates></gml:Point>",
+            "@type": "geosparql:gmlliteral"
+          }
+        },
+        "Bemonsteringspunt.geometrieLambert": {
+          "@type": "Punt",
+          "Geometrie.gml": {
+            "@value": "<gml:Point srsName=\"http://www.opengis.net/def/crs/EPSG/0/31370\"><gml:coordinates>104719,196826</gml:coordinates></gml:Point>",
+            "@type": "geosparql:gmlliteral"
+          }
+        },
+        "Bemonsteringsobject.type": "https://example.com/concept/meetpunttype/OW",
+        "Bemonsteringsobject.bemonsterdObject": "_:seg00",
+        "owner": {
+          "@type": "adms:Asset",
+          "dcterms:title": "Aquafin",
+          "adms:identifier": "Aquafin_001"
+        },
+        "provider": {
+          "@type": "adms:Asset",
+          "dcterms:title": "ELSCOLAB",
+          "adms:identifier": "ELSCOLAB_001"
+        },
+        "status": {
+          "@type": "skos:Concept",
+          "skos:prefLabel": "ACTIEF"
+        },
+        "sensorFamily": {
+          "@type": "skos:Concept",
+          "skos:prefLabel": "Environmental Sensors"
+        }
+      }
+    ]
+  }
 ```
 
 Merk op dat kolommen `modifiedAt` en `isDeleted` ook gebruikt worden. Deze zijn domeinonafhankelijk en worden gebruikt bij het versioneren van de data.
-
-## Intermediate mapping
-
-Om de intermediate mapping te doen, worden volgende configuratie-velden gebruikt in de VMM-pipeline:
-```yaml
-  ldes_aboutbaseurl: "https://vmm.be/id/imjv/"
-  ldes_aboutcolumnname: "observation_url"
-  ldes_propertybaseurl: "https://vmm.be/ns#"
-  ldes_membertype: "http://www.w3.org/ns/sosa/Observation"
-  ldes_timestamppath: "http://www.w3.org/ns/prov#generatedAtTime"
-  ldes_versionof: "http://purl.org/dc/terms/isVersionOf"
-```
-
-* `aboutbaseurl` + waarde van `aboutcolumnname` worden gebruikt om per record een URI te maken
-* deze URI wordt verder geversioneerd met de huidige timestamp in de pipeline
-* elke kolomwaarde leidt tot een triple met als predikaat `propertybaseurl` + naam van kolom
-* een `rdf:type` triple wordt toegevoegd met als object de waarde van `membertype`
-* een `versionOf` triple wordt toegevoegd met predikaat op basis van `versionof`
-* een `timestamp` triple wordt toegevoegd met predikaat op basis van `timestamppath`
+# Nog toe te voegen
 
 De eerste omzetting leidt tot volgende triples:
 
