@@ -1,26 +1,28 @@
-<https://data.imjv.omgeving.vlaanderen.be/id/observatie/01802717000544/1-1-1/geleideemissies/117014/debiet/2017/2024-05-07T12:59:17.937Z>
-        rdf:type                   sosa:Observation ;
-        rdfs:label                 "Debiet van Emissie in Schouw oven(2017)" ;
-        terms:isVersionOf          <https://data.imjv.omgeving.vlaanderen.be/id/observatie/01802717000544/1-1-1/geleideemissies/117014/debiet/2017> ;
-        prov:generatedAtTime       "2024-05-07T12:59:17.937Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        sosa:hasFeatureOfInterest  <https://data.imjv.omgeving.vlaanderen.be/id/emissie/01802717000544/1-1-1/geleideemissies/117014/2017> ;
-        sosa:hasResult             <https://data.imjv.omgeving.vlaanderen.be/id/observatie/01802717000544/1-1-1/geleideemissies/117014/debiet/2017/2024-05-07T12:59:17.937Z/result/0001> ;
-        sosa:hasSimpleResult       "32100"^^<http://www.w3.org/2001/XMLSchema#decimal> ;
-        sosa:observedProperty      <https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053> ;
-        sosa:phenomenonTime        <https://data.imjv.omgeving.vlaanderen.be/id/observatie/01802717000544/1-1-1/geleideemissies/117014/debiet/2017/2024-05-07T12:59:17.937Z/fenomeentijd/0001> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.imjv.omgeving.vlaanderen.be/id/observatie/01802717000544/1-1-1/geleideemissies/117014/debiet/2017/2024-05-07T12:59:17.937Z/result/0001>
-        rdf:type                       sosa:Result , <https://schema.org/QuantitativeValue> ;
-        rdfs:label                     "32100 (normaal kubieke meter per uur )" ;
-        <https://schema.org/unitCode>  eenheid:Nm3_per_uur ;
-        <https://schema.org/unitText>  "normaal kubieke meter per uur" ;
-        <https://schema.org/value>     "32100"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://data.imjv.omgeving.vlaanderen.be/id/observatie/01854307000111/1-1-1/geleideemissies/16181/debiet/1977/2024-05-07T11:16:16.628Z> a sosa:Observation ;
+    rdfs:label "Debiet van Emissie in  SCHOORSTEEN(1977)" ;
+    dcterms:isVersionOf <https://data.imjv.omgeving.vlaanderen.be/id/observatie/01854307000111/1-1-1/geleideemissies/16181/debiet/1977> ;
+    prov:generatedAtTime "2024-05-07T11:16:16.628000+00:00"^^xsd:dateTime ;
+    sosa:hasFeatureOfInterest <https://data.imjv.omgeving.vlaanderen.be/id/emissie/01854307000111/1-1-1/geleideemissies/16181/1977> ;
+    sosa:hasResult <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/15e527941fa941f58e1c2f0f937be57b> ;
+    sosa:hasSimpleResult 134800.0 ;
+    sosa:observedProperty <https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053> ;
+    sosa:phenomenonTime <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/a3042a090d24893f6501cd88b626794c> .
 
-<https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053>
-        rdf:type    sosa:ObservableProperty , imjv:FysicoChemischeEigenschap , core:Concept ;
-        rdfs:label  "Debiet"@nl .
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/15e527941fa941f58e1c2f0f937be57b> a sosa:Result,
+        schema:QuantitativeValue ;
+    rdfs:label "134800 (normaal kubieke meter per uur )" ;
+    schema:unitCode <https://data.imjv.omgeving.vlaanderen.be/id/concept/eenheid/Nm3_per_uur> ;
+    schema:unitText "normaal kubieke meter per uur" ;
+    schema:value 134800.0 .
 
-<https://data.imjv.omgeving.vlaanderen.be/id/observatie/01802717000544/1-1-1/geleideemissies/117014/debiet/2017/2024-05-07T12:59:17.937Z/fenomeentijd/0001>
-        rdf:type         time:Instant ;
-        rdfs:label       "2017" ;
-        time:inXSDgYear  "2017"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/a3042a090d24893f6501cd88b626794c> a time:Instant ;
+    rdfs:label "1977" ;
+    time:inXSDgYear "1977"^^xsd:gYear .

@@ -10,155 +10,223 @@ nav_order: 1
 Om alles overzichtelijk te maken, voorzien we onderstaand een JSON-LD voorbeeld van een Event. De brondata wordt meteen aangeleverd in JSON-LD-formaat.
 Op die manier krijgen we voor overstort:
 
+## Overstorthoogte
 
 ```json
-      {
-  "@context": [
-    "https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01/context/waterkwaliteit-ap.jsonld",
-    "https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01/context/statistiek-ap.jsonld",
-    "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28/context/ap-observaties-en-metingen.jsonld",
-    "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28/context/ap-sensoren-en-bemonstering.jsonld",
-    "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld",
-    {
+{
+  "id": "https://aquafin.be/id/observatie/001/gemetenAfstand/2024-07-29T15:00:00Z",
+  "type": "Observatie",
+  "isVersionOf": "https://aquafin.be/id/observatie/001/gemetenAfstand/2024-07-27T20:00:00Z",
+  "modifiedAt": "2024-07-29T15:00:00Z",
+  "geobserveerdObject": "https://aquafin.be/id/emissiepunt/001",
+  "geobserveerdKenmerk": "https://data.vlaanderen.be/id/concept/WaterMetingType/gemetenAfstand",
+  "simpelResultaat": "-10.5",
+  "resultaat": {
+    "type": "KwantitatieveWaarde",
+    "waarde": "-10.5",
+    "standaardEenheid": "qudt-unit:CentiM"
+  },
+  "Overstortstatus": "https://data.vlaanderen.be/id/concept/OverstortStatus/nietOverstort",
+  "resultaatTijd": "2024-07-27T20:00:00Z",
+  "fenomeentijd": {
+    "type": "Moment",
+    "inXSDDateTime": "2024-07-27T14:00:00Z"
+  },
+  "gebruikteProcedure": "https://aquafin.be/id/concept/observatieproceduretype/OW19",
+  "WaarGenomenMet": "https://aquafin.be/id/sensor/001"
+}
+```
+
+## Temperatuur
+
+```json
+{
+  "id": "https://aquafin.be/id/observatie/001/temperatuur/2024-07-29T15:00:00Z",
+  "type": "Observatie",
+  "isVersionOf": "https://aquafin.be/id/observatie/001/temperatuur/2024-07-27T20:00:00Z",
+  "modifiedAt": "2024-07-29T15:00:00Z",
+  "geobserveerdObject": "https://aquafin.be/id/emissiepunt/001",
+  "geobserveerdKenmerk": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0030",
+  "simpelResultaat": "22.5",
+  "resultaat": {
+    "type": "KwantitatieveWaarde",
+    "waarde": "22.5",
+    "standaardEenheid": "qudt-unit:DEG_C"
+  },
+  "resultaatTijd": "2024-07-27T20:00:00Z",
+  "fenomeentijd": {
+    "type": "Moment",
+    "inXSDDateTime": "2024-07-27T14:00:00Z"
+  },
+  "gebruikteProcedure": "https://aquafin.be/id/concept/observatieproceduretype/OW19",
+  "isWaargenomenMet": "https://aquafin.be/id/sensor/001"
+}
+
+```
+
+## Debiet
+
+```json
+{
+  "id": "https://aquafin.be/id/observatie/001/debiet/2024-07-29T15:00:00Z",
+  "type": "Observatie",
+  "isVersionOf": "https://aquafin.be/id/observatie/001/debiet/2024-07-27T20:00:00Z",
+  "modifiedAt": "2024-07-29T15:00:00Z",
+  "geobserveerdObject": "https://aquafin.be/id/emissiepunt/001",
+  "geobserveerdKenmerk": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053",
+  "simpelResultaat": "22.5",
+  "resultaat": {
+    "type": "KwantitatieveWaarde",
+    "waarde": "22.5",
+    "standaardEenheid": "qudt-unit:CubicMeterPerSecond"
+  },
+  "resultaatTijd": "2024-07-27T20:00:00Z",
+  "fenomeentijd": {
+    "type": "Moment",
+    "inXSDDateTime": "2024-07-27T14:00:00Z"
+  },
+  "gebruikteProcedure": "https://aquafin.be/id/concept/observatieproceduretype/OW19",
+  "isWaargenomenMet": "https://aquafin.be/id/sensor/001"
+}
+```
+
+## Emissiepunt (Overstortpunt)
+
+
+```json
+{
+  "id": "https://aquafin.be/id/emissiepunt/001",
+  "type": "Emissiepunt",
+  "label": "Overstortpunt 001",
+  "geometrie": {
+    "type": "Geometrie",
+    "wktWGS84": "POINT(5.298607495000001 50.948995878)",
+    "wktLambert72": "POINT(xxx yyy)",
+    "lat": "50.948995878",
+    "long": "5.298607495000001"
+  }
+}
+```
+
+## Sensor
+
+```json
+{
+  "id": "https://aquafin.be/id/sensor/001",
+  "type": "Sensor",
+  "label": "Sensor 001",
+  "geometrie": {
+    "type": "Geometrie",
+    "wktWGS84": "POINT(5.298607495000001 50.948995878)",
+    "wktLambert72": "POINT(xxx yyy)",
+    "lat": "50.948995878",
+    "long": "5.298607495000001"
+  },
+  "familieType": "",
+  "identifier": "P2046600",
+  "eigenaar": "",
+  "operationeleStatus": "",
+  "serienummer": ""
+}
+
+```
+
+https://github.com/smart-data-models/dataModel.Device/blob/master/Device/doc/spec.md
+
+https://www.w3.org/TR/wot-thing-description
+
+
+## Context
+```json
+{
+  "@context": {
+      "@language": "nl",
       "adms": "http://www.w3.org/ns/adms#",
       "qudt-schema": "https://qudt.org/schema/qudt/",
-      "dcterms": "http://purl.org/dc/terms/",
+      "terms": "http://purl.org/dc/terms/",
       "time": "http://www.w3.org/2006/time#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
       "geosparql": "http://www.opengis.net/ont/geosparql#",
       "qudt-unit": "https://qudt.org/vocab/unit/",
-      "sosa": "http://www.w3.org/ns/sosa/"
-    }
-  ],
-  "@graph": [
-    {
-      "@id": "_:obv001",
-      "@type": "Observatieverzameling",
-      "Observatieverzameling.geobserveerdObject": "_:mpt001",
-      "Observatieverzameling.geobserveerdKenmerk": [
-        "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0030",
-        "https://data.vlaanderen.be/id/concept/waterkwaliteit/hoogte",
-		"https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053"
-      ],
-      "Observatieverzameling.fenomeentijd": {
-        "@type": "time:Instant",
-        "time:inXSDDateTime": {
-          "@type": "xml-schema:dateTime",
-          "@value": "2024-07-29T14:00:00Z"
-        }
+      "sosa": "http://www.w3.org/ns/sosa/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "schema": "https://schema.org",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "locn": "http://www.w3.org/ns/locn#",
+      "wgs84_pos": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+      "id": "@id",
+      "type": "@type",
+      "Observatie": "sosa:Observation",
+      "isVersionOf": {
+        "@id": "terms:isVersionOf",
+        "@type": "@id"
       },
-      "Observatieverzameling.heeftLid": [
-        "_:wko001",
-        "_:wko002"
-      ]
-    },
-    {
-      "@id": "_:wko001",
-      "@type": "OverstortMetingParameterObservatie",
-      "Observatie.geobserveerdObject": "_:mpt001",
-      "OverstortMetingParameterObservatie.geobserveerdKenmerk": {
-        "@id": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0030",
-        "skos:prefLabel": "Temperatuur"
+      "createdAt": {
+        "@id": "terms:createdAt",
+        "@type": "xsd:dateTime"
       },
-      "WaterkwaliteitParameterObservatie.OverstortMetingParameterResultaat": {
-        "@type": [
-          "Maat",
-          "KwantitatieveWaarde"
-        ],
-        "KwantitatieveWaarde.waarde": 22.5,
-        "KwantitatieveWaarde.standaardEenheid": {
-          "@type": "qudt-schema:Unit",
-          "@id": "qudt-unit:DEG_C"
-        }
+      "modifiedAt": {
+        "@id": "terms:modifiedAt",
+        "@type": "xsd:dateTime"
+      },
+      "Observatie.geobserveerdObject": {
+        "@id": "sosa:hasFeatureOfInterest",
+        "@type": "@id"
+      },
+      "Observatie.geobserveerdKenmerk": {
+        "@id": "sosa:observedProperty",
+        "@type": "@id"
+      },
+      "Observatie.simpelResultaat": {
+        "@id": "sosa:hasSimpleResult",
+        "@type": "xsd:decimal"
+      },
+      "Observatie.resultaat": {
+        "@id": "sosa:hasResult",
+        "@type": "@id"
+      },
+      "Observatie.resultaatTijd": {
+        "@id": "sosa:resultTime",
+        "@type": "xsd:dateTime"
       },
       "Observatie.fenomeentijd": {
-        "@type": "time:Instant",
-        "time:inXSDDateTime": {
-          "@type": "xml-schema:dateTime",
-          "@value": "2024-07-29T14:00:00Z"
-        }
+        "@id": "sosa:phenomenonTime",
+        "@type": "@id"
       },
       "Observatie.gebruikteProcedure": {
-        "@type": "Observatieprocedure",
-        "Observatieprocedure.type": "https://example.com/concept/observatieproceduretype/OW19"
+        "@id": "sosa:usedProcedure",
+        "@type": "@id"
       },
-      "Observatie.isWaargenomenMet": "_:P2046600"
-    },
-    {
-      "@id": "_:wko002",
-      "@type": "OverstortMetingParameterObservatie",
-      "Observatie.geobserveerdObject": "_:mpt001",
-      "OverstortMetingParameterObservatie.geobserveerdKenmerk": {
-        "@id": "https://data.vlaanderen.be/id/concept/waterkwaliteit/hoogte",
-        "skos:prefLabel": "Waterhoogte"
+      "KwantitatieveWaarde": "https://schema.org/QuantitativeValue",
+      "KwantitatieveWaarde.waarde": {
+        "@id": "https://schema.org/value",
+        "@type": "xsd:decimal"
       },
-      "OverstortMetingParameterObservatie.OverstortMetingParameterResultaat": {
-        "@type": [
-          "Maat",
-          "KwantitatieveWaarde"
-        ],
-        "KwantitatieveWaarde.waarde": -0.5,
-        "KwantitatieveWaarde.standaardEenheid": {
-          "@type": "qudt-schema:Unit",
-          "@id": "qudt-unit:Meter"
-        }
+      "KwantitatieveWaarde.standaardEenheid": {
+        "@id": "https://schema.org/unitCode",
+        "@type": "@id"
       },
-      "Observatie.fenomeentijd": {
-        "@type": "time:Instant",
-        "time:inXSDDateTime": {
-          "@type": "xml-schema:dateTime",
-          "@value": "2024-07-29T14:00:00Z"
-        }
+      "Moment": "time:Instant",
+      "inXSDDateTime": "time:inXSDDateTime",
+      "overstortStatus": "https://aquafin.be/ns/overstort#overstortStatus",
+      "Emissiepunt": "https://data.imjv.omgeving.vlaanderen.be/ns/imjv#Emissiepunt",
+      "label": "rdfs:label",
+      "geometrie": "locn:geometry",
+      "Geometrie": "locn:Geometry",
+      "wktWGS84": {
+        "@id": "geosparql:asWKT",
+        "@type": "geosparql:wktLiteral"
       },
-      "Observatie.gebruikteProcedure": {
-        "@type": "Observatieprocedure",
-        "Observatieprocedure.type": "https://example.com/concept/observatieproceduretype/OW19"
+      "wktLambert72": {
+        "@id": "geosparql:asWKT",
+        "@type": "geosparql:wktLiteral"
       },
-      "Observatie.isWaargenomenMet": "_:P2046600"
-    },
-	{
-      "@id": "_:wko003",
-      "@type": "OverstortMetingParameterObservatie",
-      "Observatie.geobserveerdObject": "_:mpt001",
-      "OverstortMetingParameterObservatie.geobserveerdKenmerk": {
-        "@id": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053",
-        "skos:prefLabel": "Debiet"
+      "lat": {
+        "@id": "wgs84_pos:lat"
       },
-      "OverstortMetingParameterObservatie.OverstortmetingParameterResultaat": {
-        "@type": [
-          "Maat",
-          "KwantitatieveWaarde"
-        ],
-        "KwantitatieveWaarde.waarde": 0.0,
-        "KwantitatieveWaarde.standaardEenheid": {
-          "@type": "qudt-schema:Unit",
-          "@id": "qudt-unit:CubicMeterPerSecond"
-        }
-      },
-      "Observatie.fenomeentijd": {
-        "@type": "time:Instant",
-        "time:inXSDDateTime": {
-          "@type": "xml-schema:dateTime",
-          "@value": "2024-07-29T14:00:00Z"
-        }
-      },
-      "Observatie.gebruikteProcedure": {
-        "@type": "Observatieprocedure",
-        "Observatieprocedure.type": "https://example.com/concept/observatieproceduretype/OW19"
-      },
-      "Observatie.isWaargenomenMet": "_:P2046600"
-    }
-    {
-      "@id": "_:P2046600",
-      "@type": "sosa:Sensor",
-      "dcterms:identifier": "P2046600",
-      "sosa:observes": [
-		"https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0030",
-        "https://data.vlaanderen.be/id/concept/waterkwaliteit/hoogte",
-        "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053"
-		]
-    }
-  ]
+      "long": {
+        "@id": "wgs84_pos:long"
+      }
+  }
 }
-
 ```

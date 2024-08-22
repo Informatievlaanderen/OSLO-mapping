@@ -1,0 +1,35 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://data.vlaanderen.be/ns/waterkwaliteit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/observatie/.well-known/genid/concentratie/00418870096315/AW9981001/obs/sommatie_stoffen/n_t/2021/2024-08-17T15:18:28.975Z> a sosa:Observation ;
+    dcterms:isVersionOf <https://data.imjv.omgeving.vlaanderen.be/id/observatie/.well-known/genid/concentratie/00418870096315/AW9981001/obs/sommatie_stoffen/n_t/2021> ;
+    prov:generatedAtTime "2024-08-17T15:18:28.975000+00:00"^^xsd:dateTime ;
+    sosa:hasFeatureOfInterest <https://data.imjv.omgeving.vlaanderen.be/id/lozing/00418870096315/AW9981001/2021> ;
+    sosa:hasResult <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/c1a1008bda1ac55e8346ff9c9e591361> ;
+    sosa:hasSimpleResult 21.13345700000000000000 ;
+    sosa:observedProperty <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/425543ff6b794e27421c60046704a616> ;
+    sosa:phenomenonTime <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/4a9be8c63cdadd82028a01be7c1098a5> ;
+    sosa:usedProcedure <https://data.imjv.omgeving.vlaanderen.be/id/concept/meetgegevens> .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/425543ff6b794e27421c60046704a616> a sosa:ObservableProperty,
+        <https://data.imjv.omgeving.vlaanderen.be/ns/imjv#ConcentratieAgens> ;
+    rdfs:label "concentratie Stikstof totaal (N)"@nl ;
+    rdfs:comment "De concentratie Stikstof totaal (N) van een emissie."@nl ;
+    ns1:agens <https://data.omgeving.vlaanderen.be/id/concept/sommatie_stoffen/n_t> .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/4a9be8c63cdadd82028a01be7c1098a5> a time:Instant ;
+    rdfs:label "2021"@nl ;
+    time:inXSDgYear "2021"^^xsd:gYear .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/c1a1008bda1ac55e8346ff9c9e591361> a sosa:Result,
+        schema:QuantitativeValue ;
+    rdfs:label "21.13345700000000000000 (mg/L)" ;
+    schema:unitCode <https://qudt.org/vocab/unit/MilliGM-PER-L> ;
+    schema:unitText "mg/L" ;
+    schema:value 21.13345700000000000000 .

@@ -194,8 +194,11 @@ CONSTRUCT {
     ...
 } WHERE {
     ...
-    BIND(URI(concat(str(?observation_versie), "/fenomeentijd/0001")) as ?observation_versie_fenomeentijd) 
-    BIND(URI(concat(str(?observation_versie), "/result/0001")) as ?observation_versie_result)
+
+    BIND('https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/' as ?skolemBase)
+
+    BIND(URI(concat(?skolemBase, md5(concat(str(?observation_versie), "/fenomeentijd/0001")))) as ?observation_versie_fenomeentijd) 
+    BIND(URI(concat(?skolemBase, md5(concat(str(?observation_versie), "/result/0001")))) as ?observation_versie_result)
 
     BIND(STRDT(?year0, xsd:gYear) as ?year_with_datatype)
     BIND(URI(?unitMeasure_url) as ?vracht_unitMeasure)
@@ -227,6 +230,8 @@ CONSTRUCT {
     ...
     BIND(URI(str(?substantie_url)) as ?agens)
     BIND(STRLANG(?substantie_url, "nl") as ?substantie_url_with_lang)
+
+    BIND(URI(concat(?skolemBase, md5(concat(str(?observation_versie), "/kenmerktype/emissievrachtagens/0001")))) as ?observed_property_emissievrachtagens)
 
     BIND(STRLANG(concat("vracht ", ?substantie_label), "nl") as ?observed_property_emissievrachtagens_label)
     BIND(STRLANG(concat("De vracht ", ?substantie_label, " van een emissie."), "nl") as ?observed_property_emissievrachtagens_comment)
