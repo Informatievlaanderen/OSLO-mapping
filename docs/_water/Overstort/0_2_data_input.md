@@ -230,3 +230,43 @@ https://www.w3.org/TR/wot-thing-description
   }
 }
 ```
+
+## Overstortduur
+
+```json
+{
+  "id": "https://aquafin.be/id/Event/001/overstortduur/2024-07-29T15:00:00Z",
+  "type": "Event",
+  "isVersionOf": "https://aquafin.be/id/Event/001/overstortduur/2024-07-27T14:00:00Z",
+  "modifiedAt": "2024-07-29T15:00:00Z",
+  "Event.geobserveerdObject": {
+    "type": "Meetpunt",
+    "geometrie": {
+      "type": "Geometrie",
+      "wktWGS84": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(5.298607495000001 50.948995878)",
+      "wktLambert72": "<http://www.opengis.net/def/crs/EPSG/0/31370> POINT(xxx yyy)",
+      "lat": "50.948995878",
+      "long": "5.298607495000001",
+      "Code": "K_000003850759"
+    }
+  },
+  "Event.geobserveerdKenmerk": "https://data.vlaanderen.be/id/concept/WaterMetingType/Vuilvracht",
+  "Event.simpelResultaat": "22.5",
+  "Event.resultaat": {
+    "type": "KwantitatieveWaarde",
+    "KwantitatieveWaarde.waarde": "22.5",
+    "KwantitatieveWaarde.standaardEenheid": "qudt-unit:CubicMeterPerSecond"
+  },
+  "Event.fenomeentijdStart": {
+    "type": "Moment",
+    "inXSDDateTime": "2024-07-27T14:00:00Z"
+  },
+  "Event.fenomeentijdEind": {
+    "type": "Moment",
+    "inXSDDateTime": "2024-07-27T14:05:00Z"
+  },
+  "Event.isWaargenomenMet": "https://aquafin.be/id/sensor/418858"
+}
+```
+Footer
+
