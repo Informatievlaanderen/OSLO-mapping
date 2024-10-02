@@ -39,7 +39,7 @@ Onderstaand een json-voorbeeld
 {
   "type": "Event",
   "fenomeenStarttijd": "2024-07-27T14:00:00Z",
-  "fenomeenEindTijd": ""2024-07-27T14:012:00Z",
+  "fenomeenEindTijd": ""2024-07-27T14:12:00Z",
   "modifiedAt": "2024-07-27T14:00:00Z", 
   "debiet": "2.3",
   "meetpunt":"K_000003850759", 
