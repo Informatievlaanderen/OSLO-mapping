@@ -7,8 +7,8 @@ nav_order: 3
 
 # Intro
 
-De data wordt reeds in een voorafbepaald JSON-LD formaat aangeleverd. 
-Op basis van dat JSON-LD-model bepalen we de  SPARQL CONSTRUCT mapping die de intiële JSON-LD herstructureert in het implementatiemodel.
+De data wordt reeds in een voorafbepaald JSON formaat aangeleverd. 
+Op basis van dat JSON-model bepalen we de  SPARQL CONSTRUCT mapping die de intiële JSON-LD herstructureert in het implementatiemodel.
 
 Om deze stappen beter uit te leggen, gaan we een overstort-observatie als voorbeeld uitwerken.
 
