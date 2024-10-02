@@ -56,7 +56,6 @@ In de Sensordata-json wordt alle relevante metadata per sensor doorgestuurd. Dit
   "id": "418858",
   "type": "Sensor",
   "name": "Overstortmeter Ijinus US LTE",
-  "familyType": "",
   "owner": "Aquafin",
   "manufacturerName": "ELSCOLAB",
   "serialNumber": "IJA0102-00001836",
