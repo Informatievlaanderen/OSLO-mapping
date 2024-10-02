@@ -7,126 +7,64 @@ nav_order: 1
 
 # Data voorbeeld
 
-Om alles overzichtelijk te maken, voorzien we onderstaand een JSON-LD voorbeeld van een Event. De brondata wordt meteen aangeleverd in JSON-LD-formaat.
+Om alles overzichtelijk te maken, voorzien we onderstaand een JSON voorbeeld van een observatie, een event en sensordata. 
+De brondata wordt telkens aangeleverd in JSON-formaat.
+
+## Observatie
+
+In 1 observatie krijgen we de metingen van zowel temperatuur, overstorthoogte(gemetenAfstand) als debiet meegestuurd. 
+Deze observaties worden elke minuut gemeten in geval van overstort (InWerking) of elke 5min in geval van 'nietWerking'. 
 Op die manier krijgen we voor overstort:
 
-## Overstorthoogte
-
 ```json
 {
-  "id": "https://aquafin.be/id/observatie/001/gemetenAfstand/2024-07-29T15:00:00Z",
   "type": "Observatie",
-  "isVersionOf": "https://aquafin.be/id/observatie/001/gemetenAfstand/2024-07-27T20:00:00Z",
-  "modifiedAt": "2024-07-29T15:00:00Z",
-  "geobserveerdObject": "https://aquafin.be/id/emissiepunt/001",
-  "geobserveerdKenmerk": "https://data.vlaanderen.be/id/concept/WaterMetingType/gemetenAfstand",
-  "simpelResultaat": "-10.5",
-  "resultaat": {
-    "type": "KwantitatieveWaarde",
-    "waarde": "-10.5",
-    "standaardEenheid": "qudt-unit:CentiM"
-  },
-  "Overstortstatus": "https://data.vlaanderen.be/id/concept/OverstortStatus/nietOverstort",
-  "resultaatTijd": "2024-07-27T20:00:00Z",
-  "fenomeentijd": {
-    "type": "Moment",
-    "inXSDDateTime": "2024-07-27T14:00:00Z"
-  },
-  "gebruikteProcedure": "https://aquafin.be/id/concept/observatieproceduretype/OW19",
-  "WaarGenomenMet": "https://aquafin.be/id/sensor/001"
+  "fenomeentijd": "2024-07-27T14:00:00Z",
+  "modifiedAt": "2024-07-27T14:00:00Z", 
+  "gemetenAfstand": "-10.5",
+  "temperatuur": "15",
+  "debiet": "2.3",
+  "meetpunt":"K_000003850759", 
+  "overstortstatus": "NietWerking",  
+  "validatieStatus": "raw", 
+  "isWaargenomenMet": "418858" 
 }
+	
 ```
-
-## Temperatuur
+## Event
+In de events wordt niet de data vastgelegd die op een specifiek moment wordt opgemeten, maar is een berekening van de overstortduur en de hoeveelheid totale vuilvracht die wordt opgemeten. 
+Onderstaand een json-voorbeeld
 
 ```json
 {
-  "id": "https://aquafin.be/id/observatie/001/temperatuur/2024-07-29T15:00:00Z",
-  "type": "Observatie",
-  "isVersionOf": "https://aquafin.be/id/observatie/001/temperatuur/2024-07-27T20:00:00Z",
-  "modifiedAt": "2024-07-29T15:00:00Z",
-  "geobserveerdObject": "https://aquafin.be/id/emissiepunt/001",
-  "geobserveerdKenmerk": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0030",
-  "simpelResultaat": "22.5",
-  "resultaat": {
-    "type": "KwantitatieveWaarde",
-    "waarde": "22.5",
-    "standaardEenheid": "qudt-unit:DEG_C"
-  },
-  "resultaatTijd": "2024-07-27T20:00:00Z",
-  "fenomeentijd": {
-    "type": "Moment",
-    "inXSDDateTime": "2024-07-27T14:00:00Z"
-  },
-  "gebruikteProcedure": "https://aquafin.be/id/concept/observatieproceduretype/OW19",
-  "isWaargenomenMet": "https://aquafin.be/id/sensor/001"
-}
-
-```
-
-## Debiet
-
-```json
-{
-  "id": "https://aquafin.be/id/observatie/001/debiet/2024-07-29T15:00:00Z",
-  "type": "Observatie",
-  "isVersionOf": "https://aquafin.be/id/observatie/001/debiet/2024-07-27T20:00:00Z",
-  "modifiedAt": "2024-07-29T15:00:00Z",
-  "geobserveerdObject": "https://aquafin.be/id/emissiepunt/001",
-  "geobserveerdKenmerk": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053",
-  "simpelResultaat": "22.5",
-  "resultaat": {
-    "type": "KwantitatieveWaarde",
-    "waarde": "22.5",
-    "standaardEenheid": "qudt-unit:CubicMeterPerSecond"
-  },
-  "resultaatTijd": "2024-07-27T20:00:00Z",
-  "fenomeentijd": {
-    "type": "Moment",
-    "inXSDDateTime": "2024-07-27T14:00:00Z"
-  },
-  "gebruikteProcedure": "https://aquafin.be/id/concept/observatieproceduretype/OW19",
-  "isWaargenomenMet": "https://aquafin.be/id/sensor/001"
-}
-```
-
-## Emissiepunt (Overstortpunt)
-
-
-```json
-{
-  "id": "https://aquafin.be/id/emissiepunt/001",
-  "type": "Emissiepunt",
-  "label": "Overstortpunt 001",
-  "geometrie": {
-    "type": "Geometrie",
-    "wktWGS84": "POINT(5.298607495000001 50.948995878)",
-    "wktLambert72": "POINT(xxx yyy)",
-    "lat": "50.948995878",
-    "long": "5.298607495000001"
-  }
+  "type": "Event",
+  "fenomeenStarttijd": "2024-07-27T14:00:00Z",
+  "fenomeenEindTijd": ""2024-07-27T14:012:00Z",
+  "modifiedAt": "2024-07-27T14:00:00Z", 
+  "debiet": "2.3",
+  "meetpunt":"K_000003850759", 
+  "validatieStatus": "raw", 
+  "isWaargenomenMet": "418858"
 }
 ```
 
 ## Sensor
+In de Sensordata-json wordt alle relevante metadata per sensor doorgestuurd. Dit gaat over slowly changing data. 
 
 ```json
 {
-  "id": "https://aquafin.be/id/sensor/001",
+  "id": "418858",
   "type": "Sensor",
-  "label": "Sensor 001",
-  "geometrie": {
-    "type": "Geometrie",
-    "wktWGS84": "POINT(5.298607495000001 50.948995878)",
-    "wktLambert72": "POINT(xxx yyy)",
-    "lat": "50.948995878",
-    "long": "5.298607495000001"
-  },
-  "familieType": "",
-  "identifier": "P2046600",
-  "eigenaar": "",
-  "operationeleStatus": "",
-  "serienummer": ""
+  "name": "Overstortmeter Ijinus US LTE",
+  "familyType": "",
+  "owner": "Aquafin",
+  "manufacturerName": "ELSCOLAB",
+  "serialNumber": "IJA0102-00001836",
+  "deviceState": "Actief",
+  "lat_WGS84": "50.948995878", 
+  "long_WGS84": "5.298607495000001", 
+  "lat_Lambert72": "xxx", 
+  "long_Lambert72": "yyy"
 }
 
 ```
@@ -229,44 +167,6 @@ https://www.w3.org/TR/wot-thing-description
       }
   }
 }
-```
 
-## Overstortduur
-
-```json
-{
-  "id": "https://aquafin.be/id/Event/001/overstortduur/2024-07-29T15:00:00Z",
-  "type": "Event",
-  "isVersionOf": "https://aquafin.be/id/Event/001/overstortduur/2024-07-27T14:00:00Z",
-  "modifiedAt": "2024-07-29T15:00:00Z",
-  "Event.geobserveerdObject": {
-    "type": "Meetpunt",
-    "geometrie": {
-      "type": "Geometrie",
-      "wktWGS84": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(5.298607495000001 50.948995878)",
-      "wktLambert72": "<http://www.opengis.net/def/crs/EPSG/0/31370> POINT(xxx yyy)",
-      "lat": "50.948995878",
-      "long": "5.298607495000001",
-      "Code": "K_000003850759"
-    }
-  },
-  "Event.geobserveerdKenmerk": "https://data.vlaanderen.be/id/concept/WaterMetingType/Vuilvracht",
-  "Event.simpelResultaat": "22.5",
-  "Event.resultaat": {
-    "type": "KwantitatieveWaarde",
-    "KwantitatieveWaarde.waarde": "22.5",
-    "KwantitatieveWaarde.standaardEenheid": "qudt-unit:CubicMeterPerSecond"
-  },
-  "Event.fenomeentijdStart": {
-    "type": "Moment",
-    "inXSDDateTime": "2024-07-27T14:00:00Z"
-  },
-  "Event.fenomeentijdEind": {
-    "type": "Moment",
-    "inXSDDateTime": "2024-07-27T14:05:00Z"
-  },
-  "Event.isWaargenomenMet": "https://aquafin.be/id/sensor/418858"
-}
-```
 Footer
 
