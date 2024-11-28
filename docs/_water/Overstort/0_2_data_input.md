@@ -10,42 +10,20 @@ nav_order: 1
 Om alles overzichtelijk te maken, voorzien we onderstaand een JSON voorbeeld van een event en sensordata. 
 De brondata wordt telkens aangeleverd in JSON-formaat.
 
-[## Observatie
-
-In 1 observatie krijgen we de metingen van zowel temperatuur, overstorthoogte(gemetenAfstand) als debiet meegestuurd. 
-Deze observaties worden elke minuut gemeten in geval van overstort (InWerking) of elke 5min in geval van 'nietWerking'. 
-Op die manier krijgen we voor overstort:
-
-```json
-{
-  "type": "Observatie",
-  "fenomeentijd": "2024-07-27T14:00:00Z",
-  "modifiedAt": "2024-07-27T14:00:00Z", 
-  "gemetenAfstand": "-10.5",
-  "temperatuur": "15",
-  "debiet": "2.3",
-  "meetpunt":"K_000003850759", 
-  "overstortstatus": "NietWerking",  
-  "validatieStatus": "raw", 
-  "isWaargenomenMet": "418858" 
-}
-	
-```](url)
 
 ## Event
-In de events wordt niet de data vastgelegd die op een specifiek moment wordt opgemeten, maar is een berekening van de overstortduur en de hoeveelheid totale vuilvracht die wordt opgemeten. 
+In de events wordt niet de data vastgelegd die op een specifiek moment wordt opgemeten, maar is een berekening van de overstortduur
 Onderstaand een json-voorbeeld
 
 ```json
 {
-  "type": "Event",
-  "fenomeenStarttijd": "2024-07-27T14:00:00Z",
-  "fenomeenEindTijd": ""2024-07-27T14:12:00Z",
-  "modifiedAt": "2024-07-27T14:00:00Z", 
-  "debiet": "2.3",
-  "meetpunt":"K_000003850759", 
-  "validatieStatus": "raw", 
-  "isWaargenomenMet": "418858"
+	"type": "event",
+	"event_start_time": "2024-07-27T14:00:00Z",
+        "event_end_time": "2024-07-27T14:30:00Z",
+	"modifiedAt": "2024-07-27T14:00:00Z", 
+	"measurement_location":"K_000003850759", 
+	"overstort_in_werking": "InWerking", 
+	"is_observed_with": "418858" 
 }
 ```
 
@@ -54,17 +32,19 @@ In de Sensordata-json wordt alle relevante metadata per sensor doorgestuurd. Dit
 
 ```json
 {
-  "id": "418858",
-  "type": "Sensor",
-  "name": "Overstortmeter Ijinus US LTE",
-  "owner": "Aquafin",
-  "manufacturerName": "ELSCOLAB",
-  "serialNumber": "IJA0102-00001836",
-  "deviceState": "Actief",
-  "lat_WGS84": "50.948995878", 
-  "long_WGS84": "5.298607495000001", 
-  "lat_Lambert72": "xxx", 
-  "long_Lambert72": "yyy"
+   "id": "415987",
+   "device_type": "Sensor",
+   "name": "Overstortmeter Ijinus RD LTE",
+   "owner": "Aquafin",
+   "brand": "IJINUS",
+   "supplier": "ELSCOLAB",
+   "serial_number": "XAA0102-00001999",
+   "device_state": "Actief",
+   "lat_WGS84": "50.948995878",
+   "long_WGS84": "5.298607495000001", 
+   "lat_Lambert72": "xxx", 
+   "long_Lambert72": "yyy", 
+   "measurement_location":"K_000003850759"
 }
 
 ```
