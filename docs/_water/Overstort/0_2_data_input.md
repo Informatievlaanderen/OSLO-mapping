@@ -7,10 +7,10 @@ nav_order: 1
 
 # Data voorbeeld
 
-Om alles overzichtelijk te maken, voorzien we onderstaand een JSON voorbeeld van een observatie, een event en sensordata. 
+Om alles overzichtelijk te maken, voorzien we onderstaand een JSON voorbeeld van een event en sensordata. 
 De brondata wordt telkens aangeleverd in JSON-formaat.
 
-## Observatie
+[## Observatie
 
 In 1 observatie krijgen we de metingen van zowel temperatuur, overstorthoogte(gemetenAfstand) als debiet meegestuurd. 
 Deze observaties worden elke minuut gemeten in geval van overstort (InWerking) of elke 5min in geval van 'nietWerking'. 
@@ -30,7 +30,8 @@ Op die manier krijgen we voor overstort:
   "isWaargenomenMet": "418858" 
 }
 	
-```
+```](url)
+
 ## Event
 In de events wordt niet de data vastgelegd die op een specifiek moment wordt opgemeten, maar is een berekening van de overstortduur en de hoeveelheid totale vuilvracht die wordt opgemeten. 
 Onderstaand een json-voorbeeld
