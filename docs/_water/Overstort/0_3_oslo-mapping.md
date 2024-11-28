@@ -7,10 +7,13 @@ nav_order: 3
 
 # Intro
 
-De data wordt reeds in een voorafbepaald JSON formaat aangeleverd. 
-Op basis van dat JSON-model bepalen we de  SPARQL CONSTRUCT mapping die de intiële JSON-LD herstructureert in het implementatiemodel.
+Voor het mappen van de tabulaire view naar een Linked Data graph volgens OSLO wordt gewerkt in 2 stappen.
 
-Om deze stappen beter uit te leggen, gaan we een overstort-observatie als voorbeeld uitwerken.
+Eerst gebeurt een rudimentaire omzetting naar Linked Data die aansluit bij de oorspronkelijke kolomstructuur. De reden hiervoor is dat we de OSLO mapping via SPARQL Construct queries willen uitdrukken. Dit is een leesbare manier om complexe mappingen te beschrijven, maar vereist Linked Data als input.
+
+Daarna gebeurt een SPARQL CONSTRUCT mapping die de intiële omzetting herstructureerd in het implementatiemodel.
+
+Om deze stappen beter uit te leggen, gaan we een overstort als voorbeeld uitwerken.
 
 # Voorbeeld hoogte overstort
 
