@@ -5,6 +5,10 @@ parent: VMM
 nav_order: 0
 ---
 
+Onderstaande inputdata is afkomstig van 1500 sensoren verspreid over Vlaanderen. Deze sensoren meten o.a. de periode waarin er sprake is van overstort. 
+Een overstort is een kunstwerk met als doel het afvoeren van (pieken in) overtollig rioolwater vanuit de gemengde riolering naar het oppervlaktewater.
+
+
 # Data voorbeeld Overstortsensor Metadata 
 
 | id |  1 |
