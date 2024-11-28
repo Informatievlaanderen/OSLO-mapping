@@ -1,10 +1,22 @@
 ---
 layout: default
 title: Input data
-parent: Overstort
+parent: VMM
 nav_order: 0
 ---
 
-# Input data
+# Data voorbeeld Sensor Metadata 
 
-De overstort-data wordt bijgehouden in [X] views op de Water Data Space van Aquafin. Achterliggend wordt gebruik gemaakt van de LDES Server om de data ter beschikking te stellen. Dit zijn triple-storetabellen en zijn opvraagbaar via SparQL in de LDES Client.
+| id |  1 |
+| device_type |  Sensor |
+| name |  Overstortmeter |
+| owner |  Aquafin |
+| brand |  IJINUS |
+| supplier |  ELSCOLAB |
+| serial_number |  XAA0102-00001999 |
+| device_state |  Actief |
+| lat_WGS84 |  50.948995878 |
+| long_WGS84 |  5.298607495000001 | 
+| lat_Lambert72 |  xxx | 
+| long_Lambert72 |  yyy | 
+| measurement_location | K_000003850759 |
