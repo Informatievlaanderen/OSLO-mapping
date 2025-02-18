@@ -87,8 +87,7 @@ https://www.w3.org/TR/wot-thing-description
       "aquafin": "https://aquafin.be/ns#",
       "dcterms": "http://purl.org/dc/terms/",
       "environment": "https://smartdatamodels.org/dataModel.Environment/",
-      "sdm": "https://smartdatamodels.org/",
- 
+      "sdm": "https://smartdatamodels.org/"
       }
   }
 }
