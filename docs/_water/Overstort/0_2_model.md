@@ -14,10 +14,7 @@ Concreet werden volgende klasses gebruikt, maar gemapt op SSN/SOSA ipv ISO19156:
 * Observatie (sosa:Observation)
 * Kenmerktype (sosa:ObservableProperty)
 * Object (sosa:FeatureOfInterest)
-* Emissie (wk:Emissie)
 
-Een uitbreiding werd gemaakt met volgende klasses:
-* Emissiepunt (imjv:Emissiepunt)
 
 <br>
 <br>
