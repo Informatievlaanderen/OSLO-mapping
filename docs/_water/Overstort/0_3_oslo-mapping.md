@@ -15,7 +15,7 @@ Bij deze alvast een voorbeeld.
 
 ## Ruwe data
 
-Onderstaand nogmaals de data zoals ze ontvangen wordt de LDIO workbench in JSON-formaat.
+Onderstaand nogmaals de data zoals ze ontvangen wordt door de LDIO workbench in JSON-formaat.
 
 ```json
       {
