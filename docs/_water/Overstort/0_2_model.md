@@ -25,7 +25,7 @@ Met dank aan departement Omgeving werd het implementatiemodel als volgt opgestel
 
 ![alt text](image-2.png)
 
-Een belangrijk verschil met OSLO waterkwaliteit is dat de specifieke kenmerken en parameters (temperatuur, debiet, hoogte...) werden uitgemodelleerd op Kenmerktype in plaats van subklasses.
+<!-- Een belangrijk verschil met OSLO waterkwaliteit is dat de specifieke kenmerken en parameters (temperatuur, debiet, hoogte...) werden uitgemodelleerd op Kenmerktype in plaats van subklasses. -->
 
 ## OSLO Waterkwaliteit
 
