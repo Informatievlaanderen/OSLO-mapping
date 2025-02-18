@@ -89,10 +89,8 @@ Voor de leesbaarheid worden volgende prefices gebruikt:
 #### Versie
 
 Nu kunnen we starten met het mappen naar OSLO.
-Eerst zorgen we ervoor dat de observatie correct geversioneerd en gelabeled is.
-De ?observation_url kolom wordt als persistente identificator van een observatie gebruikt en dus niet de ?obs die door de pipeline wordt ingevuld.
-De bedoeling is om de Linked Data zo dicht mogelijk in de bron te houden. Dit houdt in dat de URI's van resources best worden beschreven in de view adhv `_url`
- kolommen en niet in de mapping. Het versioneren wordt hier wel in de mapping gedaan adhv de modifiedAt-waarde om te vermijden dat het aantal _url kolommen verdubbelt.
+De versionering gebeurt automatisch door de LDIO Workbench pipeline en wordt toevoegd aan de eindmapping. 
+Het versioneren wordt hier wel in de mapping gedaan adhv de modifiedAt-waarde om te vermijden dat het aantal _url kolommen verdubbelt.
 
 Belangrijk bij het mappen is dat de objecten van triples correct getypeerd worden: datatypes worden verrijkt met `STRDT` en bijhorende xsd type, instanties van een klasse met `URI`.
 
@@ -133,7 +131,7 @@ Belangrijk bij het mappen is dat de objecten van triples correct getypeerd worde
 }
 ```
 
-#### Resultaat en tijd
+#### Resultaat en tijd - STILL TO DO
 
 ![alt text](image-3.png)
 
@@ -168,48 +166,49 @@ CONSTRUCT {
 }
 ```
 
-#### Kenmerken
+#### Eindresultaat
 
 ![alt text](image-4.png)
 
 ```
-CONSTRUCT {
-  ...
-  ?observation_versie sosa:observedProperty ?observed_property_emissievrachtagens .
+PREFIX dcat:                             <http://www.w3.org/ns/dcat#>
+PREFIX dct:                              <http://purl.org/dc/terms/>
+PREFIX foaf:                             <http://xmlns.com/foaf/0.1/>
+PREFIX geo:                              <http://www.opengis.net/ont/geosparql#>
+PREFIX ldes:                             <https://w3id.org/ldes#>
+PREFIX m8g:                              <http://data.europa.eu/m8g/>
+PREFIX overstort-event-cleansed:         <https://ldes-overstort.test.az.aquafin.be/ldes/overstort-event-cleansed/>
+PREFIX overstort-event-cleansed-by-page: <https://ldes-overstort.test.az.aquafin.be/ldes/overstort-event-cleansed/overstort-event-cleansed-by-page/>
+PREFIX owl:                              <http://www.w3.org/2002/07/owl#>
+PREFIX prov:                             <http://www.w3.org/ns/prov#>
+PREFIX rdf:                              <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:                             <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sh:                               <http://www.w3.org/ns/shacl#>
+PREFIX shsh:                             <http://www.w3.org/ns/shacl-shacl#>
+PREFIX skos:                             <http://www.w3.org/2004/02/skos/core#>
+PREFIX tree:                             <https://w3id.org/tree#>
+PREFIX xsd:                              <http://www.w3.org/2001/XMLSchema#>
 
-  ?observed_property_emissievrachtagens a sosa:ObservableProperty , imjv:EmissieVrachtAgens ;
-              wk:agens ?agens ;
-              rdfs:label ?observed_property_emissievrachtagens_label ;
-              rdfs:comment ?observed_property_emissievrachtagens_comment .
-            
-            ?agens a skos:Concept ;
-              rdfs:label ?substantie_url_with_lang .
-    ...
-} WHERE {
-    ...
-    BIND(URI(str(?substantie_url)) as ?agens)
-    BIND(STRLANG(?substantie_url, "nl") as ?substantie_url_with_lang)
-
-    BIND(STRLANG(concat("vracht ", ?substantie_label), "nl") as ?observed_property_emissievrachtagens_label)
-    BIND(STRLANG(concat("De vracht ", ?substantie_label, " van een emissie."), "nl") as ?observed_property_emissievrachtagens_comment)
+<https://aquafin.be/id/event/61443dd0-e8a5-4d60-aa59-91d2ade86150/2025-02-06T07:02:14.284989010>
+        rdf:type              <http://www.w3.org/ns/sosa/Event>;
+        dct:isVersionOf       <https://aquafin.be/id/event/61443dd0-e8a5-4d60-aa59-91d2ade86150>;
+        prov:generatedAtTime  "2025-02-06T07:02:14.284Z"^^xsd:dateTime;
+        <http://www.w3.org/ns/sosa/event_end_time>
+                "2025-02-05T16:30:00.000Z"^^xsd:dateTime;
+        <http://www.w3.org/ns/sosa/event_start_time>
+                "2025-02-05T16:16:00.000Z"^^xsd:dateTime;
+        <http://www.w3.org/ns/sosa/hasFeatureOfInterest>
+                <https://aquafin.be/id/meetpunt/P_000000582719>;
+        <http://www.w3.org/ns/sosa/madeBySensor>
+                <https://aquafin.be/id/sensor/P1035782>;
+        <http://www.w3.org/ns/sosa/modified_at>
+                "2025-02-06T06:34:13.273Z"^^xsd:dateTime;
+        <http://www.w3.org/ns/ssn/status>
+                "WerkingOnbekend";
+        <https://aquafin.be/ns#endTimestampKnown>
+                true .
   ...
 }
 ```
 
-#### Geobserveerd Object
 
-
-
-![alt text](image-5.png)
-
-```
-CONSTRUCT {
-  ...
-  ?observation_versie sosa:hasFeatureOfInterest ?emissie .
-    ...
-} WHERE {
-  ...
-  BIND(URI(?emissie_url) as ?emissie)
-  ...
-}
-```
