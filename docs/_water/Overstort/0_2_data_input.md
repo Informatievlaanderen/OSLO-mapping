@@ -7,8 +7,8 @@ nav_order: 1
 
 # Data voorbeeld
 
-Om alles overzichtelijk te maken, voorzien we onderstaand een JSON voorbeeld van een event en sensordata. 
-De brondata wordt telkens aangeleverd in JSON-formaat.
+Om alles overzichtelijk te maken, voorzien we onderstaand een voorbeeld in JSON-formaat van een eventbericht en een metadatabericht van een sensor. 
+Dit is ook meteen het formaat waarin de brondata wordt aangeleverd om later ter beschikking gesteld te worden via LDES.
 
 
 ## Event
