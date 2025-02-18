@@ -30,7 +30,9 @@ Onderstaand een json-voorbeeld
 ```
 
 ## Sensor
-In de Sensordata-json wordt alle relevante metadata per sensor doorgestuurd. Dit gaat over slowly changing data. 
+In de Sensordata-json wordt alle relevante metadata per sensor doorgestuurd. 
+Indien er wijzigingen optreden in de status, locatie of kwaliteit van de sensor, wordt een nieuwe versie beschikbaar gemaakt op de LDES Server die de meest versie van de sensormetadata bevat.
+
 
 ```json
 {
@@ -87,78 +89,6 @@ https://www.w3.org/TR/wot-thing-description
       "environment": "https://smartdatamodels.org/dataModel.Environment/",
       "sdm": "https://smartdatamodels.org/",
  
-      "id": "@id",
-      "type": "@type",
-      "Observatie": "sosa:Observation",
-      "isVersionOf": {
-        "@id": "terms:isVersionOf",
-        "@type": "@id"
-      },
-      "ModifiedAt": {
-        "@id": "terms:createdAt",
-        "@type": "xsd:dateTime"
-      },
-      "modifiedAt": {
-        "@id": "terms:modifiedAt",
-        "@type": "xsd:dateTime"
-      },
-      "Observatie.geobserveerdObject": {
-        "@id": "sosa:hasFeatureOfInterest",
-        "@type": "@id"
-      },
-      "Observatie.geobserveerdKenmerk": {
-        "@id": "sosa:observedProperty",
-        "@type": "@id"
-      },
-      "Observatie.simpelResultaat": {
-        "@id": "sosa:hasSimpleResult",
-        "@type": "xsd:decimal"
-      },
-      "Observatie.resultaat": {
-        "@id": "sosa:hasResult",
-        "@type": "@id"
-      },
-      "Observatie.resultaatTijd": {
-        "@id": "sosa:resultTime",
-        "@type": "xsd:dateTime"
-      },
-      "Observatie.fenomeentijd": {
-        "@id": "sosa:phenomenonTime",
-        "@type": "@id"
-      },
-      "Observatie.gebruikteProcedure": {
-        "@id": "sosa:usedProcedure",
-        "@type": "@id"
-      },
-      "KwantitatieveWaarde": "https://schema.org/QuantitativeValue",
-      "KwantitatieveWaarde.waarde": {
-        "@id": "https://schema.org/value",
-        "@type": "xsd:decimal"
-      },
-      "KwantitatieveWaarde.standaardEenheid": {
-        "@id": "https://schema.org/unitCode",
-        "@type": "@id"
-      },
-      "Moment": "time:Instant",
-      "inXSDDateTime": "time:inXSDDateTime",
-      "overstortStatus": "https://aquafin.be/ns/overstort#overstortStatus",
-      "Emissiepunt": "https://data.imjv.omgeving.vlaanderen.be/ns/imjv#Emissiepunt",
-      "label": "rdfs:label",
-      "geometrie": "locn:geometry",
-      "Geometrie": "locn:Geometry",
-      "wktWGS84": {
-        "@id": "geosparql:asWKT",
-        "@type": "geosparql:wktLiteral"
-      },
-      "wktLambert72": {
-        "@id": "geosparql:asWKT",
-        "@type": "geosparql:wktLiteral"
-      },
-      "lat": {
-        "@id": "wgs84_pos:lat"
-      },
-      "long": {
-        "@id": "wgs84_pos:long"
       }
   }
 }
