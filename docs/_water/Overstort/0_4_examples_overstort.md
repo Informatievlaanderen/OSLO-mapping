@@ -5,8 +5,7 @@ title: Examples Overstort
 nav_order: 4
 ---
 
-#### Eindresultaat op de LDES Server
-
+#Prefices 
 
 ```
 PREFIX dcat:                             <http://www.w3.org/ns/dcat#>
@@ -26,6 +25,12 @@ PREFIX shsh:                             <http://www.w3.org/ns/shacl-shacl#>
 PREFIX skos:                             <http://www.w3.org/2004/02/skos/core#>
 PREFIX tree:                             <https://w3id.org/tree#>
 PREFIX xsd:                              <http://www.w3.org/2001/XMLSchema#>
+```
+
+#### Eindresultaat op de LDES Server
+
+
+```
 
 <https://aquafin.be/id/event/61443dd0-e8a5-4d60-aa59-91d2ade86150/2025-02-06T07:02:14.284989010>
         rdf:type              <http://www.w3.org/ns/sosa/Event>;
