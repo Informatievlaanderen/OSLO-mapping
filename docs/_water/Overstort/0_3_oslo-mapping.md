@@ -18,41 +18,6 @@ Bij deze alvast een voorbeeld.
 Onderstaand nogmaals de data zoals ze ontvangen wordt de LDIO workbench in JSON-formaat.
 
 ```json
-  {
-<!--    "@context": [
-      "https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01/context/waterkwaliteit-ap.jsonld",
-      "https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01/context/statistiek-ap.jsonld",
-      "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28/context/ap-observaties-en-metingen.jsonld",
-      "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28/context/ap-sensoren-en-bemonstering.jsonld",
-      "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01/context/generiek-basis.jsonld",
-      "https://github.com/smart-data-models/dataModel.Environment/blob/master/context.jsonld",
-    "https://github.com/bramverdonck/AQFOverstort/blob/main/Context%20Overstort.json",
-      {
-      "@language": "nl",
-      "adms": "http://www.w3.org/ns/adms#",
-      "qudt-schema": "https://qudt.org/schema/qudt/",
-      "terms": "http://purl.org/dc/terms/",
-      "time": "http://www.w3.org/2006/time#",
-      "sc": "http://purl.org/science/owl/sciencecommons",
-      "skos": "http://www.w3.org/2004/02/skos/core#",
-      "geosparql": "http://www.opengis.net/ont/geosparql#",
-      "qudt-unit": "https://qudt.org/vocab/unit/",
-      "sosa": "http://www.w3.org/ns/sosa/",
-      "xsd": "http://www.w3.org/2001/XMLSchema#",
-      "schema": "https://schema.org",
-      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-      "locn": "http://www.w3.org/ns/locn#",
-      "geo" : "http://www.w3.org/2003/01/geo/wgs84_pos#",
-      "prov": "http://www.w3.org/ns/prov#",
-      "sosa": "http://www.w3.org/ns/sosa/",
-      "ssn": "http://www.w3.org/ns/ssn/",
-      "aquafin": "https://aquafin.be/ns#",
-      "dcterms": "http://purl.org/dc/terms/",
-      "environment": "https://smartdatamodels.org/dataModel.Environment/",
-      "sdm": "https://smartdatamodels.org/"
-      }
-    ], -->
-    "@graph": [
       {
        "id":"P2050378",
        "device_type":"Overstortmeter",
@@ -72,94 +37,66 @@ Onderstaand nogmaals de data zoals ze ontvangen wordt de LDIO workbench in JSON-
        "quality_label":"0",
        "scd_update_timestamp":"2025-02-14T08:46:50.202Z"
      }
-  ]
-}
+
 ```
 
-Merk op dat kolom `modifiedAt` ook gebruikt wordt. Dit is domeinonafhankelijk en wordt gebruikt bij het versioneren van de data.
-
-# Nog toe te voegen
-
-De eerste omzetting leidt tot volgende triples:
-
-```turtle
-<https://vmm.be/id/imjv/https%3A%2F%2Fdata.imjv.omgeving.vlaanderen.be%2Fid%2Fobservatie%2F01894963000131%2FAW9308001%2Ftransfer%2Fchemische_stof%2FRYGMFSIKBFXOCR-UHFFFAOYSA-N%2F2021/2024-06-06T07:09:38.716Z> <https://vmm.be/ns#observation_url> "https://data.imjv.omgeving.vlaanderen.be/id/observatie/01894963000131/AW9308001/transfer/chemische_stof/RYGMFSIKBFXOCR-UHFFFAOYSA-N/2021" .
-<https://vmm.be/id/imjv/https%3A%2F%2Fdata.imjv.omgeving.vlaanderen.be%2Fid%2Fobservatie%2F01894963000131%2FAW9308001%2Ftransfer%2Fchemische_stof%2FRYGMFSIKBFXOCR-UHFFFAOYSA-N%2F2021/2024-06-06T07:09:38.716Z> <https://vmm.be/ns#observatie_label> "Observatie Koper 2021" .
-<https://vmm.be/id/imjv/https%3A%2F%2Fdata.imjv.omgeving.vlaanderen.be%2Fid%2Fobservatie%2F01894963000131%2FAW9308001%2Ftransfer%2Fchemische_stof%2FRYGMFSIKBFXOCR-UHFFFAOYSA-N%2F2021/2024-06-06T07:09:38.716Z> <https://vmm.be/ns#year0> "2021" .
-<https://vmm.be/id/imjv/https%3A%2F%2Fdata.imjv.omgeving.vlaanderen.be%2Fid%2Fobservatie%2F01894963000131%2FAW9308001%2Ftransfer%2Fchemische_stof%2FRYGMFSIKBFXOCR-UHFFFAOYSA-N%2F2021/2024-06-06T07:09:38.716Z> <https://vmm.be/ns#emissie_url> "https://data.imjv.omgeving.vlaanderen.be/id/lozing/01894963000131/AW9308001/2021" .
-<https://vmm.be/id/imjv/https%3A%2F%2Fdata.imjv.omgeving.vlaanderen.be%2Fid%2Fobservatie%2F01894963000131%2FAW9308001%2Ftransfer%2Fchemische_stof%2FRYGMFSIKBFXOCR-UHFFFAOYSA-N%2F2021/2024-06-06T07:09:38.716Z> <https://vmm.be/ns#substantie_url> "https://data.omgeving.vlaanderen.be/id/concept/chemische_stof/RYGMFSIKBFXOCR-UHFFFAOYSA-N" .
-<https://vmm.be/id/imjv/https%3A%2F%2Fdata.imjv.omgeving.vlaanderen.be%2Fid%2Fobservatie%2F01894963000131%2FAW9308001%2Ftransfer%2Fchemische_stof%2FRYGMFSIKBFXOCR-UHFFFAOYSA-N%2F2021/2024-06-06T07:09:38.716Z> <https://vmm.be/ns#substantie_label> "Koper" .
-<https://vmm.be/id/imjv/https%3A%2F%2Fdata.imjv.omgeving.vlaanderen.be%2Fid%2Fobservatie%2F01894963000131%2FAW9308001%2Ftransfer%2Fchemische_stof%2FRYGMFSIKBFXOCR-UHFFFAOYSA-N%2F2021/2024-06-06T07:09:38.716Z> <https://vmm.be/ns#bepalingsmethode_url> "https://data.imjv.omgeving.vlaanderen.be/id/concept/meetgegevens" .
-<https://vmm.be/id/imjv/https%3A%2F%2Fdata.imjv.omgeving.vlaanderen.be%2Fid%2Fobservatie%2F01894963000131%2FAW9308001%2Ftransfer%2Fchemische_stof%2FRYGMFSIKBFXOCR-UHFFFAOYSA-N%2F2021/2024-06-06T07:09:38.716Z> <https://vmm.be/ns#bepalingsmethode_label> "meetgegevens" .
-<https://vmm.be/id/imjv/https%3A%2F%2Fdata.imjv.omgeving.vlaanderen.be%2Fid%2Fobservatie%2F01894963000131%2FAW9308001%2Ftransfer%2Fchemische_stof%2FRYGMFSIKBFXOCR-UHFFFAOYSA-N%2F2021/2024-06-06T07:09:38.716Z> <https://vmm.be/ns#value0> "1.44642" .
-<https://vmm.be/id/imjv/https%3A%2F%2Fdata.imjv.omgeving.vlaanderen.be%2Fid%2Fobservatie%2F01894963000131%2FAW9308001%2Ftransfer%2Fchemische_stof%2FRYGMFSIKBFXOCR-UHFFFAOYSA-N%2F2021/2024-06-06T07:09:38.716Z> <https://vmm.be/ns#unitMeasure_url> "https://data.imjv.omgeving.vlaanderen.be/id/concept/eenheid/kg_per_jaar" .
-<https://vmm.be/id/imjv/https%3A%2F%2Fdata.imjv.omgeving.vlaanderen.be%2Fid%2Fobservatie%2F01894963000131%2FAW9308001%2Ftransfer%2Fchemische_stof%2FRYGMFSIKBFXOCR-UHFFFAOYSA-N%2F2021/2024-06-06T07:09:38.716Z> <https://vmm.be/ns#unitMeasure_label> "kg/jaar" .
-
-<https://vmm.be/id/imjv/https%3A%2F%2Fdata.imjv.omgeving.vlaanderen.be%2Fid%2Fobservatie%2F01894963000131%2FAW9308001%2Ftransfer%2Fchemische_stof%2FRYGMFSIKBFXOCR-UHFFFAOYSA-N%2F2021/2024-06-06T07:09:38.716Z> <https://vmm.be/ns#modifiedAt> "2024-06-05T07:14:44.998Z" .
-<https://vmm.be/id/imjv/https%3A%2F%2Fdata.imjv.omgeving.vlaanderen.be%2Fid%2Fobservatie%2F01894963000131%2FAW9308001%2Ftransfer%2Fchemische_stof%2FRYGMFSIKBFXOCR-UHFFFAOYSA-N%2F2021/2024-06-06T07:09:38.716Z> <#isDeleted> "0" .
-
-<https://vmm.be/id/imjv/https%3A%2F%2Fdata.imjv.omgeving.vlaanderen.be%2Fid%2Fobservatie%2F01894963000131%2FAW9308001%2Ftransfer%2Fchemische_stof%2FRYGMFSIKBFXOCR-UHFFFAOYSA-N%2F2021/2024-06-06T07:09:38.716Z> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
-<https://vmm.be/id/imjv/https%3A%2F%2Fdata.imjv.omgeving.vlaanderen.be%2Fid%2Fobservatie%2F01894963000131%2FAW9308001%2Ftransfer%2Fchemische_stof%2FRYGMFSIKBFXOCR-UHFFFAOYSA-N%2F2021/2024-06-06T07:09:38.716Z> <http://www.w3.org/ns/prov#generatedAtTime> "2024-06-06T07:09:38.716Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://vmm.be/id/imjv/https%3A%2F%2Fdata.imjv.omgeving.vlaanderen.be%2Fid%2Fobservatie%2F01894963000131%2FAW9308001%2Ftransfer%2Fchemische_stof%2FRYGMFSIKBFXOCR-UHFFFAOYSA-N%2F2021/2024-06-06T07:09:38.716Z> <http://purl.org/dc/terms/isVersionOf> <https://vmm.be/id/imjv/https%3A%2F%2Fdata.imjv.omgeving.vlaanderen.be%2Fid%2Fobservatie%2F01894963000131%2FAW9308001%2Ftransfer%2Fchemische_stof%2FRYGMFSIKBFXOCR-UHFFFAOYSA-N%2F2021> .
-```
+Merk op dat kolom `change_timestamp_utc` ook gebruikt wordt. Dit is domeinonafhankelijk en wordt gebruikt bij het versioneren van de data.
 
 ## OSLO mapping
 
-Op basis van de intermediate omzetting kan vervolgens een OSLO mapping uitwerkt worden adhv SPARQL CONSTRUCT queries. De intermediate omzetting kan lokaal gehost worden via HTTP server om vervolgens met Comunica te transformeren.
+Op basis van de brondata kunnen we een OSLO mapping uitwerken worden adhv SPARQL CONSTRUCT queries. 
 
 ### WHERE
 
-Bovenstaande triples worden gebruikt als input in de WHERE-clausule:
+Bovenstaande brondata wordt gebruikt als input in de WHERE-clausule:
 
 ```
 CONSTRUCT {
   ...
 } WHERE {
-  ?obs rdf:type ?type ;
-      prov:generatedAtTime ?gat ;
-      dcterms:isVersionOf ?ivo .
-    ?obs <https://vmm.be/ns#observation_url> ?observation_url .
-    ?obs <https://vmm.be/ns#observatie_label> ?observatie_label .
-    ?obs <https://vmm.be/ns#value0> ?value0 .
-    ?obs <https://vmm.be/ns#year0> ?year0 .
-    ?obs <https://vmm.be/ns#substantie_url> ?substantie_url .
-    ?obs <https://vmm.be/ns#emissie_url> ?emissie_url .
-    ?obs <https://vmm.be/ns#substantie_label> ?substantie_label .
-    ?obs <https://vmm.be/ns#bepalingsmethode_url> ?bepalingsmethode_url .
-    ?obs <https://vmm.be/ns#modifiedAt> ?modifiedAt .
-    OPTIONAL {
-      ?obs <https://vmm.be/ns#unitMeasure_url> ?unitMeasure_url .
-      ?obs <https://vmm.be/ns#unitMeasure_label> ?unitMeasure_label .
+                ?s aquafin:id  ?id .
+                ?s aquafin:devicetype ?device_type .
+                ?s aquafin:name ?name .
+                ?s aquafin:owner ?owner .
+                ?s aquafin:supplier ?supplier .
+                ?s aquafin:brand ?brand .
+                ?s aquafin:serial_number ?serial_number .
+                ?s aquafin:device_state ?device_state .
+                ?s aquafin:lat_WGS84 ?lat_WGS84 .
+                ?s aquafin:long_WGS84 ?long_WGS84 .
+                ?s aquafin:lat_Lambert72 ?lat_Lambert72 .
+                ?s aquafin:long_Lambert72 ?long_Lambert72 .
+                ?s aquafin:measurement_location ?measurement_location .
+                ?s aquafin:load_timestamp_utc ?load_timestamp_utc . 
+                ?s aquafin:change_timestamp_utc ?change_timestamp_utc . 
+                ?s aquafin:quality_label ?quality_label . 
+                ?s aquafin:scd_update_timestamp ?scd_update_timestamp .
+      
+              
+                BIND(IRI(CONCAT("https://aquafin.be/id/sensor/", STRUUID())) AS ?sensor)
+                BIND(IRI(CONCAT("https://aquafin.be/id/meetpunt/", COALESCE(?measurement_location, "unknown"))) AS ?measurement_location_name)
     }
 }
 ```
-
-De bovenste drie triple "patterns" werden automatisch toegevoegd zoals hierboven vermeld op basis van configuratie van de pipeline. Deze gebruiken wij niet, omdat we gebruiken maken van de modifiedAt om een versie object te maken.
-
-Merk op dat unitMeasure_url en unitMeasure_label op OPTIONAL staan, omdat dit leeg (NULL) kan zijn in de view .
 
 ### Prefix
 
 Voor de leesbaarheid worden volgende prefices gebruikt:
 
 ```
-PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX dc: <http://purl.org/dc/elements/1.1/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX csvw: <http://www.w3.org/ns/csvw#>
-PREFIX vmm: <https://vmm.be/ns#>
-PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX sosa: <http://www.w3.org/ns/sosa/>
-PREFIX ssn: <http://www.w3.org/ns/ssn/>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX time: <http://www.w3.org/2006/time#>
-PREFIX schema: <https://schema.org/>
-PREFIX imjv: <https://data.imjv.omgeving.vlaanderen.be/ns/imjv#>
-PREFIX locn: <http://www.w3.org/ns/locn#>
-PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
-PREFIX wk: <https://data.vlaanderen.be/ns/waterkwaliteit#>
+  PREFIX so: <http://schema.org/>
+  PREFIX sc: <http://purl.org/science/owl/sciencecommons/>
+  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+  PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+  PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+  PREFIX prov: <http://www.w3.org/ns/prov#>
+  PREFIX sosa: <http://www.w3.org/ns/sosa/>
+  PREFIX ssn: <http://www.w3.org/ns/ssn/>
+  PREFIX aquafin: <https://aquafin.be/ns#>
+  PREFIX schema: <https://schema.org/>
+  PREFIX dcterms: <http://purl.org/dc/terms/>
+  PREFIX environment: <https://smartdatamodels.org/dataModel.Environment/>
+  PREFIX sdm: <https://smartdatamodels.org/>
 ```
 
 ### CONSTRUCT
@@ -175,18 +112,47 @@ De bedoeling is om de Linked Data zo dicht mogelijk in de bron te houden. Dit ho
 Belangrijk bij het mappen is dat de objecten van triples correct getypeerd worden: datatypes worden verrijkt met `STRDT` en bijhorende xsd type, instanties van een klasse met `URI`.
 
 ```
-CONSTRUCT {
-  # EmissieVrachtAgens observaties voor water
-  ?observation_versie rdf:type ?type ;
-    prov:generatedAtTime ?modifiedAt_with_datatype ;
-    dcterms:isVersionOf ?observation ;
-    rdfs:label ?observatie_vracht_label .
-    ...
-} WHERE {
-  BIND(STRDT(?modifiedAt, xsd:dateTime) as ?modifiedAt_with_datatype)
-  BIND(URI(?observation_url) as ?observation)
-  BIND(URI(concat(str(?observation_url), "/", str(?modifiedAt_with_datatype))) as ?observation_versie)
-  BIND(concat('Geobserveerde vracht ', ?observatie_label) as ?observatie_vracht_label)
+              CONSTRUCT {
+                ?sensor a sosa:Sensor ;
+                  dcterms:identifier ?id ;
+                  environment:deviceId ?id ;
+                  dcterms:description ?name ;
+                  dcterms:type ?device_type ;
+                  sdm:owner ?owner ;
+                  schema:vendor ?supplier ;
+                  environment:deviceModel ?brand ;
+                  schema:serialNumber ?serial_number ;
+                  environment:deviceStatus ?device_state ;
+                  geo:lat ?lat_WGS84 ;
+                  geo:long ?long_WGS84 ;
+                  aquafin:lat_Lambert72 ?lat_Lambert72 ;
+                  aquafin:long_Lambert72 ?long_Lambert72 ;
+                  environment:deviceName ?devicename ;
+                  sosa:hasFeatureOfInterest ?measurement_location_name ;
+                  aquafin:quality_label ?quality_label 
+              }
+              WHERE {
+                ?s aquafin:id  ?id .
+                ?s aquafin:devicetype ?device_type .
+                ?s aquafin:name ?name .
+                ?s aquafin:owner ?owner .
+                ?s aquafin:supplier ?supplier .
+                ?s aquafin:brand ?brand .
+                ?s aquafin:serial_number ?serial_number .
+                ?s aquafin:device_state ?device_state .
+                ?s aquafin:lat_WGS84 ?lat_WGS84 .
+                ?s aquafin:long_WGS84 ?long_WGS84 .
+                ?s aquafin:lat_Lambert72 ?lat_Lambert72 .
+                ?s aquafin:long_Lambert72 ?long_Lambert72 .
+                ?s aquafin:measurement_location ?measurement_location .
+                ?s aquafin:load_timestamp_utc ?load_timestamp_utc . 
+                ?s aquafin:change_timestamp_utc ?change_timestamp_utc . 
+                ?s aquafin:quality_label ?quality_label . 
+                ?s aquafin:scd_update_timestamp ?scd_update_timestamp .
+      
+              
+                BIND(IRI(CONCAT("https://aquafin.be/id/sensor/", STRUUID())) AS ?sensor)
+                BIND(IRI(CONCAT("https://aquafin.be/id/meetpunt/", COALESCE(?measurement_location, "unknown"))) AS ?measurement_location_name)
 
   ...
 }
