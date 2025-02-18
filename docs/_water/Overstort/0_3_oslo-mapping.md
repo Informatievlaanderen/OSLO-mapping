@@ -133,8 +133,6 @@ Belangrijk bij het mappen is dat de objecten van triples correct getypeerd worde
 
 #### Resultaat en tijd - STILL TO DO
 
-![alt text](image-3.png)
-
 ```
 CONSTRUCT {
   ...
@@ -166,9 +164,8 @@ CONSTRUCT {
 }
 ```
 
-#### Eindresultaat
+#### Eindresultaat op de LDES Server
 
-![alt text](image-4.png)
 
 ```
 PREFIX dcat:                             <http://www.w3.org/ns/dcat#>
