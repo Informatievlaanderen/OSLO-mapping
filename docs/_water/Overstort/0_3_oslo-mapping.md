@@ -15,11 +15,11 @@ Bij deze alvast een voorbeeld.
 
 ## Ruwe data
 
-Om overstorthoogte-observaties te publiceren hebben we maar een deel van de kolommen in de view nodig:
+Onderstaand nogmaals de data zoals ze ontvangen wordt de LDIO workbench in JSON-formaat.
 
 ```json
   {
-    "@context": [
+<!--    "@context": [
       "https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01/context/waterkwaliteit-ap.jsonld",
       "https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01/context/statistiek-ap.jsonld",
       "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28/context/ap-observaties-en-metingen.jsonld",
@@ -28,16 +28,30 @@ Om overstorthoogte-observaties te publiceren hebben we maar een deel van de kolo
       "https://github.com/smart-data-models/dataModel.Environment/blob/master/context.jsonld",
     "https://github.com/bramverdonck/AQFOverstort/blob/main/Context%20Overstort.json",
       {
-        "adms": "http://www.w3.org/ns/adms#",
-        "qudt-schema": "https://qudt.org/schema/qudt/",
-        "dcterms": "http://purl.org/dc/terms/",
-        "time": "http://www.w3.org/2006/time#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "geosparql": "http://www.opengis.net/ont/geosparql#",
-        "qudt-unit": "https://qudt.org/vocab/unit/",
-        "sosa": "http://www.w3.org/ns/sosa/"
+      "@language": "nl",
+      "adms": "http://www.w3.org/ns/adms#",
+      "qudt-schema": "https://qudt.org/schema/qudt/",
+      "terms": "http://purl.org/dc/terms/",
+      "time": "http://www.w3.org/2006/time#",
+      "sc": "http://purl.org/science/owl/sciencecommons",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "geosparql": "http://www.opengis.net/ont/geosparql#",
+      "qudt-unit": "https://qudt.org/vocab/unit/",
+      "sosa": "http://www.w3.org/ns/sosa/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "schema": "https://schema.org",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "locn": "http://www.w3.org/ns/locn#",
+      "geo" : "http://www.w3.org/2003/01/geo/wgs84_pos#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "sosa": "http://www.w3.org/ns/sosa/",
+      "ssn": "http://www.w3.org/ns/ssn/",
+      "aquafin": "https://aquafin.be/ns#",
+      "dcterms": "http://purl.org/dc/terms/",
+      "environment": "https://smartdatamodels.org/dataModel.Environment/",
+      "sdm": "https://smartdatamodels.org/"
       }
-    ],
+    ], -->
     "@graph": [
       {
        "id":"P2050378",
@@ -62,7 +76,8 @@ Om overstorthoogte-observaties te publiceren hebben we maar een deel van de kolo
 }
 ```
 
-Merk op dat kolommen `modifiedAt` en `isDeleted` ook gebruikt worden. Deze zijn domeinonafhankelijk en worden gebruikt bij het versioneren van de data.
+Merk op dat kolom `modifiedAt` ook gebruikt wordt. Dit is domeinonafhankelijk en wordt gebruikt bij het versioneren van de data.
+
 # Nog toe te voegen
 
 De eerste omzetting leidt tot volgende triples:
