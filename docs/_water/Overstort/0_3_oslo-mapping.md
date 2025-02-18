@@ -19,28 +19,20 @@ Onderstaand nogmaals de data zoals ze ontvangen wordt de LDIO workbench in JSON-
 
 ```json
       {
-       "id":"P2050378",
-       "device_type":"Overstortmeter",
-       "name":"Overstortmeter Ijinus US LTE",
-       "owner":"AQUAFIN",
-       "brand":"Ijinus",
-       "supplier":"ELSCOLAB",
-       "serial_number":"IJA0102-00004425",
-       "device_state":"ACTIEF",
-       "lat_WGS84":51.04243219340782,
-       "long_WGS84":5.594445509825586,
-       "lat_Lambert72":193183.8663904309,
-       "long_Lambert72":235956.9331605651,
-       "measurement_location":"P_000000217952",
-       "load_timestamp_utc":"2025-02-16T22:01:04.229Z",
-       "change_timestamp_utc":"2024-12-29T05:52:09.343Z",
-       "quality_label":"0",
-       "scd_update_timestamp":"2025-02-14T08:46:50.202Z"
+	"type":"Event",
+	"start_timestamp":"2025-02-18T08:31:00.000Z",
+	"end_timestamp":"2025-02-18T08:41:00.000Z",
+	"measurement_location":"P_000000181521",
+	"status":"WerkingOnbekend",
+	"is_observed_with":"P1037143",
+	"modified_at":"2025-02-18T10:21:17.979Z",
+	"end_timestamp_known":true,
+	"sent_to_evh":false 
      }
 
 ```
 
-Merk op dat kolom `change_timestamp_utc` ook gebruikt wordt. Dit is domeinonafhankelijk en wordt gebruikt bij het versioneren van de data.
+Merk op dat kolom `modified_at` ook gebruikt wordt. Dit is domeinonafhankelijk en wordt gebruikt bij het versioneren van de data.
 
 ## OSLO mapping
 
@@ -54,27 +46,24 @@ Bovenstaande brondata wordt gebruikt als input in de WHERE-clausule:
 CONSTRUCT {
   ...
 } WHERE {
-                ?s aquafin:id  ?id .
-                ?s aquafin:devicetype ?device_type .
-                ?s aquafin:name ?name .
-                ?s aquafin:owner ?owner .
-                ?s aquafin:supplier ?supplier .
-                ?s aquafin:brand ?brand .
-                ?s aquafin:serial_number ?serial_number .
-                ?s aquafin:device_state ?device_state .
-                ?s aquafin:lat_WGS84 ?lat_WGS84 .
-                ?s aquafin:long_WGS84 ?long_WGS84 .
-                ?s aquafin:lat_Lambert72 ?lat_Lambert72 .
-                ?s aquafin:long_Lambert72 ?long_Lambert72 .
-                ?s aquafin:measurement_location ?measurement_location .
-                ?s aquafin:load_timestamp_utc ?load_timestamp_utc . 
-                ?s aquafin:change_timestamp_utc ?change_timestamp_utc . 
-                ?s aquafin:quality_label ?quality_label . 
-                ?s aquafin:scd_update_timestamp ?scd_update_timestamp .
-      
-              
-                BIND(IRI(CONCAT("https://aquafin.be/id/sensor/", STRUUID())) AS ?sensor)
-                BIND(IRI(CONCAT("https://aquafin.be/id/meetpunt/", COALESCE(?measurement_location, "unknown"))) AS ?measurement_location_name)
+          ?s aquafin:start_timestamp ?start_timestamp .
+          ?s aquafin:end_timestamp ?end_timestamp .
+          ?s aquafin:modified_at ?modified_at .
+          ?s aquafin:measurement_location ?measurement_location .
+          ?s aquafin:status ?status .
+          ?s aquafin:is_observed_with ?is_observed_with .
+          ?s aquafin:end_timestamp_known ?end_timestamp_known .
+          # ?s aquafin:type ?type.
+
+          BIND(IRI(CONCAT("https://aquafin.be/id/event/", STRUUID())) AS ?event)
+
+          BIND(xsd:dateTime(?start_timestamp) AS ?start_timestamp_bind)
+          BIND(xsd:dateTime(?end_timestamp) AS ?end_timestamp_bind)
+          BIND(xsd:dateTime(?modified_at) AS ?modified_at_bind)
+
+          BIND(IRI(CONCAT("https://aquafin.be/id/meetpunt/", COALESCE(?measurement_location, "unknown"))) AS ?measurement_location_bind)
+          BIND(IRI(CONCAT("https://aquafin.be/id/sensor/", COALESCE(?is_observed_with, "unknown"))) AS ?is_observed_with_bind)
+          # BIND(IRI(CONCAT("Event",COALESCE(?type,"unknown"))) AS ?message_type)
     }
 }
 ```
@@ -84,19 +73,15 @@ CONSTRUCT {
 Voor de leesbaarheid worden volgende prefices gebruikt:
 
 ```
-  PREFIX so: <http://schema.org/>
-  PREFIX sc: <http://purl.org/science/owl/sciencecommons/>
-  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-  PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-  PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
-  PREFIX prov: <http://www.w3.org/ns/prov#>
-  PREFIX sosa: <http://www.w3.org/ns/sosa/>
-  PREFIX ssn: <http://www.w3.org/ns/ssn/>
-  PREFIX aquafin: <https://aquafin.be/ns#>
-  PREFIX schema: <https://schema.org/>
-  PREFIX dcterms: <http://purl.org/dc/terms/>
-  PREFIX environment: <https://smartdatamodels.org/dataModel.Environment/>
-  PREFIX sdm: <https://smartdatamodels.org/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+        PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+        PREFIX prov: <http://www.w3.org/ns/prov#>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX ssn: <http://www.w3.org/ns/ssn/>
+        PREFIX aquafin: <https://aquafin.be/ns#>
+        PREFIX qudt: <http://qudt.org/schema/qudt/>
+        PREFIX schema: <http://schema.org/>
 ```
 
 ### CONSTRUCT
@@ -112,47 +97,37 @@ De bedoeling is om de Linked Data zo dicht mogelijk in de bron te houden. Dit ho
 Belangrijk bij het mappen is dat de objecten van triples correct getypeerd worden: datatypes worden verrijkt met `STRDT` en bijhorende xsd type, instanties van een klasse met `URI`.
 
 ```
-              CONSTRUCT {
-                ?sensor a sosa:Sensor ;
-                  dcterms:identifier ?id ;
-                  environment:deviceId ?id ;
-                  dcterms:description ?name ;
-                  dcterms:type ?device_type ;
-                  sdm:owner ?owner ;
-                  schema:vendor ?supplier ;
-                  environment:deviceModel ?brand ;
-                  schema:serialNumber ?serial_number ;
-                  environment:deviceStatus ?device_state ;
-                  geo:lat ?lat_WGS84 ;
-                  geo:long ?long_WGS84 ;
-                  aquafin:lat_Lambert72 ?lat_Lambert72 ;
-                  aquafin:long_Lambert72 ?long_Lambert72 ;
-                  environment:deviceName ?devicename ;
-                  sosa:hasFeatureOfInterest ?measurement_location_name ;
-                  aquafin:quality_label ?quality_label 
-              }
-              WHERE {
-                ?s aquafin:id  ?id .
-                ?s aquafin:devicetype ?device_type .
-                ?s aquafin:name ?name .
-                ?s aquafin:owner ?owner .
-                ?s aquafin:supplier ?supplier .
-                ?s aquafin:brand ?brand .
-                ?s aquafin:serial_number ?serial_number .
-                ?s aquafin:device_state ?device_state .
-                ?s aquafin:lat_WGS84 ?lat_WGS84 .
-                ?s aquafin:long_WGS84 ?long_WGS84 .
-                ?s aquafin:lat_Lambert72 ?lat_Lambert72 .
-                ?s aquafin:long_Lambert72 ?long_Lambert72 .
-                ?s aquafin:measurement_location ?measurement_location .
-                ?s aquafin:load_timestamp_utc ?load_timestamp_utc . 
-                ?s aquafin:change_timestamp_utc ?change_timestamp_utc . 
-                ?s aquafin:quality_label ?quality_label . 
-                ?s aquafin:scd_update_timestamp ?scd_update_timestamp .
-      
-              
-                BIND(IRI(CONCAT("https://aquafin.be/id/sensor/", STRUUID())) AS ?sensor)
-                BIND(IRI(CONCAT("https://aquafin.be/id/meetpunt/", COALESCE(?measurement_location, "unknown"))) AS ?measurement_location_name)
+        CONSTRUCT {
+          ?event a sosa:Event ;
+            sosa:event_start_time ?start_timestamp_bind ;
+            sosa:event_end_time ?end_timestamp_bind ;
+            sosa:modified_at ?modified_at_bind ;
+            sosa:hasFeatureOfInterest ?measurement_location_bind ;
+            ssn:status ?status ;
+            sosa:madeBySensor ?is_observed_with_bind ;
+            aquafin:endTimestampKnown ?end_timestamp_known ;
+            # aquafin:type ?type .
+        }
+        WHERE {
+          ?s aquafin:start_timestamp ?start_timestamp .
+          ?s aquafin:end_timestamp ?end_timestamp .
+          ?s aquafin:modified_at ?modified_at .
+          ?s aquafin:measurement_location ?measurement_location .
+          ?s aquafin:status ?status .
+          ?s aquafin:is_observed_with ?is_observed_with .
+          ?s aquafin:end_timestamp_known ?end_timestamp_known .
+          # ?s aquafin:type ?type.
+
+          BIND(IRI(CONCAT("https://aquafin.be/id/event/", STRUUID())) AS ?event)
+
+          BIND(xsd:dateTime(?start_timestamp) AS ?start_timestamp_bind)
+          BIND(xsd:dateTime(?end_timestamp) AS ?end_timestamp_bind)
+          BIND(xsd:dateTime(?modified_at) AS ?modified_at_bind)
+
+          BIND(IRI(CONCAT("https://aquafin.be/id/meetpunt/", COALESCE(?measurement_location, "unknown"))) AS ?measurement_location_bind)
+          BIND(IRI(CONCAT("https://aquafin.be/id/sensor/", COALESCE(?is_observed_with, "unknown"))) AS ?is_observed_with_bind)
+          # BIND(IRI(CONCAT("Event",COALESCE(?type,"unknown"))) AS ?message_type)
+        }  
 
   ...
 }
