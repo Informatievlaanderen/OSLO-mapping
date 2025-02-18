@@ -69,6 +69,7 @@ https://www.w3.org/TR/wot-thing-description
       "qudt-schema": "https://qudt.org/schema/qudt/",
       "terms": "http://purl.org/dc/terms/",
       "time": "http://www.w3.org/2006/time#",
+      "sc": "http://purl.org/science/owl/sciencecommons",
       "skos": "http://www.w3.org/2004/02/skos/core#",
       "geosparql": "http://www.opengis.net/ont/geosparql#",
       "qudt-unit": "https://qudt.org/vocab/unit/",
@@ -77,7 +78,15 @@ https://www.w3.org/TR/wot-thing-description
       "schema": "https://schema.org",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "locn": "http://www.w3.org/ns/locn#",
-      "wgs84_pos": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+      "geo" : "http://www.w3.org/2003/01/geo/wgs84_pos#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "sosa": "http://www.w3.org/ns/sosa/",
+      "ssn": "http://www.w3.org/ns/ssn/",
+      "aquafin": "https://aquafin.be/ns#",
+      "dcterms": "http://purl.org/dc/terms/",
+      "environment": "https://smartdatamodels.org/dataModel.Environment/",
+      "sdm": "https://smartdatamodels.org/",
+ 
       "id": "@id",
       "type": "@type",
       "Observatie": "sosa:Observation",
@@ -85,7 +94,7 @@ https://www.w3.org/TR/wot-thing-description
         "@id": "terms:isVersionOf",
         "@type": "@id"
       },
-      "createdAt": {
+      "ModifiedAt": {
         "@id": "terms:createdAt",
         "@type": "xsd:dateTime"
       },
