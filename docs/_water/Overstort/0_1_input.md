@@ -7,6 +7,8 @@ nav_order: 1
 
 Onderstaande inputdata is afkomstig van 1600 overstortsensoren verspreid over Vlaanderen. Deze sensoren meten o.a. de periode waarin er sprake is van overstort. 
 Een overstort is een kunstwerk met als doel het afvoeren van (pieken in) overtollig rioolwater vanuit de gemengde riolering naar het oppervlaktewater.
+Dagelijks worden deze metingen doorgestuurd naar het dataplatform van Aquafin en wordt alle data verzameld in het datalake in Delta Parquet-files. 
+
 
 
 # Data voorbeeld Overstortsensor Metadata 
