@@ -8,7 +8,7 @@ has_children: true
 
 <br>
 <br>
-Deze dataset omvat de /b>meetgegevens van de overstortsensoren in Vlaanderen/b> in beheer van Aquafin. Deze data wordt beschikbaar gesteld door Aquafin binnen het kader van datadeling met VMM en de openbaarheid van bestuursdocumenten. 
+Deze dataset omvat de </b>meetgegevens van de overstortsensoren in Vlaanderen</b> in beheer van Aquafin. Deze data wordt beschikbaar gesteld door Aquafin binnen het kader van datadeling met VMM en de openbaarheid van bestuursdocumenten. 
 
 Er werd een implementatiemodel opgesteld waarbij maximaal gealigneerd werd met het OSLO Waterkwaliteitmodel en zo nauw mogelijk gealigneerd met de [SSN/SOSA](https://www.w3.org/TR/2017/REC-vocab-ssn-20171019/) standaard.
 
