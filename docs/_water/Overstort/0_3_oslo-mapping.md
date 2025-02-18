@@ -7,13 +7,9 @@ nav_order: 3
 
 # Intro
 
-Voor het mappen van de tabulaire view naar een Linked Data graph volgens OSLO wordt gewerkt in 2 stappen.
+Voor het mappen van de brondata in JSON-format naar een Linked Data graph volgens OSLO wordt gewerkt met een SPARQL CONSTRUCT mapping die JSON-brondata herstructureert in het implementatiemodel.
 
-Eerst gebeurt een rudimentaire omzetting naar Linked Data die aansluit bij de oorspronkelijke kolomstructuur. De reden hiervoor is dat we de OSLO mapping via SPARQL Construct queries willen uitdrukken. Dit is een leesbare manier om complexe mappingen te beschrijven, maar vereist Linked Data als input.
-
-Daarna gebeurt een SPARQL CONSTRUCT mapping die de intiële omzetting herstructureerd in het implementatiemodel.
-
-Om deze stappen beter uit te leggen, gaan we een overstort als voorbeeld uitwerken.
+Bij deze alvast een voorbeeld.
 
 # Voorbeeld hoogte overstort
 
@@ -44,120 +40,26 @@ Om overstorthoogte-observaties te publiceren hebben we maar een deel van de kolo
     ],
     "@graph": [
       {
-        "@id": "_:obv001",
-        "@type": "Observatieverzameling",
-        "Observatieverzameling.geobserveerdObject": "_:mpt001",
-        "Observatieverzameling.geobserveerdKenmerk": [
-          "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0030",
-          "https://smartdatamodels.org/dataModel.Environment/waterLevel",
-          "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053"
-        ],
-        "Observatieverzameling.fenomeentijd": {
-          "@type": "time:Instant",
-          "time:inXSDDateTime": {
-            "@type": "xml-schema:dateTime",
-            "@value": "2024-07-29T14:00:00Z"
-          }
-        },
-        "Observatieverzameling.heeftLid": [
-          "_:wko001",
-          "_:wko002",
-          "_:wko003"
-        ]
-      },
-      {
-        "@id": "_:wko002",
-        "@type": "OverstortMetingParameterObservatie",
-        "Observatie.geobserveerdObject": "_:mpt001",
-        "OverstortMetingParameterObservatie.geobserveerdKenmerk": {
-          "@id": "https://smartdatamodels.org/dataModel.Environment/waterLevel",
-          "skos:prefLabel": "Waterhoogte"
-        },
-        "OverstortMetingParameterObservatie.OverstortMetingParameterResultaat": {
-          "@type": [
-            "Maat",
-            "KwantitatieveWaarde"
-          ],
-          "KwantitatieveWaarde.waarde": -0.5,
-          "KwantitatieveWaarde.standaardEenheid": {
-            "@type": "qudt-schema:Unit",
-            "@id": "qudt-unit:Meter"
-          }
-        },
-        "Observatie.fenomeentijd": {
-          "@type": "time:Instant",
-          "time:inXSDDateTime": {
-            "@type": "xml-schema:dateTime",
-            "@value": "2024-07-29T14:00:00Z"
-          }
-        },
-        "Observatie.gebruikteProcedure": {
-          "@type": "Observatieprocedure",
-          "Observatieprocedure.type": "https://example.com/concept/observatieproceduretype/OW19"
-        },
-        "Observatie.isWaargenomenMet": "_:P2046600"
-      },
-      {
-        "@id": "_:P2046600",
-        "@type": [
-          "sosa:Sensor",
-          "Meetpunt",
-          "Bemonsteringspunt"
-        ],
-        "dcterms:identifier": "P2046600",
-        "sosa:observes": [
-          "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0030",
-          "https://smartdatamodels.org/dataModel.Environment/waterLevel",
-          "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053"
-        ],
-        "Bemonsteringsobject.identificator": {
-          "@type": "Identificator",
-          "Identificator.identificator": {
-            "@value": "100000",
-            "@type": "https://example.com/concept/identificatortype/puntnummer"
-          }
-        },
-        "dcterms:description": {
-          "@value": "OSM OSgr. Keistraat 11, Hemelveerdegem",
-          "@language": "nl"
-        },
-        "Bemonsteringspunt.geometrieWGS": {
-          "@type": "Punt",
-          "Geometrie.gml": {
-            "@value": "<gml:Point srsName=\"http://www.opengis.net/def/crs/EPSG/0/4326\"><gml:coordinates>4.3598,50.8467</gml:coordinates></gml:Point>",
-            "@type": "geosparql:gmlliteral"
-          }
-        },
-        "Bemonsteringspunt.geometrieLambert": {
-          "@type": "Punt",
-          "Geometrie.gml": {
-            "@value": "<gml:Point srsName=\"http://www.opengis.net/def/crs/EPSG/0/31370\"><gml:coordinates>104719,196826</gml:coordinates></gml:Point>",
-            "@type": "geosparql:gmlliteral"
-          }
-        },
-        "Bemonsteringsobject.type": "https://example.com/concept/meetpunttype/OW",
-        "Bemonsteringsobject.bemonsterdObject": "_:seg00",
-        "owner": {
-          "@type": "adms:Asset",
-          "dcterms:title": "Aquafin",
-          "adms:identifier": "Aquafin_001"
-        },
-        "provider": {
-          "@type": "adms:Asset",
-          "dcterms:title": "ELSCOLAB",
-          "adms:identifier": "ELSCOLAB_001"
-        },
-        "status": {
-          "@type": "skos:Concept",
-          "skos:prefLabel": "ACTIEF"
-        },
-        "sensorFamily": {
-          "@type": "skos:Concept",
-          "skos:prefLabel": "Environmental Sensors"
-        }
-      }
-    ]
-  }
+       "id":"P2050378",
+       "device_type":"Overstortmeter",
+       "name":"Overstortmeter Ijinus US LTE",
+       "owner":"AQUAFIN",
+       "brand":"Ijinus",
+       "supplier":"ELSCOLAB",
+       "serial_number":"IJA0102-00004425",
+       "device_state":"ACTIEF",
+       "lat_WGS84":51.04243219340782,
+       "long_WGS84":5.594445509825586,
+       "lat_Lambert72":193183.8663904309,
+       "long_Lambert72":235956.9331605651,
+       "measurement_location":"P_000000217952",
+       "load_timestamp_utc":"2025-02-16T22:01:04.229Z",
+       "change_timestamp_utc":"2024-12-29T05:52:09.343Z",
+       "quality_label":"0",
+       "scd_update_timestamp":"2025-02-14T08:46:50.202Z"
+     }
+  ]
+}
 ```
 
 Merk op dat kolommen `modifiedAt` en `isDeleted` ook gebruikt worden. Deze zijn domeinonafhankelijk en worden gebruikt bij het versioneren van de data.
