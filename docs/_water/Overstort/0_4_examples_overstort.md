@@ -29,6 +29,45 @@ PREFIX tree:                             <https://w3id.org/tree#>
 PREFIX xsd:                              <http://www.w3.org/2001/XMLSchema#>
 ```
 
+#### Eindresultaat Overstort Sensor op de LDES Server
+
+```
+<https://aquafin.be/id/sensor/a2f87c5a-fd19-4169-9bfc-a270af465e75/2025-02-26T20:06:28.783816114>
+        rdf:type                     <http://www.w3.org/ns/sosa/Sensor>;
+        dct:description              "Overstortmeter Ijinus US LTE";
+        dct:identifier               "1";
+        dct:isVersionOf              <https://aquafin.be/id/sensor/a2f87c5a-fd19-4169-9bfc-a270af465e75>;
+        <http://www.w3.org/2003/01/geo/wgs84_pos#lat>
+                5.104243219340782E1;
+        <http://www.w3.org/2003/01/geo/wgs84_pos#long>
+                5.594445509825586E0;
+        prov:generatedAtTime         "2025-02-26T20:06:28.783Z"^^xsd:dateTime;
+        <http://www.w3.org/ns/sosa/hasFeatureOfInterest>
+                <https://aquafin.be/id/meetpunt/P_000000217952>;
+        <https://aquafin.be/ns#change_timestamp_utc>
+                "2024-12-29T05:52:09.343Z";
+        <https://aquafin.be/ns#lat_Lambert72>
+                1.931838663904309E5;
+        <https://aquafin.be/ns#load_timestamp_utc>
+                "2025-02-16T22:01:04.229Z";
+        <https://aquafin.be/ns#long_Lambert72>
+                2.359569331605651E5;
+        <https://aquafin.be/ns#quality_label>
+                "A01";
+        <https://schema.org/serialNumber>
+                "IJA0102-00004425";
+        <https://schema.org/vendor>  "ELSCOLAB";
+        <https://smartdatamodels.org/dataModel.Environment/deviceId>
+                "1";
+        <https://smartdatamodels.org/dataModel.Environment/deviceModel>
+                "Ijinus";
+        <https://smartdatamodels.org/dataModel.Environment/deviceName>
+                "Overstortmeter Ijinus US LTE";
+        <https://smartdatamodels.org/dataModel.Environment/deviceStatus>
+                "ACTIEF";
+        <https://smartdatamodels.org/owner>
+                "AQUAFIN" .
+
 #### Eindresultaat Overstort Event op de LDES Server
 
 
