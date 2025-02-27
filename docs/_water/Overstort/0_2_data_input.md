@@ -12,7 +12,8 @@ Dit is ook meteen het formaat waarin de brondata wordt aangeleverd om later ter 
 
 
 ## Event
-In de events wordt niet de data vastgelegd die op een specifiek moment wordt opgemeten, maar is een berekening van de overstortduur
+In de events vind je telkens een berekening terug van de start- en eindtijd van elk event, gevolgd door de specificatie over welk type event het gaat. Een event kan nl. een overstorting zijn, maar even goed de afwezigheid van een overstorting of een foutmelding. 
+
 Onderstaand een json-voorbeeld
 
 ```json
@@ -31,7 +32,7 @@ Onderstaand een json-voorbeeld
 
 ## Sensor
 In de Sensordata-json wordt alle relevante metadata per sensor doorgestuurd. 
-Indien er wijzigingen optreden in de status, locatie of kwaliteit van de sensor, wordt een nieuwe versie beschikbaar gemaakt op de LDES Server die de meest versie van de sensormetadata bevat.
+Indien er wijzigingen optreden in de status, locatie of kwaliteit van de sensor, wordt een nieuwe versie beschikbaar gemaakt op de LDES Server die de meest recente versie van de sensormetadata bevat.
 
 
 ```json
