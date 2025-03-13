@@ -1,0 +1,13 @@
+{
+  "type": "Observatie",
+  "fenomeentijd": "2024-07-27T14:00:00Z",
+  "modifiedAt": "2024-07-27T14:00:00Z", 
+  "gemetenAfstand": "-10.5",
+  "temperatuur": "15",
+  "debiet": "2.3",
+  "meetpunt":"K_000003850759", 
+  "overstortstatus": "NietWerking",  
+  "validatieStatus": "raw", 
+  "isWaargenomenMet": "418858" 
+}
+	

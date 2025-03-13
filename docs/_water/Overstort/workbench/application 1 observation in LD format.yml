@@ -1,0 +1,158 @@
+# application 1 observation in LD format (first)
+# server:
+#   port: 80
+
+# logging:
+#   level:
+#     root: WARN
+#     be.vlaanderen.informatievlaanderen.ldes.ldio.Application: INFO
+
+orchestrator:
+  pipelines:
+    - name: observaties-pipeline-raw
+      description: "Aquafin observaties JSON message (raw) in using HTTP, OSLO transformation, version creation & HTTP sending."
+      input:
+        name: Ldio:HttpIn
+        adapter:
+          name: Ldio:JsonToLdAdapter
+          config:
+            context: |
+              {
+                "@context": {
+                  "@vocab": "https://aquafin.be/ns#"
+                }
+              }
+      transformers:
+        - name: Ldio:SparqlConstructTransformer
+          config:
+            query: |
+              PREFIX sosa: <http://www.w3.org/ns/sosa/>
+              PREFIX qudt-unit: <https://qudt.org/vocab/unit/>
+              PREFIX schema: <https://schema.org/>
+              PREFIX terms: <http://purl.org/dc/terms/>
+              PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+              CONSTRUCT {
+                GRAPH ?urigemetenAfstand {
+                  ?observation a sosa:Observation ;
+                    terms:isVersionOf ?versionOf ;
+                    terms:modifiedAt ?modifiedAt ;
+                    sosa:hasFeatureOfInterest ?feature ;
+                    sosa:observedProperty <https://data.vlaanderen.be/id/concept/WaterMetingType/gemetenAfstand> ;
+                    sosa:hasSimpleResult ?gemetenAfstand ;
+                    sosa:hasResult ?resultGemetenAfstand ;
+                    sosa:resultTime ?resultTime ;
+                    sosa:phenomenonTime ?phenomenonTime ;
+                    sosa:madeBySensor ?sensor .
+                }
+              }
+              WHERE {
+                # Define URI for the named graph and bind variables
+                BIND (IRI("https://aquafin.be/id/observatie/001/gemetenAfstand/2024-07-29T15:00:00Z") as ?urigemetenAfstand)
+                BIND (IRI("https://aquafin.be/id/sensor/418858") AS ?sensor)
+                BIND ("2024-07-27T14:00:00Z"^^xsd:dateTime AS ?resultTime)
+                BIND ("2024-07-27T14:00:00Z"^^xsd:dateTime AS ?phenomenonTime)
+                BIND (IRI("https://aquafin.be/id/observatie/001/gemetenAfstand/2024-07-27T14:00:00Z") AS ?versionOf)
+                BIND ("2024-07-29T15:00:00Z"^^xsd:dateTime AS ?modifiedAt)
+                BIND (?sensor AS ?feature)
+
+                # Manually bind the value for gemetenAfstand
+                BIND ("-10.5"^^xsd:decimal AS ?gemetenAfstand)
+                BIND (IRI("https://aquafin.be/id/resultaat/001/gemetenAfstand/2024-07-29T15:00:00Z") AS ?resultGemetenAfstand)
+
+                # Bind the observation (for tracking purposes)
+                BIND (IRI("https://aquafin.be/id/observatie/001/gemetenAfstand/2024-07-29T15:00:00Z") AS ?observation)
+              }
+
+      outputs:
+        - name: Ldio:ConsoleOut
+
+    - name: sensordata-pipeline
+      description: "Aquafin sensordata JSON message in using HTTP, OSLO transformation, version creation & HTTP sending."
+      input:
+        name: Ldio:HttpIn
+        adapter:
+          name: Ldio:JsonToLdAdapter
+          config:
+            context: |
+              {
+                "@context": {
+                  "@vocab": "https://aquafin.be/ns#",
+                  "sosa": "http://www.w3.org/ns/sosa/",
+                  "schema": "http://schema.org/",
+                  "geo": "https://uri.etsi.org/ngsi-ld/geometry",
+                  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+                  "xsd":"http://www.w3.org/2001/XMLSchema#",
+                  "ngsi-ld":"https://uri.etsi.org/ngsi-ld/"
+                }
+              }
+      transformers:
+        - name: Ldio:SparqlConstructTransformer
+          config:
+            query: |
+              PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+              PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+              PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+              PREFIX ngsi-ld: <https://uri.etsi.org/ngsi-ld/>
+              PREFIX sosa: <http://www.w3.org/ns/sosa/>
+              PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+
+              CONSTRUCT {
+                ?sensorUri a sosa:Sensor, sosa:Device ;
+                  rdfs:label ?name ;
+                  sosa:name ?nameProp ;
+                  sosa:location ?locationProp ;
+                  sosa:controlledProperty ?controlledPropProp ;
+                  sosa:familyType ?familyType ;
+                  sosa:owner ?ownerProp ;
+                  sosa:manufacturerName ?manufacturerNameProp ;
+                  sosa:serialNumber ?serialNumberProp ;
+                  sosa:deviceState ?deviceStateProp .
+
+                ?nameProp a sosa:Property ;
+                  rdf:value ?name .
+
+                ?locationProp a sosa:GeoProperty ;
+                  rdf:value ?geoValue .
+
+                ?geoValue a geo:Point ;
+                  geo:lat ?latitude ;
+                  geo:long ?longitude .
+
+                ?controlledPropProp a sosa:Property ;
+                  rdf:value ?controlledProperty .
+
+                ?ownerProp a sosa:Property ;
+                  rdf:value ?owner .
+
+                ?manufacturerNameProp a sosa:Property ;
+                  rdf:value ?manufacturerName .
+
+                ?serialNumberProp a sosa:Property ;
+                  rdf:value ?serialNumber .
+
+                ?deviceStateProp a sosa:Property ;
+                  rdf:value ?deviceState .
+              }
+              WHERE {
+                VALUES (?id ?name ?familyType ?owner ?manufacturerName ?serialNumber ?deviceState ?latitude ?longitude ?controlledProperty) {
+                  ("418858" "Overstortmeter Ijinus US LTE" "" "Aquafin" "ELSCOLAB" "IJA0102-00001836" "Actief" "50.948995878" "5.298607495000001" "")
+                }
+
+                # Construct URIs
+                BIND(IRI(CONCAT("https://aquafin.be/id/sensor/", STR(?id))) AS ?sensorUri)
+                BIND(IRI(CONCAT(STR(?sensorUri), "/name")) AS ?nameProp)
+                BIND(IRI(CONCAT(STR(?sensorUri), "/location")) AS ?locationProp)
+                BIND(IRI(CONCAT(STR(?sensorUri), "/controlledProperty")) AS ?controlledPropProp)
+                BIND(IRI(CONCAT(STR(?sensorUri), "/owner")) AS ?ownerProp)
+                BIND(IRI(CONCAT(STR(?sensorUri), "/manufacturerName")) AS ?manufacturerNameProp)
+                BIND(IRI(CONCAT(STR(?sensorUri), "/serialNumber")) AS ?serialNumberProp)
+                BIND(IRI(CONCAT(STR(?sensorUri), "/deviceState")) AS ?deviceStateProp)
+
+                # Construct geo value
+                BIND(IRI(CONCAT(STR(?locationProp), "/value")) AS ?geoValue)
+              }
+
+      outputs:
+        - name: Ldio:ConsoleOut
+

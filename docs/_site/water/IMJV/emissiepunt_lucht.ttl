@@ -1,0 +1,24 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://data.vlaanderen.be/ns/generiek#> .
+@prefix ns2: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ns3: <http://www.w3.org/ns/locn#> .
+@prefix ns4: <https://data.imjv.omgeving.vlaanderen.be/ns/imjv#> .
+@prefix ns5: <http://www.opengis.net/ont/geosparql#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/emissiepunt/01854307000111/1/1977/2024-05-07T11:16:16.628Z> a ns4:Emissiepunt ;
+    rdfs:label " SCHOORSTEEN (1977)"@nl ;
+    dcterms:isVersionOf <https://data.imjv.omgeving.vlaanderen.be/id/emissiepunt/01854307000111/1/1977> ;
+    dcterms:title " SCHOORSTEEN"@nl ;
+    ns3:geometry <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/770a523f294d83efb81daa78b16c773f> ;
+    prov:generatedAtTime "2024-05-07T11:16:16.628000+00:00"^^xsd:dateTime ;
+    ns4:exploitatie <https://data.cbb.omgeving.vlaanderen.be/id/exploitatie/01854307000111> ;
+    ns4:jaar "1977"^^xsd:gYear ;
+    ns1:isTijdspecialisatieVan <https://data.imjv.omgeving.vlaanderen.be/id/emissiepunt/01854307000111/1/1977> .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/770a523f294d83efb81daa78b16c773f> a ns3:Geometry ;
+    ns5:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(3.205794868161017 50.92813442035296)"^^ns5:wktLiteral ;
+    ns2:lat 50.92813442035296 ;
+    ns2:long 3.205794868161017 .

@@ -1,0 +1,42 @@
+{
+    "bindings": [
+      {
+        "type": "eventHubTrigger",
+        "name": "dataspace-overstort-sensor",
+        "direction": "in",
+        "eventHubName": "dataspace-overstort-sensor",
+        "connection": "EventHubConnectionString"
+      },
+      {
+        "type": "eventHubTrigger",
+        "name": "overstort-meting-raw",
+        "direction": "in",
+        "eventHubName": "dataspace-overstort-meting-raw",
+        "connection": "EventHubConnectionString"
+      },
+      {
+        "type": "eventHubTrigger",
+        "name": "overstort-meting-cleansed",
+        "direction": "in",
+        "eventHubName": "dataspace-overstort-meting-cleansed",
+        "connection": "EventHubConnectionString"
+      },
+      {
+        "type": "eventHubTrigger",
+        "name": "overstort-event-cleansed",
+        "direction": "in",
+        "eventHubName": "dataspace-overstort-event-cleansed",
+        "connection": "EventHubConnectionString"
+      },
+      {
+        "type": "eventHubTrigger",
+        "name": "overstort-event-validated",
+        "direction": "in",
+        "eventHubName": "dataspace-overstort-event-validated",
+        "connection": "EventHubConnectionString"
+      }
+    ],
+    "scriptFile": "function_app.py" 
+  
+  }
+  

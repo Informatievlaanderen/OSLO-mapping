@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ldio-workbench
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ldio-workbench
+  template:
+    metadata:
+      labels:
+        app: ldio-workbench
+    spec:
+      containers:
+        - name: ldio-workbench
+          image: ldes/ldi-orchestrator:2.9.0-SNAPSHOT
+          ports:
+            - containerPort: 80
+          env:
+            - name: SERVER_PORT
+              value: "80"
+          volumeMounts:
+            - name: config-volume
+              mountPath: /ldio/application.yml
+              subPath: application.yml
+      volumes:
+        - name: config-volume
+          configMap:
+            name: ldio-workbench-config

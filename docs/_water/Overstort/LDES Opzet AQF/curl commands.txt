@@ -1,0 +1,26 @@
+
+
+# define the LDES
+curl -X POST -H "content-type: text/turtle" "http://localhost:9003/ldes/admin/api/v1/eventstreams" -d "@./definitions/observation.ttl"
+
+# define the view - observation alle observaties
+curl -X POST -H "content-type: text/turtle" "http://localhost:9003/ldes/admin/api/v1/eventstreams/observation/views" -d "@./definitions/observation.observation-by-page.ttl"
+
+#define the view - observation gemeten afstand
+curl -X POST -H "content-type: text/turtle" "http://localhost:9003/ldes/admin/api/v1/eventstreams/observation/views" -d "@./definitions/observation.gemetenAfstand-by-page.ttl"
+curl -X POST -H "content-type: text/turtle" "http://localhost:9003/ldes/admin/api/v1/eventstreams/observation/views" -d "@./definitions/observation.temperatuur-by-page.ttl"
+curl -X POST -H "content-type: text/turtle" "http://localhost:9003/ldes/admin/api/v1/eventstreams/observation/views" -d "@./definitions/observation.debiet-by-page.ttl"
+
+
+# define the pipeline
+curl -X POST -H "content-type: application/yaml" http://localhost:9005/admin/api/v1/pipeline --data-binary @./definitions/observation-pipeline.yml
+
+curl -X POST -H "content-type: application/yaml" http://localhost:9005/admin/api/v1/pipeline --data-binary @./definitions/observation-pipeline-v2.yml
+
+curl -X POST -H "content-type: application/yaml" http://localhost:9005/admin/api/v1/pipeline --data-binary @./definitions/sensordata-pipeline2.yml
+
+
+#define client pipeline
+curl -X POST -H "content-type: application/yaml" http://localhost:9006/admin/api/v1/pipeline --data-binary @./pipeline.yml
+
+

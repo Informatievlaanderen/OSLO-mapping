@@ -1,0 +1,12 @@
+{
+  "type": "event",
+  "fenomeenStarttijd": "2024-07-27T14:00:00Z",
+  "fenomeenEindtijd": "2024-07-27T14:30:00Z",
+  "overstortDuur":"30"
+  "totaleVuilvracht":"15"
+  "modifiedAt": "2024-07-27T14:00:00Z", 
+  "meetlocatie":"K_000003850759", 
+  "validatieStatus": "raw", 
+  "isWaargenomenMet": "418858" 
+}
+	

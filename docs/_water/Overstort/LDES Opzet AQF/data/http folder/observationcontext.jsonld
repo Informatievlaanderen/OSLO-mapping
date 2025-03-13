@@ -1,0 +1,16 @@
+        {
+          "@context": {
+            "@vocab": "https://aquafin.be/ns#",
+            "@base": "https://aquafin.be/id/",
+            "type": "@type"
+          },
+		"type":"Event",	
+		"start_timestamp":"2025-02-05T07:01:00.000Z",
+		"end_timestamp":"9999-12-31T23:59:59.999Z",
+		"measurement_location":"P_000000181521",
+		"status":"NietInWerking",
+		"is_observed_with":"P1037143",
+		"modified_at":"2025-02-05T07:35:06.822Z",
+		"end_timestamp_known":false 
+	}
+	

@@ -1,0 +1,51 @@
+networks:
+  public-ldes:
+    name: public-ldes-network
+
+services:
+
+  ### -- Data Client --
+
+  ldio-workbench:
+    image: ldes/ldi-orchestrator:2.9.0-SNAPSHOT
+    environment:
+      - SERVER_PORT=80
+    ports:
+      - 9006:80
+    networks:
+      - public-ldes 
+    depends_on:
+      - sink-system
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://ldio-workbench/actuator/health"]
+
+
+  ### -- Backend System --
+
+  test-message-sink:
+    image: vsds/test-message-sink
+    container_name: ${USECASE_NAME:-sink-mongo}_test-message-sink
+    build:
+      context: .
+    environment:
+      - MEMBER_TYPE=${MEMBER_TYPE:-http://schema.org/Person}
+      - DATABASE_NAME=${DATABASE_NAME:-test}
+      - COLLECTION_NAME=${COLLECTION_NAME:-cartoons}
+      - SILENT=${SILENT:-false}
+      - CONNECTION_URI=mongodb://test-message-database:27017
+      - MEMORY=false
+    ports:
+      - ${TEST_MESSAGE_SINK_PORT:-9000}:80
+    networks:
+      - sink-mongo
+
+  test-message-database:
+    image: mongo:${MONGODB_TAG:-latest}
+    container_name: ${USECASE_NAME:-sink-mongo}_test-message-database
+    ports:
+      - ${MONGODB_PORT:-27017}:27017
+    networks:
+      - public-ldes
+      
+  networks:
+    public-ldes: {}

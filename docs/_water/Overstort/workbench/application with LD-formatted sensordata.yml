@@ -1,0 +1,179 @@
+# application with LD-formatted sensordatapipeline
+# server:
+#   port: 80
+
+# logging:
+#   level:
+#     root: WARN
+#     be.vlaanderen.informatievlaanderen.ldes.ldio.Application: INFO
+
+orchestrator:
+  pipelines:
+    - name: observaties-pipeline-raw
+      description: "Aquafin observaties JSON message (raw) in using HTTP, OSLO transformation, version creation & HTTP sending."
+      input:
+        name: Ldio:HttpIn
+        adapter:
+          name: Ldio:JsonToLdAdapter
+          config:
+            context: |
+              {
+                "@context": {
+                  "@vocab": "https://aquafin.be/ns#"
+                }
+              }
+      transformers:
+        - name: Ldio:SparqlConstructTransformer
+          config:
+            query: |
+              CONSTRUCT {
+                GRAPH ?urigemetenAfstand {
+                  ?s ?p ?o .
+                }
+                GRAPH ?uriTemperatuur {
+                  ?s_temperatuur ?p_temperatuur ?o_temperatuur .
+                }
+                GRAPH ?uriDebiet {
+                  ?s_debiet ?p_debiet ?o_debiet .
+                }
+              }
+              WHERE { 
+                # Define URIs for the named graphs
+                BIND (IRI("https://aquafin.be/id/observatie/001/gemetenAfstand/2024-07-29T15:00:00Z") as ?urigemetenAfstand)
+                BIND (IRI("https://aquafin.be/id/observatie/001/temperatuur/2024-07-29T15:00:00Z") as ?uriTemperatuur)
+                BIND (IRI("https://aquafin.be/id/observatie/001/debiet/2024-07-29T15:00:00Z") AS ?uriDebiet)
+                # Block for urigemetenAfstand graph, excluding 'temperatuur' triples
+                {
+                  ?s ?p ?o .
+                  FILTER (
+                    !CONTAINS(LCASE(STR(?s)), "temperatuur") &&
+                    !CONTAINS(LCASE(STR(?p)), "temperatuur") &&
+                    !CONTAINS(LCASE(STR(?o)), "temperatuur") &&
+                    !CONTAINS(LCASE(STR(?s)), "debiet") &&
+                    !CONTAINS(LCASE(STR(?p)), "debiet") &&
+                    !CONTAINS(LCASE(STR(?o)), "debiet")
+
+                  )
+                }
+
+                # Block for uriTemperatuur graph, excluding 'gemetenAfstand' triples
+                UNION
+                {
+                  ?s_temperatuur ?p_temperatuur ?o_temperatuur .
+                  FILTER (
+                    !CONTAINS(LCASE(STR(?s_temperatuur)), "gemetenafstand") &&
+                    !CONTAINS(LCASE(STR(?p_temperatuur)), "gemetenafstand") &&
+                    !CONTAINS(LCASE(STR(?o_temperatuur)), "gemetenafstand") &&
+                    !CONTAINS(LCASE(STR(?s_temperatuur)), "debiet") &&
+                    !CONTAINS(LCASE(STR(?p_temperatuur)), "debiet") &&
+                    !CONTAINS(LCASE(STR(?o_temperatuur)), "debiet")
+
+                  )
+                }
+                #Block for uriDebiet graph, excluding 'gemetenafstand' and 'temperatuur' triples
+                UNION 
+                {
+                  ?s_debiet ?p_debiet ?o_debiet . 
+                  FILTER(
+                    !CONTAINS(LCASE(STR(?s_debiet)), "gemetenafstand") &&
+                    !CONTAINS(LCASE(STR(?p_debiet)), "gemetenafstand") &&
+                    !CONTAINS(LCASE(STR(?o_debiet)), "gemetenafstand") &&
+                    !CONTAINS(LCASE(STR(?s_debiet)), "temperatuur") &&
+                    !CONTAINS(LCASE(STR(?p_debiet)), "temperatuur") &&
+                    !CONTAINS(LCASE(STR(?o_debiet)), "temperatuur")
+                  
+                  )
+                }
+              }
+      outputs:
+        - name: Ldio:ConsoleOut
+
+    - name: sensordata-pipeline
+      description: "Aquafin sensordata JSON message in using HTTP, OSLO transformation, version creation & HTTP sending."
+      input:
+        name: Ldio:HttpIn
+        adapter:
+          name: Ldio:JsonToLdAdapter
+          config:
+            context: |
+              {
+                "@context": {
+                  "@vocab": "https://aquafin.be/ns#",
+                  "sosa": "http://www.w3.org/ns/sosa/",
+                  "schema": "http://schema.org/",
+                  "geo": "https://uri.etsi.org/ngsi-ld/geometry",
+                  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+                  "xsd":"http://www.w3.org/2001/XMLSchema#",
+                  "ngsi-ld":"https://uri.etsi.org/ngsi-ld/"
+                }
+              }
+      transformers:
+        - name: Ldio:SparqlConstructTransformer
+          config:
+            query: |
+              PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+              PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+              PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+              PREFIX ngsi-ld: <https://uri.etsi.org/ngsi-ld/>
+              PREFIX sosa: <http://www.w3.org/ns/sosa/>
+              PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+
+              CONSTRUCT {
+                ?sensorUri a sosa:Sensor, sosa:Device ;
+                  rdfs:label ?name ;
+                  sosa:name ?nameProp ;
+                  sosa:location ?locationProp ;
+                  sosa:controlledProperty ?controlledPropProp ;
+                  sosa:familyType ?familyType ;
+                  sosa:owner ?ownerProp ;
+                  sosa:manufacturerName ?manufacturerNameProp ;
+                  sosa:serialNumber ?serialNumberProp ;
+                  sosa:deviceState ?deviceStateProp .
+
+                ?nameProp a sosa:Property ;
+                  rdf:value ?name .
+
+                ?locationProp a sosa:GeoProperty ;
+                  rdf:value ?geoValue .
+
+                ?geoValue a geo:Point ;
+                  geo:lat ?latitude ;
+                  geo:long ?longitude .
+
+                ?controlledPropProp a sosa:Property ;
+                  rdf:value ?controlledProperty .
+
+                ?ownerProp a sosa:Property ;
+                  rdf:value ?owner .
+
+                ?manufacturerNameProp a sosa:Property ;
+                  rdf:value ?manufacturerName .
+
+                ?serialNumberProp a sosa:Property ;
+                  rdf:value ?serialNumber .
+
+                ?deviceStateProp a sosa:Property ;
+                  rdf:value ?deviceState .
+              }
+              WHERE {
+                VALUES (?id ?name ?familyType ?owner ?manufacturerName ?serialNumber ?deviceState ?latitude ?longitude ?controlledProperty) {
+                  ("418858" "Overstortmeter Ijinus US LTE" "" "Aquafin" "ELSCOLAB" "IJA0102-00001836" "Actief" "50.948995878" "5.298607495000001" "")
+                }
+
+                # Construct URIs
+                BIND(IRI(CONCAT("https://aquafin.be/id/sensor/", STR(?id))) AS ?sensorUri)
+                BIND(IRI(CONCAT(STR(?sensorUri), "/name")) AS ?nameProp)
+                BIND(IRI(CONCAT(STR(?sensorUri), "/location")) AS ?locationProp)
+                BIND(IRI(CONCAT(STR(?sensorUri), "/controlledProperty")) AS ?controlledPropProp)
+                BIND(IRI(CONCAT(STR(?sensorUri), "/owner")) AS ?ownerProp)
+                BIND(IRI(CONCAT(STR(?sensorUri), "/manufacturerName")) AS ?manufacturerNameProp)
+                BIND(IRI(CONCAT(STR(?sensorUri), "/serialNumber")) AS ?serialNumberProp)
+                BIND(IRI(CONCAT(STR(?sensorUri), "/deviceState")) AS ?deviceStateProp)
+
+                # Construct geo value
+                BIND(IRI(CONCAT(STR(?locationProp), "/value")) AS ?geoValue)
+              }
+
+      outputs:
+        - name: Ldio:ConsoleOut
+

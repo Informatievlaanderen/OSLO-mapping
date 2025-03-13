@@ -1,0 +1,14 @@
+{
+  "id": "3",
+  "type": "Sensor",
+  "name": "Sensorname",
+  "owner": "companyA",
+  "manufacturerName": "CompanyB",
+  "serialNumber": "XAA0102-00001999",
+  "deviceState": "Actief",
+  "lat_WGS84": "50.948995878",
+  "long_WGS84": "5.298607495000001", 
+  "lat_Lambert72": "xxx", 
+  "long_Lambert72": "yyy", 
+  "meetlocatie":"K_000003850759"
+}

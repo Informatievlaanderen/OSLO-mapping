@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ldio-workbench-config
+data:
+  application.yml: |
+    # Contents of workbench's application.yml

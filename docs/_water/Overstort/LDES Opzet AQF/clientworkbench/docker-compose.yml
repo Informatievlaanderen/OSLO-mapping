@@ -1,0 +1,23 @@
+networks:
+  basic-client:
+    name: basic-client-network
+
+
+services:
+
+
+  ldio-workbench-client:
+    container_name: client-ldio-workbench
+    image: ldes/ldi-orchestrator:2.9.0-SNAPSHOT
+    environment:
+      - SERVER_PORT=80
+    volumes:
+      - ./workbench/application.yml:/ldio/application.yml:ro
+    ports:
+      - 9006:80
+    networks:
+       - basic-client 
+    # healthcheck:
+    #   test: ["CMD", "wget", "-qO-", "http://localhost:9006/actuator/health"]
+
+

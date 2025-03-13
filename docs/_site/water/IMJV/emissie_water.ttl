@@ -1,0 +1,30 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://data.imjv.omgeving.vlaanderen.be/ns/imjv#> .
+@prefix ns2: <https://data.vlaanderen.be/ns/waterkwaliteit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/lozing/00418870096315/AW9981001/2021/2024-08-17T15:18:28.975Z> a sosa:FeatureOfInterest,
+        ns2:Emissie ;
+    rdfs:label "Lozing in RWZI Sint-Laureins - Sint-Margriete : Effluent (2021)"@nl ;
+    dcterms:isVersionOf <https://data.imjv.omgeving.vlaanderen.be/id/lozing/00418870096315/AW9981001/2021> ;
+    prov:generatedAtTime "2024-08-17T15:18:28.975000+00:00"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://data.cbb.omgeving.vlaanderen.be/id/exploitatie/00418870096315> ;
+    ns1:emissieType <https://data.imjv.omgeving.vlaanderen.be/id/concept/geleidelozing>,
+        <https://data.imjv.omgeving.vlaanderen.be/id/concept/water/geleidelozing_lozend> ;
+    ns2:matrix <https://data.omgeving.vlaanderen.be/id/concept/matrix/water> ;
+    ns2:periode <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/190537dd78eead3d4e483a5ec28e3c55> .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/190537dd78eead3d4e483a5ec28e3c55> a time:Interval ;
+    rdfs:label "Periode 2021"@nl ;
+    dcterms:description "Periode 2021"@nl ;
+    time:inside <https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/f483ea739e7f9eaa980b6be1a6cf3022> ;
+    ns1:jaar "2021"^^xsd:gYear ;
+    ns1:meetfrequentie 4.00000000000000000000 .
+
+<https://data.imjv.omgeving.vlaanderen.be/id/.well-known/genid/f483ea739e7f9eaa980b6be1a6cf3022> a time:Instant ;
+    rdfs:label "2021"@nl ;
+    time:inXSDgYear "2021"^^xsd:gYear .

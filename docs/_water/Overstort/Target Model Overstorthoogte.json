@@ -1,0 +1,31 @@
+{
+  "id": "https://aquafin.be/id/observatie/001/gemetenAfstand/2024-07-29T15:00:00Z",
+  "type": "Observatie",
+  "isVersionOf": "https://aquafin.be/id/observatie/001/gemetenAfstand/2024-07-27T14:00:00Z",
+  "modifiedAt": "2024-07-29T15:00:00Z",
+  "Observatie.geobserveerdObject": {
+    "type": "Meetpunt",
+    "geometrie": {
+      "type": "Geometrie",
+      "wktWGS84": "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT(5.298607495000001 50.948995878)",
+      "wktLambert72": "<http://www.opengis.net/def/crs/EPSG/0/31370> POINT(xxx yyy)",
+      "lat": "50.948995878",
+      "long": "5.298607495000001"
+    }
+  },
+  "Observatie.geobserveerdKenmerk": "https://data.vlaanderen.be/id/concept/WaterMetingType/gemetenAfstand",
+  "Observatie.simpelResultaat": "-10.5",
+  "Observatie.resultaat": {
+    "type": "KwantitatieveWaarde",
+    "KwantitatieveWaarde.waarde": "-10.5",
+    "KwantitatieveWaarde.standaardEenheid": "qudt-unit:CentiM"
+  },
+  "Overstortstatus": "https://data.vlaanderen.be/id/concept/OverstortStatus/nietWerking",
+  "Observatie.resultaatTijd": "2024-07-27T14:00:00Z",
+  "Observatie.fenomeentijd": {
+    "type": "Moment",
+    "inXSDDateTime": "2024-07-27T14:00:00Z"
+  },
+  "Observatie.gebruikteProcedure": "https://aquafin.be/id/concept/observatieproceduretype/OW19",
+  "Observatie.isWaargenomenMet": "https://aquafin.be/id/sensor/418858"
+}
