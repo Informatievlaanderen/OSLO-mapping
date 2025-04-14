@@ -1,4 +1,0 @@
-logging:
-  level:
-    root: WARN
-    be.vlaanderen.informatievlaanderen.ldes.ldio.Application: INFO
