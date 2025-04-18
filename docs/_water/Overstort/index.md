@@ -17,7 +17,7 @@ Voor de case 'Overstort in Vlaanderen' worden volgende LDES datastromen voorzien
 * [Overstort Event](https://ldes-overstort.test.az.aquafin.be/ldes/overstort-event-cleansed)  Deze stroom bevat de start- en eindtijd van overstortingen per sensor
 
 Deze datastromen zijn momenteel niet publiek toegankelijk.
-Indien u toegang wenst, kan dit door een aanvraag te versturen naar: [INSERT EMAIL HERE]
+Indien u toegang wenst, kan dit door een aanvraag te versturen naar: info@aquafin.be
 
 <br>
 
