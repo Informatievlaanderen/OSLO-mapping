@@ -1,0 +1,16 @@
+{
+  "type": "Observatie",
+  "fenomeentijd": "2024-07-27T14:00:00Z", 
+  "modifiedAt": "2024-07-27T14:00:00Z", 
+  "gemetenAfstand": "-10.5", 
+  "temperatuur": "15", 
+  "lat_WGS84": "50.948995878", 
+  "long_WGS84": "5.298607495000001", 
+  "lat_Lambert72": "xxx", 
+  "long_Lambert72": "yyy", 
+  "overstortstatus": "NietWerking", 
+  "validatieStatus": "raw", 
+  "gebruikteProcedure": "OW19",
+  "isWaargenomenMet": "418858"
+}
+	

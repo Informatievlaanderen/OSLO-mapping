@@ -1,0 +1,117 @@
+# server:
+#   port: 80
+
+# logging:
+#   level:
+#     root: WARN
+#     be.vlaanderen.informatievlaanderen.ldes.ldio.Application: INFO
+
+orchestrator:
+  pipelines:
+    - name: berekeningen-pipeline-raw
+      description: "Aquafin metingen JSON message (raw) in using HTTP, OSLO transformation, version creation & HTTP sending."
+      input:
+        name: Ldio:HttpIn
+        adapter:
+          name: Ldio:JsonToLdAdapter
+          config:
+            context: |
+              {
+                "@context": {
+                  "@vocab": "https://aquafin.be/ns#"
+                }
+              }
+      transformers:
+        - name: Ldio:SparqlConstructTransformer
+          config:
+            query: |
+              CONSTRUCT {
+                GRAPH ?uriDebiet {
+                  ?s ?p ?o .
+                }
+                GRAPH ?uriOverstortDuur {
+                  ?s_overstortduur ?p_overstortduur ?o_overstortduur .
+                }
+              }
+              WHERE { 
+                # Define URIs for the named graphs
+                BIND (IRI("https://aquafin.be/id/observatie/001/debiet/2024-07-29T15:00:00Z") as ?uriDebiet)
+                BIND (IRI("https://aquafin.be/id/observatie/001/overstortduur/2024-07-29T15:00:00Z") as ?uriOverstortDuur)
+
+                # Block for uriDebiet graph, excluding 'overstortduur' triples
+                {
+                  ?s ?p ?o .
+                  FILTER (
+                    !CONTAINS(LCASE(STR(?s)), "overstortduur") &&
+                    !CONTAINS(LCASE(STR(?p)), "overstortduur") &&
+                    !CONTAINS(LCASE(STR(?o)), "overstortduur")
+                  )
+                }
+
+                # Block for uriOverstortDuur graph, excluding 'debiet' triples
+                UNION
+                {
+                  ?s_overstortduur ?p_overstortduur ?o_overstortduur .
+                  FILTER (
+                    !CONTAINS(LCASE(STR(?s_overstortduur)), "debiet") &&
+                    !CONTAINS(LCASE(STR(?p_overstortduur)), "debiet") &&
+                    !CONTAINS(LCASE(STR(?o_overstortduur)), "debiet")
+                  )
+                }
+              }
+      outputs:
+        - name: Ldio:ConsoleOut
+
+    - name: observaties-pipeline-raw
+      description: "Aquafin observaties JSON message (raw) in using HTTP, OSLO transformation, version creation & HTTP sending."
+      input:
+        name: Ldio:HttpIn
+        adapter:
+          name: Ldio:JsonToLdAdapter
+          config:
+            context: |
+              {
+                "@context": {
+                  "@vocab": "https://aquafin.be/ns#"
+                }
+              }
+      transformers:
+        - name: Ldio:SparqlConstructTransformer
+          config:
+            query: |
+              CONSTRUCT {
+                GRAPH ?urigemetenAfstand {
+                  ?s ?p ?o .
+                }
+                GRAPH ?uriTemperatuur {
+                  ?s_temperatuur ?p_temperatuur ?o_temperatuur .
+                }
+              }
+              WHERE { 
+                # Define URIs for the named graphs
+                BIND (IRI("https://aquafin.be/id/observatie/001/gemetenAfstand/2024-07-29T15:00:00Z") as ?urigemetenAfstand)
+                BIND (IRI("https://aquafin.be/id/observatie/001/temperatuur/2024-07-29T15:00:00Z") as ?uriTemperatuur)
+                
+                # Block for urigemetenAfstand graph, excluding 'temperatuur' triples
+                {
+                  ?s ?p ?o .
+                  FILTER (
+                    !CONTAINS(LCASE(STR(?s)), "temperatuur") &&
+                    !CONTAINS(LCASE(STR(?p)), "temperatuur") &&
+                    !CONTAINS(LCASE(STR(?o)), "temperatuur")
+                  )
+                }
+
+                # Block for uriTemperatuur graph, excluding 'gemetenAfstand' triples
+                UNION
+                {
+                  ?s_temperatuur ?p_temperatuur ?o_temperatuur .
+                  FILTER (
+                    !CONTAINS(LCASE(STR(?s_temperatuur)), "gemetenafstand") &&
+                    !CONTAINS(LCASE(STR(?p_temperatuur)), "gemetenafstand") &&
+                    !CONTAINS(LCASE(STR(?o_temperatuur)), "gemetenafstand")
+                  )
+                }
+              }
+      outputs:
+        - name: Ldio:ConsoleOut

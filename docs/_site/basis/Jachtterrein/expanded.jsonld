@@ -1,0 +1,127 @@
+[
+  {
+    "@id": "_:catalogus_agiv",
+    "http://www.w3.org/ns/dcat#dataset": [
+      "_:datasetjachtterrein",
+      "_:datasetjacht_limb",
+      "_:datasetjacht_wvl",
+      "_:datasetjacht_vlbr",
+      "_:datasetjacht_antw",
+      "_:datasetjacht_ovl"
+    ],
+    "http://purl.org/dc/terms/publisher": {
+      "@type": "http://purl.org/dc/terms/Agent",
+      "http://xmlns.com/foaf/0.1/name": {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+        "@value": "Agentschap voor Natuur en Bos"
+      }
+    }
+  },
+  {
+    "@id": "_:datasetjachtterrein",
+    "@type": "http://www.w3.org/ns/dcat#Dataset",
+    "http://purl.org/dc/terms/description": {
+      "@language": "nl",
+      "@value": "Overzicht van de jachtterreinen die opgenomen zijn op goedgekeurde jachtplannen. Een jachtterrein is een aaneengesloten terrein, dat uit \u00c3\u00a9\u00c3\u00a9n of meer percelen bestaat waarop eenzelfde jachtrechthouder of een groep van jachtrechthouders het jachtrecht heeft."
+    },
+    "http://purl.org/dc/terms/spatial": "Vlaanderen",
+    "http://purl.org/dc/terms/title": {
+      "@language": "nl",
+      "@value": "Jachtterreinen"
+    },
+    "http://purl.org/dc/terms/accessRights": [
+      "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+      "https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/KOSTELOOS",
+      "https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATA",
+      "https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/HERBRUIKBAAR",
+      "https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/TOEGEVOEGDIVL",
+      "https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/GEODATA"
+    ],
+    "http://www.w3.org/ns/dcat#keyword": [
+      {
+        "@language": "nl",
+        "@value": "AGIV"
+      },
+      {
+        "@language": "nl",
+        "@value": "jachtplan"
+      },
+      {
+        "@language": "nl",
+        "@value": "jachtrecht"
+      },
+      {
+        "@language": "nl",
+        "@value": "jachtrechthouder"
+      },
+      {
+        "@language": "nl",
+        "@value": "jachtseizoen"
+      },
+      {
+        "@language": "nl",
+        "@value": "jachtterrein"
+      },
+      {
+        "@language": "nl",
+        "@value": "jachtvergunning"
+      },
+      {
+        "@language": "nl",
+        "@value": "jachtverlof"
+      },
+      {
+        "@language": "nl",
+        "@value": "wildbeheereenheid"
+      }
+    ]
+  },
+  {
+    "@id": "_:datasetjacht_limburg",
+    "@type": "http://www.w3.org/ns/dcat#Dataset",
+    "http://purl.org/dc/terms/rightsHolder": {
+      "@type": "http://purl.org/dc/terms/Agent",
+      "http://xmlns.com/foaf/0.1/name": {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+        "@value": "Dienst van de gouverneurs - Limburg, Team Jacht"
+      }
+    }
+  },
+  {
+    "@id": "_:jacht01",
+    "@type": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid",
+    "https://data.vlaanderen.be/ns/perceel#agentMetRecht": {
+      "@type": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#FeitelijkeVereniging",
+      "http://www.w3.org/ns/adms#Identifier": {
+        "@type": "https://data.vlaanderen.be/doc/concept/Wildbeheereenheid/",
+        "@value": "410"
+      },
+      "http://www.w3.org/2004/02/skos/core#prefLabel": "De Leeuwerik"
+    },
+    "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.geometrie": {
+      "@type": "http://www.opengis.net/ont/sf#Polygon",
+      "http://www.opengis.net/ont/geosparql#asGML": {
+        "@type": "http://www.opengis.net/ont/geosparql#gmlliteral",
+        "@value": "<gml:Polygon srsName=\"http:\\//www.opengis.net/def/crs/EPSG/0/31370\"><gml:coordinates>227995 222056</gml:coordinates><gml:polygon>"
+      }
+    },
+    "http://www.w3.org/ns/adms#identifier": [
+      {
+        "@type": "https://data.vlaanderen.be/doc/concept/Identificator/oidn",
+        "@value": 3801
+      },
+      {
+        "@type": "https://data.vlaanderen.be/doc/concept/Identificator/uidn",
+        "@value": 49287
+      },
+      {
+        "@type": "https://data.vlaanderen.be/doc/concept/Identificator/veldid",
+        "@value": 41000014
+      }
+    ],
+    "https://data.vlaanderen.be/ns/perceel#landgebruik": "https://data.vlaanderen.be/doc/concept/landgebruik/jachtterrein",
+    "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.oppervlakte": {
+      "@value": 143933.16
+    }
+  }
+]

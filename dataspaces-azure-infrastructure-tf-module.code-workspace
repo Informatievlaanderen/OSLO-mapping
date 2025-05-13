@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../dataspaces-azure-infrastructure-tf-module"
+		},
+		{
+			"name": "ldes-service",
+			"path": "../ldes-service/ldes-service"
+		}
+	],
+	"settings": {}
+}

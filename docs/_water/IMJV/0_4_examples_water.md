@@ -7,12 +7,6 @@ nav_order: 4
 
 # Examples Water
 
-## Prefices
-
-{% highlight turtle %}
-{% include_relative prefices_water.ttl %}
-{% endhighlight %}
-
 ## Bruto vracht observaties
 
 {% highlight turtle %}
