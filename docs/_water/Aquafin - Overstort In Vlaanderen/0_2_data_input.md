@@ -18,14 +18,14 @@ Onderstaand een json-voorbeeld
 
 ```json
 {
-	"type":"Event",
-	"start_timestamp":"2025-02-18T08:31:00.000Z",
-	"end_timestamp":"2025-02-18T08:41:00.000Z",
-	"measurement_location":"P_000000181521",
-	"status":"WerkingOnbekend",
-	"is_observed_with":"P1037143",
-	"modified_at":"2025-02-18T10:21:17.979Z",
-	"is_deleted":"false"
+	"type":"Event", --Type Event
+	"start_timestamp":"2025-02-18T08:31:00.000Z", -- Tijdstip waarop het event startte
+	"end_timestamp":"2025-02-18T08:41:00.000Z", -- Tijdstip waraop het event eindigde
+	"measurement_location":"P_000000181521", --unieke identifier van de locatie waar de meting werd uitgevoerd. P-nummers op basis van de Rioolinventaris
+	"status":"WerkingOnbekend", --Status van het event. Werd er overstort vastgesteld, geen overstort vastgesteld of was er een verstoord signaal (WerkingOnbekend)
+	"is_observed_with":"P1037143", -- unieke identifier van het toestel waarmee de meting werd uitgevoerd
+	"modified_at":"2025-02-18T10:21:17.979Z", --Tijdstip waarop het event werd verstuurd
+	"is_deleted":"false" -- Is dit event nog geldig of werd deze verwijderd en vervangen door een nieuw en verbeterd event? 
 }
 ```
 
@@ -36,23 +36,22 @@ Indien er wijzigingen optreden in de status, locatie of kwaliteit van de sensor,
 
 ```json
 {
-	"id":"P2050378",
-	"device_type":"Overstortmeter",
-	"name":"Overstortmeter Ijinus US LTE",
-	"owner":"AQUAFIN",
-	"brand":"Ijinus",
-	"supplier":"ELSCOLAB",
-	"serial_number":"IJA0102-00004425",
-	"device_state":"ACTIEF",
-	"lat_WGS84":51.04243219340782,
-	"long_WGS84":5.594445509825586,
-	"lat_Lambert72":193183.8663904309,
-	"long_Lambert72":235956.9331605651,
-	"measurement_location":"P_000000217952",
-	"quality_label":"0",
-	"valid_from":"2025-04-11T13:31:56.947Z",
-	"valid_to":"9999-12-31T23:59:59.000Z"
-	"modified_at":"2025-04-11T13:31:56.947Z"
+	"id":"P2050378", -- Unieke identifier van het toestel waarmee de meting werd uitgevoerd
+	"device_type":"Overstortmeter", --type van het toestel
+	"name":"Overstortmeter Ijinus US LTE", --niet-unieke naam van het toestel
+	"owner":"AQUAFIN", -- eigenaar van het toestel
+	"brand":"Ijinus", -- merk van het toestel
+	"supplier":"ELSCOLAB", -- verkoper van het toestel 
+	"device_state":"ACTIEF", --status van het toestel (Actief / Inactief / uit dienst)
+	"lat_WGS84":51.04243219340782, --Lengte-coördinnaat van de locatie van het toestel volgens WGS84-normen
+	"long_WGS84":5.594445509825586, --breedte- coördinnaat van de locatie van het toestel volgens WGS84-normen
+	"lat_Lambert72":193183.8663904309, -- lengte-coördinnaat van de locatie van het toestel volgens Lambert72-normen
+	"long_Lambert72":235956.9331605651, -- breedte-coördinnaat van de locatie van het toestel volgens Lambert72-normen
+	"measurement_location":"P_000000217952", --unieke identifier van de locatie waar de meting werd uitgevoerd. P-nummers op basis van de Rioolinventaris
+	"quality_label":"A00", --kwaliteitskenmerk van het toestel
+	"valid_from":"2025-04-11T13:31:56.947Z", --start geldigheidsdatum waarop dit record valide was
+	"valid_to":"9999-12-31T23:59:59.000Z" -- einde geldigheidsdatum waarop dit record valide was
+	"modified_at":"2025-04-11T13:31:56.947Z" --datum laatste wijziging van dit record
 }
 
 ```
